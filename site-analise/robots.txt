@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://analise-da-virada.pages.dev/sitemap.xml
