@@ -1,0 +1,5164 @@
+{
+ "meta": {
+  "gerado": "27/10/2026 10:46",
+  "script": "scripts/exploracao.py",
+  "registro": "docs/analise/HIPOTESES.md, seção 8, \"Rodada 1\" (27/10/2026, 10:40)",
+  "rotulo": "exploratório, não registrado antes das contas",
+  "semente": 20261026,
+  "bootstrap": 1000,
+  "secoes": 497897,
+  "municipios": 5571
+ },
+ "E1": {
+  "por_lugar": [
+   {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5571,
+    "secoes": 497897,
+    "fontes": {
+     "70": {
+      "fonte": "Avante (70)",
+      "lula": 0.609969,
+      "lula_ic95": [
+       0.581349,
+       0.63393
+      ],
+      "flavio": 0.390031,
+      "flavio_ic95": [
+       0.36607,
+       0.418651
+      ],
+      "meia_largura": 0.026291,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "14": {
+      "fonte": "Missão (14)",
+      "lula": 0.508279,
+      "lula_ic95": [
+       0.480921,
+       0.557589
+      ],
+      "flavio": 0.491721,
+      "flavio_ic95": [
+       0.442411,
+       0.519079
+      ],
+      "meia_largura": 0.038334,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "sem lado claro",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "55": {
+      "fonte": "PSD (55)",
+      "lula": 0.382271,
+      "lula_ic95": [
+       0.293878,
+       0.46392
+      ],
+      "flavio": 0.617729,
+      "flavio_ic95": [
+       0.53608,
+       0.706122
+      ],
+      "meia_largura": 0.085021,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "resto": {
+      "fonte": "os outros sete, juntos",
+      "lula": 0.279921,
+      "lula_ic95": [
+       0.232842,
+       0.406237
+      ],
+      "flavio": 0.720079,
+      "flavio_ic95": [
+       0.593763,
+       0.767158
+      ],
+      "meia_largura": 0.086697,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "C": {
+      "fonte": "variação do comparecimento",
+      "lula": 0.591371,
+      "lula_ic95": [
+       0.545968,
+       0.640202
+      ],
+      "flavio": 0.408629,
+      "flavio_ic95": [
+       0.359798,
+       0.454032
+      ],
+      "meia_largura": 0.047117,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "R": {
+      "fonte": "queda de brancos e nulos",
+      "lula": 0.768002,
+      "lula_ic95": [
+       0.742596,
+       0.785684
+      ],
+      "flavio": 0.231998,
+      "flavio_ic95": [
+       0.214316,
+       0.257404
+      ],
+      "meia_largura": 0.021544,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     }
+    },
+    "modelo_nao_descreve": []
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Norte",
+    "n": 450,
+    "secoes": 43769,
+    "fontes": {
+     "70": {
+      "fonte": "Avante (70)",
+      "lula": 0.62783,
+      "lula_ic95": [
+       0.560956,
+       0.669676
+      ],
+      "flavio": 0.37217,
+      "flavio_ic95": [
+       0.330324,
+       0.439044
+      ],
+      "meia_largura": 0.05436,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "14": {
+      "fonte": "Missão (14)",
+      "lula": 0.629562,
+      "lula_ic95": [
+       0.530148,
+       0.678101
+      ],
+      "flavio": 0.370438,
+      "flavio_ic95": [
+       0.321899,
+       0.469852
+      ],
+      "meia_largura": 0.073976,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "55": {
+      "fonte": "PSD (55)",
+      "lula": 0.455209,
+      "lula_ic95": [
+       0.402571,
+       0.482054
+      ],
+      "flavio": 0.544791,
+      "flavio_ic95": [
+       0.517946,
+       0.597429
+      ],
+      "meia_largura": 0.039741,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "resto": {
+      "fonte": "os outros sete, juntos",
+      "lula": 0.560777,
+      "lula_ic95": [
+       0.498479,
+       0.600859
+      ],
+      "flavio": 0.439223,
+      "flavio_ic95": [
+       0.399141,
+       0.501521
+      ],
+      "meia_largura": 0.05119,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "sem lado claro",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "C": {
+      "fonte": "variação do comparecimento",
+      "lula": 0.534999,
+      "lula_ic95": [
+       0.385128,
+       0.588657
+      ],
+      "flavio": 0.465001,
+      "flavio_ic95": [
+       0.411343,
+       0.614872
+      ],
+      "meia_largura": 0.101765,
+      "aviso_modelo": false,
+      "passa": false,
+      "motivo": "resultados muito dispersos",
+      "conferencias_mantem": [
+       "sem_peso",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "R": {
+      "fonte": "queda de brancos e nulos",
+      "lula": 0.687859,
+      "lula_ic95": [
+       0.555922,
+       0.728109
+      ],
+      "flavio": 0.312141,
+      "flavio_ic95": [
+       0.271891,
+       0.444078
+      ],
+      "meia_largura": 0.086094,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     }
+    },
+    "modelo_nao_descreve": []
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Nordeste",
+    "n": 1794,
+    "secoes": 140828,
+    "fontes": {
+     "70": {
+      "fonte": "Avante (70)",
+      "lula": 0.663652,
+      "lula_ic95": [
+       0.645694,
+       0.686171
+      ],
+      "flavio": 0.336348,
+      "flavio_ic95": [
+       0.313829,
+       0.354306
+      ],
+      "meia_largura": 0.020239,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "14": {
+      "fonte": "Missão (14)",
+      "lula": 0.604617,
+      "lula_ic95": [
+       0.56948,
+       0.656155
+      ],
+      "flavio": 0.395383,
+      "flavio_ic95": [
+       0.343845,
+       0.43052
+      ],
+      "meia_largura": 0.043338,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "55": {
+      "fonte": "PSD (55)",
+      "lula": 0.472837,
+      "lula_ic95": [
+       0.413566,
+       0.542365
+      ],
+      "flavio": 0.527163,
+      "flavio_ic95": [
+       0.457635,
+       0.586434
+      ],
+      "meia_largura": 0.064399,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "sem lado claro",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "resto": {
+      "fonte": "os outros sete, juntos",
+      "lula": 0.456447,
+      "lula_ic95": [
+       0.392407,
+       0.563917
+      ],
+      "flavio": 0.543553,
+      "flavio_ic95": [
+       0.436083,
+       0.607593
+      ],
+      "meia_largura": 0.085755,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "sem lado claro",
+      "conferencias_mantem": [
+       "sem_peso",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "C": {
+      "fonte": "variação do comparecimento",
+      "lula": 0.723744,
+      "lula_ic95": [
+       0.686134,
+       0.745699
+      ],
+      "flavio": 0.276256,
+      "flavio_ic95": [
+       0.254301,
+       0.313866
+      ],
+      "meia_largura": 0.029782,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "R": {
+      "fonte": "queda de brancos e nulos",
+      "lula": 0.811779,
+      "lula_ic95": [
+       0.785461,
+       0.841578
+      ],
+      "flavio": 0.188221,
+      "flavio_ic95": [
+       0.158422,
+       0.214539
+      ],
+      "meia_largura": 0.028059,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     }
+    },
+    "modelo_nao_descreve": []
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Centro-Oeste",
+    "n": 468,
+    "secoes": 38048,
+    "fontes": {
+     "70": {
+      "fonte": "Avante (70)",
+      "lula": 0.537495,
+      "lula_ic95": [
+       0.501977,
+       0.580931
+      ],
+      "flavio": 0.462505,
+      "flavio_ic95": [
+       0.419069,
+       0.498023
+      ],
+      "meia_largura": 0.039477,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "14": {
+      "fonte": "Missão (14)",
+      "lula": 0.430519,
+      "lula_ic95": [
+       0.356063,
+       0.494909
+      ],
+      "flavio": 0.569481,
+      "flavio_ic95": [
+       0.505091,
+       0.643937
+      ],
+      "meia_largura": 0.069423,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "55": {
+      "fonte": "PSD (55)",
+      "lula": 0.463241,
+      "lula_ic95": [
+       0.405089,
+       0.472836
+      ],
+      "flavio": 0.536759,
+      "flavio_ic95": [
+       0.527164,
+       0.594911
+      ],
+      "meia_largura": 0.033874,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "resto": {
+      "fonte": "os outros sete, juntos",
+      "lula": 0.257672,
+      "lula_ic95": [
+       0.0409,
+       0.481372
+      ],
+      "flavio": 0.742328,
+      "flavio_ic95": [
+       0.518628,
+       0.9591
+      ],
+      "meia_largura": 0.220236,
+      "aviso_modelo": false,
+      "passa": false,
+      "motivo": "resultados muito dispersos",
+      "conferencias_mantem": [
+       "sem_peso",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "C": {
+      "fonte": "variação do comparecimento",
+      "lula": 0.524364,
+      "lula_ic95": [
+       0.480011,
+       0.589079
+      ],
+      "flavio": 0.475636,
+      "flavio_ic95": [
+       0.410921,
+       0.519989
+      ],
+      "meia_largura": 0.054534,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "sem lado claro",
+      "conferencias_mantem": [
+       "sem_peso",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "R": {
+      "fonte": "queda de brancos e nulos",
+      "lula": 0.665484,
+      "lula_ic95": [
+       0.630813,
+       0.683534
+      ],
+      "flavio": 0.334516,
+      "flavio_ic95": [
+       0.316466,
+       0.369187
+      ],
+      "meia_largura": 0.02636,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     }
+    },
+    "modelo_nao_descreve": []
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Sudeste",
+    "n": 1668,
+    "secoes": 203237,
+    "fontes": {
+     "70": {
+      "fonte": "Avante (70)",
+      "lula": 0.6162,
+      "lula_ic95": [
+       0.599872,
+       0.644565
+      ],
+      "flavio": 0.3838,
+      "flavio_ic95": [
+       0.355435,
+       0.400128
+      ],
+      "meia_largura": 0.022346,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "14": {
+      "fonte": "Missão (14)",
+      "lula": 0.468545,
+      "lula_ic95": [
+       0.459477,
+       0.497888
+      ],
+      "flavio": 0.531455,
+      "flavio_ic95": [
+       0.502112,
+       0.540523
+      ],
+      "meia_largura": 0.019205,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "55": {
+      "fonte": "PSD (55)",
+      "lula": 0.291034,
+      "lula_ic95": [
+       0.199389,
+       0.460716
+      ],
+      "flavio": 0.708966,
+      "flavio_ic95": [
+       0.539284,
+       0.800611
+      ],
+      "meia_largura": 0.130663,
+      "aviso_modelo": false,
+      "passa": false,
+      "motivo": "resultados muito dispersos",
+      "conferencias_mantem": [
+       "sem_peso",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "resto": {
+      "fonte": "os outros sete, juntos",
+      "lula": 0.225554,
+      "lula_ic95": [
+       0.204913,
+       0.346783
+      ],
+      "flavio": 0.774446,
+      "flavio_ic95": [
+       0.653217,
+       0.795087
+      ],
+      "meia_largura": 0.070935,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "C": {
+      "fonte": "variação do comparecimento",
+      "lula": 0.539188,
+      "lula_ic95": [
+       0.485257,
+       0.566604
+      ],
+      "flavio": 0.460812,
+      "flavio_ic95": [
+       0.433396,
+       0.514743
+      ],
+      "meia_largura": 0.040673,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "sem lado claro",
+      "conferencias_mantem": [
+       "sem_peso",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "R": {
+      "fonte": "queda de brancos e nulos",
+      "lula": 0.758177,
+      "lula_ic95": [
+       0.700672,
+       0.766046
+      ],
+      "flavio": 0.241823,
+      "flavio_ic95": [
+       0.233954,
+       0.299328
+      ],
+      "meia_largura": 0.032687,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     }
+    },
+    "modelo_nao_descreve": []
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Sul",
+    "n": 1191,
+    "secoes": 72015,
+    "fontes": {
+     "70": {
+      "fonte": "Avante (70)",
+      "lula": 0.505386,
+      "lula_ic95": [
+       0.499316,
+       0.514418
+      ],
+      "flavio": 0.494614,
+      "flavio_ic95": [
+       0.485582,
+       0.500684
+      ],
+      "meia_largura": 0.007551,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "sem lado claro",
+      "conferencias_mantem": [
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "14": {
+      "fonte": "Missão (14)",
+      "lula": 0.457965,
+      "lula_ic95": [
+       0.435966,
+       0.471236
+      ],
+      "flavio": 0.542035,
+      "flavio_ic95": [
+       0.528764,
+       0.564034
+      ],
+      "meia_largura": 0.017635,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "55": {
+      "fonte": "PSD (55)",
+      "lula": 0.352,
+      "lula_ic95": [
+       0.323443,
+       0.397758
+      ],
+      "flavio": 0.648,
+      "flavio_ic95": [
+       0.602242,
+       0.676557
+      ],
+      "meia_largura": 0.037157,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "resto": {
+      "fonte": "os outros sete, juntos",
+      "lula": 0.306569,
+      "lula_ic95": [
+       0.260232,
+       0.359455
+      ],
+      "flavio": 0.693431,
+      "flavio_ic95": [
+       0.640545,
+       0.739768
+      ],
+      "meia_largura": 0.049612,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Flávio",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "C": {
+      "fonte": "variação do comparecimento",
+      "lula": 0.503475,
+      "lula_ic95": [
+       0.443444,
+       0.530258
+      ],
+      "flavio": 0.496525,
+      "flavio_ic95": [
+       0.469742,
+       0.556556
+      ],
+      "meia_largura": 0.043407,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "sem lado claro",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     },
+     "R": {
+      "fonte": "queda de brancos e nulos",
+      "lula": 0.733196,
+      "lula_ic95": [
+       0.671028,
+       0.787241
+      ],
+      "flavio": 0.266804,
+      "flavio_ic95": [
+       0.212759,
+       0.328972
+      ],
+      "meia_largura": 0.058107,
+      "aviso_modelo": false,
+      "passa": true,
+      "maior_parte": "Lula",
+      "conferencias_mantem": [
+       "sem_peso",
+       "municipios_dentro_do_estado",
+       "sem_agregadas",
+       "sem_aptos_que_mudam"
+      ]
+     }
+    },
+    "modelo_nao_descreve": []
+   }
+  ],
+  "conferencias": {
+   "sem_peso": [
+    {
+     "nivel": "brasil",
+     "lugar": "Brasil",
+     "n": 5571,
+     "secoes": 497897,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.613281,
+       "lula_ic95": [
+        0.581255,
+        0.636665
+       ],
+       "flavio": 0.386719,
+       "flavio_ic95": [
+        0.363335,
+        0.418745
+       ],
+       "meia_largura": 0.027705,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.518243,
+       "lula_ic95": [
+        0.489345,
+        0.569789
+       ],
+       "flavio": 0.481757,
+       "flavio_ic95": [
+        0.430211,
+        0.510655
+       ],
+       "meia_largura": 0.040222,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.397315,
+       "lula_ic95": [
+        0.313879,
+        0.475864
+       ],
+       "flavio": 0.602685,
+       "flavio_ic95": [
+        0.524136,
+        0.686121
+       ],
+       "meia_largura": 0.080992,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.304776,
+       "lula_ic95": [
+        0.256238,
+        0.431417
+       ],
+       "flavio": 0.695224,
+       "flavio_ic95": [
+        0.568583,
+        0.743762
+       ],
+       "meia_largura": 0.087589,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.594026,
+       "lula_ic95": [
+        0.550337,
+        0.641769
+       ],
+       "flavio": 0.405974,
+       "flavio_ic95": [
+        0.358231,
+        0.449663
+       ],
+       "meia_largura": 0.045716,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.761422,
+       "lula_ic95": [
+        0.734656,
+        0.779609
+       ],
+       "flavio": 0.238578,
+       "flavio_ic95": [
+        0.220391,
+        0.265344
+       ],
+       "meia_largura": 0.022477,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Norte",
+     "n": 450,
+     "secoes": 43769,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.634062,
+       "lula_ic95": [
+        0.569167,
+        0.678315
+       ],
+       "flavio": 0.365938,
+       "flavio_ic95": [
+        0.321685,
+        0.430833
+       ],
+       "meia_largura": 0.054574,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.643915,
+       "lula_ic95": [
+        0.553336,
+        0.704041
+       ],
+       "flavio": 0.356085,
+       "flavio_ic95": [
+        0.295959,
+        0.446664
+       ],
+       "meia_largura": 0.075353,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.473553,
+       "lula_ic95": [
+        0.416488,
+        0.503434
+       ],
+       "flavio": 0.526447,
+       "flavio_ic95": [
+        0.496566,
+        0.583512
+       ],
+       "meia_largura": 0.043473,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.560129,
+       "lula_ic95": [
+        0.468382,
+        0.620858
+       ],
+       "flavio": 0.439871,
+       "flavio_ic95": [
+        0.379142,
+        0.531618
+       ],
+       "meia_largura": 0.076238,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.542691,
+       "lula_ic95": [
+        0.385745,
+        0.600195
+       ],
+       "flavio": 0.457309,
+       "flavio_ic95": [
+        0.399805,
+        0.614255
+       ],
+       "meia_largura": 0.107225,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.694629,
+       "lula_ic95": [
+        0.564278,
+        0.733502
+       ],
+       "flavio": 0.305371,
+       "flavio_ic95": [
+        0.266498,
+        0.435722
+       ],
+       "meia_largura": 0.084612,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Nordeste",
+     "n": 1794,
+     "secoes": 140828,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.667433,
+       "lula_ic95": [
+        0.64617,
+        0.692204
+       ],
+       "flavio": 0.332567,
+       "flavio_ic95": [
+        0.307796,
+        0.35383
+       ],
+       "meia_largura": 0.023017,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.620753,
+       "lula_ic95": [
+        0.585656,
+        0.675722
+       ],
+       "flavio": 0.379247,
+       "flavio_ic95": [
+        0.324278,
+        0.414344
+       ],
+       "meia_largura": 0.045033,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.49684,
+       "lula_ic95": [
+        0.429265,
+        0.574931
+       ],
+       "flavio": 0.50316,
+       "flavio_ic95": [
+        0.425069,
+        0.570735
+       ],
+       "meia_largura": 0.072833,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.479893,
+       "lula_ic95": [
+        0.410991,
+        0.589695
+       ],
+       "flavio": 0.520107,
+       "flavio_ic95": [
+        0.410305,
+        0.589009
+       ],
+       "meia_largura": 0.089352,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.726836,
+       "lula_ic95": [
+        0.695422,
+        0.746179
+       ],
+       "flavio": 0.273164,
+       "flavio_ic95": [
+        0.253821,
+        0.304578
+       ],
+       "meia_largura": 0.025379,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.809188,
+       "lula_ic95": [
+        0.783,
+        0.841136
+       ],
+       "flavio": 0.190812,
+       "flavio_ic95": [
+        0.158864,
+        0.217
+       ],
+       "meia_largura": 0.029068,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Centro-Oeste",
+     "n": 468,
+     "secoes": 38048,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.538823,
+       "lula_ic95": [
+        0.501531,
+        0.572923
+       ],
+       "flavio": 0.461177,
+       "flavio_ic95": [
+        0.427077,
+        0.498469
+       ],
+       "meia_largura": 0.035696,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.430962,
+       "lula_ic95": [
+        0.354797,
+        0.494184
+       ],
+       "flavio": 0.569038,
+       "flavio_ic95": [
+        0.505816,
+        0.645203
+       ],
+       "meia_largura": 0.069693,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.459894,
+       "lula_ic95": [
+        0.413248,
+        0.467321
+       ],
+       "flavio": 0.540106,
+       "flavio_ic95": [
+        0.532679,
+        0.586752
+       ],
+       "meia_largura": 0.027036,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.286064,
+       "lula_ic95": [
+        0.084084,
+        0.492693
+       ],
+       "flavio": 0.713936,
+       "flavio_ic95": [
+        0.507307,
+        0.915916
+       ],
+       "meia_largura": 0.204304,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.525494,
+       "lula_ic95": [
+        0.478381,
+        0.587624
+       ],
+       "flavio": 0.474506,
+       "flavio_ic95": [
+        0.412376,
+        0.521619
+       ],
+       "meia_largura": 0.054622,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.661307,
+       "lula_ic95": [
+        0.624644,
+        0.683751
+       ],
+       "flavio": 0.338693,
+       "flavio_ic95": [
+        0.316249,
+        0.375356
+       ],
+       "meia_largura": 0.029553,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Sudeste",
+     "n": 1668,
+     "secoes": 203237,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.614733,
+       "lula_ic95": [
+        0.599106,
+        0.638823
+       ],
+       "flavio": 0.385267,
+       "flavio_ic95": [
+        0.361177,
+        0.400894
+       ],
+       "meia_largura": 0.019858,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.475657,
+       "lula_ic95": [
+        0.4644,
+        0.50363
+       ],
+       "flavio": 0.524343,
+       "flavio_ic95": [
+        0.49637,
+        0.5356
+       ],
+       "meia_largura": 0.019615,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.304203,
+       "lula_ic95": [
+        0.203678,
+        0.468851
+       ],
+       "flavio": 0.695797,
+       "flavio_ic95": [
+        0.531149,
+        0.796322
+       ],
+       "meia_largura": 0.132586,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.242986,
+       "lula_ic95": [
+        0.223498,
+        0.358571
+       ],
+       "flavio": 0.757014,
+       "flavio_ic95": [
+        0.641429,
+        0.776502
+       ],
+       "meia_largura": 0.067537,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.538612,
+       "lula_ic95": [
+        0.480465,
+        0.570851
+       ],
+       "flavio": 0.461388,
+       "flavio_ic95": [
+        0.429149,
+        0.519535
+       ],
+       "meia_largura": 0.045193,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.747019,
+       "lula_ic95": [
+        0.688351,
+        0.755349
+       ],
+       "flavio": 0.252981,
+       "flavio_ic95": [
+        0.244651,
+        0.311649
+       ],
+       "meia_largura": 0.033499,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Sul",
+     "n": 1191,
+     "secoes": 72015,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.516684,
+       "lula_ic95": [
+        0.504442,
+        0.523607
+       ],
+       "flavio": 0.483316,
+       "flavio_ic95": [
+        0.476393,
+        0.495558
+       ],
+       "meia_largura": 0.009583,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.459105,
+       "lula_ic95": [
+        0.429267,
+        0.47511
+       ],
+       "flavio": 0.540895,
+       "flavio_ic95": [
+        0.52489,
+        0.570733
+       ],
+       "meia_largura": 0.022921,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.369343,
+       "lula_ic95": [
+        0.339403,
+        0.409866
+       ],
+       "flavio": 0.630657,
+       "flavio_ic95": [
+        0.590134,
+        0.660597
+       ],
+       "meia_largura": 0.035231,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.336347,
+       "lula_ic95": [
+        0.273835,
+        0.38043
+       ],
+       "flavio": 0.663653,
+       "flavio_ic95": [
+        0.61957,
+        0.726165
+       ],
+       "meia_largura": 0.053297,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.504992,
+       "lula_ic95": [
+        0.44513,
+        0.528883
+       ],
+       "flavio": 0.495008,
+       "flavio_ic95": [
+        0.471117,
+        0.55487
+       ],
+       "meia_largura": 0.041876,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.722686,
+       "lula_ic95": [
+        0.667443,
+        0.76668
+       ],
+       "flavio": 0.277314,
+       "flavio_ic95": [
+        0.23332,
+        0.332557
+       ],
+       "meia_largura": 0.049618,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    }
+   ],
+   "municipios_dentro_do_estado": [
+    {
+     "nivel": "brasil",
+     "lugar": "Brasil",
+     "n": 5571,
+     "secoes": 497897,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.609969,
+       "lula_ic95": [
+        0.592229,
+        0.627169
+       ],
+       "flavio": 0.390031,
+       "flavio_ic95": [
+        0.372831,
+        0.407771
+       ],
+       "meia_largura": 0.01747,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.508279,
+       "lula_ic95": [
+        0.493122,
+        0.525559
+       ],
+       "flavio": 0.491721,
+       "flavio_ic95": [
+        0.474441,
+        0.506878
+       ],
+       "meia_largura": 0.016218,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.382271,
+       "lula_ic95": [
+        0.328253,
+        0.424828
+       ],
+       "flavio": 0.617729,
+       "flavio_ic95": [
+        0.575172,
+        0.671747
+       ],
+       "meia_largura": 0.048287,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.279921,
+       "lula_ic95": [
+        0.224053,
+        0.353776
+       ],
+       "flavio": 0.720079,
+       "flavio_ic95": [
+        0.646224,
+        0.775947
+       ],
+       "meia_largura": 0.064862,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.591371,
+       "lula_ic95": [
+        0.579368,
+        0.603635
+       ],
+       "flavio": 0.408629,
+       "flavio_ic95": [
+        0.396365,
+        0.420632
+       ],
+       "meia_largura": 0.012133,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.768002,
+       "lula_ic95": [
+        0.740849,
+        0.793657
+       ],
+       "flavio": 0.231998,
+       "flavio_ic95": [
+        0.206343,
+        0.259151
+       ],
+       "meia_largura": 0.026404,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Norte",
+     "n": 450,
+     "secoes": 43769,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.62783,
+       "lula_ic95": [
+        0.599193,
+        0.662494
+       ],
+       "flavio": 0.37217,
+       "flavio_ic95": [
+        0.337506,
+        0.400807
+       ],
+       "meia_largura": 0.03165,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.629562,
+       "lula_ic95": [
+        0.6019,
+        0.658876
+       ],
+       "flavio": 0.370438,
+       "flavio_ic95": [
+        0.341124,
+        0.3981
+       ],
+       "meia_largura": 0.028488,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.455209,
+       "lula_ic95": [
+        0.418843,
+        0.500781
+       ],
+       "flavio": 0.544791,
+       "flavio_ic95": [
+        0.499219,
+        0.581157
+       ],
+       "meia_largura": 0.040969,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.560777,
+       "lula_ic95": [
+        0.49912,
+        0.652208
+       ],
+       "flavio": 0.439223,
+       "flavio_ic95": [
+        0.347792,
+        0.50088
+       ],
+       "meia_largura": 0.076544,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.534999,
+       "lula_ic95": [
+        0.508911,
+        0.563967
+       ],
+       "flavio": 0.465001,
+       "flavio_ic95": [
+        0.436033,
+        0.491089
+       ],
+       "meia_largura": 0.027528,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.687859,
+       "lula_ic95": [
+        0.656223,
+        0.717649
+       ],
+       "flavio": 0.312141,
+       "flavio_ic95": [
+        0.282351,
+        0.343777
+       ],
+       "meia_largura": 0.030713,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Nordeste",
+     "n": 1794,
+     "secoes": 140828,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.663652,
+       "lula_ic95": [
+        0.649023,
+        0.677109
+       ],
+       "flavio": 0.336348,
+       "flavio_ic95": [
+        0.322891,
+        0.350977
+       ],
+       "meia_largura": 0.014043,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.604617,
+       "lula_ic95": [
+        0.577095,
+        0.632854
+       ],
+       "flavio": 0.395383,
+       "flavio_ic95": [
+        0.367146,
+        0.422905
+       ],
+       "meia_largura": 0.02788,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.472837,
+       "lula_ic95": [
+        0.436011,
+        0.522046
+       ],
+       "flavio": 0.527163,
+       "flavio_ic95": [
+        0.477954,
+        0.563989
+       ],
+       "meia_largura": 0.043017,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.456447,
+       "lula_ic95": [
+        0.369753,
+        0.572713
+       ],
+       "flavio": 0.543553,
+       "flavio_ic95": [
+        0.427287,
+        0.630247
+       ],
+       "meia_largura": 0.10148,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.723744,
+       "lula_ic95": [
+        0.707125,
+        0.740502
+       ],
+       "flavio": 0.276256,
+       "flavio_ic95": [
+        0.259498,
+        0.292875
+       ],
+       "meia_largura": 0.016688,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.811779,
+       "lula_ic95": [
+        0.793991,
+        0.830016
+       ],
+       "flavio": 0.188221,
+       "flavio_ic95": [
+        0.169984,
+        0.206009
+       ],
+       "meia_largura": 0.018013,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Centro-Oeste",
+     "n": 468,
+     "secoes": 38048,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.537495,
+       "lula_ic95": [
+        0.5006,
+        0.57121
+       ],
+       "flavio": 0.462505,
+       "flavio_ic95": [
+        0.42879,
+        0.4994
+       ],
+       "meia_largura": 0.035305,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.430519,
+       "lula_ic95": [
+        0.399396,
+        0.457334
+       ],
+       "flavio": 0.569481,
+       "flavio_ic95": [
+        0.542666,
+        0.600604
+       ],
+       "meia_largura": 0.028969,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.463241,
+       "lula_ic95": [
+        0.444873,
+        0.480087
+       ],
+       "flavio": 0.536759,
+       "flavio_ic95": [
+        0.519913,
+        0.555127
+       ],
+       "meia_largura": 0.017607,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.257672,
+       "lula_ic95": [
+        0.195227,
+        0.314049
+       ],
+       "flavio": 0.742328,
+       "flavio_ic95": [
+        0.685951,
+        0.804773
+       ],
+       "meia_largura": 0.059411,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.524364,
+       "lula_ic95": [
+        0.502023,
+        0.551531
+       ],
+       "flavio": 0.475636,
+       "flavio_ic95": [
+        0.448469,
+        0.497977
+       ],
+       "meia_largura": 0.024754,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.665484,
+       "lula_ic95": [
+        0.641018,
+        0.685356
+       ],
+       "flavio": 0.334516,
+       "flavio_ic95": [
+        0.314644,
+        0.358982
+       ],
+       "meia_largura": 0.022169,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Sudeste",
+     "n": 1668,
+     "secoes": 203237,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.6162,
+       "lula_ic95": [
+        0.581559,
+        0.642665
+       ],
+       "flavio": 0.3838,
+       "flavio_ic95": [
+        0.357335,
+        0.418441
+       ],
+       "meia_largura": 0.030553,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.468545,
+       "lula_ic95": [
+        0.456471,
+        0.487961
+       ],
+       "flavio": 0.531455,
+       "flavio_ic95": [
+        0.512039,
+        0.543529
+       ],
+       "meia_largura": 0.015745,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.291034,
+       "lula_ic95": [
+        0.214622,
+        0.376687
+       ],
+       "flavio": 0.708966,
+       "flavio_ic95": [
+        0.623313,
+        0.785378
+       ],
+       "meia_largura": 0.081032,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.225554,
+       "lula_ic95": [
+        0.18684,
+        0.311543
+       ],
+       "flavio": 0.774446,
+       "flavio_ic95": [
+        0.688457,
+        0.81316
+       ],
+       "meia_largura": 0.062351,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.539188,
+       "lula_ic95": [
+        0.509414,
+        0.568036
+       ],
+       "flavio": 0.460812,
+       "flavio_ic95": [
+        0.431964,
+        0.490586
+       ],
+       "meia_largura": 0.029311,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.758177,
+       "lula_ic95": [
+        0.696959,
+        0.803338
+       ],
+       "flavio": 0.241823,
+       "flavio_ic95": [
+        0.196662,
+        0.303041
+       ],
+       "meia_largura": 0.05319,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Sul",
+     "n": 1191,
+     "secoes": 72015,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.505386,
+       "lula_ic95": [
+        0.49015,
+        0.519364
+       ],
+       "flavio": 0.494614,
+       "flavio_ic95": [
+        0.480636,
+        0.50985
+       ],
+       "meia_largura": 0.014607,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.457965,
+       "lula_ic95": [
+        0.442929,
+        0.474782
+       ],
+       "flavio": 0.542035,
+       "flavio_ic95": [
+        0.525218,
+        0.557071
+       ],
+       "meia_largura": 0.015926,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.352,
+       "lula_ic95": [
+        0.328442,
+        0.3764
+       ],
+       "flavio": 0.648,
+       "flavio_ic95": [
+        0.6236,
+        0.671558
+       ],
+       "meia_largura": 0.023979,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.306569,
+       "lula_ic95": [
+        0.266012,
+        0.36311
+       ],
+       "flavio": 0.693431,
+       "flavio_ic95": [
+        0.63689,
+        0.733988
+       ],
+       "meia_largura": 0.048549,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.503475,
+       "lula_ic95": [
+        0.483855,
+        0.525965
+       ],
+       "flavio": 0.496525,
+       "flavio_ic95": [
+        0.474035,
+        0.516145
+       ],
+       "meia_largura": 0.021055,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.733196,
+       "lula_ic95": [
+        0.698447,
+        0.772659
+       ],
+       "flavio": 0.266804,
+       "flavio_ic95": [
+        0.227341,
+        0.301553
+       ],
+       "meia_largura": 0.037106,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    }
+   ],
+   "sem_agregadas": [
+    {
+     "nivel": "brasil",
+     "lugar": "Brasil",
+     "n": 5569,
+     "secoes": 482971,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.608011,
+       "lula_ic95": [
+        0.579271,
+        0.630835
+       ],
+       "flavio": 0.391989,
+       "flavio_ic95": [
+        0.369165,
+        0.420729
+       ],
+       "meia_largura": 0.025782,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.504948,
+       "lula_ic95": [
+        0.47793,
+        0.547435
+       ],
+       "flavio": 0.495052,
+       "flavio_ic95": [
+        0.452565,
+        0.52207
+       ],
+       "meia_largura": 0.034752,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.378159,
+       "lula_ic95": [
+        0.285887,
+        0.462306
+       ],
+       "flavio": 0.621841,
+       "flavio_ic95": [
+        0.537694,
+        0.714113
+       ],
+       "meia_largura": 0.088209,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.278514,
+       "lula_ic95": [
+        0.230854,
+        0.407794
+       ],
+       "flavio": 0.721486,
+       "flavio_ic95": [
+        0.592206,
+        0.769146
+       ],
+       "meia_largura": 0.08847,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.589284,
+       "lula_ic95": [
+        0.548784,
+        0.638621
+       ],
+       "flavio": 0.410716,
+       "flavio_ic95": [
+        0.361379,
+        0.451216
+       ],
+       "meia_largura": 0.044918,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.766895,
+       "lula_ic95": [
+        0.741042,
+        0.784697
+       ],
+       "flavio": 0.233105,
+       "flavio_ic95": [
+        0.215303,
+        0.258958
+       ],
+       "meia_largura": 0.021828,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Norte",
+     "n": 450,
+     "secoes": 41689,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.62505,
+       "lula_ic95": [
+        0.557103,
+        0.664043
+       ],
+       "flavio": 0.37495,
+       "flavio_ic95": [
+        0.335957,
+        0.442897
+       ],
+       "meia_largura": 0.05347,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.626376,
+       "lula_ic95": [
+        0.527298,
+        0.668706
+       ],
+       "flavio": 0.373624,
+       "flavio_ic95": [
+        0.331294,
+        0.472702
+       ],
+       "meia_largura": 0.070704,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.452037,
+       "lula_ic95": [
+        0.390852,
+        0.484074
+       ],
+       "flavio": 0.547963,
+       "flavio_ic95": [
+        0.515926,
+        0.609148
+       ],
+       "meia_largura": 0.046611,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.56278,
+       "lula_ic95": [
+        0.492848,
+        0.61244
+       ],
+       "flavio": 0.43722,
+       "flavio_ic95": [
+        0.38756,
+        0.507152
+       ],
+       "meia_largura": 0.059796,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.533269,
+       "lula_ic95": [
+        0.372663,
+        0.588338
+       ],
+       "flavio": 0.466731,
+       "flavio_ic95": [
+        0.411662,
+        0.627337
+       ],
+       "meia_largura": 0.107837,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.686156,
+       "lula_ic95": [
+        0.534883,
+        0.725468
+       ],
+       "flavio": 0.313844,
+       "flavio_ic95": [
+        0.274532,
+        0.465117
+       ],
+       "meia_largura": 0.095293,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Nordeste",
+     "n": 1794,
+     "secoes": 133296,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.662836,
+       "lula_ic95": [
+        0.644193,
+        0.68828
+       ],
+       "flavio": 0.337164,
+       "flavio_ic95": [
+        0.31172,
+        0.355807
+       ],
+       "meia_largura": 0.022043,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.60244,
+       "lula_ic95": [
+        0.566919,
+        0.653036
+       ],
+       "flavio": 0.39756,
+       "flavio_ic95": [
+        0.346964,
+        0.433081
+       ],
+       "meia_largura": 0.043058,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.466563,
+       "lula_ic95": [
+        0.411973,
+        0.542313
+       ],
+       "flavio": 0.533437,
+       "flavio_ic95": [
+        0.457687,
+        0.588027
+       ],
+       "meia_largura": 0.06517,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.449377,
+       "lula_ic95": [
+        0.38303,
+        0.568368
+       ],
+       "flavio": 0.550623,
+       "flavio_ic95": [
+        0.431632,
+        0.61697
+       ],
+       "meia_largura": 0.092669,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.722497,
+       "lula_ic95": [
+        0.685236,
+        0.746167
+       ],
+       "flavio": 0.277503,
+       "flavio_ic95": [
+        0.253833,
+        0.314764
+       ],
+       "meia_largura": 0.030466,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.811256,
+       "lula_ic95": [
+        0.785161,
+        0.840845
+       ],
+       "flavio": 0.188744,
+       "flavio_ic95": [
+        0.159155,
+        0.214839
+       ],
+       "meia_largura": 0.027842,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Centro-Oeste",
+     "n": 467,
+     "secoes": 36724,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.53519,
+       "lula_ic95": [
+        0.498288,
+        0.578436
+       ],
+       "flavio": 0.46481,
+       "flavio_ic95": [
+        0.421564,
+        0.501712
+       ],
+       "meia_largura": 0.040074,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.430919,
+       "lula_ic95": [
+        0.356704,
+        0.491315
+       ],
+       "flavio": 0.569081,
+       "flavio_ic95": [
+        0.508685,
+        0.643296
+       ],
+       "meia_largura": 0.067305,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.463163,
+       "lula_ic95": [
+        0.383738,
+        0.472815
+       ],
+       "flavio": 0.536837,
+       "flavio_ic95": [
+        0.527185,
+        0.616262
+       ],
+       "meia_largura": 0.044538,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.254623,
+       "lula_ic95": [
+        0.032636,
+        0.498206
+       ],
+       "flavio": 0.745377,
+       "flavio_ic95": [
+        0.501794,
+        0.967364
+       ],
+       "meia_largura": 0.232785,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.524299,
+       "lula_ic95": [
+        0.481615,
+        0.586822
+       ],
+       "flavio": 0.475701,
+       "flavio_ic95": [
+        0.413178,
+        0.518385
+       ],
+       "meia_largura": 0.052604,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.665819,
+       "lula_ic95": [
+        0.628112,
+        0.684542
+       ],
+       "flavio": 0.334181,
+       "flavio_ic95": [
+        0.315458,
+        0.371888
+       ],
+       "meia_largura": 0.028215,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Sudeste",
+     "n": 1668,
+     "secoes": 199852,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.614546,
+       "lula_ic95": [
+        0.599435,
+        0.64118
+       ],
+       "flavio": 0.385454,
+       "flavio_ic95": [
+        0.35882,
+        0.400565
+       ],
+       "meia_largura": 0.020873,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.465883,
+       "lula_ic95": [
+        0.458247,
+        0.491429
+       ],
+       "flavio": 0.534117,
+       "flavio_ic95": [
+        0.508571,
+        0.541753
+       ],
+       "meia_largura": 0.016591,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.287616,
+       "lula_ic95": [
+        0.19895,
+        0.457241
+       ],
+       "flavio": 0.712384,
+       "flavio_ic95": [
+        0.542759,
+        0.80105
+       ],
+       "meia_largura": 0.129146,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.226816,
+       "lula_ic95": [
+        0.204776,
+        0.346037
+       ],
+       "flavio": 0.773184,
+       "flavio_ic95": [
+        0.653963,
+        0.795224
+       ],
+       "meia_largura": 0.07063,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.539138,
+       "lula_ic95": [
+        0.485944,
+        0.565531
+       ],
+       "flavio": 0.460862,
+       "flavio_ic95": [
+        0.434469,
+        0.514056
+       ],
+       "meia_largura": 0.039793,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.757426,
+       "lula_ic95": [
+        0.6989,
+        0.765301
+       ],
+       "flavio": 0.242574,
+       "flavio_ic95": [
+        0.234699,
+        0.3011
+       ],
+       "meia_largura": 0.0332,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Sul",
+     "n": 1190,
+     "secoes": 71410,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.504602,
+       "lula_ic95": [
+        0.498259,
+        0.516112
+       ],
+       "flavio": 0.495398,
+       "flavio_ic95": [
+        0.483888,
+        0.501741
+       ],
+       "meia_largura": 0.008926,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.456431,
+       "lula_ic95": [
+        0.433715,
+        0.469272
+       ],
+       "flavio": 0.543569,
+       "flavio_ic95": [
+        0.530728,
+        0.566285
+       ],
+       "meia_largura": 0.017779,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.350798,
+       "lula_ic95": [
+        0.320697,
+        0.399254
+       ],
+       "flavio": 0.649202,
+       "flavio_ic95": [
+        0.600746,
+        0.679303
+       ],
+       "meia_largura": 0.039278,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.307613,
+       "lula_ic95": [
+        0.261842,
+        0.360649
+       ],
+       "flavio": 0.692387,
+       "flavio_ic95": [
+        0.639351,
+        0.738158
+       ],
+       "meia_largura": 0.049404,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.503816,
+       "lula_ic95": [
+        0.442938,
+        0.530391
+       ],
+       "flavio": 0.496184,
+       "flavio_ic95": [
+        0.469609,
+        0.557062
+       ],
+       "meia_largura": 0.043727,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.732529,
+       "lula_ic95": [
+        0.670336,
+        0.786492
+       ],
+       "flavio": 0.267471,
+       "flavio_ic95": [
+        0.213508,
+        0.329664
+       ],
+       "meia_largura": 0.058078,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    }
+   ],
+   "sem_aptos_que_mudam": [
+    {
+     "nivel": "brasil",
+     "lugar": "Brasil",
+     "n": 5571,
+     "secoes": 497100,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.609716,
+       "lula_ic95": [
+        0.580053,
+        0.63435
+       ],
+       "flavio": 0.390284,
+       "flavio_ic95": [
+        0.36565,
+        0.419947
+       ],
+       "meia_largura": 0.027149,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.50888,
+       "lula_ic95": [
+        0.481778,
+        0.559585
+       ],
+       "flavio": 0.49112,
+       "flavio_ic95": [
+        0.440415,
+        0.518222
+       ],
+       "meia_largura": 0.038903,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.38196,
+       "lula_ic95": [
+        0.298172,
+        0.465513
+       ],
+       "flavio": 0.61804,
+       "flavio_ic95": [
+        0.534487,
+        0.701828
+       ],
+       "meia_largura": 0.083671,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.279341,
+       "lula_ic95": [
+        0.230848,
+        0.409256
+       ],
+       "flavio": 0.720659,
+       "flavio_ic95": [
+        0.590744,
+        0.769152
+       ],
+       "meia_largura": 0.089204,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.591425,
+       "lula_ic95": [
+        0.547146,
+        0.640051
+       ],
+       "flavio": 0.408575,
+       "flavio_ic95": [
+        0.359949,
+        0.452854
+       ],
+       "meia_largura": 0.046452,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.767691,
+       "lula_ic95": [
+        0.743468,
+        0.78693
+       ],
+       "flavio": 0.232309,
+       "flavio_ic95": [
+        0.21307,
+        0.256532
+       ],
+       "meia_largura": 0.021731,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Norte",
+     "n": 450,
+     "secoes": 43716,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.62709,
+       "lula_ic95": [
+        0.551566,
+        0.666465
+       ],
+       "flavio": 0.37291,
+       "flavio_ic95": [
+        0.333535,
+        0.448434
+       ],
+       "meia_largura": 0.057449,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.630407,
+       "lula_ic95": [
+        0.530144,
+        0.675464
+       ],
+       "flavio": 0.369593,
+       "flavio_ic95": [
+        0.324536,
+        0.469856
+       ],
+       "meia_largura": 0.07266,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.454477,
+       "lula_ic95": [
+        0.398456,
+        0.485309
+       ],
+       "flavio": 0.545523,
+       "flavio_ic95": [
+        0.514691,
+        0.601544
+       ],
+       "meia_largura": 0.043426,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.562063,
+       "lula_ic95": [
+        0.499982,
+        0.600624
+       ],
+       "flavio": 0.437937,
+       "flavio_ic95": [
+        0.399376,
+        0.500018
+       ],
+       "meia_largura": 0.050321,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.534377,
+       "lula_ic95": [
+        0.369815,
+        0.589792
+       ],
+       "flavio": 0.465623,
+       "flavio_ic95": [
+        0.410208,
+        0.630185
+       ],
+       "meia_largura": 0.109989,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.687265,
+       "lula_ic95": [
+        0.547325,
+        0.726232
+       ],
+       "flavio": 0.312735,
+       "flavio_ic95": [
+        0.273768,
+        0.452675
+       ],
+       "meia_largura": 0.089453,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Nordeste",
+     "n": 1794,
+     "secoes": 140615,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.664115,
+       "lula_ic95": [
+        0.645203,
+        0.689978
+       ],
+       "flavio": 0.335885,
+       "flavio_ic95": [
+        0.310022,
+        0.354797
+       ],
+       "meia_largura": 0.022387,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.605533,
+       "lula_ic95": [
+        0.570747,
+        0.65838
+       ],
+       "flavio": 0.394467,
+       "flavio_ic95": [
+        0.34162,
+        0.429253
+       ],
+       "meia_largura": 0.043817,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.472963,
+       "lula_ic95": [
+        0.416226,
+        0.543804
+       ],
+       "flavio": 0.527037,
+       "flavio_ic95": [
+        0.456196,
+        0.583774
+       ],
+       "meia_largura": 0.063789,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.45803,
+       "lula_ic95": [
+        0.396982,
+        0.571888
+       ],
+       "flavio": 0.54197,
+       "flavio_ic95": [
+        0.428112,
+        0.603018
+       ],
+       "meia_largura": 0.087453,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.725385,
+       "lula_ic95": [
+        0.686186,
+        0.747631
+       ],
+       "flavio": 0.274615,
+       "flavio_ic95": [
+        0.252369,
+        0.313814
+       ],
+       "meia_largura": 0.030723,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.811803,
+       "lula_ic95": [
+        0.785753,
+        0.839674
+       ],
+       "flavio": 0.188197,
+       "flavio_ic95": [
+        0.160326,
+        0.214247
+       ],
+       "meia_largura": 0.02696,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Centro-Oeste",
+     "n": 468,
+     "secoes": 37948,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.537304,
+       "lula_ic95": [
+        0.501591,
+        0.577287
+       ],
+       "flavio": 0.462696,
+       "flavio_ic95": [
+        0.422713,
+        0.498409
+       ],
+       "meia_largura": 0.037848,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.431766,
+       "lula_ic95": [
+        0.357849,
+        0.496768
+       ],
+       "flavio": 0.568234,
+       "flavio_ic95": [
+        0.503232,
+        0.642151
+       ],
+       "meia_largura": 0.069459,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.463048,
+       "lula_ic95": [
+        0.406119,
+        0.47243
+       ],
+       "flavio": 0.536952,
+       "flavio_ic95": [
+        0.52757,
+        0.593881
+       ],
+       "meia_largura": 0.033156,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.257135,
+       "lula_ic95": [
+        0.043549,
+        0.477105
+       ],
+       "flavio": 0.742865,
+       "flavio_ic95": [
+        0.522895,
+        0.956451
+       ],
+       "meia_largura": 0.216778,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.523216,
+       "lula_ic95": [
+        0.478152,
+        0.587118
+       ],
+       "flavio": 0.476784,
+       "flavio_ic95": [
+        0.412882,
+        0.521848
+       ],
+       "meia_largura": 0.054483,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.665121,
+       "lula_ic95": [
+        0.635781,
+        0.682839
+       ],
+       "flavio": 0.334879,
+       "flavio_ic95": [
+        0.317161,
+        0.364219
+       ],
+       "meia_largura": 0.023529,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Sudeste",
+     "n": 1668,
+     "secoes": 202922,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.615964,
+       "lula_ic95": [
+        0.600311,
+        0.644128
+       ],
+       "flavio": 0.384036,
+       "flavio_ic95": [
+        0.355872,
+        0.399689
+       ],
+       "meia_largura": 0.021908,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.468889,
+       "lula_ic95": [
+        0.45998,
+        0.497253
+       ],
+       "flavio": 0.531111,
+       "flavio_ic95": [
+        0.502747,
+        0.54002
+       ],
+       "meia_largura": 0.018636,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.2908,
+       "lula_ic95": [
+        0.193228,
+        0.460267
+       ],
+       "flavio": 0.7092,
+       "flavio_ic95": [
+        0.539733,
+        0.806772
+       ],
+       "meia_largura": 0.133519,
+       "aviso_modelo": false,
+       "passa": false,
+       "motivo": "resultados muito dispersos"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.224602,
+       "lula_ic95": [
+        0.203152,
+        0.346085
+       ],
+       "flavio": 0.775398,
+       "flavio_ic95": [
+        0.653915,
+        0.796848
+       ],
+       "meia_largura": 0.071466,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.53909,
+       "lula_ic95": [
+        0.485106,
+        0.56669
+       ],
+       "flavio": 0.46091,
+       "flavio_ic95": [
+        0.43331,
+        0.514894
+       ],
+       "meia_largura": 0.040792,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.757785,
+       "lula_ic95": [
+        0.700995,
+        0.765512
+       ],
+       "flavio": 0.242215,
+       "flavio_ic95": [
+        0.234488,
+        0.299005
+       ],
+       "meia_largura": 0.032258,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    },
+    {
+     "nivel": "regiao",
+     "lugar": "Sul",
+     "n": 1191,
+     "secoes": 71899,
+     "fontes": {
+      "70": {
+       "fonte": "Avante (70)",
+       "lula": 0.505206,
+       "lula_ic95": [
+        0.4991,
+        0.514215
+       ],
+       "flavio": 0.494794,
+       "flavio_ic95": [
+        0.485785,
+        0.5009
+       ],
+       "meia_largura": 0.007558,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "14": {
+       "fonte": "Missão (14)",
+       "lula": 0.458973,
+       "lula_ic95": [
+        0.437432,
+        0.471982
+       ],
+       "flavio": 0.541027,
+       "flavio_ic95": [
+        0.528018,
+        0.562568
+       ],
+       "meia_largura": 0.017275,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "55": {
+       "fonte": "PSD (55)",
+       "lula": 0.351402,
+       "lula_ic95": [
+        0.323011,
+        0.396673
+       ],
+       "flavio": 0.648598,
+       "flavio_ic95": [
+        0.603327,
+        0.676989
+       ],
+       "meia_largura": 0.036831,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "resto": {
+       "fonte": "os outros sete, juntos",
+       "lula": 0.305694,
+       "lula_ic95": [
+        0.259929,
+        0.357042
+       ],
+       "flavio": 0.694306,
+       "flavio_ic95": [
+        0.642958,
+        0.740071
+       ],
+       "meia_largura": 0.048557,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Flávio"
+      },
+      "C": {
+       "fonte": "variação do comparecimento",
+       "lula": 0.503798,
+       "lula_ic95": [
+        0.443514,
+        0.530376
+       ],
+       "flavio": 0.496202,
+       "flavio_ic95": [
+        0.469624,
+        0.556486
+       ],
+       "meia_largura": 0.043431,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "sem lado claro"
+      },
+      "R": {
+       "fonte": "queda de brancos e nulos",
+       "lula": 0.732969,
+       "lula_ic95": [
+        0.670464,
+        0.787069
+       ],
+       "flavio": 0.267031,
+       "flavio_ic95": [
+        0.212931,
+        0.329536
+       ],
+       "meia_largura": 0.058303,
+       "aviso_modelo": false,
+       "passa": true,
+       "maior_parte": "Lula"
+      }
+     },
+     "modelo_nao_descreve": []
+    }
+   ]
+  },
+  "achado_brasil": {
+   "70": "Lula",
+   "55": "Flávio",
+   "resto": "Flávio"
+  },
+  "lados_opostos": true,
+  "votos_brasil": {
+   "70": 3438835,
+   "14": 2667307,
+   "55": 2600440,
+   "resto": 580570,
+   "C": 2920562,
+   "R": 1820154
+  }
+ },
+ "E2": {
+  "brasil": {
+   "casas": {
+    "Flávio → Flávio": {
+     "n": 2694,
+     "eleitores_1t": 78928253
+    },
+    "Flávio → Lula": {
+     "n": 211,
+     "eleitores_1t": 10898538
+    },
+    "Flávio → empate": {
+     "n": 1,
+     "eleitores_1t": 3876
+    },
+    "Lula → Flávio": {
+     "n": 1,
+     "eleitores_1t": 3080
+    },
+    "Lula → Lula": {
+     "n": 2662,
+     "eleitores_1t": 67991745
+    },
+    "empate → Lula": {
+     "n": 2,
+     "eleitores_1t": 3476
+    }
+   },
+   "fatia_lula": {
+    "subiu": {
+     "n": 5411,
+     "eleitores_1t": 156325496
+    },
+    "caiu": {
+     "n": 160,
+     "eleitores_1t": 1503472
+    },
+    "igual": {
+     "n": 0,
+     "eleitores_1t": 0
+    }
+   }
+  },
+  "por_uf": {
+   "AC": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 19,
+      "eleitores_1t": 595784
+     },
+     "Lula → Lula": {
+      "n": 3,
+      "eleitores_1t": 17958
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 21,
+      "eleitores_1t": 605710
+     },
+     "caiu": {
+      "n": 1,
+      "eleitores_1t": 8032
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "AL": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 9,
+      "eleitores_1t": 805430
+     },
+     "Flávio → Lula": {
+      "n": 7,
+      "eleitores_1t": 143583
+     },
+     "Lula → Lula": {
+      "n": 86,
+      "eleitores_1t": 1493113
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 101,
+      "eleitores_1t": 2436096
+     },
+     "caiu": {
+      "n": 1,
+      "eleitores_1t": 6030
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "AM": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 5,
+      "eleitores_1t": 1559106
+     },
+     "Flávio → Lula": {
+      "n": 3,
+      "eleitores_1t": 31070
+     },
+     "Lula → Lula": {
+      "n": 54,
+      "eleitores_1t": 1208435
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 62,
+      "eleitores_1t": 2798611
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "AP": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 2,
+      "eleitores_1t": 90011
+     },
+     "Flávio → Lula": {
+      "n": 2,
+      "eleitores_1t": 329458
+     },
+     "Lula → Lula": {
+      "n": 12,
+      "eleitores_1t": 157519
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 16,
+      "eleitores_1t": 576988
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "BA": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 4,
+      "eleitores_1t": 245188
+     },
+     "Lula → Lula": {
+      "n": 413,
+      "eleitores_1t": 11067564
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 331,
+      "eleitores_1t": 10285453
+     },
+     "caiu": {
+      "n": 86,
+      "eleitores_1t": 1027299
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "CE": {
+    "casas": {
+     "Flávio → Lula": {
+      "n": 1,
+      "eleitores_1t": 19053
+     },
+     "Lula → Lula": {
+      "n": 183,
+      "eleitores_1t": 6977492
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 175,
+      "eleitores_1t": 6867418
+     },
+     "caiu": {
+      "n": 9,
+      "eleitores_1t": 129127
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "DF": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 1,
+      "eleitores_1t": 2258320
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 1,
+      "eleitores_1t": 2258320
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "ES": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 60,
+      "eleitores_1t": 2670919
+     },
+     "Flávio → Lula": {
+      "n": 3,
+      "eleitores_1t": 38987
+     },
+     "Lula → Lula": {
+      "n": 15,
+      "eleitores_1t": 281744
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 78,
+      "eleitores_1t": 2991650
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "GO": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 204,
+      "eleitores_1t": 4768790
+     },
+     "Flávio → Lula": {
+      "n": 14,
+      "eleitores_1t": 150186
+     },
+     "Lula → Flávio": {
+      "n": 1,
+      "eleitores_1t": 3080
+     },
+     "Lula → Lula": {
+      "n": 27,
+      "eleitores_1t": 158534
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 238,
+      "eleitores_1t": 5046693
+     },
+     "caiu": {
+      "n": 8,
+      "eleitores_1t": 33897
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "MA": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 5,
+      "eleitores_1t": 366782
+     },
+     "Flávio → Lula": {
+      "n": 1,
+      "eleitores_1t": 24146
+     },
+     "Lula → Lula": {
+      "n": 211,
+      "eleitores_1t": 4792187
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 216,
+      "eleitores_1t": 5178426
+     },
+     "caiu": {
+      "n": 1,
+      "eleitores_1t": 4689
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "MG": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 325,
+      "eleitores_1t": 9659258
+     },
+     "Flávio → Lula": {
+      "n": 76,
+      "eleitores_1t": 1838959
+     },
+     "Lula → Lula": {
+      "n": 452,
+      "eleitores_1t": 4874155
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 839,
+      "eleitores_1t": 16285871
+     },
+     "caiu": {
+      "n": 14,
+      "eleitores_1t": 86501
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "MS": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 69,
+      "eleitores_1t": 1873394
+     },
+     "Flávio → Lula": {
+      "n": 4,
+      "eleitores_1t": 93354
+     },
+     "Lula → Lula": {
+      "n": 6,
+      "eleitores_1t": 57682
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 79,
+      "eleitores_1t": 2024430
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "MT": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 131,
+      "eleitores_1t": 2531948
+     },
+     "Flávio → Lula": {
+      "n": 2,
+      "eleitores_1t": 12224
+     },
+     "Lula → Lula": {
+      "n": 9,
+      "eleitores_1t": 93629
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 142,
+      "eleitores_1t": 2637801
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "PA": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 48,
+      "eleitores_1t": 2055574
+     },
+     "Flávio → Lula": {
+      "n": 5,
+      "eleitores_1t": 430616
+     },
+     "Lula → Lula": {
+      "n": 91,
+      "eleitores_1t": 3776207
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 143,
+      "eleitores_1t": 6239438
+     },
+     "caiu": {
+      "n": 1,
+      "eleitores_1t": 22959
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "PB": {
+    "casas": {
+     "Lula → Lula": {
+      "n": 223,
+      "eleitores_1t": 3248531
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 222,
+      "eleitores_1t": 3244099
+     },
+     "caiu": {
+      "n": 1,
+      "eleitores_1t": 4432
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "PE": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 1,
+      "eleitores_1t": 66108
+     },
+     "Lula → Lula": {
+      "n": 184,
+      "eleitores_1t": 7157342
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 182,
+      "eleitores_1t": 7189907
+     },
+     "caiu": {
+      "n": 3,
+      "eleitores_1t": 33543
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "PI": {
+    "casas": {
+     "Lula → Lula": {
+      "n": 224,
+      "eleitores_1t": 2704758
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 203,
+      "eleitores_1t": 2598204
+     },
+     "caiu": {
+      "n": 21,
+      "eleitores_1t": 106554
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "PR": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 329,
+      "eleitores_1t": 8151272
+     },
+     "Flávio → Lula": {
+      "n": 20,
+      "eleitores_1t": 166085
+     },
+     "Flávio → empate": {
+      "n": 1,
+      "eleitores_1t": 3876
+     },
+     "Lula → Lula": {
+      "n": 49,
+      "eleitores_1t": 292424
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 396,
+      "eleitores_1t": 8603584
+     },
+     "caiu": {
+      "n": 3,
+      "eleitores_1t": 10073
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "RJ": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 74,
+      "eleitores_1t": 7125007
+     },
+     "Flávio → Lula": {
+      "n": 9,
+      "eleitores_1t": 5170030
+     },
+     "Lula → Lula": {
+      "n": 9,
+      "eleitores_1t": 562611
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 92,
+      "eleitores_1t": 12857648
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "RN": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 1,
+      "eleitores_1t": 147649
+     },
+     "Flávio → Lula": {
+      "n": 1,
+      "eleitores_1t": 2858
+     },
+     "Lula → Lula": {
+      "n": 165,
+      "eleitores_1t": 2509318
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 166,
+      "eleitores_1t": 2657063
+     },
+     "caiu": {
+      "n": 1,
+      "eleitores_1t": 2762
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "RO": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 52,
+      "eleitores_1t": 1265893
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 52,
+      "eleitores_1t": 1265893
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "RR": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 14,
+      "eleitores_1t": 392393
+     },
+     "Lula → Lula": {
+      "n": 1,
+      "eleitores_1t": 9128
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 15,
+      "eleitores_1t": 401521
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "RS": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 436,
+      "eleitores_1t": 5806631
+     },
+     "Flávio → Lula": {
+      "n": 19,
+      "eleitores_1t": 688293
+     },
+     "Lula → Lula": {
+      "n": 42,
+      "eleitores_1t": 2027621
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 491,
+      "eleitores_1t": 8504857
+     },
+     "caiu": {
+      "n": 6,
+      "eleitores_1t": 17688
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "SC": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 289,
+      "eleitores_1t": 5707454
+     },
+     "Flávio → Lula": {
+      "n": 1,
+      "eleitores_1t": 8737
+     },
+     "Lula → Lula": {
+      "n": 5,
+      "eleitores_1t": 18460
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 295,
+      "eleitores_1t": 5734651
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "SE": {
+    "casas": {
+     "Lula → Lula": {
+      "n": 75,
+      "eleitores_1t": 1740135
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 75,
+      "eleitores_1t": 1740135
+     },
+     "caiu": {
+      "n": 0,
+      "eleitores_1t": 0
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "SP": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 573,
+      "eleitores_1t": 20075263
+     },
+     "Flávio → Lula": {
+      "n": 32,
+      "eleitores_1t": 1713938
+     },
+     "Lula → Lula": {
+      "n": 39,
+      "eleitores_1t": 12332042
+     },
+     "empate → Lula": {
+      "n": 1,
+      "eleitores_1t": 1649
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 643,
+      "eleitores_1t": 34117707
+     },
+     "caiu": {
+      "n": 2,
+      "eleitores_1t": 5185
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   },
+   "TO": {
+    "casas": {
+     "Flávio → Flávio": {
+      "n": 43,
+      "eleitores_1t": 710079
+     },
+     "Flávio → Lula": {
+      "n": 11,
+      "eleitores_1t": 36961
+     },
+     "Lula → Lula": {
+      "n": 84,
+      "eleitores_1t": 433156
+     },
+     "empate → Lula": {
+      "n": 1,
+      "eleitores_1t": 1827
+     }
+    },
+    "fatia_lula": {
+     "subiu": {
+      "n": 137,
+      "eleitores_1t": 1177322
+     },
+     "caiu": {
+      "n": 2,
+      "eleitores_1t": 4701
+     },
+     "igual": {
+      "n": 0,
+      "eleitores_1t": 0
+     }
+    }
+   }
+  },
+  "com_exterior": {
+   "casas": {
+    "Flávio → Flávio": {
+     "n": 2746,
+     "eleitores_1t": 79220217
+    },
+    "Flávio → Lula": {
+     "n": 218,
+     "eleitores_1t": 10945401
+    },
+    "Flávio → empate": {
+     "n": 1,
+     "eleitores_1t": 3876
+    },
+    "Lula → Flávio": {
+     "n": 4,
+     "eleitores_1t": 4958
+    },
+    "Lula → Lula": {
+     "n": 2743,
+     "eleitores_1t": 68566961
+    },
+    "Lula → empate": {
+     "n": 1,
+     "eleitores_1t": 30
+    },
+    "empate → Flávio": {
+     "n": 1,
+     "eleitores_1t": 88
+    },
+    "empate → Lula": {
+     "n": 2,
+     "eleitores_1t": 3476
+    },
+    "empate → empate": {
+     "n": 41,
+     "eleitores_1t": 495
+    }
+   },
+   "fatia_lula": {
+    "subiu": {
+     "n": 5502,
+     "eleitores_1t": 157123675
+    },
+    "caiu": {
+     "n": 213,
+     "eleitores_1t": 1621302
+    },
+    "igual": {
+     "n": 0,
+     "eleitores_1t": 0
+    }
+   }
+  },
+  "exterior": {
+   "casas": {
+    "Flávio → Flávio": {
+     "n": 52,
+     "eleitores_1t": 291964
+    },
+    "Flávio → Lula": {
+     "n": 7,
+     "eleitores_1t": 46863
+    },
+    "Lula → Flávio": {
+     "n": 3,
+     "eleitores_1t": 1878
+    },
+    "Lula → Lula": {
+     "n": 81,
+     "eleitores_1t": 575216
+    },
+    "Lula → empate": {
+     "n": 1,
+     "eleitores_1t": 30
+    },
+    "empate → Flávio": {
+     "n": 1,
+     "eleitores_1t": 88
+    },
+    "empate → empate": {
+     "n": 41,
+     "eleitores_1t": 495
+    }
+   },
+   "fatia_lula": {
+    "subiu": {
+     "n": 91,
+     "eleitores_1t": 798179
+    },
+    "caiu": {
+     "n": 53,
+     "eleitores_1t": 117830
+    },
+    "igual": {
+     "n": 0,
+     "eleitores_1t": 0
+    }
+   }
+  },
+  "conf_vencedor_entre_todos": {
+   "Lula": 2663,
+   "Flávio": 2906,
+   "outro": 0,
+   "empate": 2
+  },
+  "conf_secoes": {
+   "casas": {
+    "Flávio → Flávio": {
+     "n": 244901,
+     "eleitores_1t": 78610099
+    },
+    "Flávio → Lula": {
+     "n": 31341,
+     "eleitores_1t": 10392039
+    },
+    "Flávio → empate": {
+     "n": 1980,
+     "eleitores_1t": 627094
+    },
+    "Lula → Flávio": {
+     "n": 555,
+     "eleitores_1t": 154468
+    },
+    "Lula → Lula": {
+     "n": 216837,
+     "eleitores_1t": 67336744
+    },
+    "Lula → empate": {
+     "n": 144,
+     "eleitores_1t": 38950
+    },
+    "empate → Flávio": {
+     "n": 183,
+     "eleitores_1t": 51039
+    },
+    "empate → Lula": {
+     "n": 1930,
+     "eleitores_1t": 611200
+    },
+    "empate → empate": {
+     "n": 26,
+     "eleitores_1t": 7335
+    }
+   },
+   "fatia_lula": {
+    "subiu": {
+     "n": 446739,
+     "eleitores_1t": 143140651
+    },
+    "caiu": {
+     "n": 50731,
+     "eleitores_1t": 14590286
+    },
+    "igual": {
+     "n": 427,
+     "eleitores_1t": 98031
+    }
+   }
+  }
+ },
+ "E3": {
+  "estados_2t_governador": [
+   "AC",
+   "AM",
+   "DF",
+   "ES",
+   "RN",
+   "TO"
+  ],
+  "desfechos": {
+   "var_abstencao_pp": {
+    "principal": {
+     "b_pp": 1.4233,
+     "p_permutacao": 0.07893,
+     "permutacoes": 296010
+    },
+    "sem_peso": {
+     "b_pp": 2.0934,
+     "p_permutacao": 0.04874,
+     "permutacoes": 296010
+    },
+    "sem_df": {
+     "b_pp": 1.6588,
+     "p_permutacao": 0.06932,
+     "permutacoes": 65780
+    },
+    "efeito_de_regiao": {
+     "b_pp": 0.0968,
+     "p_permutacao": 0.87793,
+     "permutacoes": 296010
+    },
+    "selvagem": {
+     "b_pp": 1.4233,
+     "erro_padrao": 0.8488,
+     "ic95_cr1": [
+      -0.3213,
+      3.1679
+     ],
+     "p_cr1": 0.10554,
+     "p_selvagem": 0.13041
+    },
+    "medias_pp": {
+     "com_2t": -0.54,
+     "sem_2t": -1.9633
+    },
+    "p_holm": 0.15786,
+    "achado": false,
+    "tamanho": "não pequena"
+   },
+   "var_fatia_lula_pp": {
+    "principal": {
+     "b_pp": -0.1983,
+     "p_permutacao": 0.73305,
+     "permutacoes": 296010
+    },
+    "sem_peso": {
+     "b_pp": -0.2076,
+     "p_permutacao": 0.62329,
+     "permutacoes": 296010
+    },
+    "sem_df": {
+     "b_pp": -0.2655,
+     "p_permutacao": 0.66344,
+     "permutacoes": 65780
+    },
+    "efeito_de_regiao": {
+     "b_pp": -0.0451,
+     "p_permutacao": 0.88706,
+     "permutacoes": 296010
+    },
+    "selvagem": {
+     "b_pp": -0.1983,
+     "erro_padrao": 0.242,
+     "ic95_cr1": [
+      -0.6958,
+      0.2992
+     ],
+     "p_cr1": 0.42005,
+     "p_selvagem": 0.46795
+    },
+    "medias_pp": {
+     "com_2t": 2.7999,
+     "sem_2t": 2.9982
+    },
+    "p_holm": 0.73305,
+    "achado": false,
+    "tamanho": "pequena"
+   }
+  },
+  "funil_acima_998": {
+   "total": 150,
+   "nos_6_estados": 43,
+   "esperado_pelo_numero_de_municipios": 12.63,
+   "municipios_nos_6": 469,
+   "por_uf": {
+    "AC": 18,
+    "AL": 6,
+    "AM": 20,
+    "AP": 16,
+    "GO": 2,
+    "MA": 23,
+    "MT": 4,
+    "PA": 31,
+    "PB": 1,
+    "PE": 1,
+    "PI": 7,
+    "PR": 1,
+    "RJ": 1,
+    "RN": 2,
+    "RR": 13,
+    "SP": 1,
+    "TO": 3
+   }
+  }
+ },
+ "E4": {
+  "principal": [
+   {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5571,
+    "secoes": 497810,
+    "b_por_10": -0.2987,
+    "ic95_por_10": [
+     -0.3883,
+     -0.1895
+    ],
+    "efeito_interquartil_pp": -0.2626
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Norte",
+    "n": 450,
+    "secoes": 43723,
+    "b_por_10": 0.1831,
+    "ic95_por_10": [
+     -0.0828,
+     0.2965
+    ],
+    "efeito_interquartil_pp": 0.1644
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Nordeste",
+    "n": 1794,
+    "secoes": 140806,
+    "b_por_10": -0.447,
+    "ic95_por_10": [
+     -0.5275,
+     -0.3587
+    ],
+    "efeito_interquartil_pp": -0.3907
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Centro-Oeste",
+    "n": 468,
+    "secoes": 38044,
+    "b_por_10": -0.4208,
+    "ic95_por_10": [
+     -0.6895,
+     -0.1118
+    ],
+    "efeito_interquartil_pp": -0.3775
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Sudeste",
+    "n": 1668,
+    "secoes": 203228,
+    "b_por_10": -0.3129,
+    "ic95_por_10": [
+     -0.4064,
+     -0.1175
+    ],
+    "efeito_interquartil_pp": -0.28
+   },
+   {
+    "nivel": "regiao",
+    "lugar": "Sul",
+    "n": 1191,
+    "secoes": 72009,
+    "b_por_10": -0.3007,
+    "ic95_por_10": [
+     -0.3834,
+     -0.229
+    ],
+    "efeito_interquartil_pp": -0.2484
+   },
+   {
+    "nivel": "uf",
+    "lugar": "AL",
+    "n": 102,
+    "secoes": 7101,
+    "b_por_10": -0.6418,
+    "ic95_por_10": [
+     -0.9107,
+     -0.4296
+    ],
+    "efeito_interquartil_pp": -0.4339
+   },
+   {
+    "nivel": "uf",
+    "lugar": "AM",
+    "n": 62,
+    "secoes": 8138,
+    "b_por_10": 0.2579,
+    "ic95_por_10": [
+     -0.0836,
+     0.4902
+    ],
+    "efeito_interquartil_pp": 0.212
+   },
+   {
+    "nivel": "uf",
+    "lugar": "BA",
+    "n": 417,
+    "secoes": 35470,
+    "b_por_10": -0.5341,
+    "ic95_por_10": [
+     -0.6558,
+     -0.3926
+    ],
+    "efeito_interquartil_pp": -0.5235
+   },
+   {
+    "nivel": "uf",
+    "lugar": "CE",
+    "n": 184,
+    "secoes": 23763,
+    "b_por_10": -0.3331,
+    "ic95_por_10": [
+     -0.414,
+     -0.2461
+    ],
+    "efeito_interquartil_pp": -0.3041
+   },
+   {
+    "nivel": "uf",
+    "lugar": "ES",
+    "n": 78,
+    "secoes": 9843,
+    "b_por_10": -0.2321,
+    "ic95_por_10": [
+     -0.3082,
+     -0.138
+    ],
+    "efeito_interquartil_pp": -0.2153
+   },
+   {
+    "nivel": "uf",
+    "lugar": "GO",
+    "n": 246,
+    "secoes": 15686,
+    "b_por_10": -0.3791,
+    "ic95_por_10": [
+     -0.5017,
+     -0.2809
+    ],
+    "efeito_interquartil_pp": -0.3281
+   },
+   {
+    "nivel": "uf",
+    "lugar": "MA",
+    "n": 217,
+    "secoes": 18081,
+    "b_por_10": -0.289,
+    "ic95_por_10": [
+     -0.4563,
+     -0.1463
+    ],
+    "efeito_interquartil_pp": -0.3522
+   },
+   {
+    "nivel": "uf",
+    "lugar": "MG",
+    "n": 853,
+    "secoes": 52056,
+    "b_por_10": -0.325,
+    "ic95_por_10": [
+     -0.3747,
+     -0.2804
+    ],
+    "efeito_interquartil_pp": -0.2756
+   },
+   {
+    "nivel": "uf",
+    "lugar": "MS",
+    "n": 79,
+    "secoes": 7105,
+    "b_por_10": -0.801,
+    "ic95_por_10": [
+     -1.0316,
+     -0.5235
+    ],
+    "efeito_interquartil_pp": -0.8753
+   },
+   {
+    "nivel": "uf",
+    "lugar": "MT",
+    "n": 142,
+    "secoes": 8284,
+    "b_por_10": -0.3254,
+    "ic95_por_10": [
+     -0.4238,
+     -0.232
+    ],
+    "efeito_interquartil_pp": -0.3002
+   },
+   {
+    "nivel": "uf",
+    "lugar": "PA",
+    "n": 144,
+    "secoes": 20812,
+    "b_por_10": 0.2541,
+    "ic95_por_10": [
+     0.0905,
+     0.4372
+    ],
+    "efeito_interquartil_pp": 0.2624
+   },
+   {
+    "nivel": "uf",
+    "lugar": "PB",
+    "n": 223,
+    "secoes": 10712,
+    "b_por_10": -0.5939,
+    "ic95_por_10": [
+     -0.9013,
+     -0.4329
+    ],
+    "efeito_interquartil_pp": -0.4087
+   },
+   {
+    "nivel": "uf",
+    "lugar": "PE",
+    "n": 185,
+    "secoes": 21418,
+    "b_por_10": -0.4456,
+    "ic95_por_10": [
+     -0.5906,
+     -0.3386
+    ],
+    "efeito_interquartil_pp": -0.3295
+   },
+   {
+    "nivel": "uf",
+    "lugar": "PI",
+    "n": 224,
+    "secoes": 10223,
+    "b_por_10": -0.5879,
+    "ic95_por_10": [
+     -0.8351,
+     -0.4652
+    ],
+    "efeito_interquartil_pp": -0.5726
+   },
+   {
+    "nivel": "uf",
+    "lugar": "PR",
+    "n": 399,
+    "secoes": 27140,
+    "b_por_10": -0.3834,
+    "ic95_por_10": [
+     -0.4722,
+     -0.3062
+    ],
+    "efeito_interquartil_pp": -0.3211
+   },
+   {
+    "nivel": "uf",
+    "lugar": "RJ",
+    "n": 92,
+    "secoes": 37675,
+    "b_por_10": -0.0925,
+    "ic95_por_10": [
+     -0.2732,
+     -0.0494
+    ],
+    "efeito_interquartil_pp": -0.0908
+   },
+   {
+    "nivel": "uf",
+    "lugar": "RN",
+    "n": 167,
+    "secoes": 8115,
+    "b_por_10": -0.3864,
+    "ic95_por_10": [
+     -0.5038,
+     -0.2631
+    ],
+    "efeito_interquartil_pp": -0.2705
+   },
+   {
+    "nivel": "uf",
+    "lugar": "RO",
+    "n": 52,
+    "secoes": 4697,
+    "b_por_10": 0.011,
+    "ic95_por_10": [
+     -0.1796,
+     0.1387
+    ],
+    "efeito_interquartil_pp": 0.0075
+   },
+   {
+    "nivel": "uf",
+    "lugar": "RS",
+    "n": 497,
+    "secoes": 27543,
+    "b_por_10": -0.229,
+    "ic95_por_10": [
+     -0.2635,
+     -0.1887
+    ],
+    "efeito_interquartil_pp": -0.2084
+   },
+   {
+    "nivel": "uf",
+    "lugar": "SC",
+    "n": 295,
+    "secoes": 17326,
+    "b_por_10": -0.2976,
+    "ic95_por_10": [
+     -0.3767,
+     -0.2265
+    ],
+    "efeito_interquartil_pp": -0.2082
+   },
+   {
+    "nivel": "uf",
+    "lugar": "SE",
+    "n": 75,
+    "secoes": 5923,
+    "b_por_10": -0.4335,
+    "ic95_por_10": [
+     -0.6047,
+     -0.2934
+    ],
+    "efeito_interquartil_pp": -0.3576
+   },
+   {
+    "nivel": "uf",
+    "lugar": "SP",
+    "n": 645,
+    "secoes": 103654,
+    "b_por_10": -0.4195,
+    "ic95_por_10": [
+     -0.4557,
+     -0.3413
+    ],
+    "efeito_interquartil_pp": -0.3707
+   },
+   {
+    "nivel": "uf",
+    "lugar": "TO",
+    "n": 139,
+    "secoes": 4379,
+    "b_por_10": -0.2052,
+    "ic95_por_10": [
+     -0.3845,
+     -0.0647
+    ],
+    "efeito_interquartil_pp": -0.2056
+   }
+  ],
+  "conferencias": {
+   "sem_peso": {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5571,
+    "secoes": 497810,
+    "b_por_10": -0.2487,
+    "ic95_por_10": [
+     -0.3389,
+     -0.1182
+    ],
+    "efeito_interquartil_pp": -0.2237
+   },
+   "sem_agregadas": {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5569,
+    "secoes": 482889,
+    "b_por_10": -0.3025,
+    "ic95_por_10": [
+     -0.3952,
+     -0.1888
+    ],
+    "efeito_interquartil_pp": -0.2638
+   },
+   "sem_aptos_que_mudam": {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5571,
+    "secoes": 497013,
+    "b_por_10": -0.3003,
+    "ic95_por_10": [
+     -0.3928,
+     -0.1678
+    ],
+    "efeito_interquartil_pp": -0.2639
+   },
+   "fatia_entre_validos": {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5571,
+    "secoes": 497810,
+    "b_por_10": -0.3329,
+    "ic95_por_10": [
+     -0.4265,
+     -0.198
+    ],
+    "efeito_interquartil_pp": -0.2801
+   },
+   "erro_agrupado_por_estado": {
+    "b_por_10": -0.2987,
+    "ic95_por_10": [
+     -0.4129,
+     -0.1845
+    ]
+   }
+  },
+  "contexto_sem_efeito_de_municipio": {
+   "nivel": "brasil",
+   "lugar": "Brasil",
+   "n": 5571,
+   "secoes": 497810,
+   "b_por_10": -0.0256,
+   "ic95_por_10": [
+    -0.2516,
+    0.2102
+   ],
+   "efeito_interquartil_pp": -0.0648
+  },
+  "achado": true,
+  "tamanho": "pequena"
+ },
+ "E5": {
+  "principal": {
+   "nivel": "brasil",
+   "lugar": "Brasil",
+   "n": 5571,
+   "secoes": 497897,
+   "b_por_10": 1.137,
+   "ic95_por_10": [
+    0.9121,
+    1.3539
+   ],
+   "efeito_interquartil_pp": 0.9997
+  },
+  "correcao_por_10": 1.7442,
+  "conferencias": {
+   "bruta": {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5571,
+    "secoes": 497897,
+    "b_por_10": -0.6072,
+    "ic95_por_10": [
+     -0.7007,
+     -0.5177
+    ],
+    "efeito_interquartil_pp": -0.534
+   },
+   "divisao_igual": {
+    "esperada_por_10": -0.9475,
+    "observada_bruta_por_10": -0.6072,
+    "diferenca_por_10": 0.3402,
+    "diferenca_ic95_por_10": [
+     0.1257,
+     0.5162
+    ],
+    "captura": 0.736671
+   },
+   "pelo_menos_200_votos": {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5438,
+    "secoes": 357100,
+    "b_por_10": 1.181,
+    "ic95_por_10": [
+     0.9421,
+     1.4178
+    ],
+    "efeito_interquartil_pp": 0.9862
+   },
+   "sem_peso": {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5571,
+    "secoes": 497897,
+    "b_por_10": 1.0978,
+    "ic95_por_10": [
+     0.8695,
+     1.2998
+    ],
+    "efeito_interquartil_pp": 0.9877
+   },
+   "sem_agregadas": {
+    "nivel": "brasil",
+    "lugar": "Brasil",
+    "n": 5569,
+    "secoes": 482971,
+    "b_por_10": 1.1723,
+    "ic95_por_10": [
+     0.9408,
+     1.3756
+    ],
+    "efeito_interquartil_pp": 1.0225
+   }
+  },
+  "achado": true,
+  "h1_municipios_por_10": -0.5147,
+  "fracao_da_correcao_que_zera": 0.348,
+  "secoes": 497897
+ }
+}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Cartão da prévia</title>
+<!-- Molde das imagens das prévias de link (T25; especificação 7.5): 1200 × 627, no caderno de
+     apuração, sempre no modo claro. ?c=0 é a capa (conceito 3, pergunta, sobre a ponte da virada;
+     P01 e D36); ?c=1 a ?c=8, o cartão de cada capítulo. Fotografado por scripts/previas.py com o
+     Chrome sem janela, uma vez por língua (T30). Os números vêm de site-analise/dados.js, arredondados
+     uma vez (diário, D25) e escritos no formato da língua; os textos vêm da própria página e do
+     catálogo de textos da língua (textos.js, gravado pelo script). -->
+<style>
+@font-face{font-family:"Alegreya";font-weight:400 900;src:url(../../site-analise/fontes/alegreya.woff2) format("woff2")}
+@font-face{font-family:"Alegreya";font-style:italic;font-weight:400 900;src:url(../../site-analise/fontes/alegreya-italico.woff2) format("woff2")}
+@font-face{font-family:"Alegreya Sans";font-weight:400;src:url(../../site-analise/fontes/alegreya-sans-400.woff2) format("woff2")}
+@font-face{font-family:"Alegreya Sans";font-weight:500;src:url(../../site-analise/fontes/alegreya-sans-500.woff2) format("woff2")}
+@font-face{font-family:"Alegreya Sans";font-weight:700;src:url(../../site-analise/fontes/alegreya-sans-700.woff2) format("woff2")}
+:root{--lula:#c62f2a;--flavio:#1f5fae;--bg:#f5f1e8;--ink:#1d1a16;--ink-2:#3f3a32;--muted:#6a6155;--line:#ddd3c1;--line-forte:#b3a58c;
+  --f-texto:"Alegreya",Georgia,serif;--f-ui:"Alegreya Sans","Segoe UI",sans-serif}
+*{box-sizing:border-box;margin:0}
+html,body{width:1200px;height:627px;overflow:hidden;background:var(--bg);color:var(--ink)}
+body{font-family:var(--f-texto);font-variant-numeric:lining-nums proportional-nums}
+.cartao{position:relative;width:1200px;height:627px;padding:34px 64px 0;display:flex;flex-direction:column}
+.topo{display:flex;align-items:baseline;justify-content:space-between;padding-bottom:12px;border-bottom:4px double var(--ink)}
+.nome{font:italic 600 34px/1 var(--f-texto)}
+.lado{font:400 24px/1 var(--f-texto);color:var(--ink-2)}
+.pergunta{font:700 72px/1.02 var(--f-texto);letter-spacing:-.01em;margin-top:26px;text-wrap:balance}
+.grafico{margin-top:18px;flex:1;min-height:0}
+.pe{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--ink);padding:10px 0 22px;
+  font:500 21px/1 var(--f-ui);color:var(--ink-2)}
+.pe b{font-weight:700;color:var(--ink)}
+svg text{font-family:var(--f-ui)}
+.nome-linha{fill:var(--ink-2);font-size:22px;font-weight:500}
+.val{fill:var(--ink);font-size:22px;font-weight:500}
+.forte{fill:var(--ink);font-weight:700}
+.barra-l{fill:var(--lula)}.barra-f{fill:var(--flavio)}.passo{fill-opacity:.75}
+.conector{stroke:var(--ink-2);stroke-width:1.5;stroke-dasharray:3 3}
+.zero{stroke:var(--ink);stroke-width:1.5}
+/* Cartão de capítulo: o número do capítulo à esquerda, a pergunta e a resposta à direita */
+.cap{display:grid;grid-template-columns:190px 1fr;gap:0 40px;align-items:center;flex:1;min-height:0;padding:18px 0}
+.cap-n{font:900 280px/.78 var(--f-texto);color:var(--ink);text-align:right}
+.cap-pergunta{font:700 68px/1.03 var(--f-texto);letter-spacing:-.01em;text-wrap:balance}
+.cap-resposta{font:400 34px/1.28 var(--f-texto);color:var(--ink-2);margin-top:22px;text-wrap:pretty}
+.cap-resposta b{font-weight:700;color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="cartao" id="cartao"></div>
+<script src="../../site-analise/dados.js"></script>
+<script src="textos.js"></script>
+<script>
+(function () {
+  'use strict';
+  const D = window.ESTUDO, T = window.TEXTOS, R = T.rotulos, BR = D.brasil;
+  document.documentElement.lang = T.lingua;
+  const c = +(new URLSearchParams(location.search).get('c') || 0);
+  const NS = 'http://www.w3.org/2000/svg';
+  const nf = (v, k) => Math.abs(v).toLocaleString(T.lingua, { minimumFractionDigits: k, maximumFractionDigits: k });
+  const mi = v => R.mi.replace('{n}', (v < 0 ? '−' : '+') + nf(v / 1e6, 2));
+  const raiz = document.getElementById('cartao');
+  function el(tag, cls, texto, pai) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (texto !== undefined) e.textContent = texto;
+    if (pai) pai.appendChild(e);
+    return e;
+  }
+  function s(nome, attrs, pai, texto) {
+    const e = document.createElementNS(NS, nome);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (texto !== undefined) e.textContent = texto;
+    pai.appendChild(e);
+    return e;
+  }
+  const topo = el('div', 'topo', undefined, raiz);
+  el('span', 'nome', R.nome, topo);
+  el('span', 'lado', c ? R.capitulo_de.replace('{n}', c) : R.eleicao, topo);
+
+  if (!c) {
+    // A capa: a pergunta do estudo sobre a ponte da virada, a mesma figura do capítulo 6 (por região)
+    el('h1', 'pergunta', T.capa.pergunta, raiz);
+    const caixa = el('div', 'grafico', undefined, raiz);
+    const pe = el('div', 'pe', undefined, raiz); // antes do gráfico medir a altura que sobra
+    el('span', '', R.ponte, pe);
+    el('span', '', T.endereco, pe);
+    const regs = D.regioes.slice().sort((a, b) => b.dM - a.dM);
+    const linhas = [{ nome: R.turno1, ini: 0, fim: BR.M1, total: true }];
+    let acum = BR.M1;
+    for (const r of regs) { linhas.push({ nome: R.regioes[r.codigo] || r.nome, ini: acum, fim: acum + r.dM }); acum += r.dM; }
+    linhas.push({ nome: R.turno2, ini: 0, fim: BR.M2, total: true });
+    const larg = 1072, alt = caixa.clientHeight - 6, margE = 168, margD = 120;
+    const lh = alt / linhas.length, bh = Math.min(24, lh * 0.66);
+    const svg = s('svg', { width: larg, height: alt, viewBox: `0 0 ${larg} ${alt}` }, caixa);
+    const vmin = Math.min(0, ...linhas.map(l => Math.min(l.ini, l.fim))), vmax = Math.max(0, ...linhas.map(l => Math.max(l.ini, l.fim)));
+    const x = v => margE + (v - vmin) / (vmax - vmin) * (larg - margE - margD);
+    s('line', { x1: x(0), x2: x(0), y1: 0, y2: alt, class: 'zero' }, svg);
+    linhas.forEach((l, i) => {
+      const y = i * lh + (lh - bh) / 2, a = Math.min(l.ini, l.fim), b = Math.max(l.ini, l.fim);
+      const cls = (l.total ? (l.fim >= 0 ? 'barra-l' : 'barra-f') : (l.fim - l.ini >= 0 ? 'barra-l' : 'barra-f') + ' passo');
+      s('rect', { x: x(a), y, width: Math.max(2, x(b) - x(a)), height: bh, rx: 2, class: cls }, svg);
+      if (i < linhas.length - 1) s('line', { x1: x(l.fim), x2: x(l.fim), y1: y + bh, y2: (i + 1) * lh + (lh - bh) / 2, class: 'conector' }, svg);
+      s('text', { x: margE - 14, y: y + bh / 2 + 8, 'text-anchor': 'end', class: 'nome-linha' + (l.total ? ' forte' : '') }, svg, l.nome);
+      s('text', { x: x(b) + 10, y: y + bh / 2 + 8, class: 'val' + (l.total ? ' forte' : '') }, svg, l.total ? mi(l.fim) : mi(l.fim - l.ini));
+    });
+  } else {
+    const t = T.capitulos[c - 1];
+    const g = el('div', 'cap', undefined, raiz);
+    el('div', 'cap-n', String(c), g);
+    const dir = el('div', '', undefined, g);
+    const h = el('h1', 'cap-pergunta', t.pergunta, dir);
+    const r = el('p', 'cap-resposta', t.cartao, dir);
+    const pe = el('div', 'pe', undefined, raiz);
+    el('span', '', t.fonte, pe);
+    el('span', '', T.endereco + '/c/' + c, pe);
+    // a pergunta e a resposta diminuem juntas até caber, sem passar de um mínimo legível
+    for (let k = 1; dir.scrollHeight > g.clientHeight - 36 && k > 0.7; k -= 0.04) {
+      h.style.fontSize = Math.round(68 * k) + 'px'; r.style.fontSize = Math.round(34 * k) + 'px';
+    }
+  }
+  document.title = 'pronto';
+})();
+</script>
+</body>
+</html>

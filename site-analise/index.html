@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!-- Os textos desta página vêm do catálogo da língua (textos/pt-BR.js, T30): data-t troca o texto do
+     elemento, data-t-html o texto com marcação e data-t-<atributo> o atributo. scripts/linguas.py
+     grava aqui o texto do catálogo e, a partir deste arquivo, a página de cada língua (en/index.html…).
+     Mudar o texto no catálogo, não aqui, e rodar python -I scripts/linguas.py (ou previas.py). -->
+<title data-t="pag.titulo">Lula cresceu nos 27 estados e virou a diferença do 1º turno · Análise da virada</title>
+<meta name="description" data-t-content="pag.descricao" content="Onde e quanto o voto mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município, com as hipóteses testadas, as fontes e os dados para baixar.">
+<!-- prévias de link: gravado por scripts/previas.py (T25); texto provisório até o T11 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Análise da virada">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Lula cresceu nos 27 estados e virou a diferença do 1º turno">
+<meta property="og:description" content="Na eleição presidencial de 2026, o Lula terminou o 1º turno 2,22 milhões de votos atrás do Flávio e o 2º, 4,43 milhões à frente: a diferença entre os dois mudou 6,66 milhões de votos.">
+<meta property="og:url" content="https://analise-da-virada.pages.dev/">
+<meta property="og:image" content="https://analise-da-virada.pages.dev/img/previa/capa.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Onde o Lula cresceu do 1º para o 2º turno? Ponte da virada: a diferença entre Lula e Flávio passa de −2,22 mi no 1º turno para +4,43 mi no 2º, somando a mudança de cada região.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- fim das prévias de link -->
+<!-- línguas: gravado por scripts/linguas.py (T30) -->
+<link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/">
+<link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/">
+<link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/">
+<script>
+/* A língua escolhida no botão fica guardada, como o tema: a raiz leva à versão dela, no mesmo trecho. */
+(function(){
+  var p = {"pt-BR": "", "en": "en/"}, l;
+  try { l = localStorage.getItem('analise-lingua'); } catch (_) {}
+  if (l && l !== 'pt-BR' && p.hasOwnProperty(l)) location.replace('' + p[l] + location.hash);
+})();
+</script>
+<!-- fim das línguas -->
+<script>
+/* Modo claro ou escuro antes de desenhar, para não piscar: segue o aparelho, ou a escolha lembrada. */
+(function(){
+  var t; try { t = localStorage.getItem('analise-tema'); } catch (_) {}
+  if (t === 'claro' || t === 'escuro') document.documentElement.setAttribute('data-tema', t);
+})();
+</script>
+<link rel="preload" href="fontes/alegreya.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fontes/alegreya-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estudo.css">
+</head>
+<body>
+<a class="pular" href="#conteudo" data-t="pag.pular">Pular para o conteúdo</a>
+
+<header class="cab">
+  <div class="cab-in">
+    <a class="nome" href="#resumo" data-t="pag.nome">Análise da virada</a>
+    <nav class="nav" data-t-aria-label="nav.aria" aria-label="Seções do estudo">
+      <a href="#resumo" data-secao="resumo" data-t="nav.resumo">Resumo</a>
+      <a href="#analise/1" data-secao="capitulos" data-t="nav.capitulos">Capítulos</a>
+      <a href="#explorar" data-secao="explorar" data-t="nav.explorar">Explorar</a>
+      <a href="#apuracao" data-secao="apuracao" data-t="nav.apuracao">Apuração ao vivo</a>
+      <a href="#metodo" data-secao="metodo" data-t="nav.metodo">Método e fontes</a>
+    </nav>
+    <button class="bt-escrever" type="button" data-abrir-contato aria-haspopup="dialog"><span class="e-longo" data-t="rod.escrever">Escrever ao autor</span><span class="e-curto" data-t="rod.contato_curto">Contato</span></button>
+    <!-- botão de língua: gravado por scripts/linguas.py (T30) -->
+    <details class="linguas">
+      <summary><span class="sr">Língua: </span><span class="ling-nome" lang="pt-BR">Português</span><span class="ling-curto" lang="pt-BR">pt</span></summary>
+      <ul aria-label="Línguas do estudo">
+        <li><a href="./" lang="pt-BR" hreflang="pt-BR" data-lingua="pt-BR" aria-current="true">Português</a></li>
+        <li><a href="en/" lang="en" hreflang="en" data-lingua="en">English</a></li>
+      </ul>
+    </details>
+    <!-- fim do botão de língua -->
+    <button class="bt-tema" type="button" data-t="cab.modo_escuro">Modo escuro</button>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+<noscript><p data-t="pag.noscript">Esta página precisa de JavaScript para desenhar os gráficos.</p></noscript>
+
+<!-- ======================= A leitura: Resumo, os 9 capítulos e o fim, numa rolagem só (D34) ======================= -->
+<div class="vista leitura" data-vista="leitura">
+  <nav class="indice" id="indice" data-t-aria-label="ind.aria" aria-label="Capítulos do estudo">
+    <ol id="lista-indice"></ol>
+    <p class="indice-atual" id="indice-atual" aria-hidden="true"></p>
+  </nav>
+
+  <div class="leitura-corpo">
+  <section id="resumo" aria-labelledby="t-resumo" tabindex="-1">
+    <h1 class="manchete" id="t-resumo" data-t="pag.manchete">Lula cresceu nos 27 estados e virou a diferença do 1º turno</h1>
+    <p class="linha-fina" id="linha-fina"></p>
+
+    <div class="abertura">
+      <figure class="fig-abertura" data-t-aria-label="res.fig_aria" aria-label="Diferença de votos entre Lula e Flávio no 1º e no 2º turno">
+        <div id="grafico-virada"></div>
+        <figcaption class="fig-rodape"><span data-t="res.fig_rodape">Diferença de votos entre os dois em cada turno, em milhões: abaixo da linha do empate, o Flávio à frente; acima, o Lula. Os votos de cada um estão nos totais de partida. Fonte: TSE, resultados do 1º e do 2º turno.</span></figcaption>
+      </figure>
+      <aside class="fita" id="fita" data-t-aria-label="res.fita_aria" aria-label="Totais de partida, como na contagem impressa"></aside>
+    </div>
+
+    <section class="achados" aria-labelledby="t-achados">
+      <h2 id="t-achados" data-t="res.achados_tit">O que os dados mostram</h2>
+      <ul id="lista-achados"></ul>
+    </section>
+    <p class="res-sobre" data-t-html="res.sobre.html">Estudo independente, sem tomar partido, feito para trazer dados a uma discussão de opiniões. Pode ter erros: <a href="#metodo/sobre">veja por que ele existe e como ajudar</a>.</p>
+    <p class="pdf-baixar" data-pdf-baixar></p>
+
+    <!-- Lugar de uma citação de leitor em destaque (T23): só aparece quando houver comentário real
+         liberado e escolhido pelo autor. Nada de citação de exemplo (diário, D31). -->
+
+    <section class="cidade" data-t-aria-label="res.cidade_aria" aria-label="Como foi na sua cidade">
+      <div class="pergunta">
+        <label for="busca-cidade" data-t="res.cidade">E na sua cidade?</label>
+        <div class="busca">
+          <input class="campo" id="busca-cidade" type="search" data-t-placeholder="res.cidade_placeholder" placeholder="o nome do município" autocomplete="off" spellcheck="false"
+            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="busca-lista">
+          <ul id="busca-lista" role="listbox" data-t-aria-label="busca.aria" aria-label="Municípios encontrados" hidden></ul>
+        </div>
+      </div>
+      <div id="ficha-cidade" aria-live="polite"></div>
+    </section>
+  </section>
+
+  <div id="capitulos"></div>
+
+  <!-- Fim do estudo: o único lugar para comentar (diário, D31), bloqueado até o T16 -->
+  <section class="leitores" id="comentarios" aria-labelledby="t-comentarios" tabindex="-1">
+    <h2 id="t-comentarios" data-t="com.tit">Comentários</h2>
+    <!-- "O que os leitores disseram" e a nuvem de palavras (T23) entram aqui só quando houver comentários
+         reais liberados. Nada de comentário de exemplo (diário, D31). -->
+    <form class="comentario" data-comentario>
+      <label for="comentario-fim" data-t="com.pergunta">O que você achou do estudo?</label>
+      <textarea id="comentario-fim" rows="1" data-t-placeholder="com.placeholder" placeholder="os comentários ainda não estão abertos" disabled></textarea>
+      <p class="chamada-hip" data-t-html="com.chamada.html"><b>Alguma hipótese que você gostaria de ver estudada e não está aqui?</b> Escreva também: ela pode entrar na próxima versão, registrada antes das contas, como as deste estudo.</p>
+      <p class="comentario-pe"><button class="bt-enviar" type="submit" disabled data-t="com.enviar">Enviar</button> <span class="aviso-it" data-t="com.aviso">(os comentários ainda não estão abertos; até lá, escreva pela caixa “Escrever ao autor”)</span></p>
+    </form>
+  </section>
+
+  <section class="notas" id="notas" aria-labelledby="t-notas" tabindex="-1">
+    <h2 id="t-notas" data-t="notas.tit">Notas</h2>
+    <!-- recolhidas: o sobrescrito no texto abre a caixa e leva à nota (estudo.js, navegar) -->
+    <details class="detalhes notas-det">
+      <summary><span class="det-rot" data-t="notas.ver">Ver as notas</span><span class="det-o-que" data-t="notas.o_que">como cada número do texto foi calculado, com a fonte e os dados para baixar</span></summary>
+      <ol id="lista-notas"></ol>
+    </details>
+  </section>
+  </div>
+</div>
+
+<!-- ======================= Explorar: consulta, fora da leitura corrida (T24; montado em explorar.js) ======================= -->
+<section class="vista explorar" data-vista="explorar" id="explorar" aria-labelledby="t-explorar" tabindex="-1" hidden>
+  <div class="com-indice">
+  <!-- índice das partes, como o dos capítulos (revisão do autor, D39; montado em estudo.js) -->
+  <nav class="indice indice-partes" data-t-aria-label="exp.indice_aria" aria-label="Partes do Explorar"><ol id="exp-lista-indice"></ol></nav>
+  <div class="consulta com-indice-corpo">
+  <h1 class="consulta-tit" id="t-explorar" data-t="nav.explorar">Explorar</h1>
+  <p class="linha-fina" data-t="exp.linha_fina">Os mesmos números dos capítulos, para consultar lugar por lugar: como cada região e cada estado somaram a virada, os estados no mapa e na tabela, os municípios com recortes e busca, e as estimativas com o intervalo de cada uma.</p>
+  <section class="exp-parte" id="explorar-ponte" aria-labelledby="t-exp-ponte" tabindex="-1">
+    <h2 id="t-exp-ponte" data-t="exp.ponte.tit">Ponte da virada</h2>
+    <p class="exp-intro" id="exp-ponte-intro"></p>
+    <div id="exp-ponte"></div>
+  </section>
+  <section class="exp-parte" id="explorar-estados" aria-labelledby="t-exp-estados" tabindex="-1">
+    <h2 id="t-exp-estados" data-t="exp.estados.tit">Estados</h2>
+    <p class="exp-intro" data-t="exp.estados.intro">O mapa, a ficha e a tabela andam juntos: o estado que você aponta num aparece nos outros.</p>
+    <div id="exp-estados"></div>
+  </section>
+  <section class="exp-parte" id="explorar-municipios" aria-labelledby="t-exp-municipios" tabindex="-1">
+    <h2 id="t-exp-municipios" data-t="exp.municipios.tit">Municípios</h2>
+    <p class="exp-intro" data-t="exp.municipios.intro">O recorte vale para os rankings, as dispersões e o funil; a busca procura em todos os municípios.</p>
+    <div id="exp-municipios"></div>
+  </section>
+  <section class="exp-parte" id="explorar-incerteza" aria-labelledby="t-exp-incerteza" tabindex="-1">
+    <h2 id="t-exp-incerteza" data-t="exp.incerteza.tit">Hipótese e incerteza</h2>
+    <p class="exp-intro" data-t="exp.incerteza.intro">As estimativas do estudo com o intervalo de 95% de cada uma, e o que não deu para estimar com segurança, com o motivo.</p>
+    <div id="exp-incerteza"></div>
+  </section>
+  </div>
+  </div>
+</section>
+
+<!-- ======================= Apuração ao vivo: o registro da apuração do 2º turno, ligado ao capítulo 7 (T28; montado em apuracao.js) ======================= -->
+<section class="vista apuracao" data-vista="apuracao" id="apuracao" aria-labelledby="t-apuracao" tabindex="-1" hidden>
+  <div class="com-indice">
+  <!-- índice das partes, como o dos capítulos: na margem no computador, numa barra presa no topo no celular (revisão do autor, D39) -->
+  <nav class="indice indice-partes" data-t-aria-label="av.indice_aria" aria-label="Partes da Apuração ao vivo"><ol id="av-lista-indice"></ol></nav>
+  <div class="consulta com-indice-corpo">
+  <h1 class="consulta-tit" id="t-apuracao" data-t="nav.apuracao">Apuração ao vivo</h1>
+  <p class="linha-fina" id="av-linha-fina"></p>
+  <div id="av-corpo"></div>
+  <section class="av-parte" id="apuracao-fim" aria-labelledby="t-av-fim" tabindex="-1">
+    <h2 id="t-av-fim" data-t="av.fim.tit">Ao fim da apuração</h2>
+  </section>
+  <section class="av-parte" id="apuracao-como" aria-labelledby="t-av-como" tabindex="-1">
+    <h2 id="t-av-como" data-t="av.como.tit">Como a página funcionava</h2>
+  </section>
+  </div>
+  </div>
+</section>
+
+<!-- ======================= Método e fontes: consulta, fora da leitura corrida ======================= -->
+<!-- T12: as partes são montadas por metodo.js a partir dos dados e do catálogo; o glossário vem de
+     glossario.js, e os dados para baixar e "Sobre este estudo", de extras.js (T25) -->
+<section class="vista metodo" data-vista="metodo" id="metodo" aria-labelledby="t-metodo" tabindex="-1" hidden>
+  <div class="com-indice">
+  <nav class="indice indice-partes" data-t-aria-label="met.indice_aria" aria-label="Partes de Método e fontes"><ol id="met-lista-indice"></ol></nav>
+  <div class="consulta com-indice-corpo">
+  <h1 class="consulta-tit" id="t-metodo" data-t="nav.metodo">Método e fontes</h1>
+  <p class="linha-fina" data-t="met.linha_fina">Como o estudo foi feito, de onde vêm os dados e o que eles não permitem dizer. Aqui também estão as notas sobre cada dado, o glossário e os arquivos para refazer as contas.</p>
+  <section class="met-parte" id="passo" aria-labelledby="t-met-passo" tabindex="-1"><h2 id="t-met-passo" data-t="met.passo.tit">Passo a passo do cálculo</h2><div id="met-passo"></div></section>
+  <section class="met-parte" id="fontes" aria-labelledby="t-met-fontes" tabindex="-1"><h2 id="t-met-fontes" data-t="met.fontes.tit">Fontes</h2><div id="met-fontes"></div></section>
+  <section class="met-parte" id="partidos" aria-labelledby="t-met-partidos" tabindex="-1"><h2 id="t-met-partidos" data-t="met.partidos.tit">Classificação dos partidos</h2><div id="met-partidos"></div></section>
+  <section class="met-parte" id="incerteza" aria-labelledby="t-met-inc" tabindex="-1"><h2 id="t-met-inc" data-t="met.inc.tit">Hipóteses e incerteza</h2><div id="met-incerteza"></div></section>
+  <section class="met-parte" id="limites" aria-labelledby="t-met-limites" tabindex="-1"><h2 id="t-met-limites" data-t="met.limites.tit">Limites do estudo</h2><div id="met-limites"></div></section>
+  <section class="met-parte" id="notas-dados" aria-labelledby="t-met-notas" tabindex="-1"><h2 id="t-met-notas" data-t="met.notas.tit">Notas sobre os dados</h2><div id="met-notas-intro"></div>
+    <ol class="notas-dados" id="lista-notas-dados"></ol></section>
+  <section class="met-parte" id="nao-deu" aria-labelledby="t-met-nao-deu" tabindex="-1"><h2 id="t-met-nao-deu" data-t="met.nao_deu.tit">Estimativas que não deram</h2><div id="met-nao-deu"></div></section>
+  <section class="met-parte" id="glossario" aria-labelledby="t-met-glossario" tabindex="-1"><h2 id="t-met-glossario" data-t="met.glossario.tit">Glossário</h2><p class="met-intro" data-t="met.glossario.txt">Todos os termos do estudo, em ordem alfabética. É a mesma lista que aparece ao passar o mouse, tocar ou chegar pelo teclado num termo sublinhado em pontinhos.</p>
+    <dl class="glossario" id="lista-glossario"></dl></section>
+  <section class="met-parte" id="dados" aria-labelledby="t-met-dados" tabindex="-1"><h2 id="t-met-dados" data-t="met.dados.tit">Baixar os dados</h2><p class="pdf-baixar" data-pdf-baixar></p><div id="dados-baixar"></div></section>
+  <section class="met-parte" id="sobre" aria-labelledby="t-met-sobre" tabindex="-1"><h2 id="t-met-sobre" data-t="met.sobre.tit">Sobre este estudo</h2><div id="sobre-estudo"></div></section>
+  </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="rodape-in">
+    <p data-t-html="rod.texto.html"><i>Análise da virada</i>, eleição presidencial de 2026: o que mudou do 1º para o 2º turno, por estado e município. Veja também <a href="#metodo/sobre">sobre este estudo</a>, os <a href="#metodo/dados">dados para baixar</a>, a <a href="#apuracao">apuração ao vivo do 2º turno</a>, leitura a leitura, e a página de <a href="privacidade/">privacidade</a>.</p>
+    <p><button class="bt-escrever-rod" type="button" data-abrir-contato aria-haspopup="dialog" data-t="rod.escrever">Escrever ao autor</button></p>
+    <p data-t="rod.versao">Fontes: Alegreya e Alegreya Sans (Huerta Tipográfica) e Courier Prime, licença SIL OFL 1.1.</p>
+  </div>
+</footer>
+
+<!-- A caixa "Escrever ao autor", aberta pelo link do cabeçalho e pelo do rodapé, em qualquer parte do estudo.
+     A mensagem vai para o e-mail do autor pelo Web3Forms, sem mostrar o endereço (contato.js; P08, D71) -->
+<dialog class="dialogo-contato" aria-labelledby="t-contato">
+  <div class="dialogo-cab"><h2 id="t-contato" data-t="rod.escrever">Escrever ao autor</h2>
+    <button class="bt-escrever dialogo-fechar" type="button" data-fechar-contato data-t="rod.fechar">Fechar</button></div>
+      <form class="contato-form" novalidate>
+        <label><span data-t="rod.nome">Nome (opcional)</span><input type="text" name="nome" autocomplete="name" maxlength="80"></label>
+        <label><span data-t="rod.email">E-mail, se quiser resposta (opcional)</span><input type="email" name="email" autocomplete="email" maxlength="120"></label>
+        <label><span data-t="rod.mensagem">Mensagem</span><textarea name="mensagem" maxlength="4000" required></textarea></label>
+        <!-- campo para robôs: escondido de quem lê; se vier preenchido, o Web3Forms descarta -->
+        <input class="caixa-robo" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p data-t-html="rod.caixa.html">A mensagem chega só ao autor, sem anexo, e é usada só para responder; não é repassada. <a href="privacidade/">Privacidade</a>.</p>
+        <p class="contato-pe"><button class="bt-enviar" type="submit" data-t="com.enviar">Enviar</button> <span class="contato-situacao" role="status" aria-live="polite"></span></p>
+      </form>
+</dialog>
+
+<script src="textos/linguas.js"></script>
+<script src="textos/pt-BR.js"></script>
+<script src="lingua.js"></script>
+<script src="dados.js"></script>
+<script src="mapa.js"></script>
+<script src="graficos.js"></script>
+<script src="explorar.js"></script>
+<script src="apuracao-dados.js"></script>
+<script src="apuracao.js"></script>
+<script src="estudo.js"></script>
+<script src="glossario.js"></script>
+<script src="descricoes.js"></script>
+<script src="csv/arquivos.js"></script>
+<script src="extras.js"></script>
+<script src="metodo.js"></script>
+<script src="externos.js"></script>
+<script src="pdf/arquivos.js"></script>
+<script src="pdf.js"></script>
+<script src="contato.js"></script>
+</body>
+</html>

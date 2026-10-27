@@ -1,0 +1,4 @@
+# Versões com que os scripts do estudo foram rodados e conferidos (parecer estatístico de 26/10/2026, m11; T32).
+# Python 3.14.0. Só scripts/inferencia.py usa bibliotecas de fora da biblioteca padrão.
+numpy==2.3.4
+scipy==1.16.2

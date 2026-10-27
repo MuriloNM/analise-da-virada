@@ -1,0 +1,357 @@
+{
+ "fonte": "TSE, dados abertos e boletins de urna (registro de fontes do T12, linhas do T27)",
+ "gerado_por": "scripts/secoes.py",
+ "campos": [
+  "uf",
+  "cd_mun",
+  "zona",
+  "secao",
+  "t1_instalada",
+  "t1_aptos",
+  "t1_comp",
+  "t1_brancos",
+  "t1_nulos",
+  "t1_13",
+  "t1_14",
+  "t1_16",
+  "t1_21",
+  "t1_22",
+  "t1_27",
+  "t1_28",
+  "t1_29",
+  "t1_30",
+  "t1_35",
+  "t1_55",
+  "t1_70",
+  "t1_80",
+  "t2_instalada",
+  "t2_aptos",
+  "t2_comp",
+  "t2_brancos",
+  "t2_nulos",
+  "t2_13",
+  "t2_22",
+  "t2_agregadas"
+ ],
+ "linhas": 499248,
+ "candidatos_1t": [
+  "13",
+  "14",
+  "16",
+  "21",
+  "22",
+  "27",
+  "28",
+  "29",
+  "30",
+  "35",
+  "55",
+  "70",
+  "80"
+ ],
+ "notas": "t1_* do detalhe da apuração por seção (aptos, comparecimento, brancos, nulos) e da votação por seção (votos de cada candidato); t2_* do detalhe (aptos, comparecimento, brancos, nulos) e dos boletins de urna (13, 22, seções agregadas). t1_nulos é o voto nulo da urna; t1_28 são os votos do candidato 28, anulados: o detalhe do TSE os conta nos nominais, e o resultado oficial, fora dos válidos (válidos = soma dos candidatos sem o 28; brancos + nulos oficiais = t1_brancos + t1_nulos + t1_28; nota N21). Vazio: seção que não existe no turno. Código do município do TSE, com 5 dígitos; ZZ é o exterior.",
+ "conferencias": {
+  "secoes": {
+   "detalhe_1t": 499248,
+   "detalhe_1t_instaladas": 499207,
+   "detalhe_2t": 499248,
+   "detalhe_2t_instaladas": 499207,
+   "votacao_secao_1t": 499206,
+   "bweb_2t": 499205
+  },
+  "1t: seções da votação por seção que não estão instaladas no detalhe": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "1t: seções instaladas do detalhe sem linha na votação por seção (com comparecimento > 0)": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "1t: brancos, detalhe × votação por seção": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "1t: nulos, detalhe × votação por seção": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "1t: nominais, detalhe × soma dos candidatos (com o 28)": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "1t: comparecimento = nominais + brancos + nulos (detalhe)": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "2t: seções do bweb × instaladas no detalhe": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "2t: instaladas do detalhe sem boletim (com comparecimento > 0)": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "2t: aptos, bweb × detalhe": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "2t: comparecimento, bweb × detalhe": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "2t: brancos, bweb × detalhe": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "2t: nulos, bweb × detalhe": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "2t: nominais, bweb × detalhe": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "2t: comparecimento = nominais + brancos + nulos (detalhe)": {
+   "diferentes": 0,
+   "exemplos": []
+  },
+  "aptos = comparecimento + abstenções (detalhe, 1t)": {
+   "diferentes": 41,
+   "exemplos": [
+    [
+     [
+      "ZZ",
+      "29424",
+      1,
+      54
+     ],
+     22,
+     0
+    ],
+    [
+     [
+      "ZZ",
+      "99341",
+      1,
+      1308
+     ],
+     6,
+     0
+    ],
+    [
+     [
+      "ZZ",
+      "29769",
+      1,
+      126
+     ],
+     7,
+     0
+    ],
+    [
+     [
+      "ZZ",
+      "38903",
+      1,
+      603
+     ],
+     5,
+     0
+    ],
+    [
+     [
+      "ZZ",
+      "99104",
+      1,
+      1011
+     ],
+     29,
+     0
+    ]
+   ]
+  },
+  "aptos = comparecimento + abstenções (detalhe, 2t)": {
+   "diferentes": 41,
+   "exemplos": [
+    [
+     [
+      "ZZ",
+      "99104",
+      1,
+      1011
+     ],
+     29,
+     0
+    ],
+    [
+     [
+      "ZZ",
+      "30929",
+      1,
+      722
+     ],
+     12,
+     0
+    ],
+    [
+     [
+      "ZZ",
+      "30669",
+      1,
+      546
+     ],
+     10,
+     0
+    ],
+    [
+     [
+      "ZZ",
+      "29815",
+      1,
+      140
+     ],
+     14,
+     0
+    ],
+    [
+     [
+      "ZZ",
+      "38903",
+      1,
+      603
+     ],
+     5,
+     0
+    ]
+   ]
+  },
+  "seções anuladas (detalhe)": {
+   "1t": 0,
+   "2t": 0
+  },
+  "votos anulados em separado ou de legenda (detalhe)": {
+   "1": 0,
+   "2": 0
+  },
+  "origem do voto (detalhe)": {
+   "1": {
+    "Urna Eletrônica": 499126,
+    "BU gerado por RED em urna de seção *** RED - Recuperador de dados": 50,
+    "Sistema de apuração": 31,
+    "Totalização": 41
+   },
+   "2": {
+    "Urna Eletrônica": 499162,
+    "BU gerado por RED em urna de seção *** RED - Recuperador de dados": 14,
+    "Sistema de apuração": 29,
+    "BU gerado por RED em urna de contingência": 2,
+    "Totalização": 41
+   }
+  },
+  "1t: soma das seções × base_1t_municipios.json": {
+   "municipios_base": 5757,
+   "municipios_secoes": 5757,
+   "so_na_base": [],
+   "so_nas_secoes": [],
+   "te": {
+    "municipios_diferentes": 0,
+    "soma_base": 158745502,
+    "soma_secoes": 158745502,
+    "exemplos": []
+   },
+   "c": {
+    "municipios_diferentes": 0,
+    "soma_base": 125275835,
+    "soma_secoes": 125275835,
+    "exemplos": []
+   },
+   "vv": {
+    "municipios_diferentes": 0,
+    "soma_base": 119300788,
+    "soma_secoes": 119300788,
+    "exemplos": []
+   },
+   "L": {
+    "municipios_diferentes": 0,
+    "soma_base": 53879538,
+    "soma_secoes": 53879538,
+    "exemplos": []
+   },
+   "F": {
+    "municipios_diferentes": 0,
+    "soma_base": 56104503,
+    "soma_secoes": 56104503,
+    "exemplos": []
+   },
+   "bn": {
+    "municipios_diferentes": 0,
+    "soma_base": 5975047,
+    "soma_secoes": 5975047,
+    "exemplos": []
+   }
+  },
+  "2t: soma das seções × base_2t_municipios.json": {
+   "municipios_base": 5757,
+   "municipios_secoes": 5757,
+   "so_na_base": [],
+   "so_nas_secoes": [],
+   "te": {
+    "municipios_diferentes": 0,
+    "soma_base": 158745502,
+    "soma_secoes": 158745502,
+    "exemplos": []
+   },
+   "c": {
+    "municipios_diferentes": 0,
+    "soma_base": 128236074,
+    "soma_secoes": 128236074,
+    "exemplos": []
+   },
+   "vv": {
+    "municipios_diferentes": 0,
+    "soma_base": 124082273,
+    "soma_secoes": 124082273,
+    "exemplos": []
+   },
+   "L": {
+    "municipios_diferentes": 0,
+    "soma_base": 64256232,
+    "soma_secoes": 64256232,
+    "exemplos": []
+   },
+   "F": {
+    "municipios_diferentes": 0,
+    "soma_base": 59826041,
+    "soma_secoes": 59826041,
+    "exemplos": []
+   },
+   "vb": {
+    "municipios_diferentes": 0,
+    "soma_base": 1430496,
+    "soma_secoes": 1430496,
+    "exemplos": []
+   },
+   "tvn": {
+    "municipios_diferentes": 0,
+    "soma_base": 2723305,
+    "soma_secoes": 2723305,
+    "exemplos": []
+   }
+  },
+  "casamento": {
+   "instaladas_nos_dois": 499207,
+   "so_no_1t": 0,
+   "so_no_2t": 0,
+   "exemplos_so_no_1t": [],
+   "exemplos_so_no_2t": [],
+   "nao_instaladas_nos_dois": 41,
+   "2t_secoes_que_recebem_agregadas": 16142,
+   "2t_secoes_agregadas": 17931,
+   "aptos_iguais_nos_dois": 443485,
+   "aptos_diferenca_absoluta_total": 74692,
+   "aptos_diferenca_maior": 84,
+   "aptos_diferenca_ate_5": 54925,
+   "agregadas_que_aparecem_como_secao": 0
+  }
+ }
+}

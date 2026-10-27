@@ -1,0 +1,943 @@
+/* Estudo "Análise da virada": o caderno de apuração (pedido em prompt design/prompt-redesign-virada.md;
+   escolhido pelo autor, P21, diário D32 e D34; aplicado ao estudo inteiro no T29). Papel quente,
+   fios de jornal e serifa grande; a interface usa só tinta e bege, e o vermelho e o azul continuam
+   só dos candidatos (validados sobre o papel nos dois modos). Tamanhos só da escala de Bringhurst
+   (12, 14, 16, 18, 21, 24, 36, 48, 60 e 72 px); linhas de texto com menos de 80 caracteres; a
+   ousadia fica na fita e no gráfico da abertura. O Resumo e os capítulos correm numa rolagem só,
+   com o índice fixo na margem (computador) ou numa barra no topo (celular). Fontes salvas junto:
+   Alegreya e Alegreya Sans (Huerta Tipográfica) e Courier Prime, licença SIL OFL 1.1, em fontes/. */
+
+@font-face{font-family:"Alegreya";font-style:normal;font-weight:400 900;font-display:swap;
+  src:url(fontes/alegreya.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Alegreya";font-style:italic;font-weight:400 900;font-display:swap;
+  src:url(fontes/alegreya-italico.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* A unicode-range das faces latinas da Alegreya Sans é a dos glifos que os arquivos têm (fontTools), para
+   conviver com as faces cirílicas abaixo sem mudar nada no português. */
+@font-face{font-family:"Alegreya Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fontes/alegreya-sans-400.woff2) format("woff2");unicode-range:U+000D,U+0020-007E,U+00A0-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+2009,U+200B,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2032-2033,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+@font-face{font-family:"Alegreya Sans";font-style:italic;font-weight:400;font-display:swap;src:url(fontes/alegreya-sans-400-italico.woff2) format("woff2");unicode-range:U+000D,U+0020-007E,U+00A0-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+2009,U+200B,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2032-2033,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+@font-face{font-family:"Alegreya Sans";font-style:normal;font-weight:500;font-display:swap;src:url(fontes/alegreya-sans-500.woff2) format("woff2");unicode-range:U+000D,U+0020-007E,U+00A0-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+2009,U+200B,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2032-2033,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+@font-face{font-family:"Alegreya Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fontes/alegreya-sans-700.woff2) format("woff2");unicode-range:U+000D,U+0020-007E,U+00A0-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+2009,U+200B,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2032-2033,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+@font-face{font-family:"Courier Prime";font-style:normal;font-weight:400;font-display:swap;src:url(fontes/courier-prime-400.woff2) format("woff2")}
+@font-face{font-family:"Courier Prime";font-style:normal;font-weight:700;font-display:swap;src:url(fontes/courier-prime-700.woff2) format("woff2")}
+/* Cirílico (T30, para a versão em russo): os subconjuntos cirílicos da Alegreya e da Alegreya Sans (Google
+   Fonts, SIL OFL 1.1), baixados só quando a página tem letra cirílica. A Courier Prime não tem cirílico: a fita
+   cai na Courier New, a fonte de máquina do sistema. */
+@font-face{font-family:"Alegreya";font-style:normal;font-weight:400 900;font-display:swap;src:url(fontes/alegreya-cirilico.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Alegreya";font-style:italic;font-weight:400 900;font-display:swap;src:url(fontes/alegreya-italico-cirilico.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Alegreya Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fontes/alegreya-sans-400-cirilico.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Alegreya Sans";font-style:italic;font-weight:400;font-display:swap;src:url(fontes/alegreya-sans-400-italico-cirilico.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Alegreya Sans";font-style:normal;font-weight:500;font-display:swap;src:url(fontes/alegreya-sans-500-cirilico.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Alegreya Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fontes/alegreya-sans-700-cirilico.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+
+/* ---------- Tokens ---------- */
+:root{
+  --lula:#c62f2a; --flavio:#1f5fae;
+  --bg:#f5f1e8; --surface:#f5f1e8; --fita:#fcfaf5; --realce:#ece5d6;
+  --lula-1t:color-mix(in oklab,var(--lula) 78%,var(--bg)); /* o Lula no 1º turno: o mesmo vermelho, mais apagado */
+  --ink:#1d1a16; --ink-2:#3f3a32; --muted:#6a6155; --line:#ddd3c1; --line-forte:#b3a58c;
+  --texto-sobre-l:#ffffff; --texto-sobre-f:#ffffff; --faixa-95:#e2d9c6; --faixa-998:#ede7da;
+  --f-texto:"Alegreya", Georgia, "Times New Roman", serif;
+  --f-ui:"Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"Courier Prime", "Courier New", monospace;
+  --alto-cab:56px; /* cabeçalho fixo no computador; o índice da margem fica logo abaixo */
+  color-scheme:light;
+}
+/* Chinês, japonês e coreano (T30): a Alegreya fica nas letras latinas e nos algarismos; os ideogramas, os
+   silabários e o hangul caem nas fontes do sistema de cada língua, sem baixar nada. Essas escritas não têm
+   itálico: a página não inventa um (font-synthesis), e o realce fica no peso e na cor. */
+:lang(zh){--f-texto:"Alegreya","Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+  --f-ui:"Alegreya Sans","Noto Sans SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+:lang(ja){--f-texto:"Alegreya","Noto Serif JP","Source Han Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-ui:"Alegreya Sans","Noto Sans JP","Source Han Sans JP","Hiragino Sans","Yu Gothic","Meiryo",sans-serif}
+:lang(ko){--f-texto:"Alegreya","Noto Serif KR","Source Han Serif KR","AppleMyungjo","Batang",serif;
+  --f-ui:"Alegreya Sans","Noto Sans KR","Source Han Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+:lang(zh),:lang(ja),:lang(ko){font-synthesis:none;line-break:strict}
+:root[data-tema="escuro"]{
+  --lula:#e5584e; --flavio:#4a8bdb;
+  --bg:#1c1a17; --surface:#1c1a17; --fita:#28241f; --realce:#2a2620;
+  --ink:#ece4d6; --ink-2:#cfc6b6; --muted:#a39a8b; --line:#37322b; --line-forte:#5c544a;
+  --texto-sobre-l:#1c1a17; --texto-sobre-f:#1c1a17; --faixa-95:#3a352d; --faixa-998:#2a2620;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-tema="claro"]){
+    --lula:#e5584e; --flavio:#4a8bdb;
+    --bg:#1c1a17; --surface:#1c1a17; --fita:#28241f; --realce:#2a2620;
+    --ink:#ece4d6; --ink-2:#cfc6b6; --muted:#a39a8b; --line:#37322b; --line-forte:#5c544a;
+    --texto-sobre-l:#1c1a17; --texto-sobre-f:#1c1a17; --faixa-95:#3a352d; --faixa-998:#2a2620;
+    color-scheme:dark;
+  }
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+html,body{margin:0}
+html{scroll-padding-top:calc(var(--alto-cab) + 28px)}
+body{background:var(--bg);color:var(--ink);font:18px/1.65 var(--f-texto);font-variant-numeric:oldstyle-nums proportional-nums;
+  -webkit-text-size-adjust:100%;min-height:100vh;display:flex;flex-direction:column}
+[hidden]{display:none!important}
+a{color:inherit;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+a:hover{text-decoration-color:currentColor}
+button{font:inherit;color:inherit}
+h1,h2,h3{margin:0;font-family:var(--f-texto);color:var(--ink);text-wrap:balance}
+p{margin:0}
+b{font-weight:700}
+.num{font-variant-numeric:lining-nums tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+[tabindex="-1"]:focus{outline:none}
+.pular{position:absolute;left:8px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:8px 12px;font:500 16px/1 var(--f-ui)}
+.pular:focus{top:8px}
+.aviso-it{font:italic 400 14px/1.4 var(--f-texto);color:var(--muted)}
+
+/* ---------- Cabeçalho de caderno: o fio duplo que abre a página ---------- */
+.cab{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:3px double var(--ink)}
+.cab-in{max-width:1280px;margin:0 auto;padding:12px 24px 10px;display:flex;align-items:baseline;gap:8px 30px}
+.nome{font:italic 600 24px/1.1 var(--f-texto);text-decoration:none;white-space:nowrap}
+.nav{display:flex;gap:4px 24px;margin-left:auto;flex-wrap:wrap}
+.nav a{font:400 18px/1.3 var(--f-texto);text-decoration:none;color:var(--ink-2);padding:2px 0}
+.nav a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-forte)}
+.nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:var(--ink);text-underline-offset:7px}
+.bt-tema{border:0;background:none;padding:2px 0;cursor:pointer;font:italic 400 16px/1.3 var(--f-texto);color:var(--muted);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px;white-space:nowrap}
+.bt-tema:hover{color:var(--ink);text-decoration-color:var(--ink)}
+/* Botão de língua (T30): irmão do "Modo escuro", no mesmo tom; abre uma lista curta, como a da
+   busca, com a língua atual marcada pelo fio à esquerda, como no índice. Cada língua escrita nela
+   mesma; no celular, o código curto (pt, en), para não empurrar o menu. */
+.linguas{position:relative}
+.linguas summary{list-style:none;cursor:pointer;padding:2px 0;font:italic 400 16px/1.3 var(--f-texto);color:var(--muted);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px;white-space:nowrap}
+.linguas summary::-webkit-details-marker{display:none}
+.linguas summary::after{content:"";display:inline-block;width:5px;height:5px;margin:0 2px 3px 7px;border:solid currentColor;
+  border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+.linguas[open] summary::after{transform:rotate(-135deg);margin-bottom:0}
+.linguas summary:hover,.linguas[open] summary{color:var(--ink);text-decoration-color:var(--ink)}
+.linguas .ling-curto{display:none}
+.linguas ul{position:absolute;right:0;top:calc(100% + 8px);z-index:40;min-width:11em;margin:0;padding:4px 0;list-style:none;
+  background:var(--bg);border:1px solid var(--ink)}
+.linguas li a{display:block;padding:6px 16px 6px 12px;border-left:2px solid transparent;font:400 18px/1.3 var(--f-texto);
+  color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.linguas li a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-forte)}
+.linguas li a[aria-current]{color:var(--ink);font-weight:700;border-left-color:var(--ink)}
+
+/* ---------- Conteúdo ---------- */
+main{flex:1;width:100%;max-width:1280px;margin:0 auto;padding:40px 24px 48px}
+
+/* A leitura: índice na margem e o estudo numa rolagem só */
+.leitura{display:grid;grid-template-columns:188px minmax(0,1fr);gap:0 56px;align-items:start}
+.leitura-corpo{min-width:0}
+
+/* Índice fixo dos capítulos. Numeração só nos capítulos, que são uma sequência; o atual leva o fio
+   na margem. No celular vira a barra do topo (fim do arquivo). */
+.indice{position:sticky;top:calc(var(--alto-cab) + 24px);max-height:calc(100vh - var(--alto-cab) - 40px);overflow-y:auto;padding:2px 0 8px 14px;margin-left:-14px}
+.indice ol{list-style:none;margin:0;padding:0}
+.indice li.sep{margin-top:6px;padding-top:6px;border-top:1px solid var(--line)}
+.indice a{display:grid;grid-template-columns:1.5em minmax(0,1fr);align-items:baseline;padding:5px 0 5px 12px;margin-left:-14px;
+  border-left:2px solid transparent;font:400 16px/1.35 var(--f-texto);color:var(--ink-2);text-decoration:none}
+.indice a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-forte)}
+.indice a[aria-current]{color:var(--ink);font-weight:700;border-left-color:var(--ink)}
+.indice .i-n{font-weight:400;color:var(--muted);font-variant-numeric:lining-nums}
+.indice a[aria-current] .i-n{color:var(--ink)}
+.indice-atual{display:none}
+
+/* Resumo: a abertura. A manchete é só tinta; o contexto vai na linha fina. */
+.manchete{font-weight:800;font-size:72px;line-height:1;letter-spacing:-.024em;margin:0 0 18px;max-width:12em}
+.linha-fina{font-size:21px;line-height:1.55;color:var(--ink-2);max-width:32em}
+.linha-fina b,.resposta b,.achados b{font-variant-numeric:lining-nums tabular-nums;color:var(--ink)}
+.abertura{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px 44px;align-items:start;margin-top:36px;padding-top:20px;border-top:1px solid var(--ink)}
+.fig-abertura{margin:0;min-width:0}
+.fig-abertura .grafico{margin-top:0}
+
+/* A fita da contagem: a única coisa em mono e em caixa alta da página */
+.fita{--dente:7px;background:var(--fita);color:var(--ink);font:400 14px/1.55 var(--f-mono);text-transform:uppercase;
+  padding:26px 20px 24px;margin-top:6px;
+  -webkit-mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/calc(2*var(--dente)) 51% repeat-x,
+    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--dente)) 51% repeat-x;
+  mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/calc(2*var(--dente)) 51% repeat-x,
+    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--dente)) 51% repeat-x}
+.fita p{margin:0}
+.fita .fita-cab{font-weight:700;text-align:center}
+.fita .fita-centro{text-align:center}
+.fita hr{border:0;border-top:1px dashed currentColor;margin:10px 0;opacity:.7}
+.fita table{width:100%;border-collapse:collapse}
+.fita th,.fita td{padding:1px 0 1px 10px;font-weight:400;text-align:right;white-space:nowrap}
+.fita th:first-child,.fita td:first-child{text-align:left;padding-right:10px}
+.fita thead th{font-weight:400}
+.fita .fita-forte td{font-weight:700}
+
+/* Achados: três frases completas, sem número (não são uma sequência) e sem esconder */
+.achados{margin-top:48px;max-width:34em}
+.achados h2,.notas h2{font-weight:700;font-size:24px;line-height:1.25}
+.achados ul{list-style:none;margin:12px 0 0;padding:0}
+.achados li{padding:14px 0;border-top:1px solid var(--line)}
+/* o aviso do fim do Resumo, com o link para "Sobre este estudo" (D72): na voz baixa do itálico das legendas */
+.res-sobre{margin-top:20px;max-width:34em;font:italic 400 16px/1.5 var(--f-texto);color:var(--ink-2)}
+.res-sobre a{color:var(--ink-2)}
+.achados li:first-child{border-top:1px solid var(--ink)}
+.achados p{font-size:21px;line-height:1.5}
+.ir{font:italic 400 16px/1 var(--f-texto);color:var(--muted);white-space:nowrap;margin-left:.3em;
+  display:inline-block;padding:4px 0;margin-block:-4px} /* alvo de toque de 24 px sem mexer na linha (QA nº 9) */
+.ir:hover{color:var(--ink)}
+
+/* "E na sua cidade? ____" */
+.cidade{margin-top:56px;padding-top:18px;border-top:1px solid var(--ink);max-width:36em}
+.pergunta{font:italic 400 24px/1.3 var(--f-texto);display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.busca{position:relative;flex:1 1 260px;max-width:420px}
+.campo{width:100%;font:400 21px/1.3 var(--f-texto);color:var(--ink);background:transparent;border:0;border-bottom:2px solid var(--ink);
+  padding:2px 2px 4px;border-radius:0}
+.campo::placeholder{color:var(--muted);font-style:italic;opacity:1}
+.campo:focus{outline:none;box-shadow:0 2px 0 var(--ink)}
+#busca-lista{position:absolute;z-index:20;left:0;right:0;top:calc(100% + 6px);list-style:none;margin:0;padding:4px 0;background:var(--bg);
+  border:1px solid var(--ink)}
+#busca-lista li{display:flex;justify-content:space-between;gap:12px;padding:7px 12px;cursor:pointer;font:400 18px/1.3 var(--f-texto);font-style:normal;color:var(--ink)}
+#busca-lista li[aria-selected="true"],#busca-lista li:hover{background:var(--realce)}
+#busca-lista .busca-uf{color:var(--muted);font:400 14px/1.3 var(--f-ui)}
+#busca-lista .busca-vazio{color:var(--muted);cursor:default}
+.busca-mais{font-size:14px}
+.ficha{margin-top:18px}
+.ficha-tit{font-size:24px;font-weight:700}
+.ficha-meta{font:italic 400 16px/1.4 var(--f-texto);color:var(--muted);margin:2px 0 10px}
+.ficha-pe{font:400 16px/1.6 var(--f-ui);color:var(--ink-2);margin-top:10px;font-variant-numeric:lining-nums;max-width:36em}
+.ficha-pe b{color:var(--ink)}
+/* T34: o perfil do município (dados sociais) abaixo dos números da eleição, com o mesmo traço de tabela */
+.ficha-sub{font:700 17px/1.35 var(--f-texto);color:var(--ink);margin:22px 0 6px;padding-top:12px;border-top:1px solid var(--line)}
+
+/* ---------- Capítulo ---------- */
+.capitulo{margin-top:72px;padding-top:32px;border-top:1px solid var(--ink)}
+.cap-titulo{font-weight:800;font-size:48px;line-height:1.06;letter-spacing:-.02em;margin:0 0 18px;max-width:17em}
+.cap-num{font-weight:400;color:var(--muted);margin-right:.08em;font-variant-numeric:lining-nums}
+.resposta{font-size:21px;line-height:1.55;color:var(--ink-2);max-width:32em}
+.hipotese{margin-top:28px;padding:14px 0 16px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);max-width:36em;display:grid;gap:8px}
+/* T33: o que não foi registrado antes das contas leva o fio tracejado, de rascunho, no lugar do fio cheio das hipóteses */
+.hipotese.exploratoria{border-top:1.5px dashed var(--ink)}
+/* o achado exploratório do Resumo leva o mesmo rótulo, em itálico apagado */
+.rotulo-exp{font-style:italic;color:var(--muted)}
+.lista-exploracao{margin:22px 0 0;padding-left:24px;max-width:40em;display:grid;gap:12px;font:400 17px/1.55 var(--f-texto);color:var(--ink-2);font-variant-numeric:lining-nums}
+.lista-exploracao li::marker{font:600 15px var(--f-ui);color:var(--muted)}
+.lista-exploracao b{color:var(--ink);font-weight:600}
+.hip-texto{font:italic 400 21px/1.45 var(--f-texto);color:var(--ink)}
+.hip-cab{font-style:normal;color:var(--muted)}
+.hip-res{font:400 16px/1.5 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums}
+.hip-res b{color:var(--ink)}
+.bt-link{border:0;background:none;padding:0;font:inherit;color:var(--ink-2);cursor:pointer;
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+.bt-link:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.cap-corpo{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:0 40px;align-items:start;margin-top:36px}
+.cap-fig{min-width:0}
+
+/* Duas figuras no mesmo lugar (capítulos 3, 4 e 6): a escolha tem cara de texto, não de pílula */
+.botoes-escolha{display:flex;flex-wrap:wrap;gap:4px 22px;margin-bottom:16px;font:400 16px/1.4 var(--f-ui)}
+.botoes-escolha button{border:0;background:none;padding:4px 0;cursor:pointer;color:var(--ink-2);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:6px}
+.botoes-escolha button:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.botoes-escolha button[aria-pressed="true"]{color:var(--ink);font-weight:700;text-decoration-color:var(--ink);text-decoration-thickness:2px}
+
+/* Figuras: o número entra no título; o título é a conclusão; os eixos vão no subtítulo */
+.figura{margin:0}
+.fig-cab{display:grid;gap:4px}
+.fig-tit{font:700 24px/1.25 var(--f-texto);color:var(--ink);max-width:30em}
+.fig-n{font-style:italic;font-weight:400;color:var(--muted)}
+.fig-sub{font:400 16px/1.5 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums;max-width:40em}
+.fig-nao-deu{font:400 16px/1.5 var(--f-ui);color:var(--ink-2);margin-top:12px;max-width:40em;font-variant-numeric:lining-nums}
+.fig-nao-deu b{color:var(--ink)}
+.fig-rodape{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;margin-top:8px;padding-top:6px;border-top:1px solid var(--line);
+  font:400 14px/1.5 var(--f-ui);color:var(--muted);font-variant-numeric:lining-nums}
+.fig-rodape>span:first-child{max-width:52em}
+.fig-aviso:empty{display:none}
+.fig-aviso{flex-basis:100%}
+.nota-lateral{font:400 16px/1.55 var(--f-ui);color:var(--ink-2);border-top:1px solid var(--ink);padding-top:10px;font-variant-numeric:lining-nums}
+.nota-lateral p+p{margin-top:8px}
+.nota-tit{font:italic 400 18px/1 var(--f-texto);color:var(--ink)}
+
+/* Notas em sobrescrito, no lugar do "ⓘ Como calculamos": número para a conta (notas no fim da
+   leitura) e o código para as notas sobre os dados (Método e fontes, #metodo/nota-N08) */
+.nota-sup{font:500 max(12px,.75em)/0 var(--f-ui);font-variant-numeric:lining-nums;margin-left:1px;vertical-align:super;font-style:normal}
+.nota-sup+.nota-sup::before{content:",";color:var(--ink-2)}
+/* letra de 12 px no mínimo e área de toque de 24 px (QA nº 3): a área extra é um pseudo-elemento, que não mexe na linha */
+.nota-sup a{position:relative;text-decoration:none;color:var(--ink-2);padding:0 1px}
+.nota-sup a::after{content:"";position:absolute;inset:-7px -9px}
+.nota-sup a:hover{color:var(--ink);text-decoration:underline}
+
+/* "Ver detalhes" */
+details.detalhes{margin-top:32px;border-top:1px solid var(--ink)}
+details.detalhes>summary{cursor:pointer;list-style:none;padding:12px 0;display:flex;flex-wrap:wrap;gap:2px 12px;align-items:baseline}
+details.detalhes>summary::-webkit-details-marker{display:none}
+.det-rot{font:700 21px/1.3 var(--f-texto);text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:4px}
+details.detalhes>summary:hover .det-rot{text-decoration-color:var(--ink)}
+.det-o-que{font:italic 400 16px/1.4 var(--f-texto);color:var(--muted)}
+details.detalhes[open] .det-rot::after{content:" (fechar)";font-weight:400;font-style:italic;font-size:16px;color:var(--muted)}
+.detalhes-corpo{padding:4px 0 8px;display:grid;gap:14px;max-width:860px}
+.detalhes-corpo p{font:400 18px/1.65 var(--f-texto);color:var(--ink-2);max-width:36em}
+.detalhes-corpo p b{color:var(--ink)}
+.det-secao,.como-chegou{display:grid;grid-template-columns:minmax(0,1fr);gap:12px} /* minmax(0,1fr): uma tabela larga rola na sua caixa em vez de alargar a página (QA nº 13) */
+.det-secao{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.det-secao h3,.como-chegou h3{font:700 21px/1.3 var(--f-texto)}
+.regra{margin:0;padding-left:22px;font:400 16px/1.55 var(--f-ui);color:var(--ink-2);display:grid;gap:4px;font-variant-numeric:lining-nums;max-width:40em}
+.regra li.aplicada{color:var(--ink);font-weight:500}
+/* T34: listas em texto corrido do "Ver detalhes" (os resultados e as fontes do capítulo 8) */
+.lista-texto{margin:0 0 14px;padding-left:22px;font:400 17px/1.6 var(--f-texto);color:var(--ink);display:grid;gap:6px;max-width:40em;font-variant-numeric:lining-nums}
+.regra-marca{font-style:italic;font-family:var(--f-texto);font-weight:400}
+.figura-det{margin:4px 0}
+.det-aninhado>summary{cursor:pointer;font:400 16px/1.4 var(--f-ui);padding:4px 0;color:var(--ink-2);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:4px}
+.det-aninhado>summary:hover,.det-aninhado[open]>summary{color:var(--ink)}
+.det-aninhado[open]>summary{margin-bottom:8px}
+.detalhes-corpo .nota-tab{font:400 14px/1.5 var(--f-ui);color:var(--muted)}
+
+/* Lugar previsto para o trabalho de outro ticket: só texto, sem caixa */
+.vaga{font:italic 400 16px/1.55 var(--f-texto);color:var(--muted);max-width:40em}
+.vaga b{font-style:normal;font-weight:700;color:var(--ink-2)}
+.detalhes-corpo p.vaga{font:italic 400 16px/1.55 var(--f-texto);color:var(--muted)}
+
+/* Tabelas: fios, algarismos alinhados e tabulares */
+.tab-caixa{overflow-x:auto;max-width:100%}
+.tab{border-collapse:collapse;font:400 16px/1.4 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums tabular-nums}
+.tab caption{text-align:left;font:700 18px/1.35 var(--f-texto);color:var(--ink);padding-bottom:8px}
+.tab caption .fig-n{font-weight:400}
+.tab th,.tab td{padding:6px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tab th:first-child,.tab td:first-child{padding-left:0}
+.tab thead th{border-bottom:1px solid var(--ink);font-weight:500;color:var(--ink);vertical-align:bottom}
+.tab tbody th{font-weight:400;color:var(--ink)}
+.tab .num{text-align:right;white-space:nowrap}
+.tab tr.destaque th,.tab tr.destaque td{font-weight:700;color:var(--ink)}
+.ordenar{border:0;background:none;padding:3px 0;min-height:24px;min-width:24px;font:inherit;color:inherit;cursor:pointer;text-align:inherit;
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+.ordenar:hover{text-decoration-color:currentColor}
+th[aria-sort="ascending"] .ordenar::after{content:" ↑"}
+th[aria-sort="descending"] .ordenar::after{content:" ↓"}
+
+/* Comentários: o único lugar para escrever, no fim (D31). Bloqueado até o T16; as cartas e a nuvem
+   só entram com comentários reais (T23) */
+.leitores{margin-top:80px;padding-top:28px;border-top:1px solid var(--ink)}
+.leitores h2{font-size:36px;font-weight:800;line-height:1.1;letter-spacing:-.015em}
+.comentario{margin-top:14px;max-width:36em;display:grid;gap:8px}
+.comentario label{font:italic 400 24px/1.3 var(--f-texto);color:var(--ink)}
+.comentario textarea{width:100%;font:400 21px/1.5 var(--f-texto);color:var(--ink);background:transparent;border:0;border-radius:0;
+  border-bottom:1px solid var(--ink);padding:4px 2px;resize:none;min-height:2.2em;field-sizing:content}
+.comentario textarea::placeholder{color:var(--muted);font-style:italic;opacity:1}
+.comentario textarea:disabled{border-bottom-style:dashed;border-bottom-color:var(--line-forte);cursor:not-allowed}
+.comentario .chamada-hip{font:italic 400 18px/1.55 var(--f-texto);color:var(--ink-2)}
+.chamada-hip b{font-style:normal;color:var(--ink)}
+.comentario-pe{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline}
+.bt-enviar{border:0;background:none;padding:0;font:700 18px/1.3 var(--f-texto);color:var(--ink);cursor:pointer;
+  text-decoration:underline;text-underline-offset:4px}
+.bt-enviar:disabled{color:var(--muted);cursor:not-allowed;text-decoration-color:var(--line-forte)}
+
+/* Notas da leitura (as contas dos sobrescritos) */
+.notas{margin-top:72px;padding-top:16px;border-top:1px solid var(--ink);max-width:640px}
+.notas details.notas-det{margin-top:8px;border-top:0}
+.notas ol{list-style:none;margin:10px 0 0;padding:0}
+.notas li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:0 6px;padding:10px 0;border-top:1px solid var(--line);
+  font:400 16px/1.55 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums}
+.notas li:focus,.notas li:target{outline:none;background:var(--realce)}
+.nota-n{font:500 16px/1.55 var(--f-ui);color:var(--ink)}
+.nota-titulo{font:700 18px/1.4 var(--f-texto);color:var(--ink);margin-bottom:2px;font-variant-numeric:lining-nums}
+.notas li p+p{margin-top:4px}
+
+/* ---------- Explorar, Apuração ao vivo e Método e fontes: páginas de consulta, fora da leitura corrida ---------- */
+.consulta{max-width:1040px}
+.consulta-tit{font-weight:800;font-size:48px;line-height:1.06;letter-spacing:-.02em;margin:0 0 18px;max-width:17em}
+.consulta .linha-fina{max-width:34em}
+
+/* Página simples (privacidade) */
+.pagina{max-width:760px}
+.pagina .voltar{margin-top:24px;font:400 18px/1.4 var(--f-texto)}
+/* Privacidade (T17): o mesmo caderno da leitura. A situação de agora fica na caixa de nota lateral, logo
+   abaixo da linha fina; cada assunto abre com o fio de tinta; os três envios são h3, como as seções do
+   "Ver detalhes". */
+.priv{max-width:720px}
+.priv .linha-fina{margin-bottom:24px}
+.priv-agora{font:italic 400 18px/1.55 var(--f-texto);color:var(--ink);border-top:1px solid var(--line-forte);
+  padding:12px 0 14px;max-width:36em}
+.priv-parte{margin-top:40px;padding-top:16px;border-top:1px solid var(--ink)}
+.priv-parte h2{font-weight:700;font-size:24px;line-height:1.25;margin-bottom:10px}
+.priv-parte h3{font:700 18px/1.35 var(--f-texto);margin:22px 0 4px;padding-top:12px;border-top:1px solid var(--line)}
+.priv-parte p{font:400 18px/1.65 var(--f-texto);color:var(--ink-2);max-width:36em;font-variant-numeric:lining-nums}
+.priv-parte p+p{margin-top:12px}
+.priv-parte .priv-pe{margin-top:20px;font:400 16px/1.55 var(--f-ui)}
+.priv-data{margin-top:40px;padding-top:10px;border-top:1px solid var(--line);font:italic 400 16px/1.4 var(--f-texto);color:var(--muted)}
+@media (max-width: 560px){ .priv-parte h2{font-size:21px} .priv-parte p,.priv-agora{font-size:17px} }
+
+/* ---------- Rodapé: o outro fio duplo, que fecha o caderno ---------- */
+.rodape{border-top:3px double var(--ink);margin-top:auto}
+.rodape-in{max-width:1280px;margin:0 auto;padding:16px 24px 26px;display:grid;gap:6px;font:400 14px/1.5 var(--f-ui);color:var(--muted)}
+.rodape a{color:var(--ink-2)}
+.rodape i{font-family:var(--f-texto);font-size:16px;color:var(--ink)}
+.contato>summary{list-style:none;display:inline-block;cursor:pointer;min-height:24px;font:italic 400 16px/1.4 var(--f-texto);color:var(--ink-2);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+.contato>summary::-webkit-details-marker{display:none}
+.contato>summary:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.contato-form{margin:10px 0 8px;display:grid;gap:10px;max-width:440px}
+.contato-form label{display:grid;gap:2px;font:italic 400 16px/1.3 var(--f-texto);color:var(--ink-2)}
+.contato-form input,.contato-form textarea{font:400 18px/1.4 var(--f-texto);color:var(--ink);background:transparent;border:0;border-radius:0;
+  border-bottom:1px dashed var(--line-forte);padding:3px 2px}
+.contato-form textarea{min-height:3em;resize:vertical}
+.contato-form :disabled{cursor:not-allowed}
+.caixa-robo{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+/* "Escrever ao autor": no cabeçalho, no tom do "Modo escuro" (no computador o cabeçalho fica preso no
+   alto, então a caixa está a um clique de qualquer parte); abre uma janela com os fios do caderno. */
+/* o mesmo tom do "Modo escuro", com classe própria: estudo.js acha o botão de tema por .bt-tema */
+.bt-escrever{border:0;background:none;padding:2px 0;cursor:pointer;font:italic 400 16px/1.3 var(--f-texto);color:var(--muted);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px;white-space:nowrap}
+.bt-escrever:hover{color:var(--ink);text-decoration-color:var(--ink)}
+/* entre 1100 e 1279 px o menu não cabe com o nome inteiro: o link fica "Contato" */
+.bt-escrever .e-curto{display:none}
+@media (max-width: 1279px){ .bt-escrever .e-longo{display:none} .bt-escrever .e-curto{display:inline} }
+.bt-contato-barra{display:none;flex:none;margin-left:auto;border:0;background:none;padding:8px 0 7px 12px;min-height:24px;cursor:pointer;
+  font:italic 400 16px/28px var(--f-texto);color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+/* abaixo de 1100 px o cabeçalho rola com a página: o link sai dele e o "Contato" fica na barra presa no alto */
+@media (max-width: 1099px){ .indice .bt-contato-barra{display:block} .cab .bt-escrever{display:none} }
+.bt-escrever-rod{border:0;background:none;padding:0;min-height:24px;cursor:pointer;font:italic 400 16px/1.4 var(--f-texto);color:var(--ink-2);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+.bt-escrever-rod:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.dialogo-contato{width:min(520px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow:auto;margin:auto;padding:16px 24px 20px;
+  background:var(--bg);color:var(--ink);border:1px solid var(--ink);border-top:3px double var(--ink)}
+.dialogo-contato::backdrop{background:rgba(29,26,22,.45)}
+.dialogo-cab{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.dialogo-cab h2{font-weight:700;font-size:24px;line-height:1.25}
+.dialogo-contato .contato-form{max-width:none}
+.dialogo-contato .contato-form>p{font:400 14px/1.5 var(--f-ui);color:var(--muted)}
+.dialogo-contato .contato-form>p a{color:var(--ink-2)}
+.contato-pe{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
+.contato-situacao{font:italic 400 16px/1.4 var(--f-texto);color:var(--ink-2)}
+.contato-situacao.erro{color:var(--lula)}
+.bt-enviar{min-height:24px}
+
+/* ---------- Gráficos (componentes em graficos.js) ---------- */
+.grafico{position:relative;width:100%;margin-top:10px;--fundo-grafico:var(--bg)}
+.grafico svg{display:block;overflow:visible;touch-action:pan-y}
+.grafico text{font-family:var(--f-ui);fill:var(--muted);font-size:12px;font-variant-numeric:lining-nums tabular-nums}
+.grafico .grade line{stroke:var(--line);stroke-width:1;shape-rendering:crispEdges}
+.grafico .grade line.zero{stroke:var(--muted);stroke-width:1.5}
+.grafico .rotulo-eixo{fill:var(--ink-2);font-size:14px}
+.grafico .val{fill:var(--ink);font-size:14px;font-weight:500}
+.grafico .val-forte{fill:var(--ink);font-weight:700}
+.grafico .nome-linha{fill:var(--ink-2);font-size:14px}
+.grafico .nome-linha,.grafico .val,.grafico .nome-serie{paint-order:stroke;stroke:var(--fundo-grafico);stroke-width:4px;stroke-linejoin:round}
+.grafico .nome-serie{font-family:var(--f-texto);font-weight:700;font-size:18px;fill:var(--ink)}
+.grafico .cab-col{font-family:var(--f-texto);font-style:italic;font-size:16px;fill:var(--ink-2)}
+.grafico .anotacao{font-family:var(--f-texto);font-style:italic;font-size:18px;fill:var(--ink);font-variant-numeric:oldstyle-nums;
+  paint-order:stroke;stroke:var(--fundo-grafico);stroke-width:5px;stroke-linejoin:round}
+.grafico .val-sobre-l{fill:var(--texto-sobre-l);font-weight:700}
+.grafico .val-sobre-f{fill:var(--texto-sobre-f);font-weight:700}
+.grafico .val-sobre-trilho{fill:var(--muted)}
+.guia{fill:none;stroke:var(--ink);stroke-width:1}
+.guia-ponto{fill:var(--ink)}
+/* A virada da capa: a linha do empate e a régua de quanto a diferença mudou (QA, L9) */
+.grafico .linha-empate{stroke:var(--ink);stroke-width:1.5;shape-rendering:crispEdges}
+.grafico .medida{stroke:var(--ink-2);stroke-width:1.5}
+.grafico .medida-ponta{fill:var(--ink-2)}
+.grafico .guia-medida{stroke:var(--line-forte);stroke-width:1;stroke-dasharray:3 3}
+.col-fio{stroke:var(--line-forte);stroke-width:1}
+.linha-grossa{stroke-width:3}
+.linha-l{stroke:var(--lula)} .linha-f{stroke:var(--flavio)} .linha-l.linha-1t{stroke:var(--lula-1t)}
+.p-l{fill:var(--lula)} .p-l1{fill:var(--lula-1t)} .p-f{fill:var(--flavio)} .p-ink{fill:var(--ink)} .p-muted{fill:var(--muted)}
+.ponto{fill-opacity:.42;stroke:var(--fundo-grafico);stroke-width:.6}
+.ponto-dentro{fill:var(--muted);fill-opacity:.3}
+.ponto-fora{fill-opacity:.95}
+.pt-anel{stroke:var(--fundo-grafico);stroke-width:2}
+.reta{stroke:var(--ink);stroke-width:2;fill:none;stroke-linecap:round}
+.marca-br{fill:var(--fundo-grafico);stroke:var(--ink);stroke-width:2}
+.anel{fill:none;stroke:var(--ink);stroke-width:2;pointer-events:none}
+.fio{stroke:var(--line-forte);stroke-width:2}
+.barra-l{fill:var(--lula)} .barra-f{fill:var(--flavio)} .barra-incerta{opacity:.5} .barra-n{fill:var(--muted)} .barra-forte{fill:var(--ink)}
+.barra-passo{fill-opacity:.75}
+.conector{stroke:var(--line-forte);stroke-width:1}
+.ic{stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+.ic-sobre{stroke:var(--ink);stroke-width:1.6;stroke-linecap:round}
+/* T34: coeficientes dos dois candidatos no mesmo gráfico; anel vazio = sem associação depois da correção */
+.ic-l{stroke:var(--lula)} .ic-f{stroke:var(--flavio)} .ic-fraco{stroke-opacity:.5}
+.pt-vazio{fill:var(--fundo-grafico);stroke-width:2}
+.s-l{stroke:var(--lula)} .s-f{stroke:var(--flavio)} .s-ink{stroke:var(--ink)}
+.ref{stroke:var(--ink-2);stroke-width:1.5}
+.ref-fina{stroke:var(--line-forte);stroke-width:1}
+.trilho{fill:var(--realce);stroke:var(--line)}
+.linha{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.linha-ink{stroke:var(--ink)} .linha-muted{stroke:var(--muted)}
+.cruz{stroke:var(--line-forte);stroke-width:1;pointer-events:none}
+.buraco{fill:var(--realce)}
+.faixa-95{fill:var(--faixa-95)} .faixa-998{fill:var(--faixa-998)}
+.linha-destaque{fill:var(--realce)}
+.alvo{outline:none;cursor:default}
+.alvo.ativo,.alvo:focus-visible{fill:var(--ink);fill-opacity:.06}
+.alvo:focus-visible{stroke:var(--ink);stroke-width:1}
+.legenda{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px 16px;font:400 14px/1.4 var(--f-ui);color:var(--ink-2)}
+.legenda li{display:inline-flex;align-items:center;gap:6px}
+.legenda i{display:inline-block;flex:none;background:var(--ink)}
+.legenda .leg-ponto{width:10px;height:10px;border-radius:50%}
+.legenda .leg-vazio{width:10px;height:10px;border-radius:50%;background:transparent;box-shadow:inset 0 0 0 2px var(--ink)}
+.legenda .leg-barra{width:12px;height:10px}
+.legenda .leg-linha{width:16px;height:2px}
+.legenda .leg-seta{background:none;width:auto;height:auto;font-style:normal;color:var(--ink-2)} .legenda .leg-seta::before{content:"↓"}
+.legenda .leg-ref{width:16px;height:2px;background:var(--ink-2)}
+.legenda .leg-l1{background:var(--lula-1t)} .legenda .leg-l{background:var(--lula)} .legenda .leg-f{background:var(--flavio)} .legenda .leg-muted{background:var(--muted)}
+.legenda .leg-dentro{background:var(--muted);opacity:.45}
+.legenda .leg-faixa95{width:14px;height:10px;background:var(--faixa-95)}
+.legenda .leg-faixa998{width:14px;height:10px;background:var(--faixa-998);box-shadow:inset 0 0 0 1px var(--line-forte)}
+.legenda .leg-ic{width:16px;height:10px;background:linear-gradient(var(--ink),var(--ink)) center/100% 2px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) left center/2px 10px no-repeat,linear-gradient(var(--ink),var(--ink)) right center/2px 10px no-repeat}
+.dica{position:fixed;z-index:50;pointer-events:none;background:var(--bg);color:var(--ink);border:1px solid var(--ink);
+  padding:8px 10px;font:400 14px/1.45 var(--f-ui);font-variant-numeric:lining-nums tabular-nums;max-width:290px}
+.dica .dt{font:700 16px/1.35 var(--f-texto);color:var(--ink);margin-bottom:3px}
+.dica .dl{display:flex;align-items:center;gap:6px;color:var(--ink-2)}
+.dica .dl b{font-weight:500;color:var(--ink);margin-left:auto;padding-left:12px;text-align:right}
+.dica .k{display:inline-block;width:12px;height:2px;flex:none}
+
+/* ---------- Telas menores ---------- */
+@media (max-width: 1240px){
+  .cap-corpo{grid-template-columns:minmax(0,1fr)}
+  .nota-lateral{margin-top:22px;max-width:36em}
+  .abertura{grid-template-columns:minmax(0,1fr)}
+  .fita{max-width:420px}
+  .manchete{font-size:60px}
+}
+/* Abaixo de 1100 px, o índice sai da margem e vira a barra do topo, que fica presa ao rolar; o
+   cabeçalho rola junto com a página, para a barra ter o alto da tela só para ela */
+@media (max-width: 1099px){
+  :root{--alto-cab:0px}
+  html{scroll-padding-top:64px}
+  .cab{position:static}
+  .leitura{display:block}
+  .indice{position:sticky;top:0;z-index:25;max-height:none;overflow:visible;display:flex;align-items:center;gap:0 12px;
+    margin:-40px -24px 32px;padding:0 24px;background:var(--bg);border-bottom:1px solid var(--ink)}
+  .indice ol{display:flex;flex:none}
+  .indice li.sem-n{display:none}
+  .indice li.sep{margin:0;padding:0;border:0}
+  .indice a{display:block;margin:0;padding:8px 8px 7px;border-left:0;font-size:18px;line-height:28px;min-width:24px;text-align:center}
+  .indice .i-t{display:none}
+  .indice a[aria-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px;text-decoration-color:var(--ink)}
+  .indice-atual{display:block;flex:1 1 auto;min-width:0;font:italic 400 16px/1.3 var(--f-texto);color:var(--ink-2);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+@media (max-width: 720px){
+  .cab-in{flex-wrap:wrap;padding:10px 16px 8px;gap:4px 16px}
+  .nome{font-size:21px;order:1;flex:1 1 auto}
+  .bt-tema,.linguas{order:2}
+  .nav{order:3;width:100%;margin-left:0;gap:2px 18px}
+}
+@media (max-width: 560px){
+  main{padding:28px 16px 36px}
+  .indice{margin:-28px -16px 28px;padding:0 16px}
+  .indice a{padding:8px 6px 7px}
+  .nav{gap:2px 14px}
+  .nav a{font-size:16px}
+  .linguas .ling-nome{display:none}
+  .linguas .ling-curto{display:inline}
+  .manchete{font-size:48px}
+  .linha-fina,.resposta,.achados p,.hip-texto,.comentario textarea{font-size:18px}
+  .cap-titulo,.consulta-tit{font-size:36px}
+  .pergunta,.comentario label{font-size:21px}
+  .campo{font-size:18px}
+  .fig-tit{font-size:21px}
+  .leitores h2{font-size:36px}
+  .fita{font-size:12px;padding:24px 14px 22px}
+  .tab{font-size:14px}
+  .tab th,.tab td{padding:5px 8px}
+  .rodape-in{padding:16px 16px 22px}
+}
+
+/* ---------- Explorar (T24): a página de consulta, com as mesmas peças da leitura ----------
+   As escolhas são texto sublinhado (as de duas ou três figuras) ou um campo de escolha com fio
+   embaixo (recortes e eixos), como o campo da busca. O mapa é a única peça com movimento: a troca
+   de cor entre 1º turno, 2º turno e variações (desligada com movimento reduzido). A escala
+   divergente vai do azul ao vermelho com cinza claro no empate; a da abstenção é de um tom só, sem
+   cor de candidato, com listras onde ela subiu. */
+:root{--neutro:#d9d2c5;--seq-0:#e4dccd;--seq-1:#2f2a24}
+:root[data-tema="escuro"]{--neutro:#555047;--seq-0:#2e2a25;--seq-1:#e6ddcd}
+@media (prefers-color-scheme: dark){
+  :root:not([data-tema="claro"]){--neutro:#555047;--seq-0:#2e2a25;--seq-1:#e6ddcd}
+}
+.exp-sumario{display:flex;flex-wrap:wrap;gap:4px 24px;margin-top:22px;font:400 18px/1.4 var(--f-texto)}
+.exp-sumario a{color:var(--ink-2);text-decoration-color:var(--line-forte)}
+.exp-sumario a:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.exp-parte{margin-top:56px;padding-top:22px;border-top:1px solid var(--ink)}
+.exp-parte>h2{font-weight:800;font-size:36px;line-height:1.1;letter-spacing:-.015em}
+.exp-intro{font:400 18px/1.6 var(--f-texto);color:var(--ink-2);max-width:36em;margin:8px 0 22px}
+.exp-sub{margin-top:40px;padding-top:14px;border-top:1px solid var(--line)}
+.exp-sub>h3{font:700 21px/1.3 var(--f-texto);margin-bottom:12px}
+.exp-nota{font:400 14px/1.5 var(--f-ui);color:var(--muted);margin-top:10px;max-width:52em;font-variant-numeric:lining-nums}
+.exp-nota a{color:var(--ink-2)}
+.exp-vazio{font:italic 400 16px/1.5 var(--f-texto);color:var(--muted)}
+.exp-ir{margin-left:auto}
+.explorar .fig-abas+.fig-abas,.explorar .figura+.figura{margin-top:28px}
+.explorar .det-aninhado{margin-top:14px}
+.explorar .figura+.tab-caixa{margin-top:28px}
+/* No celular a tabela rola de lado dentro da caixa; o título fica parado e quebra na largura da tela */
+.explorar .tab caption{position:sticky;left:0;max-width:min(36em,calc(100vw - 32px))}
+.explorar .det-aninhado .tab-caixa{margin-top:4px}
+
+/* Campos de escolha: rótulo em itálico e o valor sobre um fio, sem caixa */
+.exp-recorte{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:baseline;margin-bottom:6px}
+.exp-campo{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;font:italic 400 16px/1.3 var(--f-texto);color:var(--ink-2)}
+.exp-campo select{font:400 18px/1.3 var(--f-texto);color:var(--ink);background:var(--bg);border:0;border-bottom:1px solid var(--ink);border-radius:0;
+  padding:2px 22px 3px 2px;max-width:100%;cursor:pointer;-webkit-appearance:none;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--ink-2) 50%),linear-gradient(135deg,var(--ink-2) 50%,transparent 50%);
+  background-position:calc(100% - 9px) 55%,calc(100% - 4px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.exp-campo select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.exp-campo option,.exp-campo optgroup{font-style:normal;color:var(--ink);background:var(--bg)}
+.exp-conta{font:400 16px/1.5 var(--f-ui);color:var(--ink-2);margin:6px 0 0;font-variant-numeric:lining-nums}
+.exp-conta b{color:var(--ink)}
+.exp-conta .bt-link{margin-left:4px}
+.exp-eixos{margin:2px 0 14px}
+.exp-ranking{margin-top:12px}
+.exp-busca{font-size:21px}
+.busca-lista{position:absolute;z-index:20;left:0;right:0;top:calc(100% + 6px);list-style:none;margin:0;padding:4px 0;background:var(--bg);border:1px solid var(--ink)}
+.busca-lista li{display:flex;justify-content:space-between;gap:12px;padding:7px 12px;cursor:pointer;font:400 18px/1.3 var(--f-texto);font-style:normal;color:var(--ink)}
+.busca-lista li[aria-selected="true"],.busca-lista li:hover{background:var(--realce)}
+.busca-lista .busca-uf{color:var(--muted);font:400 14px/1.3 var(--f-ui)}
+.busca-lista .busca-vazio{color:var(--muted);cursor:default}
+
+/* Estados: o mapa à esquerda, a ficha à direita; a tabela embaixo, ligada aos dois */
+.exp-mapa{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px 40px;align-items:start;margin-top:8px}
+.exp-mapa-col{min-width:0}
+.exp-legenda-cor{max-width:360px}
+.exp-mapa .legenda{margin-top:2px}
+.exp-mapa-svg svg{max-width:100%;height:auto}
+.uf{stroke:var(--bg);stroke-width:1;stroke-linejoin:round;cursor:pointer;outline:none;transition:fill .5s ease}
+.uf:focus-visible{stroke:var(--ink);stroke-width:3}
+.uf-contorno{fill:none;stroke:var(--ink);stroke-width:3;stroke-linejoin:round;pointer-events:none}
+.hachura-linha{stroke:var(--bg);stroke-width:2.4}
+.legenda .leg-hachura{width:14px;height:10px;background:repeating-linear-gradient(135deg,var(--ink-2) 0 2px,var(--bg) 2px 5px)}
+.exp-ficha{border-top:1px solid var(--ink);padding-top:10px;min-width:0}
+.exp-ficha .ficha-tit{font-size:24px}
+.exp-ficha .ficha-meta{margin-bottom:6px}
+.exp-ficha .tab{font-size:14px}
+.exp-ficha .tab th,.exp-ficha .tab td{padding:4px 6px}
+.exp-ficha .ficha-pe{font-size:14px}
+.exp-ficha .exp-dica{font-style:italic;color:var(--muted)}
+.exp-virada-uf{margin:6px 0 0}
+.exp-virada-uf svg{max-width:100%;height:auto}
+.exp-virada-uf .val{font-size:13px}
+.uf-silhueta{fill:var(--realce);stroke:var(--ink);stroke-width:1;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.exp-ficha .exp-virada-rot{margin:2px 0 10px;color:var(--muted)}
+.exp-tab-estados{margin-top:28px}
+.bt-uf{border:0;background:none;padding:2px 0;min-height:24px;font:inherit;color:inherit;cursor:pointer;text-align:left;
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+.bt-uf:hover{text-decoration-color:currentColor}
+.exp-tab-estados tr.ativa th,.exp-tab-estados tr.ativa td{background:var(--realce)}
+.exp-tab-estados tr.escolhida th,.exp-tab-estados tr.escolhida td{font-weight:700;color:var(--ink)}
+@media (prefers-reduced-motion: reduce){ .uf{transition:none} }
+@media (max-width: 900px){
+  .exp-mapa{grid-template-columns:minmax(0,1fr)}
+  .exp-ficha{max-width:440px}
+}
+@media (max-width: 560px){
+  .exp-parte>h2{font-size:30px}
+  .exp-sumario{font-size:16px;gap:4px 16px}
+  .exp-recorte{gap:8px 18px}
+  .exp-campo select{font-size:16px}
+  .exp-busca{font-size:18px}
+}
+/* ---------- Apuração ao vivo (T28): o registro da apuração do 2º turno, ligado ao capítulo 7 ----------
+   Página de consulta, como o Explorar. A peça que se mexe é a régua das leituras, alinhada ao eixo
+   das figuras, com um traço por leitura: ela escolhe a leitura que a fita imprime (a mesma fita
+   da contagem do Resumo, presa ao lado das figuras no computador). Sem cor nova: as linhas são
+   tinta e cinza, porque as duas são a fatia do Lula; vermelho e azul seguem só dos candidatos. */
+/* Índice das partes das páginas de consulta (Explorar e Apuração ao vivo; D39): a mesma grade da leitura */
+.com-indice{display:grid;grid-template-columns:188px minmax(0,1fr);gap:0 56px;align-items:start}
+.com-indice-corpo{min-width:0}
+.av-resposta{font-size:21px;line-height:1.55;color:var(--ink-2);max-width:32em;margin-top:28px;font-variant-numeric:lining-nums}
+.av-resposta b{color:var(--ink)}
+.av-grade{display:grid;grid-template-columns:minmax(0,1fr) 300px;grid-template-areas:"f1 fita" "f2 fita" "f3 fita";gap:56px 44px;
+  align-items:start;margin-top:36px;padding-top:20px;border-top:1px solid var(--ink)}
+.av-col-fig{grid-area:f1;min-width:0}
+.av-col-proj{grid-area:f2;min-width:0}
+.av-col-fig2{grid-area:f3;min-width:0}
+.av-fita{grid-area:fita;position:sticky;top:calc(var(--alto-cab) + 20px);margin-top:0}
+/* A ficha da leitura (revisão do autor, D39): o recorte da fita, mas letra de leitura, sem caixa alta,
+   com a cor de cada um ao lado do número e a barra de quem está à frente */
+.av-fita{font:400 16px/1.45 var(--f-ui);text-transform:none;padding:24px 20px 22px;font-variant-numeric:lining-nums tabular-nums}
+.av-quando{font-size:14px;color:var(--muted)}
+.av-apurado{font:700 24px/1.2 var(--f-texto);color:var(--ink);margin-top:2px}
+.av-frase{font:400 18px/1.45 var(--f-texto);color:var(--ink);margin-top:8px}
+.av-bloco{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line-forte)}
+.av-bloco h3{font:500 14px/1.3 var(--f-ui);color:var(--ink-2);margin-bottom:4px}
+.av-par{display:flex;flex-wrap:wrap;gap:2px 18px}
+.av-c{display:inline-flex;align-items:baseline;gap:6px;color:var(--ink-2)}
+.av-c b{color:var(--ink)}
+.av-k{display:inline-block;width:10px;height:10px;border-radius:2px;align-self:center}
+.av-k.l,.av-barra .l{background:var(--lula)} .av-k.f,.av-barra .f{background:var(--flavio)}
+.av-barra{position:relative;height:10px;margin-top:8px;background:var(--line);border-radius:2px}
+.av-barra::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--ink)}
+.av-barra i{position:absolute;top:0;bottom:0;border-radius:2px}
+.av-escala{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--muted);margin-top:3px}
+.av-nota-bloco{font-size:14px;color:var(--ink-2);margin-top:2px}
+.zona-l{fill:color-mix(in oklab,var(--lula) 11%,var(--bg))}
+.zona-f{fill:color-mix(in oklab,var(--flavio) 11%,var(--bg))}
+.grafico .zona-rot{fill:var(--ink-2);font-size:12px}
+.av-regua{--mE:44px;--mD:16px;margin-top:-14px;position:relative}
+.av-range{-webkit-appearance:none;appearance:none;display:block;height:28px;margin:0 0 0 calc(var(--mE) - 8px);
+  width:calc(100% - var(--mE) - var(--mD) + 16px);background:transparent;cursor:pointer}
+.av-range::-webkit-slider-runnable-track{height:1px;background:var(--line-forte)}
+.av-range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:24px;margin-top:-12px;border-radius:2px;
+  background:var(--ink);border:3px solid var(--bg)}
+.av-range::-moz-range-track{height:1px;background:var(--line-forte)}
+.av-range::-moz-range-thumb{width:10px;height:18px;border-radius:2px;background:var(--ink);border:3px solid var(--bg)}
+.av-range:focus{outline:none}
+.av-range:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.av-botoes{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:8px;font:400 16px/1.4 var(--f-ui)}
+.av-botoes button{border:0;background:none;padding:4px 0;cursor:pointer;color:var(--ink-2);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:4px}
+.av-botoes button:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.av-botoes button[aria-pressed="true"]{color:var(--ink);font-weight:700;text-decoration-color:var(--ink)}
+.faixa-var{fill:var(--ink);fill-opacity:.07}
+.faixa-erro{fill:var(--ink);fill-opacity:.11}
+.tracejada{stroke-dasharray:6 4}
+.pontilhada{stroke-dasharray:.5 5;stroke-width:2.5}
+.regua{stroke:var(--muted);stroke-width:1;shape-rendering:crispEdges}
+.marco{fill:var(--fundo-grafico);stroke:var(--ink);stroke-width:1.5}
+.cursor-leitura{pointer-events:none}
+.cursor-fio{stroke:var(--ink);stroke-width:1}
+.alvo-leituras{cursor:crosshair}
+.av-parte{margin-top:64px;padding-top:22px;border-top:1px solid var(--ink)}
+.av-parte>h2{font-weight:800;font-size:36px;line-height:1.1;letter-spacing:-.015em}
+.av-intro,.av-texto{font:400 18px/1.6 var(--f-texto);color:var(--ink-2);max-width:36em;margin-top:10px;font-variant-numeric:lining-nums}
+.av-texto+.av-texto{margin-top:12px}
+.av-tabela{margin-top:32px}
+.av-nota{font:400 14px/1.5 var(--f-ui);color:var(--muted);margin-top:10px;max-width:52em}
+.av-baixar a{font-family:var(--f-ui);font-size:16px}
+@media (max-width: 1099px){
+  .av-fita{top:62px} /* abaixo da barra do índice, presa no topo */
+  .com-indice{display:block}
+  .indice-partes{overflow-x:auto;scrollbar-width:none}
+  .indice-partes li.sem-n{display:block}
+  .indice-partes .i-n{display:none}
+  .indice-partes .i-t{display:inline}
+  .indice-partes a{font-size:16px;white-space:nowrap}
+}
+@media (max-width: 900px){
+  .av-grade{grid-template-columns:minmax(0,1fr);grid-template-areas:"f1" "fita" "f2" "f3";gap:36px}
+  .av-fita{position:static;max-width:420px}
+}
+@media (max-width: 560px){
+  .av-resposta{font-size:18px}
+  .av-parte>h2{font-size:24px}
+}
+
+/* ---------- Extras (T25): mini-glossário, descrição dos gráficos, dados para baixar, sobre e como citar ----------
+   O termo do glossário é um botão que parece texto: o sublinhado em pontinhos diz que há uma
+   definição. O verbete tem a mesma moldura da dica dos gráficos (papel e fio de tinta), sem sombra. */
+.termo{border:0;background:none;padding:0;margin:0;font:inherit;color:inherit;cursor:help;text-align:inherit;
+  text-decoration:underline dotted;text-decoration-color:var(--muted);text-decoration-thickness:1.5px;text-underline-offset:4px}
+.termo:hover,.termo[aria-expanded="true"]{text-decoration-color:var(--ink)}
+.verbete{position:fixed;z-index:55;max-width:min(340px,calc(100vw - 16px));background:var(--bg);color:var(--ink);
+  border:1px solid var(--ink);padding:9px 12px 10px}
+.verbete-tit{font:700 16px/1.35 var(--f-texto);margin-bottom:2px}
+.verbete-def{font:400 16px/1.45 var(--f-texto);color:var(--ink-2)}
+
+.glossario{margin:14px 0 0;columns:2;column-gap:48px}
+.glossario>div{break-inside:avoid;padding:6px 0 10px;border-top:1px solid var(--line)}
+.glossario>div:focus,.glossario>div:target{outline:none;background:var(--realce)}
+.glossario dt{font:700 18px/1.35 var(--f-texto)}
+.glossario dd{margin:2px 0 0;font:400 16px/1.55 var(--f-texto);color:var(--ink-2)}
+
+.fig-desc{margin-top:6px}
+.fig-desc>summary{list-style:none;display:inline-block;cursor:pointer;padding:2px 0;font:italic 400 14px/1.5 var(--f-texto);color:var(--muted);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+.fig-desc>summary::-webkit-details-marker{display:none}
+.fig-desc>summary:hover,.fig-desc[open]>summary{color:var(--ink);text-decoration-color:var(--ink)}
+.fig-desc-corpo{margin-top:6px;padding-left:12px;border-left:1px solid var(--line-forte);max-width:46em;
+  font:400 16px/1.5 var(--f-texto);color:var(--ink-2)}
+.fig-desc-corpo p+p,.fig-desc-corpo p+ul,.fig-desc-corpo ul+p{margin-top:6px}
+.fig-desc-corpo ul{margin:0;padding-left:18px;font:400 14px/1.5 var(--f-ui);font-variant-numeric:lining-nums tabular-nums}
+
+#dados-baixar>p,#sobre-estudo>p{font:400 18px/1.6 var(--f-texto);color:var(--ink-2);max-width:40em}
+#sobre-estudo>p+p,#pdf-sha>p{margin-top:8px}
+#pdf-sha>p{font:400 18px/1.6 var(--f-texto);color:var(--ink-2);max-width:40em}
+.baixar{list-style:none;margin:12px 0 14px;padding:0;max-width:46em}
+.baixar li{display:grid;grid-template-columns:auto 1fr;gap:0 12px;align-items:baseline;padding:7px 0;border-top:1px solid var(--line)}
+.baixar a{font:700 16px/1.4 var(--f-ui)}
+.baixar-meta{font:400 14px/1.4 var(--f-ui);color:var(--muted);font-variant-numeric:lining-nums tabular-nums}
+.baixar-desc{grid-column:1 / -1;font:400 16px/1.45 var(--f-texto);color:var(--ink-2)}
+#dados-baixar>.baixar-pe{font-size:16px;line-height:1.55}
+.sobre-tit{font:700 18px/1.35 var(--f-texto);margin:22px 0 4px}
+#sobre-estudo>.sobre-tit:first-child{margin-top:4px}
+/* o botão que abre a caixa de mensagem no meio do texto: com a cara dos links do parágrafo (D72) */
+.bt-inline{border:0;background:none;padding:0;margin:0;cursor:pointer;font:inherit;color:inherit;
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+.bt-inline:hover{color:var(--ink);text-decoration-color:var(--ink)}
+#sobre-estudo code{font:400 14px/1.4 var(--f-mono);color:var(--ink);overflow-wrap:anywhere}
+/* a impressão digital de cada PDF: o nome do arquivo e o código, que quebra em qualquer ponto no celular */
+.sha{margin:8px 0 0;max-width:52em}
+.sha-linha{display:grid;grid-template-columns:minmax(0,1fr);padding:8px 0;border-top:1px solid var(--line)}
+.sha dt{font:700 14px/1.6 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums}
+.sha dd{margin:0;font:400 14px/1.55 var(--f-mono);color:var(--ink);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.citar{margin:8px 0 0;max-width:52em}
+.citar-linha{display:grid;grid-template-columns:72px minmax(0,1fr);gap:0 16px;padding:8px 0;border-top:1px solid var(--line)}
+.citar dt{font:700 14px/1.6 var(--f-ui);color:var(--ink-2)}
+.citar dd{margin:0;min-width:0}
+.citar-texto{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:400 16px/1.55 var(--f-texto);color:var(--ink)}
+.citar-bib{font:400 14px/1.55 var(--f-mono)}
+.bt-copiar{border:0;background:none;padding:2px 0;margin-top:2px;cursor:pointer;font:italic 400 16px/1.3 var(--f-texto);color:var(--ink-2);
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px}
+.bt-copiar:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.citar-aviso{margin-left:10px;font:italic 400 14px/1.3 var(--f-texto);color:var(--muted)}
+@media (max-width: 900px){ .glossario{columns:1} }
+@media (max-width: 560px){
+  .citar-linha{grid-template-columns:minmax(0,1fr)}
+  .baixar li{grid-template-columns:minmax(0,1fr)}
+}
+
+/* ---------- Método e fontes (T12): consulta com o índice das partes, como o Explorar ----------
+   Sem peça nova de estilo: os fios, o papel e as letras do caderno. A única sequência de verdade, o
+   passo a passo, ganha o número na margem e um fio que liga os passos; o caminho script → arquivo de
+   cada passo sai como o recorte da fita (papel da fita, letra de máquina), porque são nomes de arquivo.
+   As fontes são uma lista, e não uma tabela, para o endereço longo caber no celular. */
+.met-parte{margin-top:56px;padding-top:22px;border-top:1px solid var(--ink)}
+.met-parte>h2{font-weight:800;font-size:36px;line-height:1.1;letter-spacing:-.015em;margin-bottom:10px}
+.met-intro,.met-texto{font:400 18px/1.6 var(--f-texto);color:var(--ink-2);max-width:36em;font-variant-numeric:lining-nums}
+.met-intro{margin:8px 0 22px}
+.met-texto{margin-top:12px}
+.met-intro b,.met-texto b,.met-regras b,.met-limites b,.met-motivos b{color:var(--ink)}
+.met-sub{font:700 21px/1.3 var(--f-texto);margin:36px 0 8px;padding-top:12px;border-top:1px solid var(--line);max-width:36em}
+.met-pe{font:400 14px/1.5 var(--f-ui);color:var(--muted);margin-top:14px;max-width:52em;font-variant-numeric:lining-nums}
+.met-pe a{color:var(--ink-2)}
+.metodo code{font:400 14px/1.5 var(--f-mono);color:var(--ink);overflow-wrap:anywhere}
+.met-passos{list-style:none;margin:0;padding:0;max-width:44em}
+.met-passo{display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 16px;position:relative;padding:0 0 28px}
+.met-passo::before{content:"";position:absolute;left:18px;top:46px;bottom:8px;width:1px;background:var(--line-forte)}
+.met-passo:last-child::before{display:none}
+.met-passo:focus,.met-passo:target{outline:none;background:var(--realce)}
+.met-passo-n{font:800 36px/1.1 var(--f-texto);color:var(--ink);text-align:center;width:36px;font-variant-numeric:lining-nums}
+.met-passo-corpo h3{font:700 21px/1.3 var(--f-texto);margin:6px 0 4px}
+.met-passo-corpo>p{font:400 18px/1.6 var(--f-texto);color:var(--ink-2);font-variant-numeric:lining-nums}
+.met-passo-corpo>.met-cadeia{margin-top:10px;padding:8px 12px;background:var(--fita);border-left:2px solid var(--ink);
+  font:400 14px/1.6 var(--f-ui);color:var(--muted)}
+.met-seta{color:var(--muted)}
+.met-passo-corpo>.met-baixar{font:400 16px/1.5 var(--f-ui);margin-top:6px}
+.met-fontes{list-style:none;margin:0;padding:0;max-width:52em}
+.met-fontes li{padding:12px 0 14px;border-top:1px solid var(--line)}
+.met-fontes h4{font:700 18px/1.35 var(--f-texto);color:var(--ink)}
+.met-end{margin-top:4px;line-height:1.45}
+.met-quando{font:400 14px/1.5 var(--f-ui);color:var(--muted);margin-top:2px;font-variant-numeric:lining-nums}
+.met-conf{font:400 16px/1.55 var(--f-texto);color:var(--ink-2);margin-top:4px;font-variant-numeric:lining-nums}
+.met-ctx{font:400 16px/1.6 var(--f-texto);color:var(--ink-2);max-width:52em;margin-top:8px}
+.met-regras,.met-limites,.met-motivos,.met-refs{list-style:none;margin:4px 0 0;padding:0;max-width:40em}
+.met-regras li,.met-limites li,.met-motivos li,.met-refs li{padding:8px 0;border-top:1px solid var(--line);
+  font:400 18px/1.6 var(--f-texto);color:var(--ink-2);font-variant-numeric:lining-nums}
+.met-motivos{margin-bottom:24px}
+.met-refs li{font-size:16px;padding-left:1.5em;text-indent:-1.5em;overflow-wrap:anywhere}
+.met-tab-partidos{margin-top:32px}
+/* no celular a tabela rola de lado dentro da caixa; o título fica parado, como no Explorar */
+.metodo .tab caption{position:sticky;left:0;max-width:min(36em,calc(100vw - 32px))}
+.met-escala{position:relative;display:block;width:140px;height:16px}
+.met-escala::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line-forte)}
+.met-escala-corte{position:absolute;top:1px;bottom:1px;width:0;border-left:1px dashed var(--ink-2)}
+.met-escala b{position:absolute;top:50%;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;background:var(--ink)}
+.tab .met-col-escala{min-width:160px;vertical-align:middle}
+.met-tab-nao-deu{margin-top:4px}
+.met-tab-nao-deu tr.met-nova-fonte>*{border-top:1px solid var(--ink)}
+.met-tab-nao-deu tbody th{min-width:10em}
+.met-tab-nao-deu td:last-child{min-width:16em}
+.notas-dados{list-style:none;margin:8px 0 0;padding:0;max-width:44em}
+.notas-dados li{display:grid;grid-template-columns:3.2em minmax(0,1fr);gap:0 12px;padding:14px 0 18px;border-top:1px solid var(--line)}
+.notas-dados li:focus,.notas-dados li:target{outline:none;background:var(--realce)}
+.nd-cod{font:500 16px/1.7 var(--f-ui);color:var(--ink);font-variant-numeric:lining-nums}
+.nd-tit{font:700 21px/1.3 var(--f-texto);color:var(--ink);margin-bottom:4px}
+.nd-corpo p{font:400 16px/1.6 var(--f-texto);color:var(--ink-2);font-variant-numeric:lining-nums}
+.nd-corpo p+p{margin-top:6px}
+.nd-corpo .nd-onde{font:400 14px/1.5 var(--f-ui);color:var(--muted);margin-top:8px}
+.nd-onde a{color:var(--ink-2)}
+@media (max-width: 560px){
+  .met-parte>h2{font-size:24px}
+  .met-passo{grid-template-columns:28px minmax(0,1fr);gap:0 10px}
+  .met-passo-n{font-size:24px;width:24px}
+  .met-passo::before{left:12px;top:34px}
+  .notas-dados li{grid-template-columns:minmax(0,1fr)}
+}
+
+/* ---------- O estudo em PDF e a impressão (T17; especificação 7.8) ----------
+   O botão de baixar repete o vocabulário do "Ver detalhes": a ação em negrito sublinhado e, ao lado,
+   em itálico, o que vem nela. O PDF sai da própria página (pdf.js, modo ?pdf; scripts/pdf.py): papel
+   branco, para não gastar tinta; a capa leva a pergunta da prévia de link (P01) entre os dois fios
+   duplos do caderno, sobre o gráfico da diferença; o sumário tem os números das páginas, e a última
+   página é o contato do autor. Na impressão e no PDF, o vermelho do Lula fica mais claro e o azul do
+   Flávio mais escuro, para os dois se separarem também em preto e branco (cinza de cerca de 22% e
+   5% de luminância, sem mudar de cor). */
+.pdf-baixar{margin-top:28px;display:flex;flex-wrap:wrap;gap:2px 12px;align-items:baseline;max-width:36em}
+.pdf-link{font:700 21px/1.3 var(--f-texto);color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:4px}
+.pdf-link:hover{text-decoration-color:var(--ink)}
+.pdf-meta{font:italic 400 16px/1.4 var(--f-texto);color:var(--muted);font-variant-numeric:lining-nums}
+.met-parte>.pdf-baixar{margin:10px 0 18px}
+@media (max-width: 560px){ .pdf-link{font-size:18px} }
+
+@page{size:A4;margin:16mm 18mm 18mm;
+  @bottom-left{content:var(--pdf-rodape,"");font:italic 400 9pt/1 "Alegreya",Georgia,serif;color:#5f574b;vertical-align:top;padding-top:5mm}
+  @bottom-right{content:var(--pdf-rodape-end,"") "\2003\2003" counter(page);font:400 9pt/1 "Alegreya",Georgia,serif;color:#5f574b;vertical-align:top;padding-top:5mm}}
+@page :first{@bottom-left{content:none}@bottom-right{content:none}}
+
+@media print{
+  :root:is([data-tema],:not([data-tema])){
+    --lula:#dc4b3c; --flavio:#173c74;
+    --bg:#ffffff; --surface:#ffffff; --fita:#f4f0e8; --realce:#efe9dd;
+    --ink:#1d1a16; --ink-2:#3a352e; --muted:#5f574b; --line:#d9d1c2; --line-forte:#a3957c;
+    --texto-sobre-l:#ffffff; --texto-sobre-f:#ffffff; --faixa-95:#e4ddcd; --faixa-998:#f0ebe1;
+    --neutro:#d9d2c5; --seq-0:#e4dccd; --seq-1:#2f2a24;
+    color-scheme:light;
+  }
+  html{scroll-padding-top:0}
+  body{background:#fff;display:block;min-height:0}
+  .cab,.indice,.pular,.rodape,.cidade,#comentarios,.bt-link,.botoes-escolha,.bt-copiar,.citar-aviso,
+  .fig-desc,.pdf-baixar,.dica,.busca-lista,noscript,.bt-escrever,.bt-contato-barra,.dialogo-contato{display:none!important}
+  details.detalhes.notas-det>summary{display:none}
+  main{max-width:none;margin:0;padding:0}
+  .leitura,.com-indice{display:block}
+  /* o que estava fechado não sai; o "Ver detalhes" aberto vira um título */
+  details:not([open]){display:none}
+  details>summary{list-style:none;cursor:auto}
+  details.detalhes[open] .det-rot::after{content:none}
+  .det-rot{text-decoration:none}
+  .det-aninhado>summary{font-weight:500;color:var(--ink)}
+  /* o endereço dos links que saem do estudo, para quem lê no papel (pdf.js marca os que já mostram o endereço) */
+  a[href^="http"]:not(.sem-url):not(.pdf-marca)::after{content:" (" attr(href) ")";font:400 .78em/1.4 var(--f-ui);color:var(--muted);
+    overflow-wrap:anywhere;font-style:normal;font-weight:400}
+  /* cortes de página: um capítulo por página; figura, tabela e caixa sem quebrar no meio */
+  .capitulo,.notas,.vista.metodo{break-before:page}
+  .capitulo{margin-top:0;padding-top:12px}
+  .notas{margin-top:0}
+  h1,h2,h3,.fig-cab,.nota-tit,summary{break-after:avoid}
+  .figura,.fig-abertura,.fita,.hipotese,.nota-lateral,.achados li,.tab tr,.notas li,.notas-dados li,.citar-linha,.baixar li{break-inside:avoid}
+  .fig-painel+.fig-painel{margin-top:28px}
+  p,li{orphans:3;widows:3}
+  .grafico svg{max-width:100%;height:auto}
+  .tab-caixa{overflow:visible}
+  .metodo .tab caption{position:static;max-width:none}
+  .termo{text-decoration-color:var(--line-forte)}
+  .nota-sup a::after{content:none}
+}
+
+/* Só no PDF (pdf.js): capa, sumário e a página do contato */
+.pdf-marca{color:inherit;text-decoration:none}
+.modo-pdf .pdf-capa{display:flex;flex-direction:column;height:calc(100vh - 1px);break-after:page;
+  border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:14px 0 18px}
+.pdf-capa-topo{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 32px}
+.pdf-capa-nome{font:italic 600 24px/1.1 var(--f-texto)}
+.pdf-capa-sub{font:italic 400 16px/1.4 var(--f-texto);color:var(--muted);max-width:26em;text-align:right}
+.pdf-capa-pergunta{font-weight:800;font-size:72px;line-height:1.02;letter-spacing:-.024em;margin:auto 0 28px;padding-top:48px;max-width:11em}
+.pdf-capa-fig{margin:0 0 24px}
+.pdf-capa-fig .grafico{margin-top:0}
+.pdf-capa-fig svg{display:block;width:100%;height:auto}
+.pdf-capa-fig figcaption{margin-top:8px;padding-top:6px;border-top:1px solid var(--line);font:400 14px/1.5 var(--f-ui);color:var(--muted);max-width:52em}
+.pdf-capa-pe{margin-top:auto;padding-top:12px;border-top:1px solid var(--ink);display:grid;gap:2px;font:400 16px/1.5 var(--f-ui);color:var(--ink-2)}
+.pdf-capa-autor{font:italic 600 21px/1.3 var(--f-texto);color:var(--ink)}
+.pdf-capa-end{font-variant-numeric:lining-nums}
+.pdf-sumario{break-after:page}
+.pdf-sumario h2,.pdf-fim h2{font-weight:800;font-size:48px;line-height:1.06;letter-spacing:-.02em;margin:0 0 20px}
+.pdf-sumario ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.pdf-sumario li a{display:grid;grid-template-columns:1.6em minmax(0,1fr) 2.6em;gap:0 10px;align-items:baseline;padding:7px 0;
+  border-bottom:1px solid var(--line);text-decoration:none;font:400 18px/1.35 var(--f-texto);color:var(--ink)}
+.pdf-sumario li.sub a{padding:2px 0;border-bottom:0;font-size:16px;color:var(--ink-2)}
+.pdf-sumario li.sub+li:not(.sub) a{border-top:1px solid var(--line)}
+.pdf-sum-n{color:var(--muted);font-variant-numeric:lining-nums}
+.pdf-sum-pag{text-align:right;font-variant-numeric:lining-nums tabular-nums;color:var(--ink-2)}
+.pdf-so-pagina{margin-top:22px;max-width:36em;font:italic 400 16px/1.55 var(--f-texto);color:var(--muted)}
+.pdf-fim{break-before:page;border-top:3px double var(--ink);padding-top:20px}
+.pdf-fim-txt{font:400 18px/1.6 var(--f-texto);color:var(--ink-2);max-width:34em;margin-top:8px}
+.pdf-fim-lista{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 24px;margin:24px 0 8px;padding:14px 0;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--line);font:400 18px/1.4 var(--f-ui)}
+.pdf-fim-lista dt{color:var(--muted)}
+.pdf-fim-lista dd{margin:0;overflow-wrap:anywhere}
+.pdf-fim h3{font:700 21px/1.3 var(--f-texto);margin-top:28px}
+.pdf-fim-mudou{margin:8px 0 0;padding-left:22px;font:400 17px/1.6 var(--f-texto);color:var(--ink-2)}

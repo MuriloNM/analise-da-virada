@@ -1,0 +1,68 @@
+{
+ "sidra_9514_idade.json": {
+  "url": "https://apisidra.ibge.gov.br/values/t/9514/n1/all/n6/all/v/93/p/2022/c2/6794/c287/100362,93095,93096,93097,93098/c286/113635",
+  "baixado_em": "26/10/2026 23:27:13",
+  "bytes": 10873868,
+  "sha256": "6aaaa45e385ee54b60695c64eb853d8f0eddfdeea15ed1727db3bede03d79acf"
+ },
+ "sidra_9514_idade_b.json": {
+  "url": "https://apisidra.ibge.gov.br/values/t/9514/n1/all/n6/all/v/93/p/2022/c2/6794/c287/49108,49109,60040,60041,6653/c286/113635",
+  "baixado_em": "26/10/2026 23:27:17",
+  "bytes": 10883636,
+  "sha256": "1bb8510f6c9a8b31847faa0f4daa673a22e190d36679f3209f01bd40070e9b4b"
+ },
+ "sidra_9543_alfabetizacao.json": {
+  "url": "https://apisidra.ibge.gov.br/values/t/9543/n1/all/n6/all/v/2513/p/2022/c2/6794/c86/95251/c287/100362",
+  "baixado_em": "26/10/2026 23:27:22",
+  "bytes": 2357719,
+  "sha256": "060648955638a8cd9f3e8591ab4423880915251f491095e948609d9de91c2eb7"
+ },
+ "sidra_9514_15mais.json": {
+  "url": "https://apisidra.ibge.gov.br/values/t/9514/n1/all/n6/all/v/93/p/2022/c2/6794/c287/93070,93084,93085/c286/113635",
+  "baixado_em": "26/10/2026 23:27:26",
+  "bytes": 6522293,
+  "sha256": "2cb89be1e0c97b6979e16593e2388508807b57782b3a1f3d80deb10b4149e3e5"
+ },
+ "sidra_4714_densidade.json": {
+  "url": "https://apisidra.ibge.gov.br/values/t/4714/n1/all/n6/all/v/93,6318,614/p/2022",
+  "baixado_em": "26/10/2026 23:27:30",
+  "bytes": 4652737,
+  "sha256": "2b60c9c37a05e13ca26cae601d4d3030f3285df9991d7dc11ba7ad3ba325e663"
+ },
+ "sidra_9537_religiao.json": {
+  "url": "https://apisidra.ibge.gov.br/values/t/9537/n1/all/n6/all/v/140/p/2022/c133/95278,95277/c2/6794/c58/95253",
+  "baixado_em": "26/10/2026 23:27:33",
+  "bytes": 4488620,
+  "sha256": "f7ab1d1c24e16213e270985451f28c7e98ee41c6ce13b5c641852e7db3c35c13"
+ },
+ "sidra_9605_cor_raca.json": {
+  "url": "https://apisidra.ibge.gov.br/values/t/9605/n1/all/n6/all/v/93/p/2022/c86/95251,2777,2779",
+  "baixado_em": "26/10/2026 23:27:35",
+  "bytes": 5023362,
+  "sha256": "01e9eaefdd5377fd1a0d9aad09dd86e3b494fbcb76bfd4b6045ace81f10205c8"
+ },
+ "sidra_10296_renda.json": {
+  "url": "https://apisidra.ibge.gov.br/values/t/10296/n1/all/n6/all/v/13604/p/2022/c2/6794/c86/95251/c386/9680,9681,9682,9692",
+  "baixado_em": "26/10/2026 23:27:39",
+  "bytes": 12703845,
+  "sha256": "9276bc3d09e169bcfb0fe93d89233690ab03c7dd1aa3b4973ad02aadcfd2838e"
+ },
+ "pib_municipios_2010_2023_txt.zip": {
+  "url": "https://ftp.ibge.gov.br/Pib_Municipios/2022_2023/base/base_de_dados_2010_2023_txt.zip",
+  "baixado_em": "26/10/2026 23:27:42",
+  "bytes": 7750036,
+  "sha256": "1179047b0bcc527a776f5479a534a4b2d99d362491331b0f6b465871f9164090"
+ },
+ "sidra_5938_pib_brasil.json": {
+  "url": "https://apisidra.ibge.gov.br/values/t/5938/n1/all/v/37/p/2023",
+  "baixado_em": "26/10/2026 23:27:44",
+  "bytes": 611,
+  "sha256": "9b49d5ec6ecf29e775a6a3ca83a13138219a7f53ca2148de8c4e7574a9a794cd"
+ },
+ "ibge_areas_territoriais_2022.ods": {
+  "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/areas_territoriais/2022/AR_BR_RG_UF_RGINT_MES_MIC_MUN_2022.ods",
+  "baixado_em": "26/10/2026 23:29:20",
+  "bytes": 340632,
+  "sha256": "2aa31290f1a6b9fa38cfda01e4a01604c1d627989a88a8f170926b5c35d7fb14"
+ }
+}

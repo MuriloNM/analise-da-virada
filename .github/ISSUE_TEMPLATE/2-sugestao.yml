@@ -1,0 +1,17 @@
+name: "Sugestão · Suggestion"
+description: "Uma pergunta que o estudo poderia responder, um dado que falta, algo difícil de entender. · A question the study could answer, missing data, something hard to understand."
+title: "[Sugestão] "
+labels: ["sugestão"]
+body:
+  - type: textarea
+    id: sugestao
+    attributes:
+      label: "Sugestão · Suggestion"
+      description: "O que você sugere e por quê. · What you suggest and why."
+    validations:
+      required: true
+  - type: textarea
+    id: dados
+    attributes:
+      label: "Dados ou fontes (opcional) · Data or sources (optional)"
+      description: "Se a sugestão pede dados novos, de onde eles viriam. · If the suggestion needs new data, where they would come from."

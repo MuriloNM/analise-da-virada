@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!-- Os textos desta página vêm do catálogo da língua (textos/pt-BR.js, T30): data-t troca o texto do
+     elemento, data-t-html o texto com marcação e data-t-<atributo> o atributo. scripts/linguas.py
+     grava aqui o texto do catálogo e, a partir deste arquivo, a página de cada língua (en/index.html…).
+     Mudar o texto no catálogo, não aqui, e rodar python -I scripts/linguas.py (ou previas.py). -->
+<title data-t="pag.titulo">Lula gained in all 27 states and overturned the first-round margin · Brazil's runoff reversal</title>
+<meta name="description" data-t-content="pag.descricao" content="Where and by how much the vote changed from the first round to the runoff of Brazil&#x27;s 2026 presidential election, by state and municipality, with the tested hypotheses, the sources and the data to download.">
+<!-- prévias de link: gravado por scripts/previas.py (T25); texto provisório até o T11 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brazil&#x27;s runoff reversal">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:title" content="Lula gained in all 27 states and overturned the first-round margin">
+<meta property="og:description" content="In the 2026 presidential election, Lula ended the first round 2.22 million votes behind Flávio and the runoff 4.43 million votes ahead: the margin between the two changed by 6.66 million votes.">
+<meta property="og:url" content="https://analise-da-virada.pages.dev/en/">
+<meta property="og:image" content="https://analise-da-virada.pages.dev/img/previa/en/capa.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="From the first round to the runoff, where did Lula gain? Margin waterfall: the margin between Lula and Flávio goes from −2.22M in the first round to +4.43M in the runoff, summed region by region.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- fim das prévias de link -->
+<!-- línguas: gravado por scripts/linguas.py (T30) -->
+<link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/">
+<link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/">
+<link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/">
+<script>
+/* O endereço desta língua abre sempre nela e grava a escolha, para a raiz do estudo levar a ela. */
+try { localStorage.setItem('analise-lingua', 'en'); } catch (_) {}
+</script>
+<!-- fim das línguas -->
+<script>
+/* Modo claro ou escuro antes de desenhar, para não piscar: segue o aparelho, ou a escolha lembrada. */
+(function(){
+  var t; try { t = localStorage.getItem('analise-tema'); } catch (_) {}
+  if (t === 'claro' || t === 'escuro') document.documentElement.setAttribute('data-tema', t);
+})();
+</script>
+<link rel="preload" href="../fontes/alegreya.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fontes/alegreya-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../estudo.css">
+</head>
+<body>
+<a class="pular" href="#conteudo" data-t="pag.pular">Skip to content</a>
+
+<header class="cab">
+  <div class="cab-in">
+    <a class="nome" href="#resumo" data-t="pag.nome">Brazil's runoff reversal</a>
+    <nav class="nav" data-t-aria-label="nav.aria" aria-label="Study sections">
+      <a href="#resumo" data-secao="resumo" data-t="nav.resumo">Summary</a>
+      <a href="#analise/1" data-secao="capitulos" data-t="nav.capitulos">Chapters</a>
+      <a href="#explorar" data-secao="explorar" data-t="nav.explorar">Explore</a>
+      <a href="#apuracao" data-secao="apuracao" data-t="nav.apuracao">Live count</a>
+      <a href="#metodo" data-secao="metodo" data-t="nav.metodo">Method and sources</a>
+    </nav>
+    <button class="bt-escrever" type="button" data-abrir-contato aria-haspopup="dialog"><span class="e-longo" data-t="rod.escrever">Write to the author</span><span class="e-curto" data-t="rod.contato_curto">Contact</span></button>
+    <!-- botão de língua: gravado por scripts/linguas.py (T30) -->
+    <details class="linguas">
+      <summary><span class="sr">Language: </span><span class="ling-nome" lang="en">English</span><span class="ling-curto" lang="en">en</span></summary>
+      <ul aria-label="Study languages">
+        <li><a href="../" lang="pt-BR" hreflang="pt-BR" data-lingua="pt-BR">Português</a></li>
+        <li><a href="../en/" lang="en" hreflang="en" data-lingua="en" aria-current="true">English</a></li>
+      </ul>
+    </details>
+    <!-- fim do botão de língua -->
+    <button class="bt-tema" type="button" data-t="cab.modo_escuro">Dark mode</button>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+<noscript><p data-t="pag.noscript">This page needs JavaScript to draw the charts.</p></noscript>
+
+<!-- ======================= A leitura: Resumo, os 9 capítulos e o fim, numa rolagem só (D34) ======================= -->
+<div class="vista leitura" data-vista="leitura">
+  <nav class="indice" id="indice" data-t-aria-label="ind.aria" aria-label="Study chapters">
+    <ol id="lista-indice"></ol>
+    <p class="indice-atual" id="indice-atual" aria-hidden="true"></p>
+  </nav>
+
+  <div class="leitura-corpo">
+  <section id="resumo" aria-labelledby="t-resumo" tabindex="-1">
+    <h1 class="manchete" id="t-resumo" data-t="pag.manchete">Lula gained in all 27 states and overturned the first-round margin</h1>
+    <p class="linha-fina" id="linha-fina"></p>
+
+    <div class="abertura">
+      <figure class="fig-abertura" data-t-aria-label="res.fig_aria" aria-label="Vote margin between Lula and Flávio in the first round and the runoff">
+        <div id="grafico-virada"></div>
+        <figcaption class="fig-rodape"><span data-t="res.fig_rodape">Margin between the two in each round, in millions: below the tie line, Flávio ahead; above it, Lula. Each candidate's votes are in the baseline totals. Source: TSE, first-round and runoff results.</span></figcaption>
+      </figure>
+      <aside class="fita" id="fita" data-t-aria-label="res.fita_aria" aria-label="Starting totals, as in a printed tally"></aside>
+    </div>
+
+    <section class="achados" aria-labelledby="t-achados">
+      <h2 id="t-achados" data-t="res.achados_tit">What the data show</h2>
+      <ul id="lista-achados"></ul>
+    </section>
+    <p class="res-sobre" data-t-html="res.sobre.html">An independent study, taking no side, made to bring data to a debate of opinions. It may contain errors: <a href="#metodo/sobre">see why it exists and how to help</a>.</p>
+    <p class="pdf-baixar" data-pdf-baixar></p>
+
+    <!-- Lugar de uma citação de leitor em destaque (T23): só aparece quando houver comentário real
+         liberado e escolhido pelo autor. Nada de citação de exemplo (diário, D31). -->
+
+    <section class="cidade" data-t-aria-label="res.cidade_aria" aria-label="How it went in your city">
+      <div class="pergunta">
+        <label for="busca-cidade" data-t="res.cidade">What about your city?</label>
+        <div class="busca">
+          <input class="campo" id="busca-cidade" type="search" data-t-placeholder="res.cidade_placeholder" placeholder="the municipality&#x27;s name" autocomplete="off" spellcheck="false"
+            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="busca-lista">
+          <ul id="busca-lista" role="listbox" data-t-aria-label="busca.aria" aria-label="Municipalities found" hidden></ul>
+        </div>
+      </div>
+      <div id="ficha-cidade" aria-live="polite"></div>
+    </section>
+  </section>
+
+  <div id="capitulos"></div>
+
+  <!-- Fim do estudo: o único lugar para comentar (diário, D31), bloqueado até o T16 -->
+  <section class="leitores" id="comentarios" aria-labelledby="t-comentarios" tabindex="-1">
+    <h2 id="t-comentarios" data-t="com.tit">Comments</h2>
+    <!-- "O que os leitores disseram" e a nuvem de palavras (T23) entram aqui só quando houver comentários
+         reais liberados. Nada de comentário de exemplo (diário, D31). -->
+    <form class="comentario" data-comentario>
+      <label for="comentario-fim" data-t="com.pergunta">What did you think of the study?</label>
+      <textarea id="comentario-fim" rows="1" data-t-placeholder="com.placeholder" placeholder="comments are not open yet" disabled></textarea>
+      <p class="chamada-hip" data-t-html="com.chamada.html"><b>Is there a hypothesis you would like to see studied that is not here?</b> Write about it too: it may go into the next version, recorded before the calculations, like the ones in this study.</p>
+      <p class="comentario-pe"><button class="bt-enviar" type="submit" disabled data-t="com.enviar">Send</button> <span class="aviso-it" data-t="com.aviso">(comments are not open yet; until then, write through the “Write to the author” box)</span></p>
+    </form>
+  </section>
+
+  <section class="notas" id="notas" aria-labelledby="t-notas" tabindex="-1">
+    <h2 id="t-notas" data-t="notas.tit">Notes</h2>
+    <!-- recolhidas: o sobrescrito no texto abre a caixa e leva à nota (estudo.js, navegar) -->
+    <details class="detalhes notas-det">
+      <summary><span class="det-rot" data-t="notas.ver">See the notes</span><span class="det-o-que" data-t="notas.o_que">how each number in the text was calculated, with the source and the data to download</span></summary>
+      <ol id="lista-notas"></ol>
+    </details>
+  </section>
+  </div>
+</div>
+
+<!-- ======================= Explorar: consulta, fora da leitura corrida (T24; montado em explorar.js) ======================= -->
+<section class="vista explorar" data-vista="explorar" id="explorar" aria-labelledby="t-explorar" tabindex="-1" hidden>
+  <div class="com-indice">
+  <!-- índice das partes, como o dos capítulos (revisão do autor, D39; montado em estudo.js) -->
+  <nav class="indice indice-partes" data-t-aria-label="exp.indice_aria" aria-label="Parts of Explore"><ol id="exp-lista-indice"></ol></nav>
+  <div class="consulta com-indice-corpo">
+  <h1 class="consulta-tit" id="t-explorar" data-t="nav.explorar">Explore</h1>
+  <p class="linha-fina" data-t="exp.linha_fina">The same numbers as in the chapters, to look up place by place: how each region and each state added up to the reversal of the margin, the states on the map and in the table, the municipalities with filters and search, and the estimates, each with its interval.</p>
+  <section class="exp-parte" id="explorar-ponte" aria-labelledby="t-exp-ponte" tabindex="-1">
+    <h2 id="t-exp-ponte" data-t="exp.ponte.tit">Margin waterfall</h2>
+    <p class="exp-intro" id="exp-ponte-intro"></p>
+    <div id="exp-ponte"></div>
+  </section>
+  <section class="exp-parte" id="explorar-estados" aria-labelledby="t-exp-estados" tabindex="-1">
+    <h2 id="t-exp-estados" data-t="exp.estados.tit">States</h2>
+    <p class="exp-intro" data-t="exp.estados.intro">The map, the state card and the table work together: the state you point to in one appears in the others.</p>
+    <div id="exp-estados"></div>
+  </section>
+  <section class="exp-parte" id="explorar-municipios" aria-labelledby="t-exp-municipios" tabindex="-1">
+    <h2 id="t-exp-municipios" data-t="exp.municipios.tit">Municipalities</h2>
+    <p class="exp-intro" data-t="exp.municipios.intro">The filter applies to the rankings, the scatter plots and the funnel plot; the search looks through all municipalities.</p>
+    <div id="exp-municipios"></div>
+  </section>
+  <section class="exp-parte" id="explorar-incerteza" aria-labelledby="t-exp-incerteza" tabindex="-1">
+    <h2 id="t-exp-incerteza" data-t="exp.incerteza.tit">Hypothesis &amp; uncertainty</h2>
+    <p class="exp-intro" data-t="exp.incerteza.intro">The study's estimates, each with its 95% interval, and what could not be estimated reliably, with the reason.</p>
+    <div id="exp-incerteza"></div>
+  </section>
+  </div>
+  </div>
+</section>
+
+<!-- ======================= Apuração ao vivo: o registro da apuração do 2º turno, ligado ao capítulo 7 (T28; montado em apuracao.js) ======================= -->
+<section class="vista apuracao" data-vista="apuracao" id="apuracao" aria-labelledby="t-apuracao" tabindex="-1" hidden>
+  <div class="com-indice">
+  <!-- índice das partes, como o dos capítulos: na margem no computador, numa barra presa no topo no celular (revisão do autor, D39) -->
+  <nav class="indice indice-partes" data-t-aria-label="av.indice_aria" aria-label="Parts of Live count"><ol id="av-lista-indice"></ol></nav>
+  <div class="consulta com-indice-corpo">
+  <h1 class="consulta-tit" id="t-apuracao" data-t="nav.apuracao">Live count</h1>
+  <p class="linha-fina" id="av-linha-fina"></p>
+  <div id="av-corpo"></div>
+  <section class="av-parte" id="apuracao-fim" aria-labelledby="t-av-fim" tabindex="-1">
+    <h2 id="t-av-fim" data-t="av.fim.tit">At the end of the count</h2>
+  </section>
+  <section class="av-parte" id="apuracao-como" aria-labelledby="t-av-como" tabindex="-1">
+    <h2 id="t-av-como" data-t="av.como.tit">How the page worked</h2>
+  </section>
+  </div>
+  </div>
+</section>
+
+<!-- ======================= Método e fontes: consulta, fora da leitura corrida ======================= -->
+<!-- T12: as partes são montadas por metodo.js a partir dos dados e do catálogo; o glossário vem de
+     glossario.js, e os dados para baixar e "Sobre este estudo", de extras.js (T25) -->
+<section class="vista metodo" data-vista="metodo" id="metodo" aria-labelledby="t-metodo" tabindex="-1" hidden>
+  <div class="com-indice">
+  <nav class="indice indice-partes" data-t-aria-label="met.indice_aria" aria-label="Parts of Method and sources"><ol id="met-lista-indice"></ol></nav>
+  <div class="consulta com-indice-corpo">
+  <h1 class="consulta-tit" id="t-metodo" data-t="nav.metodo">Method and sources</h1>
+  <p class="linha-fina" data-t="met.linha_fina">How the study was done, where the data come from and what they do not allow us to say. Also here: the notes on each piece of data, the glossary and the files to redo the calculations.</p>
+  <section class="met-parte" id="passo" aria-labelledby="t-met-passo" tabindex="-1"><h2 id="t-met-passo" data-t="met.passo.tit">Step-by-step calculation</h2><div id="met-passo"></div></section>
+  <section class="met-parte" id="fontes" aria-labelledby="t-met-fontes" tabindex="-1"><h2 id="t-met-fontes" data-t="met.fontes.tit">Sources</h2><div id="met-fontes"></div></section>
+  <section class="met-parte" id="partidos" aria-labelledby="t-met-partidos" tabindex="-1"><h2 id="t-met-partidos" data-t="met.partidos.tit">Party classification</h2><div id="met-partidos"></div></section>
+  <section class="met-parte" id="incerteza" aria-labelledby="t-met-inc" tabindex="-1"><h2 id="t-met-inc" data-t="met.inc.tit">Hypotheses and uncertainty</h2><div id="met-incerteza"></div></section>
+  <section class="met-parte" id="limites" aria-labelledby="t-met-limites" tabindex="-1"><h2 id="t-met-limites" data-t="met.limites.tit">Limitations of the study</h2><div id="met-limites"></div></section>
+  <section class="met-parte" id="notas-dados" aria-labelledby="t-met-notas" tabindex="-1"><h2 id="t-met-notas" data-t="met.notas.tit">Notes on the data</h2><div id="met-notas-intro"></div>
+    <ol class="notas-dados" id="lista-notas-dados"></ol></section>
+  <section class="met-parte" id="nao-deu" aria-labelledby="t-met-nao-deu" tabindex="-1"><h2 id="t-met-nao-deu" data-t="met.nao_deu.tit">What could not be estimated</h2><div id="met-nao-deu"></div></section>
+  <section class="met-parte" id="glossario" aria-labelledby="t-met-glossario" tabindex="-1"><h2 id="t-met-glossario" data-t="met.glossario.tit">Glossary</h2><p class="met-intro" data-t="met.glossario.txt">All the study's terms, in alphabetical order. It is the same list that appears when you hover over, tap or tab to a term with a dotted underline.</p>
+    <dl class="glossario" id="lista-glossario"></dl></section>
+  <section class="met-parte" id="dados" aria-labelledby="t-met-dados" tabindex="-1"><h2 id="t-met-dados" data-t="met.dados.tit">Download the data</h2><p class="pdf-baixar" data-pdf-baixar></p><div id="dados-baixar"></div></section>
+  <section class="met-parte" id="sobre" aria-labelledby="t-met-sobre" tabindex="-1"><h2 id="t-met-sobre" data-t="met.sobre.tit">About this study</h2><div id="sobre-estudo"></div></section>
+  </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="rodape-in">
+    <p data-t-html="rod.texto.html"><i>Brazil's runoff reversal</i>, 2026 presidential election: what changed from the first round to the runoff, by state and municipality. See also <a href="#metodo/sobre">about this study</a>, the <a href="#metodo/dados">data to download</a>, the <a href="#apuracao">live count of the runoff</a>, reading by reading, and the <a href="privacidade/">privacy</a> page.</p>
+    <p><button class="bt-escrever-rod" type="button" data-abrir-contato aria-haspopup="dialog" data-t="rod.escrever">Write to the author</button></p>
+    <p data-t="rod.versao">Fonts: Alegreya and Alegreya Sans (Huerta Tipográfica) and Courier Prime, SIL OFL 1.1 license.</p>
+  </div>
+</footer>
+
+<!-- A caixa "Escrever ao autor", aberta pelo link do cabeçalho e pelo do rodapé, em qualquer parte do estudo.
+     A mensagem vai para o e-mail do autor pelo Web3Forms, sem mostrar o endereço (contato.js; P08, D71) -->
+<dialog class="dialogo-contato" aria-labelledby="t-contato">
+  <div class="dialogo-cab"><h2 id="t-contato" data-t="rod.escrever">Write to the author</h2>
+    <button class="bt-escrever dialogo-fechar" type="button" data-fechar-contato data-t="rod.fechar">Close</button></div>
+      <form class="contato-form" novalidate>
+        <label><span data-t="rod.nome">Name (optional)</span><input type="text" name="nome" autocomplete="name" maxlength="80"></label>
+        <label><span data-t="rod.email">Email, if you want a reply (optional)</span><input type="email" name="email" autocomplete="email" maxlength="120"></label>
+        <label><span data-t="rod.mensagem">Message</span><textarea name="mensagem" maxlength="4000" required></textarea></label>
+        <!-- campo para robôs: escondido de quem lê; se vier preenchido, o Web3Forms descarta -->
+        <input class="caixa-robo" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p data-t-html="rod.caixa.html">Your message goes only to the author, with no attachments, and is used only to reply; it is not passed on. <a href="privacidade/">Privacy</a>.</p>
+        <p class="contato-pe"><button class="bt-enviar" type="submit" data-t="com.enviar">Send</button> <span class="contato-situacao" role="status" aria-live="polite"></span></p>
+      </form>
+</dialog>
+
+<script src="../textos/linguas.js"></script>
+<script src="../textos/pt-BR.js"></script>
+<script src="../textos/en.js"></script>
+<script src="../lingua.js"></script>
+<script src="../dados.js"></script>
+<script src="../mapa.js"></script>
+<script src="../graficos.js"></script>
+<script src="../explorar.js"></script>
+<script src="../apuracao-dados.js"></script>
+<script src="../apuracao.js"></script>
+<script src="../estudo.js"></script>
+<script src="../glossario.js"></script>
+<script src="../descricoes.js"></script>
+<script src="../csv/en/arquivos.js"></script>
+<script src="../extras.js"></script>
+<script src="../metodo.js"></script>
+<script src="../externos.js"></script>
+<script src="../pdf/arquivos.js"></script>
+<script src="../pdf.js"></script>
+<script src="../contato.js"></script>
+</body>
+</html>

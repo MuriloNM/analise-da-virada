@@ -1,0 +1,100 @@
+﻿nivel;lugar;n;fonte;lula;lula_ic95_inf;lula_ic95_sup;flavio;flavio_ic95_inf;flavio_ic95_sup;meia_largura;passa_criterio;maior_parte;motivo;intervalo;aviso_modelo
+brasil;Brasil;5571;votos dos outros candidatos do 1º turno;0,499145;0,464023;0,547279;0,500855;0,452721;0,535977;0,041628;sim;sem lado claro;;estados inteiros;não
+brasil;Brasil;5571;variação do comparecimento;0,589568;0,545192;0,640459;0,410432;0,359541;0,454808;0,047634;sim;Lula;;estados inteiros;não
+brasil;Brasil;5571;queda de brancos e nulos;0,772765;0,743046;0,789315;0,227235;0,210685;0,256954;0,023134;sim;Lula;;estados inteiros;não
+regiao;Norte;450;votos dos outros candidatos do 1º turno;0,59717;0,506932;0,63265;0,40283;0,36735;0,493068;0,062859;sim;Lula;;estados inteiros;não
+regiao;Norte;450;variação do comparecimento;0,533823;0,360651;0,588549;0,466177;0,411451;0,639349;0,113949;não;;resultados muito dispersos;estados inteiros;não
+regiao;Norte;450;queda de brancos e nulos;0,685644;0,539029;0,721917;0,314356;0,278083;0,460971;0,091444;sim;Lula;;estados inteiros;não
+regiao;Nordeste;1794;votos dos outros candidatos do 1º turno;0,601472;0,575418;0,646738;0,398528;0,353262;0,424582;0,03566;sim;Lula;;estados inteiros;não
+regiao;Nordeste;1794;variação do comparecimento;0,722187;0,68065;0,74347;0,277813;0,25653;0,31935;0,03141;sim;Lula;;estados inteiros;não
+regiao;Nordeste;1794;queda de brancos e nulos;0,812246;0,78749;0,839989;0,187754;0,160011;0,21251;0,02625;sim;Lula;;estados inteiros;não
+regiao;Centro-Oeste;468;votos dos outros candidatos do 1º turno;0,464334;0,430988;0,478906;0,535666;0,521094;0,569012;0,023959;sim;Flávio;;estados inteiros;não
+regiao;Centro-Oeste;468;variação do comparecimento;0,525075;0,481784;0,603535;0,474925;0,396465;0,518216;0,060876;sim;sem lado claro;;estados inteiros;não
+regiao;Centro-Oeste;468;queda de brancos e nulos;0,670553;0,647255;0,682209;0,329447;0,317791;0,352745;0,017477;sim;Lula;;estados inteiros;não
+regiao;Sudeste;1668;votos dos outros candidatos do 1º turno;0,461016;0,428839;0,514826;0,538984;0,485174;0,571161;0,042994;sim;sem lado claro;;estados inteiros;não
+regiao;Sudeste;1668;variação do comparecimento;0,536518;0,484468;0,564894;0,463482;0,435106;0,515532;0,040213;sim;sem lado claro;;estados inteiros;não
+regiao;Sudeste;1668;queda de brancos e nulos;0,774106;0,70995;0,784802;0,225894;0,215198;0,29005;0,037426;sim;Lula;;estados inteiros;não
+regiao;Sul;1191;votos dos outros candidatos do 1º turno;0,440609;0,426333;0,458092;0,559391;0,541908;0,573667;0,01588;sim;Flávio;;estados inteiros;não
+regiao;Sul;1191;variação do comparecimento;0,501896;0,442481;0,528271;0,498104;0,471729;0,557519;0,042895;sim;sem lado claro;;estados inteiros;não
+regiao;Sul;1191;queda de brancos e nulos;0,732325;0,672765;0,787027;0,267675;0,212973;0,327235;0,057131;sim;Lula;;estados inteiros;não
+uf;AC;22;votos dos outros candidatos do 1º turno;;;;;;;;não;;poucos municípios;;
+uf;AC;22;variação do comparecimento;;;;;;;;não;;poucos municípios;;
+uf;AC;22;queda de brancos e nulos;;;;;;;;não;;poucos municípios;;
+uf;AL;102;votos dos outros candidatos do 1º turno;0,601478;0,577847;0,635769;0,398522;0,364231;0,422153;0,028961;sim;Lula;;municípios inteiros do estado;não
+uf;AL;102;variação do comparecimento;0,593701;0,540608;0,673854;0,406299;0,326146;0,459392;0,066623;sim;Lula;;municípios inteiros do estado;não
+uf;AL;102;queda de brancos e nulos;0,792431;0,737252;0,824527;0,207569;0,175473;0,262748;0,043637;sim;Lula;;municípios inteiros do estado;não
+uf;AM;62;votos dos outros candidatos do 1º turno;0,655332;0,589801;0,833127;0,344668;0,166873;0,410199;0,121663;não;;resultados muito dispersos;municípios inteiros do estado;não
+uf;AM;62;variação do comparecimento;0,59671;0,512345;0,701727;0,40329;0,298273;0,487655;0,094691;sim;Lula;;municípios inteiros do estado;não
+uf;AM;62;queda de brancos e nulos;0,715607;0,656722;0,831574;0,284393;0,168426;0,343278;0,087426;sim;Lula;;municípios inteiros do estado;não
+uf;AP;16;votos dos outros candidatos do 1º turno;;;;;;;;não;;poucos municípios;;
+uf;AP;16;variação do comparecimento;;;;;;;;não;;poucos municípios;;
+uf;AP;16;queda de brancos e nulos;;;;;;;;não;;poucos municípios;;
+uf;BA;417;votos dos outros candidatos do 1º turno;0,562349;0,537904;0,599417;0,437651;0,400583;0,462096;0,030756;sim;Lula;;municípios inteiros do estado;não
+uf;BA;417;variação do comparecimento;0,762354;0,737037;0,784405;0,237646;0,215595;0,262963;0,023684;sim;Lula;;municípios inteiros do estado;não
+uf;BA;417;queda de brancos e nulos;0,797267;0,727166;0,862321;0,202733;0,137679;0,272834;0,067578;sim;Lula;;municípios inteiros do estado;não
+uf;CE;184;votos dos outros candidatos do 1º turno;0,578865;0,544745;0,631034;0,421135;0,368966;0,455255;0,043145;sim;Lula;;municípios inteiros do estado;não
+uf;CE;184;variação do comparecimento;0,710359;0,685532;0,740667;0,289641;0,259333;0,314468;0,027567;sim;Lula;;municípios inteiros do estado;não
+uf;CE;184;queda de brancos e nulos;0,779809;0,747703;0,804981;0,220191;0,195019;0,252297;0,028639;sim;Lula;;municípios inteiros do estado;não
+uf;DF;1;votos dos outros candidatos do 1º turno;;;;;;;;não;;poucos municípios;;
+uf;DF;1;variação do comparecimento;;;;;;;;não;;poucos municípios;;
+uf;DF;1;queda de brancos e nulos;;;;;;;;não;;poucos municípios;;
+uf;ES;78;votos dos outros candidatos do 1º turno;0,500292;0,476728;0,530888;0,499708;0,469112;0,523272;0,02708;sim;sem lado claro;;municípios inteiros do estado;não
+uf;ES;78;variação do comparecimento;0,519945;0,478562;0,553272;0,480055;0,446728;0,521438;0,037355;sim;sem lado claro;;municípios inteiros do estado;não
+uf;ES;78;queda de brancos e nulos;0,59417;0,564654;0,61912;0,40583;0,38088;0,435346;0,027233;sim;Lula;;municípios inteiros do estado;não
+uf;GO;246;votos dos outros candidatos do 1º turno;0,482109;0,459358;0,502941;0,517891;0,497059;0,540642;0,021792;sim;sem lado claro;;municípios inteiros do estado;não
+uf;GO;246;variação do comparecimento;0,493089;0,469254;0,521514;0,506911;0,478486;0,530746;0,02613;sim;sem lado claro;;municípios inteiros do estado;não
+uf;GO;246;queda de brancos e nulos;0,676451;0,641886;0,714897;0,323549;0,285103;0,358114;0,036506;sim;Lula;;municípios inteiros do estado;não
+uf;MA;217;votos dos outros candidatos do 1º turno;0,688169;0,655459;0,730878;0,311831;0,269122;0,344541;0,03771;sim;Lula;;municípios inteiros do estado;não
+uf;MA;217;variação do comparecimento;0,712639;0,678068;0,747106;0,287361;0,252894;0,321932;0,034519;sim;Lula;;municípios inteiros do estado;não
+uf;MA;217;queda de brancos e nulos;0,845929;0,830056;0,863792;0,154071;0,136208;0,169944;0,016868;sim;Lula;;municípios inteiros do estado;não
+uf;MG;853;votos dos outros candidatos do 1º turno;0,516035;0,499697;0,536846;0,483965;0,463154;0,500303;0,018575;sim;sem lado claro;;municípios inteiros do estado;não
+uf;MG;853;variação do comparecimento;0,571012;0,55814;0,582622;0,428988;0,417378;0,44186;0,012241;sim;Lula;;municípios inteiros do estado;não
+uf;MG;853;queda de brancos e nulos;0,769892;0,729417;0,809166;0,230108;0,190834;0,270583;0,039874;sim;Lula;;municípios inteiros do estado;não
+uf;MS;79;votos dos outros candidatos do 1º turno;0,430596;0,360902;0,463946;0,569404;0,536054;0,639098;0,051522;sim;Flávio;;municípios inteiros do estado;não
+uf;MS;79;variação do comparecimento;0,613792;0,551162;0,679655;0,386208;0,320345;0,448838;0,064246;sim;Lula;;municípios inteiros do estado;não
+uf;MS;79;queda de brancos e nulos;0,693452;0,618599;0,729025;0,306548;0,270975;0,381401;0,055213;sim;Lula;;municípios inteiros do estado;não
+uf;MT;142;votos dos outros candidatos do 1º turno;0,447116;0,414606;0,480194;0,552884;0,519806;0,585394;0,032794;não;;depende da comparação (municípios ou seções);municípios inteiros do estado;não
+uf;MT;142;variação do comparecimento;0,468136;0,438666;0,492721;0,531864;0,507279;0,561334;0,027027;sim;Flávio;;municípios inteiros do estado;não
+uf;MT;142;queda de brancos e nulos;0,64946;0,569438;0,706174;0,35054;0,293826;0,430562;0,068368;sim;Lula;;municípios inteiros do estado;não
+uf;PA;144;votos dos outros candidatos do 1º turno;0,620477;0,594695;0,650705;0,379523;0,349295;0,405305;0,028005;sim;Lula;;municípios inteiros do estado;não
+uf;PA;144;variação do comparecimento;0,603351;0,574999;0,633749;0,396649;0,366251;0,425001;0,029375;sim;Lula;;municípios inteiros do estado;não
+uf;PA;144;queda de brancos e nulos;0,733753;0,707465;0,753553;0,266247;0,246447;0,292535;0,023044;sim;Lula;;municípios inteiros do estado;não
+uf;PB;223;votos dos outros candidatos do 1º turno;0,601026;0,572714;0,643944;0,398974;0,356056;0,427286;0,035615;sim;Lula;;municípios inteiros do estado;não
+uf;PB;223;variação do comparecimento;0,689198;0,653705;0,736752;0,310802;0,263248;0,346295;0,041524;sim;Lula;;municípios inteiros do estado;não
+uf;PB;223;queda de brancos e nulos;0,856058;0,822318;0,882102;0,143942;0,117898;0,177682;0,029892;sim;Lula;;municípios inteiros do estado;não
+uf;PE;185;votos dos outros candidatos do 1º turno;0,588287;0,546989;0,638115;0,411713;0,361885;0,453011;0,045563;sim;Lula;;municípios inteiros do estado;não
+uf;PE;185;variação do comparecimento;0,752858;0,728109;0,781733;0,247142;0,218267;0,271891;0,026812;sim;Lula;;municípios inteiros do estado;não
+uf;PE;185;queda de brancos e nulos;0,863117;0,837353;0,88177;0,136883;0,11823;0,162647;0,022208;sim;Lula;;municípios inteiros do estado;não
+uf;PI;224;votos dos outros candidatos do 1º turno;0,695;0,661426;0,749169;0,305;0,250831;0,338574;0,043872;sim;Lula;;municípios inteiros do estado;não
+uf;PI;224;variação do comparecimento;0,719625;0,694665;0,749705;0,280375;0,250295;0,305335;0,02752;sim;Lula;;municípios inteiros do estado;não
+uf;PI;224;queda de brancos e nulos;0,798393;0,771591;0,818925;0,201607;0,181075;0,228409;0,023667;sim;Lula;;municípios inteiros do estado;não
+uf;PR;399;votos dos outros candidatos do 1º turno;0,458092;0,444219;0,475268;0,541908;0,524732;0,555781;0,015524;sim;Flávio;;municípios inteiros do estado;não
+uf;PR;399;variação do comparecimento;0,509797;0,492274;0,531907;0,490203;0,468093;0,507726;0,019817;sim;sem lado claro;;municípios inteiros do estado;não
+uf;PR;399;queda de brancos e nulos;0,697793;0,667021;0,731001;0,302207;0,268999;0,332979;0,03199;sim;Lula;;municípios inteiros do estado;não
+uf;RJ;92;votos dos outros candidatos do 1º turno;0,514555;0,501779;0,546045;0,485445;0,453955;0,498221;0,022133;sim;Lula;;municípios inteiros do estado;não
+uf;RJ;92;variação do comparecimento;0,479243;0,403991;0,524516;0,520757;0,475484;0,596009;0,060263;sim;sem lado claro;;municípios inteiros do estado;não
+uf;RJ;92;queda de brancos e nulos;0,764213;0,62504;0,844283;0,235787;0,155717;0,37496;0,109622;não;;resultados muito dispersos;municípios inteiros do estado;não
+uf;RN;167;votos dos outros candidatos do 1º turno;0,561389;0,525152;0,596438;0,438611;0,403562;0,474848;0,035643;sim;Lula;;municípios inteiros do estado;não
+uf;RN;167;variação do comparecimento;0,673388;0,655399;0,697984;0,326612;0,302016;0,344601;0,021293;sim;Lula;;municípios inteiros do estado;não
+uf;RN;167;queda de brancos e nulos;0,738515;0,702158;0,771471;0,261485;0,228529;0,297842;0,034656;sim;Lula;;municípios inteiros do estado;não
+uf;RO;52;votos dos outros candidatos do 1º turno;0,539631;0,435054;0,587054;0,460369;0,412946;0,564946;0,076;sim;sem lado claro;;municípios inteiros do estado;não
+uf;RO;52;variação do comparecimento;0,340162;0,294885;0,363162;0,659838;0,636838;0,705115;0,034138;sim;Flávio;;municípios inteiros do estado;não
+uf;RO;52;queda de brancos e nulos;0,611667;0,50752;0,675528;0,388333;0,324472;0,49248;0,084004;sim;Lula;;municípios inteiros do estado;não
+uf;RR;15;votos dos outros candidatos do 1º turno;;;;;;;;não;;poucos municípios;;
+uf;RR;15;variação do comparecimento;;;;;;;;não;;poucos municípios;;
+uf;RR;15;queda de brancos e nulos;;;;;;;;não;;poucos municípios;;
+uf;RS;497;votos dos outros candidatos do 1º turno;0,432575;0,41771;0,450904;0,567425;0,549096;0,58229;0,016597;sim;Flávio;;municípios inteiros do estado;não
+uf;RS;497;variação do comparecimento;0,528271;0,485798;0,568243;0,471729;0,431757;0,514202;0,041223;sim;sem lado claro;;municípios inteiros do estado;não
+uf;RS;497;queda de brancos e nulos;0,787027;0,723041;0,845757;0,212973;0,154243;0,276959;0,061358;sim;Lula;;municípios inteiros do estado;não
+uf;SC;295;votos dos outros candidatos do 1º turno;0,426333;0,413983;0,443549;0,573667;0,556451;0,586017;0,014783;sim;Flávio;;municípios inteiros do estado;não
+uf;SC;295;variação do comparecimento;0,442481;0,409948;0,475409;0,557519;0,524591;0,590052;0,032731;sim;Flávio;;municípios inteiros do estado;não
+uf;SC;295;queda de brancos e nulos;0,672765;0,62532;0,714725;0,327235;0,285275;0,37468;0,044702;sim;Lula;;municípios inteiros do estado;não
+uf;SE;75;votos dos outros candidatos do 1º turno;0,633837;0,600845;0,659207;0,366163;0,340793;0,399155;0,029181;sim;Lula;;municípios inteiros do estado;não
+uf;SE;75;variação do comparecimento;0,713557;0,686945;0,748948;0,286443;0,251052;0,313055;0,031001;sim;Lula;;municípios inteiros do estado;não
+uf;SE;75;queda de brancos e nulos;0,793754;0,716558;0,861167;0,206246;0,138833;0,283442;0,072304;sim;Lula;;municípios inteiros do estado;não
+uf;SP;645;votos dos outros candidatos do 1º turno;0,428172;0,418215;0,453944;0,571828;0,546056;0,581785;0,017864;não;;depende da comparação (municípios ou seções);municípios inteiros do estado;não
+uf;SP;645;variação do comparecimento;0,546296;0,491659;0,588321;0,453704;0,411679;0,508341;0,048331;sim;sem lado claro;;municípios inteiros do estado;não
+uf;SP;645;queda de brancos e nulos;0,785589;0,673613;0,864542;0,214411;0,135458;0,326387;0,095465;sim;Lula;;municípios inteiros do estado;não
+uf;TO;139;votos dos outros candidatos do 1º turno;0,510889;0,465168;0,576336;0,489111;0,423664;0,534832;0,055584;sim;sem lado claro;;municípios inteiros do estado;não
+uf;TO;139;variação do comparecimento;0,48206;0,431436;0,537979;0,51794;0,462021;0,568564;0,053271;sim;sem lado claro;;municípios inteiros do estado;não
+uf;TO;139;queda de brancos e nulos;0,647161;0,605631;0,698954;0,352839;0,301046;0,394369;0,046662;sim;Lula;;municípios inteiros do estado;não

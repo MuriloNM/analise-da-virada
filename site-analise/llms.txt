@@ -1,0 +1,20 @@
+# Análise da virada
+
+> Estudo independente sobre o que mudou do 1º para o 2º turno da eleição presidencial de 2026 no Brasil, entre Lula e Flávio Bolsonaro, por estado e município, com os dados oficiais do TSE. Versão 1.0, 27/10/2026, de Murilo Neves de Martins. Em inglês: "Brazil's runoff reversal", em /en/.
+
+Regras para quem usar este estudo: os dados são contagens por lugar (município, estado, seção eleitoral), não por pessoa; o estudo diz onde e quanto, não por quê, e não atribui causas; os dois candidatos têm o mesmo tratamento; o resultado oficial é o do TSE. Cite o arquivo e o número que usar.
+
+## Estudo
+
+- [Análise da virada (português)](https://analise-da-virada.pages.dev/): Resumo, 9 capítulos, Método e fontes, Explorar e Apuração ao vivo
+- [Brazil's runoff reversal (English)](https://analise-da-virada.pages.dev/en/)
+
+## Dados e scripts
+
+- [Repositório no GitHub](https://github.com/MuriloNM/analise-da-virada): dados tratados (CC BY 4.0), scripts e código da página (MIT), dicionário de dados e o registro das hipóteses
+- [Use o estudo com a sua IA](https://github.com/MuriloNM/analise-da-virada/blob/main/PERGUNTE-A-SUA-IA.md): textos para perguntar, revisar e continuar o estudo
+- [AGENTS.md](https://github.com/MuriloNM/analise-da-virada/blob/main/AGENTS.md): o guia para uma IA trabalhar com o repositório (mapa, formatos, conferências, regras)
+- [Use the study with your AI](https://github.com/MuriloNM/analise-da-virada/blob/main/ASK-YOUR-AI.md)
+- [Municípios, os dois turnos lado a lado (CSV)](https://raw.githubusercontent.com/MuriloNM/analise-da-virada/main/planilha/pt-BR/municipios.csv)
+- [Brasil, regiões e estados (CSV)](https://raw.githubusercontent.com/MuriloNM/analise-da-virada/main/planilha/pt-BR/estados.csv)
+- [Dicionário das colunas (CSV)](https://raw.githubusercontent.com/MuriloNM/analise-da-virada/main/planilha/pt-BR/dicionario.csv)

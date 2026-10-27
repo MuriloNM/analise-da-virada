@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Se usar estes dados, cite o estudo. If you use these data, please cite the study."
+title: "Análise da virada: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município"
+type: dataset
+authors:
+  - family-names: "Martins"
+    given-names: "Murilo Neves de"
+version: "1.0"
+date-released: "2026-10-27"
+url: "https://analise-da-virada.pages.dev/"
+repository-code: "https://github.com/MuriloNM/analise-da-virada"
+license: CC-BY-4.0
+keywords:
+  - "eleições 2026"
+  - "Brazil elections"
+  - "TSE"
+  - "segundo turno"

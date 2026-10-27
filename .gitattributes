@@ -1,0 +1,4 @@
+# Os arquivos de dados vão byte a byte, sem troca de fim de linha, para as impressões digitais de SHA256SUMS.txt valerem
+dados/** -text
+planilha/** -text
+SHA256SUMS.txt -text

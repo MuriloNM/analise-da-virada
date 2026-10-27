@@ -1,0 +1,17 @@
+# Arquivos brutos que os scripts baixam de novo (scripts/LEIA-ME.md): não vão para o repositório
+dados/tse_secoes/
+dados/tse_6259_uf/
+dados/tse_votacao_partido_munzona/
+dados/sociais_fontes/
+dados/escala_fontes/artigo_*/
+dados/1turno_secoes/
+*.zip
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,16 @@
+name: "Isso me ajudou · This helped me"
+description: "Conte para que você usou o estudo ou os dados. · Tell us what you used the study or the data for."
+title: "[Ajudou] "
+labels: ["ajudou"]
+body:
+  - type: textarea
+    id: uso
+    attributes:
+      label: "Para que você usou · What you used it for"
+      description: "Uma aula, uma reportagem, um trabalho, uma conversa… Se puder, o link. · A class, a news story, a paper, a conversation… A link, if you can."
+    validations:
+      required: true
+  - type: textarea
+    id: faltou
+    attributes:
+      label: "O que faltou ou ficou difícil (opcional) · What was missing or hard (optional)"

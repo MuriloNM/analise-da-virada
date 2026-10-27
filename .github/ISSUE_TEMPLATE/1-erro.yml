@@ -1,0 +1,35 @@
+name: "Achei um erro · I found an error"
+description: "Um número, uma conta, um arquivo ou uma frase que diz mais do que os dados permitem. · A number, a calculation, a file or a sentence that says more than the data allow."
+title: "[Erro] "
+labels: ["erro"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por avisar. Cada correção entra em "Versão e correções", na página e no README, com a data, o que mudou e, se você quiser, o seu nome.
+        Thank you for reporting. Every correction goes into "Version and corrections", on the page and in the README, with the date, what changed and, if you wish, your name.
+  - type: input
+    id: onde
+    attributes:
+      label: "Onde está · Where is it"
+      description: "O arquivo e a linha, ou o capítulo e a figura da página (pode colar o link). · The file and row, or the chapter and figure on the page (you can paste the link)."
+      placeholder: "planilha/pt-BR/municipios.csv, linha de Campinas · https://analise-da-virada.pages.dev/#analise/3"
+    validations:
+      required: true
+  - type: textarea
+    id: oque
+    attributes:
+      label: "O que parece errado · What looks wrong"
+      description: "O que está escrito ou calculado, e o que você esperava. · What is written or calculated, and what you expected."
+    validations:
+      required: true
+  - type: textarea
+    id: como
+    attributes:
+      label: "Como você conferiu · How you checked"
+      description: "A fonte ou a conta que você usou, se tiver. · The source or calculation you used, if any."
+  - type: input
+    id: credito
+    attributes:
+      label: "Crédito (opcional) · Credit (optional)"
+      description: "Se quiser aparecer em \"Versão e correções\", o nome como deve aparecer. · If you want to be credited in \"Version and corrections\", the name to show."

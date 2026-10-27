@@ -1,0 +1,240 @@
+{
+ "votacao_secao_2026_BR.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_secao/votacao_secao_2026_BR.zip",
+  "baixado_em": "27/10/2026 00:13:19",
+  "bytes": 161616519,
+  "modificado": "Tue, 06 Oct 2026 19:22:49 GMT",
+  "sha256": "2d42006d0f6c6e00bad83f5c23cd3d78cd3e3182dbc1ad6718222b6b132c23e1"
+ },
+ "detalhe_votacao_secao_2026.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/detalhe_votacao_secao/detalhe_votacao_secao_2026.zip",
+  "baixado_em": "27/10/2026 00:13:26",
+  "bytes": 234357769,
+  "modificado": "Mon, 26 Oct 2026 15:35:35 GMT",
+  "sha256": "8ef9ce3a85cde260471faf7a83a9b4f5ccf3993fdda942aacaa658574344789c"
+ },
+ "bweb_2t_AC_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_AC_261020260742.zip",
+  "baixado_em": "27/10/2026 00:13:37",
+  "bytes": 1254611,
+  "modificado": "Mon, 26 Oct 2026 11:59:50 GMT",
+  "sha256": "35c1f1676e04d0824eb57df158f40d3c1e943926fd4754933a9d2863ccf06e1b",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_AL_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_AL_261020260742.zip",
+  "baixado_em": "27/10/2026 00:13:43",
+  "bytes": 1945168,
+  "modificado": "Mon, 26 Oct 2026 11:59:45 GMT",
+  "sha256": "c42eb06a14d00901c1e2023560eb561933c11837cbf992a70228fd7a389e6be1",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_AM_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_AM_261020260742.zip",
+  "baixado_em": "27/10/2026 00:13:49",
+  "bytes": 4276454,
+  "modificado": "Mon, 26 Oct 2026 12:00:46 GMT",
+  "sha256": "c6312af9d25533203e6b0c660f6e48d072cf86f03c952f5af51565503ebb2167",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_AP_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_AP_261020260742.zip",
+  "baixado_em": "27/10/2026 00:13:56",
+  "bytes": 596704,
+  "modificado": "Mon, 26 Oct 2026 11:59:43 GMT",
+  "sha256": "56e4ac4f714d84f1592b3507eb63a632439abf37601cb22eea8a1d1a0bfa4a4a",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_BA_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_BA_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:02",
+  "bytes": 9513048,
+  "modificado": "Mon, 26 Oct 2026 11:59:49 GMT",
+  "sha256": "b7da4dd73937c74a76e1d5307550085760ba0c1b1be1073f575d9f29afee553c",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_CE_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_CE_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:08",
+  "bytes": 6151144,
+  "modificado": "Mon, 26 Oct 2026 11:59:50 GMT",
+  "sha256": "e06473e8f738e7d323d31261c2b4f785f5b09671847390fa0dd31a40847466cf",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_DF_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_DF_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:15",
+  "bytes": 3846786,
+  "modificado": "Mon, 26 Oct 2026 11:59:51 GMT",
+  "sha256": "da7ea3674e771acc7a7780ba7220f82d1c88458186c6a6e86df71e7e425ce2d4",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_ES_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_ES_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:21",
+  "bytes": 5275706,
+  "modificado": "Mon, 26 Oct 2026 12:01:08 GMT",
+  "sha256": "54d636f7d22d51824a1245fa12aeebe679f7eddf0189ac5d0d4a9a2335d2c5cb",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_GO_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_GO_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:27",
+  "bytes": 4248869,
+  "modificado": "Mon, 26 Oct 2026 12:01:03 GMT",
+  "sha256": "f2c29ffbf465dbaf82a9d26e7ae040d20cddc914a1ef8d225410650aaff1f308",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_MA_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_MA_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:34",
+  "bytes": 4609442,
+  "modificado": "Mon, 26 Oct 2026 12:00:03 GMT",
+  "sha256": "38b2a6180190729dfece31f1d22d30ebce257467e539277d678d67089ea1a9dd",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_MG_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_MG_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:40",
+  "bytes": 14071007,
+  "modificado": "Mon, 26 Oct 2026 12:00:49 GMT",
+  "sha256": "56a96873e0c03508d0a58060a09ef8f8660aa80e8fd36289fd3b25c1c71b7839",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_MS_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_MS_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:46",
+  "bytes": 1863398,
+  "modificado": "Mon, 26 Oct 2026 11:59:53 GMT",
+  "sha256": "c47916ff1aca6d5c6d991d2687f67e9f09e9a1dbd16e3fcf855f7602923677e9",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_MT_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_MT_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:52",
+  "bytes": 2204666,
+  "modificado": "Mon, 26 Oct 2026 12:01:03 GMT",
+  "sha256": "5303d588838ed3b40499f86b0758237da1eb1b594449550f753fdecb152bd569",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_PA_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_PA_261020260742.zip",
+  "baixado_em": "27/10/2026 00:14:59",
+  "bytes": 5158441,
+  "modificado": "Mon, 26 Oct 2026 12:01:06 GMT",
+  "sha256": "f50720b4ef7a99f1167bff6ac24959b035901e586514a4d4b15f5538fd12073b",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_PB_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_PB_261020260742.zip",
+  "baixado_em": "27/10/2026 00:15:05",
+  "bytes": 2871353,
+  "modificado": "Mon, 26 Oct 2026 12:00:06 GMT",
+  "sha256": "07cac4be3e1ab49386eee5e9ba72b5aaf6626f9479775459c614d423d5642350",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_PE_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_PE_261020260742.zip",
+  "baixado_em": "27/10/2026 00:15:11",
+  "bytes": 5761723,
+  "modificado": "Mon, 26 Oct 2026 12:00:01 GMT",
+  "sha256": "9c917e885a2d068821f226f1524cf063bb623acc809ec37d1387f3b05df80508",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_PI_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_PI_261020260742.zip",
+  "baixado_em": "27/10/2026 00:15:17",
+  "bytes": 2648710,
+  "modificado": "Mon, 26 Oct 2026 12:01:11 GMT",
+  "sha256": "d0fd3ff93cc97ef0e2ae35dc3e6a1a54ce73ad6b9e299cbf676d27007d1c38b3",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_PR_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_PR_261020260742.zip",
+  "baixado_em": "27/10/2026 00:15:24",
+  "bytes": 7189112,
+  "modificado": "Mon, 26 Oct 2026 11:59:36 GMT",
+  "sha256": "32e8a0bfc7e9fe76db9ce0e4bc3cfd39eff4ef46ca376d98764f605cfed2147f",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_RJ_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_RJ_261020260742.zip",
+  "baixado_em": "27/10/2026 00:15:30",
+  "bytes": 10004912,
+  "modificado": "Mon, 26 Oct 2026 12:00:05 GMT",
+  "sha256": "d13abd46e8f365900f65c94dbc6ccd334a7ff65e2c759a24f5ebd13f4b0aceb5",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_RN_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_RN_261020260742.zip",
+  "baixado_em": "27/10/2026 00:15:36",
+  "bytes": 4424654,
+  "modificado": "Mon, 26 Oct 2026 12:00:04 GMT",
+  "sha256": "cf48f4e878bace44e0b3f1ab0c133e0fd59970ca9fc6f317141a9cef7f28d423",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_RO_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_RO_261020260742.zip",
+  "baixado_em": "27/10/2026 00:15:43",
+  "bytes": 1250142,
+  "modificado": "Mon, 26 Oct 2026 12:01:21 GMT",
+  "sha256": "dec6d43ae423a66722b50fda80e6dfc4378482fc141a390bfca367fd9549ede3",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_RR_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_RR_261020260742.zip",
+  "baixado_em": "27/10/2026 00:15:49",
+  "bytes": 500520,
+  "modificado": "Mon, 26 Oct 2026 12:01:26 GMT",
+  "sha256": "6554fcbd0c55cf90abf970cb83125bfe7b35e748d676fe6fe60bdbca0a4262af",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_RS_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_RS_261020260742.zip",
+  "baixado_em": "27/10/2026 00:15:55",
+  "bytes": 7410270,
+  "modificado": "Mon, 26 Oct 2026 12:01:11 GMT",
+  "sha256": "e4e7fff8d09e588246f5e55750e78cdfe7e4de995361bcd11ad3e7445538e9e3",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_SC_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_SC_261020260742.zip",
+  "baixado_em": "27/10/2026 00:16:01",
+  "bytes": 4487185,
+  "modificado": "Mon, 26 Oct 2026 11:59:46 GMT",
+  "sha256": "6f169b88a07858e920b3c9e974f3ae5238f36dfe6e6d138a1758764c5b4de697",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_SE_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_SE_261020260742.zip",
+  "baixado_em": "27/10/2026 00:16:08",
+  "bytes": 1645477,
+  "modificado": "Mon, 26 Oct 2026 12:01:08 GMT",
+  "sha256": "4dfc5ee64ed4f6e71aedc133afc4e0376eaa5dcd9c0545ab9aa29d320a77fc0a",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_SP_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_SP_261020260742.zip",
+  "baixado_em": "27/10/2026 00:16:14",
+  "bytes": 28188300,
+  "modificado": "Mon, 26 Oct 2026 12:00:04 GMT",
+  "sha256": "ffadfa193e68261e2e8aa667b3075e6bc8172b0b6629c752d3b8cf680ac10c4e",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_TO_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_TO_261020260742.zip",
+  "baixado_em": "27/10/2026 00:16:21",
+  "bytes": 2383586,
+  "modificado": "Mon, 26 Oct 2026 12:00:02 GMT",
+  "sha256": "f2dfdafb28d13aae5958ad6d04f604442c10456d6819b84a21a1f52a49db0f6d",
+  "sha512_tse": "confere"
+ },
+ "bweb_2t_ZZ_261020260742.zip": {
+  "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_2t_ZZ_261020260742.zip",
+  "baixado_em": "27/10/2026 00:16:27",
+  "bytes": 502199,
+  "modificado": "Mon, 26 Oct 2026 12:01:21 GMT",
+  "sha256": "fba52c9cec4107b8427746c154c47f5bce90aad18480cc5746866f4ae3aeb5fa",
+  "sha512_tse": "confere"
+ }
+}
