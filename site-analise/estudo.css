@@ -665,6 +665,7 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
 .pas-area:hover{stroke:var(--ink);stroke-width:1.5}
 .pas-area:focus-visible{stroke:var(--ink);stroke-width:3}
 .pas-contorno{stroke-width:2.5}
+.pas-divisa{fill:none;stroke:var(--ink);stroke-width:1.2;pointer-events:none;vector-effect:non-scaling-stroke}
 .pas-vizinho{fill:var(--line);stroke:var(--bg);stroke-width:1;opacity:.6}
 .pas-aviso{margin:6px 0 0;font:italic 400 15px/1.45 var(--f-texto);color:var(--muted);max-width:34em}
 .pas-aviso:empty{display:none}

@@ -1,16 +1,28 @@
 /* O mapa para passear pelos dados (T36, diário D83): o Brasil por estado e, ao clicar, o estado por município,
    com a ficha do lugar em barras de proporção (quem ficou à frente e por quanto), a comparação de dois lugares
    e a lista do nível em que se está. Fácil de achar: tem lugar no menu e uma chamada no Resumo.
-   Só mostra os números que o estudo já tem (dados.js); nenhuma conta nova. A malha dos municípios, quando
-   existe (window.MAPA_MUN, por estado), desenha o estado por município; sem ela, o estado aparece inteiro
-   e os municípios ficam na lista. Montado por estudo.js, com as mesmas peças do Explorar. */
+   Só mostra os números que o estudo já tem (dados.js); nenhuma conta nova. A malha dos municípios (P38)
+   fica em mapas/mun-<UF>.js (scripts/mapa_municipios.py) e só é carregada quando o estado abre; até
+   chegar, ou se falhar, o estado aparece inteiro e os municípios ficam na lista. Montado por estudo.js. */
 window.PASSEAR = function (X) {
   'use strict';
   const T = window.T;
   const { D, G, BR, UFS, NOME_UF, municipios, nomeMun, el, B, P, busca, semMovimento } = X;
   const { fmt, nf } = G;
   const $ = (s, r = document) => r.querySelector(s);
-  const FORMA = window.MAPA_UFS, MALHA = window.MAPA_MUN || {};
+  const FORMA = window.MAPA_UFS;
+  const malhaDe = cod => (window.MAPA_MUN || {})[cod];
+  const carregando = {};
+  /** O desenho dos municípios do estado, carregado na primeira vez que ele abre. */
+  function carregar(cod) {
+    if (malhaDe(cod) || carregando[cod]) return;
+    carregando[cod] = 'indo';
+    const s = document.createElement('script');
+    s.src = T.raiz + 'mapas/mun-' + cod + '.js';
+    s.onload = () => { carregando[cod] = 'ok'; if (uf === cod) { desenharMapa(); pintarMapa(); } };
+    s.onerror = () => { carregando[cod] = 'falhou'; if (uf === cod) avisoMalha.textContent = T('pas.mapa.sem_malha'); };
+    document.head.appendChild(s);
+  }
   const raiz = $('#mapa-corpo');
   if (!raiz || !FORMA) return;
 
@@ -92,7 +104,8 @@ window.PASSEAR = function (X) {
   function desenharMapa() {
     const larg = Math.max(260, Math.min(caixaMapa.clientWidth, 680));
     caixaMapa.replaceChildren();
-    const malha = uf && MALHA[uf];
+    const malha = uf && malhaDe(uf);
+    if (uf && !malha) carregar(uf);
     let vb, itens;
     if (!uf) { vb = [0, 0, FORMA.largura, FORMA.altura]; itens = UFS.map(u => [u.codigo, FORMA.caminhos[u.codigo], u]); }
     else {
@@ -145,10 +158,16 @@ window.PASSEAR = function (X) {
       p.addEventListener('click', ev => { ev.stopPropagation(); escolhe(); });
       p.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); escolhe(); } });
     }
+    if (malha) { // a divisa do estado por cima dos municípios
+      const p = document.createElementNS(NS, 'path');
+      p.setAttribute('d', FORMA.caminhos[uf]); p.setAttribute('class', 'pas-divisa');
+      s.appendChild(p);
+    }
     contorno = document.createElementNS(NS, 'path');
     contorno.setAttribute('class', 'uf-contorno pas-contorno');
     s.appendChild(contorno);
-    avisoMalha.textContent = uf && !malha ? T('pas.mapa.sem_malha') : '';
+    avisoMalha.textContent = !uf ? '' : !malha ? T(carregando[uf] === 'falhou' ? 'pas.mapa.sem_malha' : 'pas.mapa.carregando')
+      : malha.sem_desenho.length ? T.p('pas.mapa.sem_desenho', malha.sem_desenho.length, { lista: malha.sem_desenho.join(', ') }) : '';
     pintarMapa();
   }
   function pintarMapa() {

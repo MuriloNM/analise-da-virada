@@ -125,6 +125,9 @@
     { id: 'escala18', end: ['https://doi.org/10.1590/dados.2023.66.2.303', 'https://doi.org/10.7910/DVN/6KVTUV'], link: true, quando: quando('met.fontes.quando', '2026-10-26', '11:49') },
     { id: 'malha', end: ['https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/json&qualidade=minima&intrarregiao=UF'], link: true,
       quando: quando('met.fontes.quando', '2026-10-26', '13:17') },
+    // T36 (P38): a malha dos municípios, só para o Mapa
+    { id: 'malha_mun', end: ['https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/json&qualidade=minima&intrarregiao=municipio'], link: true,
+      quando: quando('met.fontes.quando', '2026-10-28', '00:20') },
     { id: 'porte', nomes: [['https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm', 'met.fonte.porte.cf'],
       ['https://ftp.ibge.gov.br/Perfil_Municipios/2012/pdf/tab021.pdf', 'met.fonte.porte.ibge']], quando: quando('met.fontes.consultado', '2026-10-26', '11:50'),
       conf: { n08: nota('N08') } },
