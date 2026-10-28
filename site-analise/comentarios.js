@@ -100,12 +100,24 @@
       const pe = el('p', 'com-nota', nota + ' ', li);
       const bt = el('button', 'bt-apagar', T('com.apagar'), pe);
       bt.type = 'button';
-      bt.addEventListener('click', () => apagar(c.id, dele.chave, li));
+      bt.addEventListener('click', () => confirmarApagar(pe, bt, c.id, dele.chave, li));
     }
   }
 
+  // a confirmação fica na página: a caixa nativa (window.confirm) pode abrir escondida ou ser bloqueada, e o botão parece morto
+  function confirmarApagar(pe, bt, id, chave, li) {
+    bt.hidden = true;
+    const conf = el('span', 'com-conf', undefined, pe);
+    conf.setAttribute('role', 'alert');
+    conf.append(T('com.apagar_confirma') + ' ');
+    const sim = el('button', 'bt-apagar', T('com.apagar_sim'), conf), nao = el('button', 'bt-apagar', T('com.apagar_nao'), conf);
+    sim.type = nao.type = 'button';
+    sim.addEventListener('click', () => { sim.disabled = nao.disabled = true; apagar(id, chave, li).then(() => { conf.remove(); bt.hidden = false; }); });
+    nao.addEventListener('click', () => { conf.remove(); bt.hidden = false; bt.focus(); });
+    nao.focus();
+  }
+
   async function apagar(id, chave, li) {
-    if (!window.confirm(T('com.apagar_confirma'))) return;
     let ok = false;
     try {
       const r = await fetch(API, { method: 'DELETE', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, chave }) });

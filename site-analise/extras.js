@@ -12,7 +12,7 @@
   const T = window.T;
   // 0.1 foi a versão de trabalho; a 1.0 é a primeira publicada (T25, item 8; sessão sobre-estudo, 27/10)
   const VERSAO = {
-    numero: '1.2.1',
+    numero: '1.2.2',
     data: '2026-10-28',
     situacao: T('ext.situacao'),
     // { data: 'AAAA-MM-DD', versao: '1.1', oQue: 'chave do catálogo: o que estava errado e o que mudou', onde: '#analise/3',
@@ -34,6 +34,7 @@
       { data: '2026-10-28', versao: '1.2', oQue: 'ext.corr.v12', onde: '#analise/9' },
       // T16, T21, T22, T19: a caixa de comentários abre, com moderação do autor
       { data: '2026-10-28', versao: '1.2.1', oQue: 'ext.corr.v121', onde: '#comentarios' },
+      { data: '2026-10-28', versao: '1.2.2', oQue: 'ext.corr.v122', onde: '#comentarios' },
     ],
   };
   const AUTOR = { nome: 'Murilo Neves de Martins', citacao: 'MARTINS, Murilo Neves de', apa: 'Martins, M. N. de',
