@@ -2,7 +2,7 @@
 
 Os scripts que fizeram cada arquivo de `../dados/`, a partir dos arquivos do TSE e do IBGE. Rode da pasta raiz do repositório, com `python -I scripts/<nome>.py`. Cada um imprime um relatório das conferências e sai com erro (código 1) se alguma não fechar.
 
-**Requisitos:** Python 3.14 (as contas foram feitas com o 3.14.0). Só três scripts usam bibliotecas de fora da biblioteca padrão (`secoes_inferencia.py`, `inferencia.py` e `exploracao.py`): `pip install -r requirements.txt` instala as mesmas versões (numpy 2.3.4 e scipy 1.16.2). As contas com sorteio (bootstrap) usam uma semente fixa, por isso o resultado sai igual a cada rodada.
+**Requisitos:** Python 3.14 (as contas foram feitas com o 3.14.0). Só quatro scripts usam bibliotecas de fora da biblioteca padrão (`secoes_inferencia.py`, `inferencia.py`, `exploracao.py` e `perfil_idade.py`): `pip install -r requirements.txt` instala as mesmas versões (numpy 2.3.4 e scipy 1.16.2). As contas com sorteio (bootstrap) usam uma semente fixa, por isso o resultado sai igual a cada rodada.
 
 **Não precisa rodar nada para usar os dados:** tudo que os scripts gravam já está em `../dados/` e `../planilha/`. Rodar serve para conferir que as bases saem das fontes.
 
@@ -28,6 +28,9 @@ Os downloads vão devagar, poucos de cada vez e com nova tentativa quando o TSE 
 | 12 | `python -I scripts/secoes_inferencia.py` | De onde vieram os votos de cada um, comparando seções da mesma cidade | `dados/secoes_inferencia.json` |
 | 13 | `python -I scripts/inferencia.py` | As hipóteses, as regressões, os intervalos, o funil, o erro da projeção e os 35 testes dos dados sociais | `dados/inferencia.json` |
 | 14 | `python -I scripts/exploracao.py` | As cinco perguntas da exploração guiada (capítulo 9); usa também `dados/tse_6259_uf/`, do passo 5 | `dados/exploracao.json` |
+| 15 | `python -I scripts/perfil_idade_base.py` | Soma o perfil de comparecimento e abstenção do TSE (`perfil_comparecimento_abstencao_2026.zip`, 229 MB, só o 1º turno; baixar à mão em `dados/tse_perfil_comparecimento/`) por município, zona, idade e gênero, e confere os totais com o resultado oficial | `dados/perfil_idade.csv.gz`, `dados/perfil_idade_instrucao.csv.gz`, `dados/perfil_idade_meta.json` |
+| 16 | `python -I scripts/perfil_secao_baixar.py` | Baixa o perfil do eleitorado por seção do TSE (28 arquivos, 2,8 GB; não vem neste repositório) | `dados/tse_perfil_eleitor_secao/` |
+| 17 | `python -I scripts/perfil_idade.py` | A 2ª rodada da exploração guiada (capítulo 9, perguntas 6 a 10): quem votou e quem faltou, por idade, e as seções com mais inscritos de 60 anos ou mais | `dados/perfil_idade.json` |
 
 Os passos 12 a 14 levam alguns minutos. Conferido em 27/10/2026: os passos 3, 4, 7 e 12 a 14, rodados de novo a partir dos arquivos desta pasta, gravam arquivos iguais aos de `dados/`, número a número; só muda a data de geração no `meta`. Os CSV de `../planilha/` são esses arquivos na forma da página (separador e decimal da língua, cabeçalhos traduzidos); o script que os formata faz parte do código da página e não muda nenhum número. Para conferir os totais e as impressões digitais: `python scripts/conferir_totais.py`.
 

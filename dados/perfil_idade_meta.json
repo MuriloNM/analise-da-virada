@@ -1,0 +1,3053 @@
+{
+ "fonte": "https://cdn.tse.jus.br/estatistica/sead/odsele/perfil_comparecimento_abstencao/perfil_comparecimento_abstencao_2026.zip",
+ "dt_geracao": [
+  "13/10/2026"
+ ],
+ "linhas_lidas": 11060908,
+ "turnos": [
+  1
+ ],
+ "faixas": {
+  "-3": "Inválido",
+  "1600": "16 anos",
+  "1700": "17 anos",
+  "1800": "18 anos",
+  "1900": "19 anos",
+  "2000": "20 anos",
+  "2124": "21 a 24 anos",
+  "2529": "25 a 29 anos",
+  "3034": "30 a 34 anos",
+  "3539": "35 a 39 anos",
+  "4044": "40 a 44 anos",
+  "4549": "45 a 49 anos",
+  "5054": "50 a 54 anos",
+  "5559": "55 a 59 anos",
+  "6064": "60 a 64 anos",
+  "6569": "65 a 69 anos",
+  "7074": "70 a 74 anos",
+  "7579": "75 a 79 anos",
+  "8084": "80 a 84 anos",
+  "8589": "85 a 89 anos",
+  "9094": "90 a 94 anos",
+  "9599": "95 a 99 anos",
+  "9999": "100 anos ou mais"
+ },
+ "municipios_com_identidade_quebrada": 0,
+ "conferencia_t03": {
+  "1t": {
+   "totais": {
+    "perfil_aptos": 158745463,
+    "perfil_comp": 125277230,
+    "perfil_abst": 33468233,
+    "oficial_aptos": 158745502,
+    "oficial_comp": 125275835,
+    "oficial_abst": 33469667,
+    "perfil_tte": 595156,
+    "soma_abs_dif_aptos": 320025
+   },
+   "municipios_diferentes": 5652,
+   "diferencas": [
+    {
+     "uf": "AC",
+     "cd_tse": "01007",
+     "municipio": "BUJARI",
+     "perfil": [
+      11148,
+      8651,
+      2497
+     ],
+     "oficial": [
+      11152,
+      8657,
+      2495
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01015",
+     "municipio": "CAPIXABA",
+     "perfil": [
+      8164,
+      6507,
+      1657
+     ],
+     "oficial": [
+      8170,
+      6513,
+      1657
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01023",
+     "municipio": "PORTO ACRE",
+     "perfil": [
+      14268,
+      11594,
+      2674
+     ],
+     "oficial": [
+      14284,
+      11609,
+      2675
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01031",
+     "municipio": "SANTA ROSA DO PURUS",
+     "perfil": [
+      3961,
+      2912,
+      1049
+     ],
+     "oficial": [
+      3927,
+      2884,
+      1043
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01040",
+     "municipio": "MARECHAL THAUMATURGO",
+     "perfil": [
+      11857,
+      9312,
+      2545
+     ],
+     "oficial": [
+      11897,
+      9352,
+      2545
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01058",
+     "municipio": "BRASILÉIA",
+     "perfil": [
+      19993,
+      15922,
+      4071
+     ],
+     "oficial": [
+      19978,
+      15907,
+      4071
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01066",
+     "municipio": "PORTO WALTER",
+     "perfil": [
+      7998,
+      6489,
+      1509
+     ],
+     "oficial": [
+      8032,
+      6520,
+      1512
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01074",
+     "municipio": "CRUZEIRO DO SUL",
+     "perfil": [
+      64167,
+      51772,
+      12395
+     ],
+     "oficial": [
+      63851,
+      51482,
+      12369
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01082",
+     "municipio": "RODRIGUES ALVES",
+     "perfil": [
+      12143,
+      10182,
+      1961
+     ],
+     "oficial": [
+      12185,
+      10218,
+      1967
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01090",
+     "municipio": "MÂNCIO LIMA",
+     "perfil": [
+      14659,
+      12086,
+      2573
+     ],
+     "oficial": [
+      14657,
+      12089,
+      2568
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01104",
+     "municipio": "JORDÃO",
+     "perfil": [
+      6003,
+      4515,
+      1488
+     ],
+     "oficial": [
+      5999,
+      4514,
+      1485
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01112",
+     "municipio": "EPITACIOLÂNDIA",
+     "perfil": [
+      14604,
+      11705,
+      2899
+     ],
+     "oficial": [
+      14599,
+      11702,
+      2897
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01120",
+     "municipio": "ACRELÂNDIA",
+     "perfil": [
+      10220,
+      8067,
+      2153
+     ],
+     "oficial": [
+      10207,
+      8055,
+      2152
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01139",
+     "municipio": "FEIJÓ",
+     "perfil": [
+      24230,
+      18186,
+      6044
+     ],
+     "oficial": [
+      24197,
+      18156,
+      6041
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01392",
+     "municipio": "RIO BRANCO",
+     "perfil": [
+      270350,
+      215729,
+      54621
+     ],
+     "oficial": [
+      270174,
+      215564,
+      54610
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01457",
+     "municipio": "SENA MADUREIRA",
+     "perfil": [
+      30905,
+      24698,
+      6207
+     ],
+     "oficial": [
+      30864,
+      24661,
+      6203
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01473",
+     "municipio": "TARAUACÁ",
+     "perfil": [
+      30033,
+      22664,
+      7369
+     ],
+     "oficial": [
+      29970,
+      22603,
+      7367
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01490",
+     "municipio": "XAPURI",
+     "perfil": [
+      12786,
+      10296,
+      2490
+     ],
+     "oficial": [
+      12774,
+      10285,
+      2489
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01511",
+     "municipio": "PLÁCIDO DE CASTRO",
+     "perfil": [
+      12305,
+      9941,
+      2364
+     ],
+     "oficial": [
+      12291,
+      9931,
+      2360
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01538",
+     "municipio": "SENADOR GUIOMARD",
+     "perfil": [
+      18670,
+      15195,
+      3475
+     ],
+     "oficial": [
+      18638,
+      15166,
+      3472
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01554",
+     "municipio": "MANOEL URBANO",
+     "perfil": [
+      8621,
+      6734,
+      1887
+     ],
+     "oficial": [
+      8602,
+      6717,
+      1885
+     ]
+    },
+    {
+     "uf": "AC",
+     "cd_tse": "01570",
+     "municipio": "ASSIS BRASIL",
+     "perfil": [
+      7290,
+      5740,
+      1550
+     ],
+     "oficial": [
+      7294,
+      5745,
+      1549
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27006",
+     "municipio": "PARIPUEIRA",
+     "perfil": [
+      12760,
+      10241,
+      2519
+     ],
+     "oficial": [
+      12721,
+      10207,
+      2514
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27014",
+     "municipio": "ÁGUA BRANCA",
+     "perfil": [
+      16530,
+      11840,
+      4690
+     ],
+     "oficial": [
+      16513,
+      11824,
+      4689
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27022",
+     "municipio": "PARICONHA",
+     "perfil": [
+      9793,
+      7556,
+      2237
+     ],
+     "oficial": [
+      9772,
+      7539,
+      2233
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27030",
+     "municipio": "ANADIA",
+     "perfil": [
+      13114,
+      10165,
+      2949
+     ],
+     "oficial": [
+      13090,
+      10144,
+      2946
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27049",
+     "municipio": "ESTRELA DE ALAGOAS",
+     "perfil": [
+      13048,
+      9504,
+      3544
+     ],
+     "oficial": [
+      13040,
+      9496,
+      3544
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27057",
+     "municipio": "ARAPIRACA",
+     "perfil": [
+      158699,
+      130639,
+      28060
+     ],
+     "oficial": [
+      158990,
+      130876,
+      28114
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27065",
+     "municipio": "JEQUIÁ DA PRAIA",
+     "perfil": [
+      8248,
+      6619,
+      1629
+     ],
+     "oficial": [
+      8245,
+      6618,
+      1627
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27073",
+     "municipio": "ATALAIA",
+     "perfil": [
+      32429,
+      25482,
+      6947
+     ],
+     "oficial": [
+      32403,
+      25460,
+      6943
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27081",
+     "municipio": "CAMPESTRE",
+     "perfil": [
+      6088,
+      4592,
+      1496
+     ],
+     "oficial": [
+      6077,
+      4586,
+      1491
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27090",
+     "municipio": "BARRA DE SANTO ANTÔNIO",
+     "perfil": [
+      14963,
+      11674,
+      3289
+     ],
+     "oficial": [
+      14944,
+      11656,
+      3288
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27111",
+     "municipio": "BARRA DE SÃO MIGUEL",
+     "perfil": [
+      8084,
+      6794,
+      1290
+     ],
+     "oficial": [
+      8063,
+      6775,
+      1288
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27138",
+     "municipio": "BATALHA",
+     "perfil": [
+      13592,
+      10814,
+      2778
+     ],
+     "oficial": [
+      13574,
+      10798,
+      2776
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27154",
+     "municipio": "BELÉM",
+     "perfil": [
+      5058,
+      3885,
+      1173
+     ],
+     "oficial": [
+      5054,
+      3882,
+      1172
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27170",
+     "municipio": "BELO MONTE",
+     "perfil": [
+      6055,
+      4892,
+      1163
+     ],
+     "oficial": [
+      6030,
+      4869,
+      1161
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27197",
+     "municipio": "BOCA DA MATA",
+     "perfil": [
+      19769,
+      15027,
+      4742
+     ],
+     "oficial": [
+      19738,
+      14998,
+      4740
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27219",
+     "municipio": "BRANQUINHA",
+     "perfil": [
+      9125,
+      6701,
+      2424
+     ],
+     "oficial": [
+      9119,
+      6695,
+      2424
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27235",
+     "municipio": "CACIMBINHAS",
+     "perfil": [
+      8783,
+      6386,
+      2397
+     ],
+     "oficial": [
+      8774,
+      6378,
+      2396
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27251",
+     "municipio": "CAJUEIRO",
+     "perfil": [
+      14487,
+      10987,
+      3500
+     ],
+     "oficial": [
+      14474,
+      10975,
+      3499
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27278",
+     "municipio": "CAMPO ALEGRE",
+     "perfil": [
+      27070,
+      20335,
+      6735
+     ],
+     "oficial": [
+      27042,
+      20310,
+      6732
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27294",
+     "municipio": "CAMPO GRANDE",
+     "perfil": [
+      9167,
+      7134,
+      2033
+     ],
+     "oficial": [
+      9154,
+      7122,
+      2032
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27316",
+     "municipio": "CANAPI",
+     "perfil": [
+      14836,
+      11108,
+      3728
+     ],
+     "oficial": [
+      14793,
+      11069,
+      3724
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27332",
+     "municipio": "CAPELA",
+     "perfil": [
+      12913,
+      10323,
+      2590
+     ],
+     "oficial": [
+      12900,
+      10312,
+      2588
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27359",
+     "municipio": "CARNEIROS",
+     "perfil": [
+      7765,
+      5949,
+      1816
+     ],
+     "oficial": [
+      7751,
+      5938,
+      1813
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27375",
+     "municipio": "CHÃ PRETA",
+     "perfil": [
+      6930,
+      5489,
+      1441
+     ],
+     "oficial": [
+      6923,
+      5483,
+      1440
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27391",
+     "municipio": "COITÉ DO NÓIA",
+     "perfil": [
+      9497,
+      7537,
+      1960
+     ],
+     "oficial": [
+      9481,
+      7521,
+      1960
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27413",
+     "municipio": "COLÔNIA LEOPOLDINA",
+     "perfil": [
+      15445,
+      11648,
+      3797
+     ],
+     "oficial": [
+      15416,
+      11624,
+      3792
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27430",
+     "municipio": "COQUEIRO SECO",
+     "perfil": [
+      5561,
+      4649,
+      912
+     ],
+     "oficial": [
+      5554,
+      4643,
+      911
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27456",
+     "municipio": "CORURIPE",
+     "perfil": [
+      41945,
+      32745,
+      9200
+     ],
+     "oficial": [
+      41885,
+      32689,
+      9196
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27472",
+     "municipio": "DELMIRO GOUVEIA",
+     "perfil": [
+      41479,
+      32166,
+      9313
+     ],
+     "oficial": [
+      41407,
+      32104,
+      9303
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27499",
+     "municipio": "DOIS RIACHOS",
+     "perfil": [
+      9513,
+      6790,
+      2723
+     ],
+     "oficial": [
+      9497,
+      6778,
+      2719
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27510",
+     "municipio": "FEIRA GRANDE",
+     "perfil": [
+      19479,
+      15685,
+      3794
+     ],
+     "oficial": [
+      19459,
+      15668,
+      3791
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27537",
+     "municipio": "FELIZ DESERTO",
+     "perfil": [
+      3985,
+      3014,
+      971
+     ],
+     "oficial": [
+      3975,
+      3004,
+      971
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27553",
+     "municipio": "FLEXEIRAS",
+     "perfil": [
+      8545,
+      6667,
+      1878
+     ],
+     "oficial": [
+      8538,
+      6662,
+      1876
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27570",
+     "municipio": "GIRAU DO PONCIANO",
+     "perfil": [
+      28495,
+      22082,
+      6413
+     ],
+     "oficial": [
+      28504,
+      22089,
+      6415
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27596",
+     "municipio": "IBATEGUARA",
+     "perfil": [
+      11560,
+      8767,
+      2793
+     ],
+     "oficial": [
+      11536,
+      8744,
+      2792
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27618",
+     "municipio": "IGACI",
+     "perfil": [
+      20554,
+      15319,
+      5235
+     ],
+     "oficial": [
+      20525,
+      15294,
+      5231
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27634",
+     "municipio": "IGREJA NOVA",
+     "perfil": [
+      17745,
+      13932,
+      3813
+     ],
+     "oficial": [
+      17729,
+      13915,
+      3814
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27650",
+     "municipio": "INHAPI",
+     "perfil": [
+      14583,
+      10662,
+      3921
+     ],
+     "oficial": [
+      14561,
+      10641,
+      3920
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27677",
+     "municipio": "JACARÉ DOS HOMENS",
+     "perfil": [
+      5264,
+      4196,
+      1068
+     ],
+     "oficial": [
+      5258,
+      4190,
+      1068
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27693",
+     "municipio": "JACUÍPE",
+     "perfil": [
+      6058,
+      4994,
+      1064
+     ],
+     "oficial": [
+      6044,
+      4980,
+      1064
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27715",
+     "municipio": "JAPARATINGA",
+     "perfil": [
+      9201,
+      7402,
+      1799
+     ],
+     "oficial": [
+      9190,
+      7392,
+      1798
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27731",
+     "municipio": "JARAMATAIA",
+     "perfil": [
+      5243,
+      4345,
+      898
+     ],
+     "oficial": [
+      5223,
+      4328,
+      895
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27758",
+     "municipio": "JOAQUIM GOMES",
+     "perfil": [
+      15488,
+      12062,
+      3426
+     ],
+     "oficial": [
+      15470,
+      12048,
+      3422
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27774",
+     "municipio": "JUNDIÁ",
+     "perfil": [
+      4851,
+      3814,
+      1037
+     ],
+     "oficial": [
+      4851,
+      3815,
+      1036
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27790",
+     "municipio": "JUNQUEIRO",
+     "perfil": [
+      20207,
+      15818,
+      4389
+     ],
+     "oficial": [
+      20177,
+      15790,
+      4387
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27812",
+     "municipio": "LAGOA DA CANOA",
+     "perfil": [
+      17041,
+      13400,
+      3641
+     ],
+     "oficial": [
+      17008,
+      13367,
+      3641
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27839",
+     "municipio": "LIMOEIRO DE ANADIA",
+     "perfil": [
+      20428,
+      16234,
+      4194
+     ],
+     "oficial": [
+      20414,
+      16221,
+      4193
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27855",
+     "municipio": "MACEIÓ",
+     "perfil": [
+      644011,
+      523350,
+      120661
+     ],
+     "oficial": [
+      646463,
+      525546,
+      120917
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27871",
+     "municipio": "MAJOR ISIDORO",
+     "perfil": [
+      15701,
+      12253,
+      3448
+     ],
+     "oficial": [
+      15675,
+      12230,
+      3445
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27898",
+     "municipio": "MARAGOGI",
+     "perfil": [
+      26070,
+      20317,
+      5753
+     ],
+     "oficial": [
+      26019,
+      20268,
+      5751
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27910",
+     "municipio": "MARAVILHA",
+     "perfil": [
+      8979,
+      6705,
+      2274
+     ],
+     "oficial": [
+      8963,
+      6690,
+      2273
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27936",
+     "municipio": "MARECHAL DEODORO",
+     "perfil": [
+      47176,
+      38589,
+      8587
+     ],
+     "oficial": [
+      47095,
+      38515,
+      8580
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27952",
+     "municipio": "MARIBONDO",
+     "perfil": [
+      11160,
+      9189,
+      1971
+     ],
+     "oficial": [
+      11142,
+      9172,
+      1970
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27979",
+     "municipio": "MAR VERMELHO",
+     "perfil": [
+      3650,
+      3067,
+      583
+     ],
+     "oficial": [
+      3653,
+      3070,
+      583
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "27995",
+     "municipio": "MATA GRANDE",
+     "perfil": [
+      18459,
+      13673,
+      4786
+     ],
+     "oficial": [
+      18418,
+      13634,
+      4784
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28010",
+     "municipio": "MATRIZ DE CAMARAGIBE",
+     "perfil": [
+      18672,
+      14604,
+      4068
+     ],
+     "oficial": [
+      18656,
+      14589,
+      4067
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28037",
+     "municipio": "MESSIAS",
+     "perfil": [
+      14081,
+      11320,
+      2761
+     ],
+     "oficial": [
+      14073,
+      11313,
+      2760
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28053",
+     "municipio": "MINADOR DO NEGRÃO",
+     "perfil": [
+      5122,
+      3954,
+      1168
+     ],
+     "oficial": [
+      5111,
+      3944,
+      1167
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28070",
+     "municipio": "MONTEIRÓPOLIS",
+     "perfil": [
+      6432,
+      5042,
+      1390
+     ],
+     "oficial": [
+      6417,
+      5028,
+      1389
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28096",
+     "municipio": "MURICI",
+     "perfil": [
+      20666,
+      16629,
+      4037
+     ],
+     "oficial": [
+      20644,
+      16611,
+      4033
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28118",
+     "municipio": "NOVO LINO",
+     "perfil": [
+      10041,
+      7828,
+      2213
+     ],
+     "oficial": [
+      10016,
+      7805,
+      2211
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28134",
+     "municipio": "OLHO D'ÁGUA DAS FLORES",
+     "perfil": [
+      16287,
+      12678,
+      3609
+     ],
+     "oficial": [
+      16240,
+      12635,
+      3605
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28150",
+     "municipio": "OLHO D'ÁGUA DO CASADO",
+     "perfil": [
+      7646,
+      5652,
+      1994
+     ],
+     "oficial": [
+      7631,
+      5638,
+      1993
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28177",
+     "municipio": "OLHO D'ÁGUA GRANDE",
+     "perfil": [
+      5156,
+      4001,
+      1155
+     ],
+     "oficial": [
+      5133,
+      3981,
+      1152
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28193",
+     "municipio": "OLIVENÇA",
+     "perfil": [
+      10355,
+      8486,
+      1869
+     ],
+     "oficial": [
+      10337,
+      8469,
+      1868
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28215",
+     "municipio": "OURO BRANCO",
+     "perfil": [
+      10035,
+      7759,
+      2276
+     ],
+     "oficial": [
+      10029,
+      7753,
+      2276
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28231",
+     "municipio": "PALESTINA",
+     "perfil": [
+      5012,
+      3736,
+      1276
+     ],
+     "oficial": [
+      4992,
+      3722,
+      1270
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28258",
+     "municipio": "PALMEIRA DOS ÍNDIOS",
+     "perfil": [
+      54635,
+      43134,
+      11501
+     ],
+     "oficial": [
+      54544,
+      43046,
+      11498
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28274",
+     "municipio": "PÃO DE AÇÚCAR",
+     "perfil": [
+      18906,
+      14524,
+      4382
+     ],
+     "oficial": [
+      18843,
+      14466,
+      4377
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28290",
+     "municipio": "PASSO DE CAMARAGIBE",
+     "perfil": [
+      12522,
+      10264,
+      2258
+     ],
+     "oficial": [
+      12513,
+      10255,
+      2258
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28312",
+     "municipio": "PAULO JACINTO",
+     "perfil": [
+      6633,
+      5477,
+      1156
+     ],
+     "oficial": [
+      6620,
+      5466,
+      1154
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28339",
+     "municipio": "PENEDO",
+     "perfil": [
+      44840,
+      34614,
+      10226
+     ],
+     "oficial": [
+      44742,
+      34518,
+      10224
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28355",
+     "municipio": "PIAÇABUÇU",
+     "perfil": [
+      13946,
+      10954,
+      2992
+     ],
+     "oficial": [
+      13930,
+      10938,
+      2992
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28371",
+     "municipio": "PILAR",
+     "perfil": [
+      29534,
+      23964,
+      5570
+     ],
+     "oficial": [
+      29494,
+      23927,
+      5567
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28398",
+     "municipio": "PINDOBA",
+     "perfil": [
+      2898,
+      2409,
+      489
+     ],
+     "oficial": [
+      2895,
+      2407,
+      488
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28410",
+     "municipio": "PIRANHAS",
+     "perfil": [
+      20143,
+      15353,
+      4790
+     ],
+     "oficial": [
+      20101,
+      15316,
+      4785
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28436",
+     "municipio": "POÇO DAS TRINCHEIRAS",
+     "perfil": [
+      11266,
+      8842,
+      2424
+     ],
+     "oficial": [
+      11257,
+      8834,
+      2423
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28452",
+     "municipio": "PORTO CALVO",
+     "perfil": [
+      21629,
+      17247,
+      4382
+     ],
+     "oficial": [
+      21598,
+      17218,
+      4380
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28479",
+     "municipio": "PORTO DE PEDRAS",
+     "perfil": [
+      8488,
+      6913,
+      1575
+     ],
+     "oficial": [
+      8457,
+      6885,
+      1572
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28495",
+     "municipio": "PORTO REAL DO COLÉGIO",
+     "perfil": [
+      17586,
+      14148,
+      3438
+     ],
+     "oficial": [
+      17563,
+      14129,
+      3434
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28517",
+     "municipio": "QUEBRANGULO",
+     "perfil": [
+      10444,
+      8292,
+      2152
+     ],
+     "oficial": [
+      10425,
+      8276,
+      2149
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28533",
+     "municipio": "RIO LARGO",
+     "perfil": [
+      68139,
+      57394,
+      10745
+     ],
+     "oficial": [
+      68061,
+      57326,
+      10735
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28550",
+     "municipio": "ROTEIRO",
+     "perfil": [
+      5780,
+      4502,
+      1278
+     ],
+     "oficial": [
+      5776,
+      4500,
+      1276
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28576",
+     "municipio": "SANTA LUZIA DO NORTE",
+     "perfil": [
+      6474,
+      5378,
+      1096
+     ],
+     "oficial": [
+      6471,
+      5375,
+      1096
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28592",
+     "municipio": "SANTANA DO IPANEMA",
+     "perfil": [
+      33162,
+      26529,
+      6633
+     ],
+     "oficial": [
+      33109,
+      26479,
+      6630
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28614",
+     "municipio": "SANTANA DO MUNDAÚ",
+     "perfil": [
+      9424,
+      7210,
+      2214
+     ],
+     "oficial": [
+      9415,
+      7203,
+      2212
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28630",
+     "municipio": "SÃO BRÁS",
+     "perfil": [
+      7363,
+      5858,
+      1505
+     ],
+     "oficial": [
+      7353,
+      5849,
+      1504
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28657",
+     "municipio": "SÃO JOSÉ DA LAJE",
+     "perfil": [
+      17850,
+      13609,
+      4241
+     ],
+     "oficial": [
+      17824,
+      13584,
+      4240
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28673",
+     "municipio": "SÃO JOSÉ DA TAPERA",
+     "perfil": [
+      23511,
+      17448,
+      6063
+     ],
+     "oficial": [
+      23495,
+      17434,
+      6061
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28690",
+     "municipio": "SÃO LUÍS DO QUITUNDE",
+     "perfil": [
+      23594,
+      18150,
+      5444
+     ],
+     "oficial": [
+      23573,
+      18136,
+      5437
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28711",
+     "municipio": "SÃO MIGUEL DOS CAMPOS",
+     "perfil": [
+      43114,
+      34096,
+      9018
+     ],
+     "oficial": [
+      43051,
+      34036,
+      9015
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28738",
+     "municipio": "SÃO MIGUEL DOS MILAGRES",
+     "perfil": [
+      8280,
+      6639,
+      1641
+     ],
+     "oficial": [
+      8255,
+      6617,
+      1638
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28754",
+     "municipio": "SÃO SEBASTIÃO",
+     "perfil": [
+      27109,
+      21408,
+      5701
+     ],
+     "oficial": [
+      27082,
+      21387,
+      5695
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28770",
+     "municipio": "SATUBA",
+     "perfil": [
+      15445,
+      13158,
+      2287
+     ],
+     "oficial": [
+      15433,
+      13147,
+      2286
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28797",
+     "municipio": "TANQUE D'ARCA",
+     "perfil": [
+      6001,
+      4541,
+      1460
+     ],
+     "oficial": [
+      6000,
+      4541,
+      1459
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28819",
+     "municipio": "TAQUARANA",
+     "perfil": [
+      15544,
+      12315,
+      3229
+     ],
+     "oficial": [
+      15528,
+      12301,
+      3227
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28835",
+     "municipio": "TRAIPU",
+     "perfil": [
+      19222,
+      14764,
+      4458
+     ],
+     "oficial": [
+      19176,
+      14722,
+      4454
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28851",
+     "municipio": "UNIÃO DOS PALMARES",
+     "perfil": [
+      48444,
+      37765,
+      10679
+     ],
+     "oficial": [
+      48373,
+      37701,
+      10672
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28878",
+     "municipio": "VIÇOSA",
+     "perfil": [
+      20934,
+      16623,
+      4311
+     ],
+     "oficial": [
+      20902,
+      16593,
+      4309
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28894",
+     "municipio": "CRAÍBAS",
+     "perfil": [
+      21911,
+      17463,
+      4448
+     ],
+     "oficial": [
+      21887,
+      17441,
+      4446
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28916",
+     "municipio": "SENADOR RUI PALMEIRA",
+     "perfil": [
+      9695,
+      7465,
+      2230
+     ],
+     "oficial": [
+      9681,
+      7451,
+      2230
+     ]
+    },
+    {
+     "uf": "AL",
+     "cd_tse": "28932",
+     "municipio": "TEOTÔNIO VILELA",
+     "perfil": [
+      31144,
+      22831,
+      8313
+     ],
+     "oficial": [
+      31106,
+      22794,
+      8312
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02003",
+     "municipio": "APUÍ",
+     "perfil": [
+      11578,
+      8484,
+      3094
+     ],
+     "oficial": [
+      11540,
+      8450,
+      3090
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02011",
+     "municipio": "NOVO AIRÃO",
+     "perfil": [
+      13383,
+      9806,
+      3577
+     ],
+     "oficial": [
+      13332,
+      9758,
+      3574
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02020",
+     "municipio": "GUAJARÁ",
+     "perfil": [
+      12202,
+      9223,
+      2979
+     ],
+     "oficial": [
+      12171,
+      9202,
+      2969
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02038",
+     "municipio": "ANORI",
+     "perfil": [
+      11180,
+      8799,
+      2381
+     ],
+     "oficial": [
+      11109,
+      8735,
+      2374
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02046",
+     "municipio": "CAREIRO DA VÁRZEA",
+     "perfil": [
+      18462,
+      14072,
+      4390
+     ],
+     "oficial": [
+      18436,
+      14049,
+      4387
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02054",
+     "municipio": "ATALAIA DO NORTE",
+     "perfil": [
+      9639,
+      7078,
+      2561
+     ],
+     "oficial": [
+      9508,
+      6965,
+      2543
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02070",
+     "municipio": "AUTAZES",
+     "perfil": [
+      32444,
+      24162,
+      8282
+     ],
+     "oficial": [
+      32340,
+      24067,
+      8273
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02097",
+     "municipio": "BARCELOS",
+     "perfil": [
+      12748,
+      8093,
+      4655
+     ],
+     "oficial": [
+      12648,
+      8006,
+      4642
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02119",
+     "municipio": "BARREIRINHA",
+     "perfil": [
+      22864,
+      18553,
+      4311
+     ],
+     "oficial": [
+      22727,
+      18433,
+      4294
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02135",
+     "municipio": "BENJAMIN CONSTANT",
+     "perfil": [
+      24360,
+      20222,
+      4138
+     ],
+     "oficial": [
+      24218,
+      20087,
+      4131
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02151",
+     "municipio": "BOCA DO ACRE",
+     "perfil": [
+      23259,
+      17622,
+      5637
+     ],
+     "oficial": [
+      23223,
+      17594,
+      5629
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02178",
+     "municipio": "BORBA",
+     "perfil": [
+      24587,
+      19127,
+      5460
+     ],
+     "oficial": [
+      24462,
+      19008,
+      5454
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02194",
+     "municipio": "CANUTAMA",
+     "perfil": [
+      10800,
+      7990,
+      2810
+     ],
+     "oficial": [
+      10740,
+      7932,
+      2808
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02216",
+     "municipio": "CARAUARI",
+     "perfil": [
+      21067,
+      15050,
+      6017
+     ],
+     "oficial": [
+      20927,
+      14918,
+      6009
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02232",
+     "municipio": "CAREIRO",
+     "perfil": [
+      27550,
+      20310,
+      7240
+     ],
+     "oficial": [
+      27452,
+      20216,
+      7236
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02259",
+     "municipio": "COARI",
+     "perfil": [
+      51970,
+      38588,
+      13382
+     ],
+     "oficial": [
+      51479,
+      38141,
+      13338
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02275",
+     "municipio": "CODAJÁS",
+     "perfil": [
+      17220,
+      13278,
+      3942
+     ],
+     "oficial": [
+      17092,
+      13162,
+      3930
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02291",
+     "municipio": "EIRUNEPÉ",
+     "perfil": [
+      22977,
+      15720,
+      7257
+     ],
+     "oficial": [
+      22838,
+      15594,
+      7244
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02313",
+     "municipio": "ENVIRA",
+     "perfil": [
+      10925,
+      7888,
+      3037
+     ],
+     "oficial": [
+      10870,
+      7840,
+      3030
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02330",
+     "municipio": "FONTE BOA",
+     "perfil": [
+      17399,
+      13311,
+      4088
+     ],
+     "oficial": [
+      17120,
+      13063,
+      4057
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02356",
+     "municipio": "HUMAITÁ",
+     "perfil": [
+      34965,
+      27510,
+      7455
+     ],
+     "oficial": [
+      34907,
+      27459,
+      7448
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02372",
+     "municipio": "SANTA ISABEL DO RIO NEGRO",
+     "perfil": [
+      9434,
+      6630,
+      2804
+     ],
+     "oficial": [
+      9379,
+      6580,
+      2799
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02399",
+     "municipio": "IPIXUNA",
+     "perfil": [
+      11612,
+      8487,
+      3125
+     ],
+     "oficial": [
+      11575,
+      8455,
+      3120
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02410",
+     "municipio": "ITACOATIARA",
+     "perfil": [
+      76342,
+      58636,
+      17706
+     ],
+     "oficial": [
+      76067,
+      58385,
+      17682
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02437",
+     "municipio": "ITAPIRANGA",
+     "perfil": [
+      9733,
+      7505,
+      2228
+     ],
+     "oficial": [
+      9689,
+      7468,
+      2221
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02453",
+     "municipio": "JAPURÁ",
+     "perfil": [
+      5811,
+      4010,
+      1801
+     ],
+     "oficial": [
+      5709,
+      3916,
+      1793
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02470",
+     "municipio": "JURUÁ",
+     "perfil": [
+      7726,
+      5714,
+      2012
+     ],
+     "oficial": [
+      7620,
+      5616,
+      2004
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02496",
+     "municipio": "JUTAÍ",
+     "perfil": [
+      16069,
+      11139,
+      4930
+     ],
+     "oficial": [
+      15903,
+      10984,
+      4919
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02518",
+     "municipio": "LÁBREA",
+     "perfil": [
+      29394,
+      22505,
+      6889
+     ],
+     "oficial": [
+      29351,
+      22463,
+      6888
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02534",
+     "municipio": "MANACAPURU",
+     "perfil": [
+      81250,
+      64199,
+      17051
+     ],
+     "oficial": [
+      81115,
+      64079,
+      17036
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02550",
+     "municipio": "MANAUS",
+     "perfil": [
+      1472138,
+      1218586,
+      253552
+     ],
+     "oficial": [
+      1477265,
+      1223229,
+      254036
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02577",
+     "municipio": "MANICORÉ",
+     "perfil": [
+      33881,
+      26923,
+      6958
+     ],
+     "oficial": [
+      33789,
+      26839,
+      6950
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02593",
+     "municipio": "MARAÃ",
+     "perfil": [
+      10107,
+      7125,
+      2982
+     ],
+     "oficial": [
+      9995,
+      7028,
+      2967
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02615",
+     "municipio": "MAUÉS",
+     "perfil": [
+      38352,
+      29029,
+      9323
+     ],
+     "oficial": [
+      38063,
+      28766,
+      9297
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02631",
+     "municipio": "NHAMUNDÁ",
+     "perfil": [
+      16110,
+      12517,
+      3593
+     ],
+     "oficial": [
+      15833,
+      12275,
+      3558
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02658",
+     "municipio": "NOVA OLINDA DO NORTE",
+     "perfil": [
+      20019,
+      15773,
+      4246
+     ],
+     "oficial": [
+      19945,
+      15708,
+      4237
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02674",
+     "municipio": "NOVO ARIPUANÃ",
+     "perfil": [
+      13358,
+      9995,
+      3363
+     ],
+     "oficial": [
+      13283,
+      9923,
+      3360
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02690",
+     "municipio": "PARINTINS",
+     "perfil": [
+      73461,
+      57086,
+      16375
+     ],
+     "oficial": [
+      73020,
+      56691,
+      16329
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02712",
+     "municipio": "PAUINI",
+     "perfil": [
+      11587,
+      8584,
+      3003
+     ],
+     "oficial": [
+      11565,
+      8565,
+      3000
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02739",
+     "municipio": "SANTO ANTÔNIO DO IÇÁ",
+     "perfil": [
+      18635,
+      15138,
+      3497
+     ],
+     "oficial": [
+      18469,
+      14981,
+      3488
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02755",
+     "municipio": "SÃO PAULO DE OLIVENÇA",
+     "perfil": [
+      21526,
+      18014,
+      3512
+     ],
+     "oficial": [
+      21421,
+      17918,
+      3503
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02771",
+     "municipio": "SILVES",
+     "perfil": [
+      9687,
+      7568,
+      2119
+     ],
+     "oficial": [
+      9656,
+      7541,
+      2115
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02798",
+     "municipio": "TAPAUÁ",
+     "perfil": [
+      14757,
+      10877,
+      3880
+     ],
+     "oficial": [
+      14621,
+      10754,
+      3867
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02810",
+     "municipio": "TEFÉ",
+     "perfil": [
+      50443,
+      40048,
+      10395
+     ],
+     "oficial": [
+      49827,
+      39486,
+      10341
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02836",
+     "municipio": "SÃO GABRIEL DA CACHOEIRA",
+     "perfil": [
+      32566,
+      24228,
+      8338
+     ],
+     "oficial": [
+      32420,
+      24092,
+      8328
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02852",
+     "municipio": "URUCARÁ",
+     "perfil": [
+      12753,
+      9500,
+      3253
+     ],
+     "oficial": [
+      12648,
+      9407,
+      3241
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02879",
+     "municipio": "URUCURITUBA",
+     "perfil": [
+      14300,
+      10870,
+      3430
+     ],
+     "oficial": [
+      14200,
+      10782,
+      3418
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02895",
+     "municipio": "ALVARÃES",
+     "perfil": [
+      12562,
+      9944,
+      2618
+     ],
+     "oficial": [
+      12444,
+      9839,
+      2605
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02917",
+     "municipio": "AMATURÁ",
+     "perfil": [
+      7564,
+      6407,
+      1157
+     ],
+     "oficial": [
+      7522,
+      6369,
+      1153
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02933",
+     "municipio": "ANAMÃ",
+     "perfil": [
+      9276,
+      6967,
+      2309
+     ],
+     "oficial": [
+      9177,
+      6876,
+      2301
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02950",
+     "municipio": "BERURI",
+     "perfil": [
+      15187,
+      11593,
+      3594
+     ],
+     "oficial": [
+      15139,
+      11548,
+      3591
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02976",
+     "municipio": "BOA VISTA DO RAMOS",
+     "perfil": [
+      13819,
+      10761,
+      3058
+     ],
+     "oficial": [
+      13666,
+      10626,
+      3040
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "02992",
+     "municipio": "CAAPIRANGA",
+     "perfil": [
+      9560,
+      7133,
+      2427
+     ],
+     "oficial": [
+      9486,
+      7067,
+      2419
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "98353",
+     "municipio": "IRANDUBA",
+     "perfil": [
+      46056,
+      37845,
+      8211
+     ],
+     "oficial": [
+      45948,
+      37750,
+      8198
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "98370",
+     "municipio": "ITAMARATI",
+     "perfil": [
+      7463,
+      5648,
+      1815
+     ],
+     "oficial": [
+      7343,
+      5529,
+      1814
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "98396",
+     "municipio": "MANAQUIRI",
+     "perfil": [
+      15394,
+      11821,
+      3573
+     ],
+     "oficial": [
+      15304,
+      11733,
+      3571
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "98418",
+     "municipio": "PRESIDENTE FIGUEIREDO",
+     "perfil": [
+      28456,
+      20461,
+      7995
+     ],
+     "oficial": [
+      28343,
+      20363,
+      7980
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "98434",
+     "municipio": "RIO PRETO DA EVA",
+     "perfil": [
+      23320,
+      17538,
+      5782
+     ],
+     "oficial": [
+      23243,
+      17468,
+      5775
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "98450",
+     "municipio": "SÃO SEBASTIÃO DO UATUMÃ",
+     "perfil": [
+      7798,
+      5926,
+      1872
+     ],
+     "oficial": [
+      7748,
+      5883,
+      1865
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "98477",
+     "municipio": "TABATINGA",
+     "perfil": [
+      40390,
+      31829,
+      8561
+     ],
+     "oficial": [
+      40230,
+      31680,
+      8550
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "98493",
+     "municipio": "UARINI",
+     "perfil": [
+      9895,
+      7869,
+      2026
+     ],
+     "oficial": [
+      9798,
+      7782,
+      2016
+     ]
+    },
+    {
+     "uf": "AM",
+     "cd_tse": "98515",
+     "municipio": "TONANTINS",
+     "perfil": [
+      11812,
+      9575,
+      2237
+     ],
+     "oficial": [
+      11653,
+      9426,
+      2227
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06009",
+     "municipio": "PRACUÚBA",
+     "perfil": [
+      4031,
+      3320,
+      711
+     ],
+     "oficial": [
+      4022,
+      3313,
+      709
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06017",
+     "municipio": "AMAPÁ",
+     "perfil": [
+      7561,
+      6296,
+      1265
+     ],
+     "oficial": [
+      7523,
+      6262,
+      1261
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06025",
+     "municipio": "PORTO GRANDE",
+     "perfil": [
+      15567,
+      12370,
+      3197
+     ],
+     "oficial": [
+      15533,
+      12338,
+      3195
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06033",
+     "municipio": "CALÇOENE",
+     "perfil": [
+      8928,
+      7028,
+      1900
+     ],
+     "oficial": [
+      8907,
+      7009,
+      1898
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06041",
+     "municipio": "ITAUBAL",
+     "perfil": [
+      8884,
+      7355,
+      1529
+     ],
+     "oficial": [
+      8881,
+      7354,
+      1527
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06050",
+     "municipio": "MACAPÁ",
+     "perfil": [
+      321591,
+      270546,
+      51045
+     ],
+     "oficial": [
+      321597,
+      270534,
+      51063
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06068",
+     "municipio": "CUTIAS",
+     "perfil": [
+      6311,
+      5201,
+      1110
+     ],
+     "oficial": [
+      6300,
+      5191,
+      1109
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06076",
+     "municipio": "MAZAGÃO",
+     "perfil": [
+      22254,
+      19028,
+      3226
+     ],
+     "oficial": [
+      22212,
+      18989,
+      3223
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06084",
+     "municipio": "PEDRA BRANCA DO AMAPARI",
+     "perfil": [
+      9956,
+      7163,
+      2793
+     ],
+     "oficial": [
+      9909,
+      7119,
+      2790
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06092",
+     "municipio": "OIAPOQUE",
+     "perfil": [
+      24262,
+      17549,
+      6713
+     ],
+     "oficial": [
+      24220,
+      17516,
+      6704
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06106",
+     "municipio": "SERRA DO NAVIO",
+     "perfil": [
+      4128,
+      3053,
+      1075
+     ],
+     "oficial": [
+      4111,
+      3040,
+      1071
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06114",
+     "municipio": "FERREIRA GOMES",
+     "perfil": [
+      7893,
+      6289,
+      1604
+     ],
+     "oficial": [
+      7861,
+      6260,
+      1601
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06122",
+     "municipio": "VITÓRIA DO JARI",
+     "perfil": [
+      10432,
+      8092,
+      2340
+     ],
+     "oficial": [
+      10405,
+      8071,
+      2334
+     ]
+    },
+    {
+     "uf": "AP",
+     "cd_tse": "06130",
+     "municipio": "LARANJAL DO JARI",
+     "perfil": [
+      28236,
+      21170,
+      7066
+     ],
+     "oficial": [
+      28170,
+      21115,
+      7055
+     ]
+    }
+   ]
+  }
+ }
+}

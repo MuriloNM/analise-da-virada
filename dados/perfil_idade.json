@@ -1,0 +1,5322 @@
+{
+ "rotulo": "exploratório, não registrado antes das contas",
+ "semente": 20261026,
+ "bootstrap": 1000,
+ "gerado_em": "2026-10-28T13:41:30-03:00",
+ "turnos_no_perfil": [
+  1
+ ],
+ "conferencias_entrada": {
+  "facultativo": {
+   "16_17_e_70_mais_sem_obrigatorio": 0,
+   "18_a_69_facultativo_aptos": 3315540,
+   "analfabetos_18_a_69_aptos": 3315540
+  },
+  "perfil_menos_oficial_por_uf": {
+   "AC": {
+    "aptos": 633,
+    "comparecimento": 567
+   },
+   "AL": {
+    "aptos": -332,
+    "comparecimento": -251
+   },
+   "AM": {
+    "aptos": 2571,
+    "comparecimento": 2340
+   },
+   "AP": {
+    "aptos": 546,
+    "comparecimento": 495
+   },
+   "BA": {
+    "aptos": 8253,
+    "comparecimento": 7803
+   },
+   "CE": {
+    "aptos": 1949,
+    "comparecimento": 1814
+   },
+   "DF": {
+    "aptos": -5188,
+    "comparecimento": -5052
+   },
+   "ES": {
+    "aptos": -1160,
+    "comparecimento": -1040
+   },
+   "GO": {
+    "aptos": 165,
+    "comparecimento": 140
+   },
+   "MA": {
+    "aptos": 3447,
+    "comparecimento": 3133
+   },
+   "MG": {
+    "aptos": 5287,
+    "comparecimento": 5173
+   },
+   "MS": {
+    "aptos": 454,
+    "comparecimento": 475
+   },
+   "MT": {
+    "aptos": 429,
+    "comparecimento": 466
+   },
+   "PA": {
+    "aptos": 2958,
+    "comparecimento": 2646
+   },
+   "PB": {
+    "aptos": -1134,
+    "comparecimento": -1111
+   },
+   "PE": {
+    "aptos": 2294,
+    "comparecimento": 2145
+   },
+   "PI": {
+    "aptos": 3402,
+    "comparecimento": 3164
+   },
+   "PR": {
+    "aptos": -4631,
+    "comparecimento": -4210
+   },
+   "RJ": {
+    "aptos": -648,
+    "comparecimento": -661
+   },
+   "RN": {
+    "aptos": 740,
+    "comparecimento": 749
+   },
+   "RO": {
+    "aptos": 1212,
+    "comparecimento": 1077
+   },
+   "RR": {
+    "aptos": -25,
+    "comparecimento": -16
+   },
+   "RS": {
+    "aptos": 3688,
+    "comparecimento": 3463
+   },
+   "SC": {
+    "aptos": -8898,
+    "comparecimento": -8023
+   },
+   "SE": {
+    "aptos": -11,
+    "comparecimento": -64
+   },
+   "SP": {
+    "aptos": -18666,
+    "comparecimento": -17001
+   },
+   "TO": {
+    "aptos": 284,
+    "comparecimento": 279
+   },
+   "ZZ": {
+    "aptos": 2342,
+    "comparecimento": 2895
+   }
+  }
+ },
+ "I1": {
+  "Brasil": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 1631813,
+     "comparecimento": 1425749,
+     "abstencao": 206064,
+     "taxa_comparecimento": 87.3721,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 118864606,
+     "comparecimento": 97198405,
+     "abstencao": 21666201,
+     "taxa_comparecimento": 81.7724,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 20115255,
+     "comparecimento": 17552428,
+     "abstencao": 2562827,
+     "taxa_comparecimento": 87.2593,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 17213704,
+     "comparecimento": 8755306,
+     "abstencao": 8458398,
+     "taxa_comparecimento": 50.8624,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 37328959,
+     "comparecimento": 26307734,
+     "abstencao": 11021225,
+     "taxa_comparecimento": 70.4754,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 157826587,
+    "comparecimento": 124932569,
+    "abstencao": 32894018,
+    "taxa_comparecimento": 79.1581,
+    "maioria_votou": true
+   },
+   "faixas": {
+    "-3": {
+     "aptos": 1209,
+     "comparecimento": 681,
+     "abstencao": 528,
+     "taxa_comparecimento": 56.3275,
+     "maioria_votou": true
+    },
+    "1600": {
+     "aptos": 605818,
+     "comparecimento": 539208,
+     "abstencao": 66610,
+     "taxa_comparecimento": 89.0049,
+     "maioria_votou": true
+    },
+    "1700": {
+     "aptos": 1025995,
+     "comparecimento": 886541,
+     "abstencao": 139454,
+     "taxa_comparecimento": 86.4079,
+     "maioria_votou": true
+    },
+    "1800": {
+     "aptos": 1930070,
+     "comparecimento": 1679035,
+     "abstencao": 251035,
+     "taxa_comparecimento": 86.9935,
+     "maioria_votou": true
+    },
+    "1900": {
+     "aptos": 2244600,
+     "comparecimento": 1808140,
+     "abstencao": 436460,
+     "taxa_comparecimento": 80.5551,
+     "maioria_votou": true
+    },
+    "2000": {
+     "aptos": 2512502,
+     "comparecimento": 1948730,
+     "abstencao": 563772,
+     "taxa_comparecimento": 77.5613,
+     "maioria_votou": true
+    },
+    "2124": {
+     "aptos": 10803943,
+     "comparecimento": 8052050,
+     "abstencao": 2751893,
+     "taxa_comparecimento": 74.5288,
+     "maioria_votou": true
+    },
+    "2529": {
+     "aptos": 14911491,
+     "comparecimento": 11321032,
+     "abstencao": 3590459,
+     "taxa_comparecimento": 75.9215,
+     "maioria_votou": true
+    },
+    "3034": {
+     "aptos": 15080238,
+     "comparecimento": 11853571,
+     "abstencao": 3226667,
+     "taxa_comparecimento": 78.6033,
+     "maioria_votou": true
+    },
+    "3539": {
+     "aptos": 15147771,
+     "comparecimento": 12323004,
+     "abstencao": 2824767,
+     "taxa_comparecimento": 81.3519,
+     "maioria_votou": true
+    },
+    "4044": {
+     "aptos": 15869609,
+     "comparecimento": 13280932,
+     "abstencao": 2588677,
+     "taxa_comparecimento": 83.6878,
+     "maioria_votou": true
+    },
+    "4549": {
+     "aptos": 15155487,
+     "comparecimento": 12931535,
+     "abstencao": 2223952,
+     "taxa_comparecimento": 85.3258,
+     "maioria_votou": true
+    },
+    "5054": {
+     "aptos": 13164966,
+     "comparecimento": 11420423,
+     "abstencao": 1744543,
+     "taxa_comparecimento": 86.7486,
+     "maioria_votou": true
+    },
+    "5559": {
+     "aptos": 12043929,
+     "comparecimento": 10579953,
+     "abstencao": 1463976,
+     "taxa_comparecimento": 87.8447,
+     "maioria_votou": true
+    },
+    "6064": {
+     "aptos": 11109370,
+     "comparecimento": 9775508,
+     "abstencao": 1333862,
+     "taxa_comparecimento": 87.9934,
+     "maioria_votou": true
+    },
+    "6569": {
+     "aptos": 9005885,
+     "comparecimento": 7776920,
+     "abstencao": 1228965,
+     "taxa_comparecimento": 86.3538,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 6948245,
+     "comparecimento": 4785687,
+     "abstencao": 2162558,
+     "taxa_comparecimento": 68.8762,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 4757020,
+     "comparecimento": 2487406,
+     "abstencao": 2269614,
+     "taxa_comparecimento": 52.2892,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 2744129,
+     "comparecimento": 1019734,
+     "abstencao": 1724395,
+     "taxa_comparecimento": 37.1606,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 1464715,
+     "comparecimento": 356147,
+     "abstencao": 1108568,
+     "taxa_comparecimento": 24.3151,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 664482,
+     "comparecimento": 89530,
+     "abstencao": 574952,
+     "taxa_comparecimento": 13.4737,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 337136,
+     "comparecimento": 14661,
+     "abstencao": 322475,
+     "taxa_comparecimento": 4.3487,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 297977,
+     "comparecimento": 2141,
+     "abstencao": 295836,
+     "taxa_comparecimento": 0.7185,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Norte": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 246136,
+     "comparecimento": 217338,
+     "abstencao": 28798,
+     "taxa_comparecimento": 88.3,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 10623520,
+     "comparecimento": 8720903,
+     "abstencao": 1902617,
+     "taxa_comparecimento": 82.0905,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 1267231,
+     "comparecimento": 1093772,
+     "abstencao": 173459,
+     "taxa_comparecimento": 86.312,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 972359,
+     "comparecimento": 530297,
+     "abstencao": 442062,
+     "taxa_comparecimento": 54.5372,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 2239590,
+     "comparecimento": 1624069,
+     "abstencao": 615521,
+     "taxa_comparecimento": 72.5164,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 13109354,
+    "comparecimento": 10562381,
+    "abstencao": 2546973,
+    "taxa_comparecimento": 80.5713,
+    "maioria_votou": true
+   },
+   "faixas": {
+    "-3": {
+     "aptos": 108,
+     "comparecimento": 71,
+     "abstencao": 37,
+     "taxa_comparecimento": 65.7407,
+     "maioria_votou": true
+    },
+    "1600": {
+     "aptos": 93217,
+     "comparecimento": 82892,
+     "abstencao": 10325,
+     "taxa_comparecimento": 88.9237,
+     "maioria_votou": true
+    },
+    "1700": {
+     "aptos": 152919,
+     "comparecimento": 134446,
+     "abstencao": 18473,
+     "taxa_comparecimento": 87.9197,
+     "maioria_votou": true
+    },
+    "1800": {
+     "aptos": 231934,
+     "comparecimento": 199100,
+     "abstencao": 32834,
+     "taxa_comparecimento": 85.8434,
+     "maioria_votou": true
+    },
+    "1900": {
+     "aptos": 261728,
+     "comparecimento": 210035,
+     "abstencao": 51693,
+     "taxa_comparecimento": 80.2493,
+     "maioria_votou": true
+    },
+    "2000": {
+     "aptos": 281175,
+     "comparecimento": 217541,
+     "abstencao": 63634,
+     "taxa_comparecimento": 77.3685,
+     "maioria_votou": true
+    },
+    "2124": {
+     "aptos": 1160344,
+     "comparecimento": 872591,
+     "abstencao": 287753,
+     "taxa_comparecimento": 75.2011,
+     "maioria_votou": true
+    },
+    "2529": {
+     "aptos": 1476661,
+     "comparecimento": 1133599,
+     "abstencao": 343062,
+     "taxa_comparecimento": 76.7677,
+     "maioria_votou": true
+    },
+    "3034": {
+     "aptos": 1424804,
+     "comparecimento": 1137360,
+     "abstencao": 287444,
+     "taxa_comparecimento": 79.8257,
+     "maioria_votou": true
+    },
+    "3539": {
+     "aptos": 1331324,
+     "comparecimento": 1099642,
+     "abstencao": 231682,
+     "taxa_comparecimento": 82.5976,
+     "maioria_votou": true
+    },
+    "4044": {
+     "aptos": 1350842,
+     "comparecimento": 1145053,
+     "abstencao": 205789,
+     "taxa_comparecimento": 84.7659,
+     "maioria_votou": true
+    },
+    "4549": {
+     "aptos": 1229158,
+     "comparecimento": 1060031,
+     "abstencao": 169127,
+     "taxa_comparecimento": 86.2404,
+     "maioria_votou": true
+    },
+    "5054": {
+     "aptos": 1020869,
+     "comparecimento": 893348,
+     "abstencao": 127521,
+     "taxa_comparecimento": 87.5086,
+     "maioria_votou": true
+    },
+    "5559": {
+     "aptos": 854681,
+     "comparecimento": 752603,
+     "abstencao": 102078,
+     "taxa_comparecimento": 88.0566,
+     "maioria_votou": true
+    },
+    "6064": {
+     "aptos": 714619,
+     "comparecimento": 624286,
+     "abstencao": 90333,
+     "taxa_comparecimento": 87.3593,
+     "maioria_votou": true
+    },
+    "6569": {
+     "aptos": 552612,
+     "comparecimento": 469486,
+     "abstencao": 83126,
+     "taxa_comparecimento": 84.9576,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 413846,
+     "comparecimento": 297227,
+     "abstencao": 116619,
+     "taxa_comparecimento": 71.8207,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 271184,
+     "comparecimento": 148388,
+     "abstencao": 122796,
+     "taxa_comparecimento": 54.7186,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 158190,
+     "comparecimento": 59200,
+     "abstencao": 98990,
+     "taxa_comparecimento": 37.4234,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 81111,
+     "comparecimento": 19649,
+     "abstencao": 61462,
+     "taxa_comparecimento": 24.2248,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 32972,
+     "comparecimento": 4747,
+     "abstencao": 28225,
+     "taxa_comparecimento": 14.3971,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 10754,
+     "comparecimento": 838,
+     "abstencao": 9916,
+     "taxa_comparecimento": 7.7924,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 4302,
+     "comparecimento": 248,
+     "abstencao": 4054,
+     "taxa_comparecimento": 5.7648,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Nordeste": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 673203,
+     "comparecimento": 617396,
+     "abstencao": 55807,
+     "taxa_comparecimento": 91.7102,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 33629549,
+     "comparecimento": 28219173,
+     "abstencao": 5410376,
+     "taxa_comparecimento": 83.9118,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 5025593,
+     "comparecimento": 4392769,
+     "abstencao": 632824,
+     "taxa_comparecimento": 87.408,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 4200942,
+     "comparecimento": 2296556,
+     "abstencao": 1904386,
+     "taxa_comparecimento": 54.6676,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 9226535,
+     "comparecimento": 6689325,
+     "abstencao": 2537210,
+     "taxa_comparecimento": 72.5009,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 43529845,
+    "comparecimento": 35526253,
+    "abstencao": 8003592,
+    "taxa_comparecimento": 81.6136,
+    "maioria_votou": true
+   },
+   "faixas": {
+    "-3": {
+     "aptos": 558,
+     "comparecimento": 359,
+     "abstencao": 199,
+     "taxa_comparecimento": 64.3369,
+     "maioria_votou": true
+    },
+    "1600": {
+     "aptos": 263562,
+     "comparecimento": 244030,
+     "abstencao": 19532,
+     "taxa_comparecimento": 92.5892,
+     "maioria_votou": true
+    },
+    "1700": {
+     "aptos": 409641,
+     "comparecimento": 373366,
+     "abstencao": 36275,
+     "taxa_comparecimento": 91.1447,
+     "maioria_votou": true
+    },
+    "1800": {
+     "aptos": 641901,
+     "comparecimento": 566813,
+     "abstencao": 75088,
+     "taxa_comparecimento": 88.3022,
+     "maioria_votou": true
+    },
+    "1900": {
+     "aptos": 711014,
+     "comparecimento": 591485,
+     "abstencao": 119529,
+     "taxa_comparecimento": 83.1889,
+     "maioria_votou": true
+    },
+    "2000": {
+     "aptos": 765240,
+     "comparecimento": 615473,
+     "abstencao": 149767,
+     "taxa_comparecimento": 80.4288,
+     "maioria_votou": true
+    },
+    "2124": {
+     "aptos": 3226427,
+     "comparecimento": 2511272,
+     "abstencao": 715155,
+     "taxa_comparecimento": 77.8345,
+     "maioria_votou": true
+    },
+    "2529": {
+     "aptos": 4347121,
+     "comparecimento": 3409825,
+     "abstencao": 937296,
+     "taxa_comparecimento": 78.4387,
+     "maioria_votou": true
+    },
+    "3034": {
+     "aptos": 4294905,
+     "comparecimento": 3484727,
+     "abstencao": 810178,
+     "taxa_comparecimento": 81.1363,
+     "maioria_votou": true
+    },
+    "3539": {
+     "aptos": 4269316,
+     "comparecimento": 3573225,
+     "abstencao": 696091,
+     "taxa_comparecimento": 83.6955,
+     "maioria_votou": true
+    },
+    "4044": {
+     "aptos": 4478060,
+     "comparecimento": 3844173,
+     "abstencao": 633887,
+     "taxa_comparecimento": 85.8446,
+     "maioria_votou": true
+    },
+    "4549": {
+     "aptos": 4162954,
+     "comparecimento": 3636352,
+     "abstencao": 526602,
+     "taxa_comparecimento": 87.3503,
+     "maioria_votou": true
+    },
+    "5054": {
+     "aptos": 3558451,
+     "comparecimento": 3154241,
+     "abstencao": 404210,
+     "taxa_comparecimento": 88.6408,
+     "maioria_votou": true
+    },
+    "5559": {
+     "aptos": 3174160,
+     "comparecimento": 2831587,
+     "abstencao": 342573,
+     "taxa_comparecimento": 89.2074,
+     "maioria_votou": true
+    },
+    "6064": {
+     "aptos": 2837497,
+     "comparecimento": 2514667,
+     "abstencao": 322830,
+     "taxa_comparecimento": 88.6227,
+     "maioria_votou": true
+    },
+    "6569": {
+     "aptos": 2188096,
+     "comparecimento": 1878102,
+     "abstencao": 309994,
+     "taxa_comparecimento": 85.8327,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 1680875,
+     "comparecimento": 1201991,
+     "abstencao": 478884,
+     "taxa_comparecimento": 71.5098,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 1213948,
+     "comparecimento": 671634,
+     "abstencao": 542314,
+     "taxa_comparecimento": 55.3264,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 710646,
+     "comparecimento": 285666,
+     "abstencao": 424980,
+     "taxa_comparecimento": 40.1981,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 375692,
+     "comparecimento": 104981,
+     "abstencao": 270711,
+     "taxa_comparecimento": 27.9434,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 150674,
+     "comparecimento": 26846,
+     "abstencao": 123828,
+     "taxa_comparecimento": 17.8173,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 48455,
+     "comparecimento": 4611,
+     "abstencao": 43844,
+     "taxa_comparecimento": 9.516,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 20652,
+     "comparecimento": 827,
+     "abstencao": 19825,
+     "taxa_comparecimento": 4.0045,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Centro-Oeste": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 133738,
+     "comparecimento": 110103,
+     "abstencao": 23635,
+     "taxa_comparecimento": 82.3274,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 9321480,
+     "comparecimento": 7425259,
+     "abstencao": 1896221,
+     "taxa_comparecimento": 79.6575,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 1435471,
+     "comparecimento": 1235458,
+     "abstencao": 200013,
+     "taxa_comparecimento": 86.0664,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 1106223,
+     "comparecimento": 621500,
+     "abstencao": 484723,
+     "taxa_comparecimento": 56.1822,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 2541694,
+     "comparecimento": 1856958,
+     "abstencao": 684736,
+     "taxa_comparecimento": 73.0599,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 11997001,
+    "comparecimento": 9392365,
+    "abstencao": 2604636,
+    "taxa_comparecimento": 78.2893,
+    "maioria_votou": true
+   },
+   "faixas": {
+    "-3": {
+     "aptos": 89,
+     "comparecimento": 45,
+     "abstencao": 44,
+     "taxa_comparecimento": 50.5618,
+     "maioria_votou": true
+    },
+    "1600": {
+     "aptos": 49824,
+     "comparecimento": 41825,
+     "abstencao": 7999,
+     "taxa_comparecimento": 83.9455,
+     "maioria_votou": true
+    },
+    "1700": {
+     "aptos": 83914,
+     "comparecimento": 68278,
+     "abstencao": 15636,
+     "taxa_comparecimento": 81.3666,
+     "maioria_votou": true
+    },
+    "1800": {
+     "aptos": 149698,
+     "comparecimento": 124737,
+     "abstencao": 24961,
+     "taxa_comparecimento": 83.3258,
+     "maioria_votou": true
+    },
+    "1900": {
+     "aptos": 173636,
+     "comparecimento": 131607,
+     "abstencao": 42029,
+     "taxa_comparecimento": 75.7948,
+     "maioria_votou": true
+    },
+    "2000": {
+     "aptos": 197101,
+     "comparecimento": 144328,
+     "abstencao": 52773,
+     "taxa_comparecimento": 73.2254,
+     "maioria_votou": true
+    },
+    "2124": {
+     "aptos": 851948,
+     "comparecimento": 602795,
+     "abstencao": 249153,
+     "taxa_comparecimento": 70.7549,
+     "maioria_votou": true
+    },
+    "2529": {
+     "aptos": 1148034,
+     "comparecimento": 844882,
+     "abstencao": 303152,
+     "taxa_comparecimento": 73.5938,
+     "maioria_votou": true
+    },
+    "3034": {
+     "aptos": 1195837,
+     "comparecimento": 914531,
+     "abstencao": 281306,
+     "taxa_comparecimento": 76.4762,
+     "maioria_votou": true
+    },
+    "3539": {
+     "aptos": 1194976,
+     "comparecimento": 951278,
+     "abstencao": 243698,
+     "taxa_comparecimento": 79.6065,
+     "maioria_votou": true
+    },
+    "4044": {
+     "aptos": 1244020,
+     "comparecimento": 1019740,
+     "abstencao": 224280,
+     "taxa_comparecimento": 81.9714,
+     "maioria_votou": true
+    },
+    "4549": {
+     "aptos": 1198890,
+     "comparecimento": 1004116,
+     "abstencao": 194774,
+     "taxa_comparecimento": 83.7538,
+     "maioria_votou": true
+    },
+    "5054": {
+     "aptos": 1042381,
+     "comparecimento": 887847,
+     "abstencao": 154534,
+     "taxa_comparecimento": 85.1749,
+     "maioria_votou": true
+    },
+    "5559": {
+     "aptos": 924959,
+     "comparecimento": 799398,
+     "abstencao": 125561,
+     "taxa_comparecimento": 86.4252,
+     "maioria_votou": true
+    },
+    "6064": {
+     "aptos": 811104,
+     "comparecimento": 703261,
+     "abstencao": 107843,
+     "taxa_comparecimento": 86.7042,
+     "maioria_votou": true
+    },
+    "6569": {
+     "aptos": 624367,
+     "comparecimento": 532197,
+     "abstencao": 92170,
+     "taxa_comparecimento": 85.2378,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 467385,
+     "comparecimento": 335937,
+     "abstencao": 131448,
+     "taxa_comparecimento": 71.8759,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 311699,
+     "comparecimento": 176621,
+     "abstencao": 135078,
+     "taxa_comparecimento": 56.664,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 179807,
+     "comparecimento": 74626,
+     "abstencao": 105181,
+     "taxa_comparecimento": 41.5034,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 92006,
+     "comparecimento": 26402,
+     "abstencao": 65604,
+     "taxa_comparecimento": 28.696,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 37771,
+     "comparecimento": 6637,
+     "abstencao": 31134,
+     "taxa_comparecimento": 17.5717,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 12312,
+     "comparecimento": 1120,
+     "abstencao": 11192,
+     "taxa_comparecimento": 9.0968,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 5243,
+     "comparecimento": 157,
+     "abstencao": 5086,
+     "taxa_comparecimento": 2.9945,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Sudeste": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 401236,
+     "comparecimento": 330123,
+     "abstencao": 71113,
+     "taxa_comparecimento": 82.2765,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 48666537,
+     "comparecimento": 39181941,
+     "abstencao": 9484596,
+     "taxa_comparecimento": 80.5111,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 9103903,
+     "comparecimento": 7924215,
+     "abstencao": 1179688,
+     "taxa_comparecimento": 87.042,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 8157302,
+     "comparecimento": 3831366,
+     "abstencao": 4325936,
+     "taxa_comparecimento": 46.9685,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 17261205,
+     "comparecimento": 11755581,
+     "abstencao": 5505624,
+     "taxa_comparecimento": 68.1041,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 66329375,
+    "comparecimento": 51267821,
+    "abstencao": 15061554,
+    "taxa_comparecimento": 77.2928,
+    "maioria_votou": true
+   },
+   "faixas": {
+    "-3": {
+     "aptos": 397,
+     "comparecimento": 176,
+     "abstencao": 221,
+     "taxa_comparecimento": 44.3325,
+     "maioria_votou": false
+    },
+    "1600": {
+     "aptos": 133069,
+     "comparecimento": 112966,
+     "abstencao": 20103,
+     "taxa_comparecimento": 84.8928,
+     "maioria_votou": true
+    },
+    "1700": {
+     "aptos": 268167,
+     "comparecimento": 217157,
+     "abstencao": 51010,
+     "taxa_comparecimento": 80.9783,
+     "maioria_votou": true
+    },
+    "1800": {
+     "aptos": 673044,
+     "comparecimento": 584494,
+     "abstencao": 88550,
+     "taxa_comparecimento": 86.8434,
+     "maioria_votou": true
+    },
+    "1900": {
+     "aptos": 828699,
+     "comparecimento": 659515,
+     "abstencao": 169184,
+     "taxa_comparecimento": 79.5844,
+     "maioria_votou": true
+    },
+    "2000": {
+     "aptos": 951796,
+     "comparecimento": 725405,
+     "abstencao": 226391,
+     "taxa_comparecimento": 76.2143,
+     "maioria_votou": true
+    },
+    "2124": {
+     "aptos": 4178906,
+     "comparecimento": 3040708,
+     "abstencao": 1138198,
+     "taxa_comparecimento": 72.7633,
+     "maioria_votou": true
+    },
+    "2529": {
+     "aptos": 5922248,
+     "comparecimento": 4411525,
+     "abstencao": 1510723,
+     "taxa_comparecimento": 74.4907,
+     "maioria_votou": true
+    },
+    "3034": {
+     "aptos": 6027768,
+     "comparecimento": 4639656,
+     "abstencao": 1388112,
+     "taxa_comparecimento": 76.9714,
+     "maioria_votou": true
+    },
+    "3539": {
+     "aptos": 6184910,
+     "comparecimento": 4925620,
+     "abstencao": 1259290,
+     "taxa_comparecimento": 79.6393,
+     "maioria_votou": true
+    },
+    "4044": {
+     "aptos": 6565060,
+     "comparecimento": 5393437,
+     "abstencao": 1171623,
+     "taxa_comparecimento": 82.1537,
+     "maioria_votou": true
+    },
+    "4549": {
+     "aptos": 6445014,
+     "comparecimento": 5412318,
+     "abstencao": 1032696,
+     "taxa_comparecimento": 83.9768,
+     "maioria_votou": true
+    },
+    "5054": {
+     "aptos": 5646483,
+     "comparecimento": 4829632,
+     "abstencao": 816851,
+     "taxa_comparecimento": 85.5335,
+     "maioria_votou": true
+    },
+    "5559": {
+     "aptos": 5242609,
+     "comparecimento": 4559631,
+     "abstencao": 682978,
+     "taxa_comparecimento": 86.9726,
+     "maioria_votou": true
+    },
+    "6064": {
+     "aptos": 4950397,
+     "comparecimento": 4334501,
+     "abstencao": 615896,
+     "taxa_comparecimento": 87.5587,
+     "maioria_votou": true
+    },
+    "6569": {
+     "aptos": 4153506,
+     "comparecimento": 3589714,
+     "abstencao": 563792,
+     "taxa_comparecimento": 86.4261,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 3231705,
+     "comparecimento": 2148644,
+     "abstencao": 1083061,
+     "taxa_comparecimento": 66.4864,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 2160752,
+     "comparecimento": 1065989,
+     "abstencao": 1094763,
+     "taxa_comparecimento": 49.3342,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 1248036,
+     "comparecimento": 425970,
+     "abstencao": 822066,
+     "taxa_comparecimento": 34.1312,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 694572,
+     "comparecimento": 146645,
+     "abstencao": 547927,
+     "taxa_comparecimento": 21.113,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 351585,
+     "comparecimento": 37364,
+     "abstencao": 314221,
+     "taxa_comparecimento": 10.6273,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 228202,
+     "comparecimento": 6040,
+     "abstencao": 222162,
+     "taxa_comparecimento": 2.6468,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 242450,
+     "comparecimento": 714,
+     "abstencao": 241736,
+     "taxa_comparecimento": 0.2945,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Sul": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 177500,
+     "comparecimento": 150789,
+     "abstencao": 26711,
+     "taxa_comparecimento": 84.9515,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 16623520,
+     "comparecimento": 13651129,
+     "abstencao": 2972391,
+     "taxa_comparecimento": 82.1194,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 3283057,
+     "comparecimento": 2906214,
+     "abstencao": 376843,
+     "taxa_comparecimento": 88.5216,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 2776878,
+     "comparecimento": 1475587,
+     "abstencao": 1301291,
+     "taxa_comparecimento": 53.1383,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 6059935,
+     "comparecimento": 4381801,
+     "abstencao": 1678134,
+     "taxa_comparecimento": 72.3077,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 22861012,
+    "comparecimento": 18183749,
+    "abstencao": 4677263,
+    "taxa_comparecimento": 79.5404,
+    "maioria_votou": true
+   },
+   "faixas": {
+    "-3": {
+     "aptos": 57,
+     "comparecimento": 30,
+     "abstencao": 27,
+     "taxa_comparecimento": 52.6316,
+     "maioria_votou": true
+    },
+    "1600": {
+     "aptos": 66146,
+     "comparecimento": 57495,
+     "abstencao": 8651,
+     "taxa_comparecimento": 86.9214,
+     "maioria_votou": true
+    },
+    "1700": {
+     "aptos": 111354,
+     "comparecimento": 93294,
+     "abstencao": 18060,
+     "taxa_comparecimento": 83.7815,
+     "maioria_votou": true
+    },
+    "1800": {
+     "aptos": 233493,
+     "comparecimento": 203891,
+     "abstencao": 29602,
+     "taxa_comparecimento": 87.3221,
+     "maioria_votou": true
+    },
+    "1900": {
+     "aptos": 269523,
+     "comparecimento": 215498,
+     "abstencao": 54025,
+     "taxa_comparecimento": 79.9553,
+     "maioria_votou": true
+    },
+    "2000": {
+     "aptos": 317190,
+     "comparecimento": 245983,
+     "abstencao": 71207,
+     "taxa_comparecimento": 77.5507,
+     "maioria_votou": true
+    },
+    "2124": {
+     "aptos": 1386318,
+     "comparecimento": 1024684,
+     "abstencao": 361634,
+     "taxa_comparecimento": 73.9141,
+     "maioria_votou": true
+    },
+    "2529": {
+     "aptos": 2017427,
+     "comparecimento": 1521201,
+     "abstencao": 496226,
+     "taxa_comparecimento": 75.403,
+     "maioria_votou": true
+    },
+    "3034": {
+     "aptos": 2136924,
+     "comparecimento": 1677297,
+     "abstencao": 459627,
+     "taxa_comparecimento": 78.4912,
+     "maioria_votou": true
+    },
+    "3539": {
+     "aptos": 2167245,
+     "comparecimento": 1773239,
+     "abstencao": 394006,
+     "taxa_comparecimento": 81.82,
+     "maioria_votou": true
+    },
+    "4044": {
+     "aptos": 2231627,
+     "comparecimento": 1878529,
+     "abstencao": 353098,
+     "taxa_comparecimento": 84.1776,
+     "maioria_votou": true
+    },
+    "4549": {
+     "aptos": 2119471,
+     "comparecimento": 1818718,
+     "abstencao": 300753,
+     "taxa_comparecimento": 85.81,
+     "maioria_votou": true
+    },
+    "5054": {
+     "aptos": 1896782,
+     "comparecimento": 1655355,
+     "abstencao": 241427,
+     "taxa_comparecimento": 87.2718,
+     "maioria_votou": true
+    },
+    "5559": {
+     "aptos": 1847520,
+     "comparecimento": 1636734,
+     "abstencao": 210786,
+     "taxa_comparecimento": 88.5909,
+     "maioria_votou": true
+    },
+    "6064": {
+     "aptos": 1795753,
+     "comparecimento": 1598793,
+     "abstencao": 196960,
+     "taxa_comparecimento": 89.0319,
+     "maioria_votou": true
+    },
+    "6569": {
+     "aptos": 1487304,
+     "comparecimento": 1307421,
+     "abstencao": 179883,
+     "taxa_comparecimento": 87.9054,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 1154434,
+     "comparecimento": 801888,
+     "abstencao": 352546,
+     "taxa_comparecimento": 69.4616,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 799437,
+     "comparecimento": 424774,
+     "abstencao": 374663,
+     "taxa_comparecimento": 53.1341,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 447450,
+     "comparecimento": 174272,
+     "abstencao": 273178,
+     "taxa_comparecimento": 38.9478,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 221334,
+     "comparecimento": 58470,
+     "abstencao": 162864,
+     "taxa_comparecimento": 26.4171,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 91480,
+     "comparecimento": 13936,
+     "abstencao": 77544,
+     "taxa_comparecimento": 15.2339,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 37413,
+     "comparecimento": 2052,
+     "abstencao": 35361,
+     "taxa_comparecimento": 5.4847,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 25330,
+     "comparecimento": 195,
+     "abstencao": 25135,
+     "taxa_comparecimento": 0.7698,
+     "maioria_votou": false
+    }
+   }
+  },
+  "AC": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 14064,
+     "comparecimento": 12304,
+     "abstencao": 1760,
+     "taxa_comparecimento": 87.4858,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 502504,
+     "comparecimento": 409231,
+     "abstencao": 93273,
+     "taxa_comparecimento": 81.4384,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 54144,
+     "comparecimento": 45138,
+     "abstencao": 9006,
+     "taxa_comparecimento": 83.3666,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 43655,
+     "comparecimento": 22219,
+     "abstencao": 21436,
+     "taxa_comparecimento": 50.8968,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 97799,
+     "comparecimento": 67357,
+     "abstencao": 30442,
+     "taxa_comparecimento": 68.8729,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 614375,
+    "comparecimento": 488897,
+    "abstencao": 125478,
+    "taxa_comparecimento": 79.5763,
+    "maioria_votou": true
+   }
+  },
+  "AL": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 40575,
+     "comparecimento": 37434,
+     "abstencao": 3141,
+     "taxa_comparecimento": 92.2588,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 1920463,
+     "comparecimento": 1581792,
+     "abstencao": 338671,
+     "taxa_comparecimento": 82.3651,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 267183,
+     "comparecimento": 222622,
+     "abstencao": 44561,
+     "taxa_comparecimento": 83.3219,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 213507,
+     "comparecimento": 96292,
+     "abstencao": 117215,
+     "taxa_comparecimento": 45.1002,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 480690,
+     "comparecimento": 318914,
+     "abstencao": 161776,
+     "taxa_comparecimento": 66.345,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 2441794,
+    "comparecimento": 1938177,
+    "abstencao": 503617,
+    "taxa_comparecimento": 79.3751,
+    "maioria_votou": true
+   }
+  },
+  "AM": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 51377,
+     "comparecimento": 44263,
+     "abstencao": 7114,
+     "taxa_comparecimento": 86.1533,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 2326131,
+     "comparecimento": 1880445,
+     "abstencao": 445686,
+     "taxa_comparecimento": 80.84,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 252720,
+     "comparecimento": 215543,
+     "abstencao": 37177,
+     "taxa_comparecimento": 85.2893,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 170948,
+     "comparecimento": 96633,
+     "abstencao": 74315,
+     "taxa_comparecimento": 56.5277,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 423668,
+     "comparecimento": 312176,
+     "abstencao": 111492,
+     "taxa_comparecimento": 73.6841,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 2801182,
+    "comparecimento": 2236889,
+    "abstencao": 564293,
+    "taxa_comparecimento": 79.8552,
+    "maioria_votou": true
+   }
+  },
+  "AP": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 14433,
+     "comparecimento": 13540,
+     "abstencao": 893,
+     "taxa_comparecimento": 93.8128,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 477980,
+     "comparecimento": 402722,
+     "abstencao": 75258,
+     "taxa_comparecimento": 84.255,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 48627,
+     "comparecimento": 41680,
+     "abstencao": 6947,
+     "taxa_comparecimento": 85.7137,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 36493,
+     "comparecimento": 19115,
+     "abstencao": 17378,
+     "taxa_comparecimento": 52.3799,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 85120,
+     "comparecimento": 60795,
+     "abstencao": 24325,
+     "taxa_comparecimento": 71.4227,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 577534,
+    "comparecimento": 477057,
+    "abstencao": 100477,
+    "taxa_comparecimento": 82.6024,
+    "maioria_votou": true
+   }
+  },
+  "BA": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 138270,
+     "comparecimento": 124558,
+     "abstencao": 13712,
+     "taxa_comparecimento": 90.0832,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 8742350,
+     "comparecimento": 7155005,
+     "abstencao": 1587345,
+     "taxa_comparecimento": 81.843,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 1361938,
+     "comparecimento": 1178790,
+     "abstencao": 183148,
+     "taxa_comparecimento": 86.5524,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 1078357,
+     "comparecimento": 602997,
+     "abstencao": 475360,
+     "taxa_comparecimento": 55.9181,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 2440295,
+     "comparecimento": 1781787,
+     "abstencao": 658508,
+     "taxa_comparecimento": 73.0152,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 11321005,
+    "comparecimento": 9061404,
+    "abstencao": 2259601,
+    "taxa_comparecimento": 80.0406,
+    "maioria_votou": true
+   }
+  },
+  "CE": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 119327,
+     "comparecimento": 107937,
+     "abstencao": 11390,
+     "taxa_comparecimento": 90.4548,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 5399104,
+     "comparecimento": 4685429,
+     "abstencao": 713675,
+     "taxa_comparecimento": 86.7816,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 808428,
+     "comparecimento": 722622,
+     "abstencao": 85806,
+     "taxa_comparecimento": 89.3861,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 671557,
+     "comparecimento": 396241,
+     "abstencao": 275316,
+     "taxa_comparecimento": 59.0033,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 1479985,
+     "comparecimento": 1118863,
+     "abstencao": 361122,
+     "taxa_comparecimento": 75.5996,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 6998494,
+    "comparecimento": 5912285,
+    "abstencao": 1086209,
+    "taxa_comparecimento": 84.4794,
+    "maioria_votou": true
+   }
+  },
+  "DF": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 19194,
+     "comparecimento": 16853,
+     "abstencao": 2341,
+     "taxa_comparecimento": 87.8035,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 1774313,
+     "comparecimento": 1460695,
+     "abstencao": 313618,
+     "taxa_comparecimento": 82.3245,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 256209,
+     "comparecimento": 224771,
+     "abstencao": 31438,
+     "taxa_comparecimento": 87.7295,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 203409,
+     "comparecimento": 124021,
+     "abstencao": 79388,
+     "taxa_comparecimento": 60.9712,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 459618,
+     "comparecimento": 348792,
+     "abstencao": 110826,
+     "taxa_comparecimento": 75.8874,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 2253132,
+    "comparecimento": 1826344,
+    "abstencao": 426788,
+    "taxa_comparecimento": 81.058,
+    "maioria_votou": true
+   }
+  },
+  "ES": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 20302,
+     "comparecimento": 17316,
+     "abstencao": 2986,
+     "taxa_comparecimento": 85.2921,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 2229785,
+     "comparecimento": 1812818,
+     "abstencao": 416967,
+     "taxa_comparecimento": 81.3001,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 403495,
+     "comparecimento": 348867,
+     "abstencao": 54628,
+     "taxa_comparecimento": 86.4613,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 336875,
+     "comparecimento": 172223,
+     "abstencao": 164652,
+     "taxa_comparecimento": 51.1237,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 740370,
+     "comparecimento": 521090,
+     "abstencao": 219280,
+     "taxa_comparecimento": 70.3824,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 2990490,
+    "comparecimento": 2351242,
+    "abstencao": 639248,
+    "taxa_comparecimento": 78.624,
+    "maioria_votou": true
+   }
+  },
+  "GO": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 50010,
+     "comparecimento": 41857,
+     "abstencao": 8153,
+     "taxa_comparecimento": 83.6973,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 3925732,
+     "comparecimento": 3124104,
+     "abstencao": 801628,
+     "taxa_comparecimento": 79.5802,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 617066,
+     "comparecimento": 535230,
+     "abstencao": 81836,
+     "taxa_comparecimento": 86.7379,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 487918,
+     "comparecimento": 270520,
+     "abstencao": 217398,
+     "taxa_comparecimento": 55.4437,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 1104984,
+     "comparecimento": 805750,
+     "abstencao": 299234,
+     "taxa_comparecimento": 72.9196,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 5080755,
+    "comparecimento": 3971727,
+    "abstencao": 1109028,
+    "taxa_comparecimento": 78.172,
+    "maioria_votou": true
+   }
+  },
+  "MA": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 110970,
+     "comparecimento": 102963,
+     "abstencao": 8007,
+     "taxa_comparecimento": 92.7845,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 4097816,
+     "comparecimento": 3347645,
+     "abstencao": 750171,
+     "taxa_comparecimento": 81.6934,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 526303,
+     "comparecimento": 454023,
+     "abstencao": 72280,
+     "taxa_comparecimento": 86.2665,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 451443,
+     "comparecimento": 258828,
+     "abstencao": 192615,
+     "taxa_comparecimento": 57.3335,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 977746,
+     "comparecimento": 712851,
+     "abstencao": 264895,
+     "taxa_comparecimento": 72.9076,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 5186562,
+    "comparecimento": 4163476,
+    "abstencao": 1023086,
+    "taxa_comparecimento": 80.2743,
+    "maioria_votou": true
+   }
+  },
+  "MG": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 133077,
+     "comparecimento": 109392,
+     "abstencao": 23685,
+     "taxa_comparecimento": 82.202,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 11904985,
+     "comparecimento": 9560795,
+     "abstencao": 2344190,
+     "taxa_comparecimento": 80.3092,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 2256446,
+     "comparecimento": 1971936,
+     "abstencao": 284510,
+     "taxa_comparecimento": 87.3912,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 2083019,
+     "comparecimento": 1000263,
+     "abstencao": 1082756,
+     "taxa_comparecimento": 48.0199,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 4339465,
+     "comparecimento": 2972199,
+     "abstencao": 1367266,
+     "taxa_comparecimento": 68.4923,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 16377659,
+    "comparecimento": 12642447,
+    "abstencao": 3735212,
+    "taxa_comparecimento": 77.1932,
+    "maioria_votou": true
+   }
+  },
+  "MS": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 22747,
+     "comparecimento": 18901,
+     "abstencao": 3846,
+     "taxa_comparecimento": 83.0923,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 1542014,
+     "comparecimento": 1198602,
+     "abstencao": 343412,
+     "taxa_comparecimento": 77.7296,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 257760,
+     "comparecimento": 216933,
+     "abstencao": 40827,
+     "taxa_comparecimento": 84.1608,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 202325,
+     "comparecimento": 107239,
+     "abstencao": 95086,
+     "taxa_comparecimento": 53.0033,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 460085,
+     "comparecimento": 324172,
+     "abstencao": 135913,
+     "taxa_comparecimento": 70.4592,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 2024884,
+    "comparecimento": 1541695,
+    "abstencao": 483189,
+    "taxa_comparecimento": 76.1374,
+    "maioria_votou": true
+   }
+  },
+  "MT": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 41787,
+     "comparecimento": 32492,
+     "abstencao": 9295,
+     "taxa_comparecimento": 77.7562,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 2079421,
+     "comparecimento": 1641858,
+     "abstencao": 437563,
+     "taxa_comparecimento": 78.9575,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 304436,
+     "comparecimento": 258524,
+     "abstencao": 45912,
+     "taxa_comparecimento": 84.919,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 212571,
+     "comparecimento": 119720,
+     "abstencao": 92851,
+     "taxa_comparecimento": 56.32,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 517007,
+     "comparecimento": 378244,
+     "abstencao": 138763,
+     "taxa_comparecimento": 73.1603,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 2638230,
+    "comparecimento": 2052599,
+    "abstencao": 585631,
+    "taxa_comparecimento": 77.8021,
+    "maioria_votou": true
+   }
+  },
+  "PA": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 107066,
+     "comparecimento": 96743,
+     "abstencao": 10323,
+     "taxa_comparecimento": 90.3583,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 5064642,
+     "comparecimento": 4185455,
+     "abstencao": 879187,
+     "taxa_comparecimento": 82.6407,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 604912,
+     "comparecimento": 526262,
+     "abstencao": 78650,
+     "taxa_comparecimento": 86.9981,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 488692,
+     "comparecimento": 260660,
+     "abstencao": 228032,
+     "taxa_comparecimento": 53.3383,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 1093604,
+     "comparecimento": 786922,
+     "abstencao": 306682,
+     "taxa_comparecimento": 71.9568,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 6265355,
+    "comparecimento": 5069150,
+    "abstencao": 1196205,
+    "taxa_comparecimento": 80.9076,
+    "maioria_votou": true
+   }
+  },
+  "PB": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 52892,
+     "comparecimento": 48958,
+     "abstencao": 3934,
+     "taxa_comparecimento": 92.5622,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 2470439,
+     "comparecimento": 2121942,
+     "abstencao": 348497,
+     "taxa_comparecimento": 85.8933,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 380684,
+     "comparecimento": 333606,
+     "abstencao": 47078,
+     "taxa_comparecimento": 87.6333,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 343327,
+     "comparecimento": 178331,
+     "abstencao": 164996,
+     "taxa_comparecimento": 51.942,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 724011,
+     "comparecimento": 511937,
+     "abstencao": 212074,
+     "taxa_comparecimento": 70.7085,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 3247397,
+    "comparecimento": 2682877,
+    "abstencao": 564520,
+    "taxa_comparecimento": 82.6162,
+    "maioria_votou": true
+   }
+  },
+  "PE": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 96037,
+     "comparecimento": 87531,
+     "abstencao": 8506,
+     "taxa_comparecimento": 91.143,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 5550346,
+     "comparecimento": 4698941,
+     "abstencao": 851405,
+     "taxa_comparecimento": 84.6603,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 855960,
+     "comparecimento": 750187,
+     "abstencao": 105773,
+     "taxa_comparecimento": 87.6428,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 723272,
+     "comparecimento": 376468,
+     "abstencao": 346804,
+     "taxa_comparecimento": 52.0507,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 1579232,
+     "comparecimento": 1126655,
+     "abstencao": 452577,
+     "taxa_comparecimento": 71.342,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 7225744,
+    "comparecimento": 5913207,
+    "abstencao": 1312537,
+    "taxa_comparecimento": 81.8353,
+    "maioria_votou": true
+   }
+  },
+  "PI": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 54830,
+     "comparecimento": 52043,
+     "abstencao": 2787,
+     "taxa_comparecimento": 94.917,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 2056744,
+     "comparecimento": 1746947,
+     "abstencao": 309797,
+     "taxa_comparecimento": 84.9375,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 310450,
+     "comparecimento": 277761,
+     "abstencao": 32689,
+     "taxa_comparecimento": 89.4704,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 286085,
+     "comparecimento": 167256,
+     "abstencao": 118829,
+     "taxa_comparecimento": 58.4637,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 596535,
+     "comparecimento": 445017,
+     "abstencao": 151518,
+     "taxa_comparecimento": 74.6003,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 2708160,
+    "comparecimento": 2244047,
+    "abstencao": 464113,
+    "taxa_comparecimento": 82.8624,
+    "maioria_votou": true
+   }
+  },
+  "PR": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 77745,
+     "comparecimento": 63366,
+     "abstencao": 14379,
+     "taxa_comparecimento": 81.5049,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 6386427,
+     "comparecimento": 5215803,
+     "abstencao": 1170624,
+     "taxa_comparecimento": 81.6701,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 1194912,
+     "comparecimento": 1044566,
+     "abstencao": 150346,
+     "taxa_comparecimento": 87.4178,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 949909,
+     "comparecimento": 513498,
+     "abstencao": 436411,
+     "taxa_comparecimento": 54.0576,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 2144821,
+     "comparecimento": 1558064,
+     "abstencao": 586757,
+     "taxa_comparecimento": 72.6431,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 8609026,
+    "comparecimento": 6837247,
+    "abstencao": 1771779,
+    "taxa_comparecimento": 79.4195,
+    "maioria_votou": true
+   }
+  },
+  "RJ": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 67628,
+     "comparecimento": 56800,
+     "abstencao": 10828,
+     "taxa_comparecimento": 83.9889,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 9132745,
+     "comparecimento": 7446231,
+     "abstencao": 1686514,
+     "taxa_comparecimento": 81.5333,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 1816888,
+     "comparecimento": 1582998,
+     "abstencao": 233890,
+     "taxa_comparecimento": 87.1269,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 1839654,
+     "comparecimento": 773074,
+     "abstencao": 1066580,
+     "taxa_comparecimento": 42.0228,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 3656542,
+     "comparecimento": 2356072,
+     "abstencao": 1300470,
+     "taxa_comparecimento": 64.4344,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 12857000,
+    "comparecimento": 9859141,
+    "abstencao": 2997859,
+    "taxa_comparecimento": 76.6831,
+    "maioria_votou": true
+   }
+  },
+  "RN": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 37243,
+     "comparecimento": 34553,
+     "abstencao": 2690,
+     "taxa_comparecimento": 92.7772,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 2025516,
+     "comparecimento": 1708818,
+     "abstencao": 316698,
+     "taxa_comparecimento": 84.3646,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 321653,
+     "comparecimento": 283320,
+     "abstencao": 38333,
+     "taxa_comparecimento": 88.0825,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 276102,
+     "comparecimento": 145043,
+     "abstencao": 131059,
+     "taxa_comparecimento": 52.5324,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 597755,
+     "comparecimento": 428363,
+     "abstencao": 169392,
+     "taxa_comparecimento": 71.662,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 2660565,
+    "comparecimento": 2171762,
+    "abstencao": 488803,
+    "taxa_comparecimento": 81.6278,
+    "maioria_votou": true
+   }
+  },
+  "RO": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 24074,
+     "comparecimento": 18683,
+     "abstencao": 5391,
+     "taxa_comparecimento": 77.6065,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 994042,
+     "comparecimento": 794809,
+     "abstencao": 199233,
+     "taxa_comparecimento": 79.9573,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 146545,
+     "comparecimento": 124852,
+     "abstencao": 21693,
+     "taxa_comparecimento": 85.197,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 102411,
+     "comparecimento": 53793,
+     "abstencao": 48618,
+     "taxa_comparecimento": 52.5266,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 248956,
+     "comparecimento": 178645,
+     "abstencao": 70311,
+     "taxa_comparecimento": 71.7577,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 1267105,
+    "comparecimento": 992157,
+    "abstencao": 274948,
+    "taxa_comparecimento": 78.3011,
+    "maioria_votou": true
+   }
+  },
+  "RR": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 11554,
+     "comparecimento": 10610,
+     "abstencao": 944,
+     "taxa_comparecimento": 91.8297,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 327499,
+     "comparecimento": 275191,
+     "abstencao": 52308,
+     "taxa_comparecimento": 84.028,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 36270,
+     "comparecimento": 31332,
+     "abstencao": 4938,
+     "taxa_comparecimento": 86.3854,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 26167,
+     "comparecimento": 15619,
+     "abstencao": 10548,
+     "taxa_comparecimento": 59.6897,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 62437,
+     "comparecimento": 46951,
+     "abstencao": 15486,
+     "taxa_comparecimento": 75.1974,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 401496,
+    "comparecimento": 332756,
+    "abstencao": 68740,
+    "taxa_comparecimento": 82.879,
+    "maioria_votou": true
+   }
+  },
+  "RS": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 54702,
+     "comparecimento": 48346,
+     "abstencao": 6356,
+     "taxa_comparecimento": 88.3807,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 5928310,
+     "comparecimento": 4862542,
+     "abstencao": 1065768,
+     "taxa_comparecimento": 82.0224,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 1305260,
+     "comparecimento": 1165080,
+     "abstencao": 140180,
+     "taxa_comparecimento": 89.2604,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 1237959,
+     "comparecimento": 630396,
+     "abstencao": 607563,
+     "taxa_comparecimento": 50.9222,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 2543219,
+     "comparecimento": 1795476,
+     "abstencao": 747743,
+     "taxa_comparecimento": 70.5986,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 8526233,
+    "comparecimento": 6706366,
+    "abstencao": 1819867,
+    "taxa_comparecimento": 78.6557,
+    "maioria_votou": true
+   }
+  },
+  "SC": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 45053,
+     "comparecimento": 39077,
+     "abstencao": 5976,
+     "taxa_comparecimento": 86.7356,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 4308783,
+     "comparecimento": 3572784,
+     "abstencao": 735999,
+     "taxa_comparecimento": 82.9186,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 782885,
+     "comparecimento": 696568,
+     "abstencao": 86317,
+     "taxa_comparecimento": 88.9745,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 589010,
+     "comparecimento": 331693,
+     "abstencao": 257317,
+     "taxa_comparecimento": 56.3136,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 1371895,
+     "comparecimento": 1028261,
+     "abstencao": 343634,
+     "taxa_comparecimento": 74.9519,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 5725753,
+    "comparecimento": 4640136,
+    "abstencao": 1085617,
+    "taxa_comparecimento": 81.0398,
+    "maioria_votou": true
+   }
+  },
+  "SE": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 23059,
+     "comparecimento": 21419,
+     "abstencao": 1640,
+     "taxa_comparecimento": 92.8878,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 1366771,
+     "comparecimento": 1172654,
+     "abstencao": 194117,
+     "taxa_comparecimento": 85.7974,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 192994,
+     "comparecimento": 169838,
+     "abstencao": 23156,
+     "taxa_comparecimento": 88.0017,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 157292,
+     "comparecimento": 75100,
+     "abstencao": 82192,
+     "taxa_comparecimento": 47.7456,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 350286,
+     "comparecimento": 244938,
+     "abstencao": 105348,
+     "taxa_comparecimento": 69.9251,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 1740124,
+    "comparecimento": 1439018,
+    "abstencao": 301106,
+    "taxa_comparecimento": 82.6963,
+    "maioria_votou": true
+   }
+  },
+  "SP": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 180229,
+     "comparecimento": 146615,
+     "abstencao": 33614,
+     "taxa_comparecimento": 81.3493,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 25399022,
+     "comparecimento": 20362097,
+     "abstencao": 5036925,
+     "taxa_comparecimento": 80.1688,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 4627074,
+     "comparecimento": 4020414,
+     "abstencao": 606660,
+     "taxa_comparecimento": 86.8889,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 3897754,
+     "comparecimento": 1885806,
+     "abstencao": 2011948,
+     "taxa_comparecimento": 48.3819,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 8524828,
+     "comparecimento": 5906220,
+     "abstencao": 2618608,
+     "taxa_comparecimento": 69.2826,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 34104226,
+    "comparecimento": 26414991,
+    "abstencao": 7689235,
+    "taxa_comparecimento": 77.4537,
+    "maioria_votou": true
+   }
+  },
+  "TO": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 23568,
+     "comparecimento": 21195,
+     "abstencao": 2373,
+     "taxa_comparecimento": 89.9313,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 930722,
+     "comparecimento": 773050,
+     "abstencao": 157672,
+     "taxa_comparecimento": 83.0592,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 124013,
+     "comparecimento": 108965,
+     "abstencao": 15048,
+     "taxa_comparecimento": 87.8658,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 103993,
+     "comparecimento": 62258,
+     "abstencao": 41735,
+     "taxa_comparecimento": 59.8675,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 228006,
+     "comparecimento": 171223,
+     "abstencao": 56783,
+     "taxa_comparecimento": 75.0958,
+     "maioria_votou": true
+    }
+   },
+   "total": {
+    "aptos": 1182307,
+    "comparecimento": 965475,
+    "abstencao": 216832,
+    "taxa_comparecimento": 81.6603,
+    "maioria_votou": true
+   }
+  },
+  "Exterior": {
+   "grupos": {
+    "16 e 17": {
+     "aptos": 2431,
+     "comparecimento": 1239,
+     "abstencao": 1192,
+     "taxa_comparecimento": 50.9667,
+     "maioria_votou": true
+    },
+    "18 a 59": {
+     "aptos": 787864,
+     "comparecimento": 290773,
+     "abstencao": 497091,
+     "taxa_comparecimento": 36.9065,
+     "maioria_votou": false
+    },
+    "60 a 69": {
+     "aptos": 90367,
+     "comparecimento": 42453,
+     "abstencao": 47914,
+     "taxa_comparecimento": 46.9784,
+     "maioria_votou": false
+    },
+    "70 ou mais": {
+     "aptos": 38211,
+     "comparecimento": 10196,
+     "abstencao": 28015,
+     "taxa_comparecimento": 26.6834,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 128578,
+     "comparecimento": 52649,
+     "abstencao": 75929,
+     "taxa_comparecimento": 40.9471,
+     "maioria_votou": false
+    }
+   },
+   "total": {
+    "aptos": 918876,
+    "comparecimento": 344661,
+    "abstencao": 574215,
+    "taxa_comparecimento": 37.509,
+    "maioria_votou": false
+   },
+   "faixas": {
+    "-3": {
+     "aptos": 3,
+     "comparecimento": 0,
+     "abstencao": 3,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "1600": {
+     "aptos": 785,
+     "comparecimento": 497,
+     "abstencao": 288,
+     "taxa_comparecimento": 63.3121,
+     "maioria_votou": true
+    },
+    "1700": {
+     "aptos": 1646,
+     "comparecimento": 742,
+     "abstencao": 904,
+     "taxa_comparecimento": 45.079,
+     "maioria_votou": false
+    },
+    "1800": {
+     "aptos": 6845,
+     "comparecimento": 2371,
+     "abstencao": 4474,
+     "taxa_comparecimento": 34.6384,
+     "maioria_votou": false
+    },
+    "1900": {
+     "aptos": 11352,
+     "comparecimento": 3051,
+     "abstencao": 8301,
+     "taxa_comparecimento": 26.8763,
+     "maioria_votou": false
+    },
+    "2000": {
+     "aptos": 13746,
+     "comparecimento": 3360,
+     "abstencao": 10386,
+     "taxa_comparecimento": 24.4435,
+     "maioria_votou": false
+    },
+    "2124": {
+     "aptos": 65195,
+     "comparecimento": 15237,
+     "abstencao": 49958,
+     "taxa_comparecimento": 23.3714,
+     "maioria_votou": false
+    },
+    "2529": {
+     "aptos": 78768,
+     "comparecimento": 24675,
+     "abstencao": 54093,
+     "taxa_comparecimento": 31.3262,
+     "maioria_votou": false
+    },
+    "3034": {
+     "aptos": 97966,
+     "comparecimento": 37004,
+     "abstencao": 60962,
+     "taxa_comparecimento": 37.7723,
+     "maioria_votou": false
+    },
+    "3539": {
+     "aptos": 115044,
+     "comparecimento": 44932,
+     "abstencao": 70112,
+     "taxa_comparecimento": 39.0564,
+     "maioria_votou": false
+    },
+    "4044": {
+     "aptos": 124782,
+     "comparecimento": 47639,
+     "abstencao": 77143,
+     "taxa_comparecimento": 38.1778,
+     "maioria_votou": false
+    },
+    "4549": {
+     "aptos": 116267,
+     "comparecimento": 45436,
+     "abstencao": 70831,
+     "taxa_comparecimento": 39.079,
+     "maioria_votou": false
+    },
+    "5054": {
+     "aptos": 88917,
+     "comparecimento": 36394,
+     "abstencao": 52523,
+     "taxa_comparecimento": 40.9303,
+     "maioria_votou": false
+    },
+    "5559": {
+     "aptos": 68982,
+     "comparecimento": 30674,
+     "abstencao": 38308,
+     "taxa_comparecimento": 44.4667,
+     "maioria_votou": false
+    },
+    "6064": {
+     "aptos": 55505,
+     "comparecimento": 25972,
+     "abstencao": 29533,
+     "taxa_comparecimento": 46.7922,
+     "maioria_votou": false
+    },
+    "6569": {
+     "aptos": 34862,
+     "comparecimento": 16481,
+     "abstencao": 18381,
+     "taxa_comparecimento": 47.275,
+     "maioria_votou": false
+    },
+    "7074": {
+     "aptos": 20286,
+     "comparecimento": 6857,
+     "abstencao": 13429,
+     "taxa_comparecimento": 33.8016,
+     "maioria_votou": false
+    },
+    "7579": {
+     "aptos": 10199,
+     "comparecimento": 2410,
+     "abstencao": 7789,
+     "taxa_comparecimento": 23.6298,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 4598,
+     "comparecimento": 727,
+     "abstencao": 3871,
+     "taxa_comparecimento": 15.8112,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 1729,
+     "comparecimento": 170,
+     "abstencao": 1559,
+     "taxa_comparecimento": 9.8323,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 717,
+     "comparecimento": 27,
+     "abstencao": 690,
+     "taxa_comparecimento": 3.7657,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 420,
+     "comparecimento": 5,
+     "abstencao": 415,
+     "taxa_comparecimento": 1.1905,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 262,
+     "comparecimento": 0,
+     "abstencao": 262,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    }
+   }
+  }
+ },
+ "I2": {
+  "Brasil": {
+   "faixas": {
+    "7074": 68.8762,
+    "7579": 52.2892,
+    "8084": 37.1606,
+    "8589": 24.3151,
+    "9094": 13.4737,
+    "9599": 4.3487,
+    "9999": 0.7185
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "Norte": {
+   "faixas": {
+    "7074": 71.8207,
+    "7579": 54.7186,
+    "8084": 37.4234,
+    "8589": 24.2248,
+    "9094": 14.3971,
+    "9599": 7.7924,
+    "9999": 5.7648
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "Nordeste": {
+   "faixas": {
+    "7074": 71.5098,
+    "7579": 55.3264,
+    "8084": 40.1981,
+    "8589": 27.9434,
+    "9094": 17.8173,
+    "9599": 9.516,
+    "9999": 4.0045
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "Centro-Oeste": {
+   "faixas": {
+    "7074": 71.8759,
+    "7579": 56.664,
+    "8084": 41.5034,
+    "8589": 28.696,
+    "9094": 17.5717,
+    "9599": 9.0968,
+    "9999": 2.9945
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "Sudeste": {
+   "faixas": {
+    "7074": 66.4864,
+    "7579": 49.3342,
+    "8084": 34.1312,
+    "8589": 21.113,
+    "9094": 10.6273,
+    "9599": 2.6468,
+    "9999": 0.2945
+   },
+   "primeira_faixa_abaixo_de_50": 7579
+  },
+  "Sul": {
+   "faixas": {
+    "7074": 69.4616,
+    "7579": 53.1341,
+    "8084": 38.9478,
+    "8589": 26.4171,
+    "9094": 15.2339,
+    "9599": 5.4847,
+    "9999": 0.7698
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "AC": {
+   "faixas": {
+    "7074": 68.0627,
+    "7579": 51.4033,
+    "8084": 35.2002,
+    "8589": 24.3059,
+    "9094": 15.8434,
+    "9599": 8.5294,
+    "9999": 5.3333
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "AL": {
+   "faixas": {
+    "7074": 62.8802,
+    "7579": 43.2308,
+    "8084": 26.5724,
+    "8589": 16.8667,
+    "9094": 9.4334,
+    "9599": 5.1724,
+    "9999": 3.1204
+   },
+   "primeira_faixa_abaixo_de_50": 7579
+  },
+  "AM": {
+   "faixas": {
+    "7074": 71.503,
+    "7579": 54.5035,
+    "8084": 38.3061,
+    "8589": 26.306,
+    "9094": 17.1357,
+    "9599": 10.6859,
+    "9999": 10.7093
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "AP": {
+   "faixas": {
+    "7074": 71.6334,
+    "7579": 53.3653,
+    "8084": 34.0651,
+    "8589": 22.2938,
+    "9094": 12.4642,
+    "9599": 7.5107,
+    "9999": 2.2222
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "BA": {
+   "faixas": {
+    "7074": 69.9527,
+    "7579": 55.1045,
+    "8084": 42.9312,
+    "8589": 31.7661,
+    "9094": 21.9405,
+    "9599": 13.886,
+    "9999": 8.46
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "CE": {
+   "faixas": {
+    "7074": 75.657,
+    "7579": 60.1208,
+    "8084": 44.9046,
+    "8589": 31.0856,
+    "9094": 20.241,
+    "9599": 11.3415,
+    "9999": 5.039
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "DF": {
+   "faixas": {
+    "7074": 74.9298,
+    "7579": 62.6857,
+    "8084": 48.5232,
+    "8589": 36.3179,
+    "9094": 24.9253,
+    "9599": 14.4856,
+    "9999": 5.3286
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "ES": {
+   "faixas": {
+    "7074": 68.4879,
+    "7579": 51.7764,
+    "8084": 36.4345,
+    "8589": 23.769,
+    "9094": 13.6544,
+    "9599": 4.4641,
+    "9999": 0.7975
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "GO": {
+   "faixas": {
+    "7074": 71.9574,
+    "7579": 55.7492,
+    "8084": 40.1823,
+    "8589": 27.3047,
+    "9094": 16.457,
+    "9599": 9.0324,
+    "9999": 3.4431
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "MA": {
+   "faixas": {
+    "7074": 73.6583,
+    "7579": 59.1616,
+    "8084": 43.5273,
+    "8589": 30.8269,
+    "9094": 19.8405,
+    "9599": 12.488,
+    "9999": 8.3675
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "MG": {
+   "faixas": {
+    "7074": 67.9088,
+    "7579": 51.2778,
+    "8084": 35.7543,
+    "8589": 23.0519,
+    "9094": 12.3592,
+    "9599": 3.9986,
+    "9999": 0.5646
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "MS": {
+   "faixas": {
+    "7074": 69.2955,
+    "7579": 53.5258,
+    "8084": 38.446,
+    "8589": 25.793,
+    "9094": 13.6009,
+    "9599": 5.2985,
+    "9999": 1.0907
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "MT": {
+   "faixas": {
+    "7074": 71.3371,
+    "7579": 55.9305,
+    "8084": 40.5223,
+    "8589": 26.635,
+    "9094": 16.3887,
+    "9599": 8.7184,
+    "9999": 4.4461
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "PA": {
+   "faixas": {
+    "7074": 71.5288,
+    "7579": 53.8578,
+    "8084": 36.2081,
+    "8589": 22.3498,
+    "9094": 12.6999,
+    "9599": 6.362,
+    "9999": 4.5992
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "PB": {
+   "faixas": {
+    "7074": 70.7345,
+    "7579": 52.8985,
+    "8084": 36.7504,
+    "8589": 24.2243,
+    "9094": 15.1178,
+    "9599": 8.8561,
+    "9999": 5.7471
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "PE": {
+   "faixas": {
+    "7074": 70.2355,
+    "7579": 52.893,
+    "8084": 37.1924,
+    "8589": 25.126,
+    "9094": 14.5356,
+    "9599": 5.6472,
+    "9999": 1.1236
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "PI": {
+   "faixas": {
+    "7074": 76.8659,
+    "7579": 61.3037,
+    "8084": 44.5587,
+    "8589": 30.569,
+    "9094": 19.6918,
+    "9599": 9.3845,
+    "9999": 5.75
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "PR": {
+   "faixas": {
+    "7074": 68.6419,
+    "7579": 52.2206,
+    "8084": 38.7726,
+    "8589": 27.5038,
+    "9094": 18.5779,
+    "9599": 10.3687,
+    "9999": 6.2714
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "RJ": {
+   "faixas": {
+    "7074": 65.585,
+    "7579": 47.2976,
+    "8084": 30.8163,
+    "8589": 18.0292,
+    "9094": 8.3566,
+    "9599": 1.5459,
+    "9999": 0.1425
+   },
+   "primeira_faixa_abaixo_de_50": 7579
+  },
+  "RN": {
+   "faixas": {
+    "7074": 72.6866,
+    "7579": 55.2402,
+    "8084": 38.0752,
+    "8589": 23.9304,
+    "9094": 13.8909,
+    "9599": 6.9302,
+    "9999": 3.2345
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "RO": {
+   "faixas": {
+    "7074": 69.6462,
+    "7579": 51.1064,
+    "8084": 34.1056,
+    "8589": 21.5662,
+    "9094": 12.0444,
+    "9599": 5.5006,
+    "9999": 3.7815
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "RR": {
+   "faixas": {
+    "7074": 75.5381,
+    "7579": 62.0685,
+    "8084": 42.9719,
+    "8589": 27.1354,
+    "9094": 16.0494,
+    "9599": 5.8104,
+    "9999": 4.3103
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "RS": {
+   "faixas": {
+    "7074": 69.3691,
+    "7579": 52.8407,
+    "8084": 37.751,
+    "8589": 24.7284,
+    "9094": 13.3581,
+    "9599": 4.3555,
+    "9999": 0.4614
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "SC": {
+   "faixas": {
+    "7074": 70.9306,
+    "7579": 55.1878,
+    "8084": 42.0402,
+    "8589": 29.0358,
+    "9094": 15.848,
+    "9599": 5.3323,
+    "9999": 1.2533
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "SE": {
+   "faixas": {
+    "7074": 67.4186,
+    "7579": 47.5634,
+    "8084": 29.1643,
+    "8589": 19.432,
+    "9094": 11.5018,
+    "9599": 6.3164,
+    "9999": 2.1631
+   },
+   "primeira_faixa_abaixo_de_50": 7579
+  },
+  "SP": {
+   "faixas": {
+    "7074": 65.9831,
+    "7579": 49.0014,
+    "8084": 34.5606,
+    "8589": 21.282,
+    "9094": 10.5849,
+    "9599": 2.7303,
+    "9999": 0.2867
+   },
+   "primeira_faixa_abaixo_de_50": 7579
+  },
+  "TO": {
+   "faixas": {
+    "7074": 76.8971,
+    "7579": 62.7313,
+    "8084": 45.6288,
+    "8589": 31.8383,
+    "9094": 19.8512,
+    "9599": 12.7988,
+    "9999": 7.0485
+   },
+   "primeira_faixa_abaixo_de_50": 8084
+  },
+  "Exterior": {
+   "faixas": {
+    "7074": 33.8016,
+    "7579": 23.6298,
+    "8084": 15.8112,
+    "8589": 9.8323,
+    "9094": 3.7657,
+    "9599": 1.1905,
+    "9999": 0.0
+   },
+   "primeira_faixa_abaixo_de_50": 7074
+  }
+ },
+ "I3": {
+  "Brasil": {
+   "16 e 17": {
+    "parte_dos_aptos": 1.0339,
+    "parte_da_abstencao": 0.6264,
+    "razao": 0.6059,
+    "abstencao": 206064
+   },
+   "18 a 59": {
+    "parte_dos_aptos": 75.3134,
+    "parte_da_abstencao": 65.8667,
+    "razao": 0.8746,
+    "abstencao": 21666201
+   },
+   "60 a 69": {
+    "parte_dos_aptos": 12.7452,
+    "parte_da_abstencao": 7.7912,
+    "razao": 0.6113,
+    "abstencao": 2562827
+   },
+   "70 ou mais": {
+    "parte_dos_aptos": 10.9067,
+    "parte_da_abstencao": 25.7141,
+    "razao": 2.3576,
+    "abstencao": 8458398
+   },
+   "60 ou mais": {
+    "parte_dos_aptos": 23.6519,
+    "parte_da_abstencao": 33.5053,
+    "razao": 1.4166,
+    "abstencao": 11021225
+   }
+  },
+  "Norte": {
+   "16 e 17": {
+    "parte_dos_aptos": 1.8776,
+    "parte_da_abstencao": 1.1307,
+    "razao": 0.6022,
+    "abstencao": 28798
+   },
+   "18 a 59": {
+    "parte_dos_aptos": 81.0377,
+    "parte_da_abstencao": 74.7011,
+    "razao": 0.9218,
+    "abstencao": 1902617
+   },
+   "60 a 69": {
+    "parte_dos_aptos": 9.6666,
+    "parte_da_abstencao": 6.8104,
+    "razao": 0.7045,
+    "abstencao": 173459
+   },
+   "70 ou mais": {
+    "parte_dos_aptos": 7.4173,
+    "parte_da_abstencao": 17.3564,
+    "razao": 2.34,
+    "abstencao": 442062
+   },
+   "60 ou mais": {
+    "parte_dos_aptos": 17.0839,
+    "parte_da_abstencao": 24.1668,
+    "razao": 1.4146,
+    "abstencao": 615521
+   }
+  },
+  "Nordeste": {
+   "16 e 17": {
+    "parte_dos_aptos": 1.5465,
+    "parte_da_abstencao": 0.6973,
+    "razao": 0.4509,
+    "abstencao": 55807
+   },
+   "18 a 59": {
+    "parte_dos_aptos": 77.2563,
+    "parte_da_abstencao": 67.5993,
+    "razao": 0.875,
+    "abstencao": 5410376
+   },
+   "60 a 69": {
+    "parte_dos_aptos": 11.5452,
+    "parte_da_abstencao": 7.9067,
+    "razao": 0.6849,
+    "abstencao": 632824
+   },
+   "70 ou mais": {
+    "parte_dos_aptos": 9.6507,
+    "parte_da_abstencao": 23.7941,
+    "razao": 2.4655,
+    "abstencao": 1904386
+   },
+   "60 ou mais": {
+    "parte_dos_aptos": 21.1959,
+    "parte_da_abstencao": 31.7009,
+    "razao": 1.4956,
+    "abstencao": 2537210
+   }
+  },
+  "Centro-Oeste": {
+   "16 e 17": {
+    "parte_dos_aptos": 1.1148,
+    "parte_da_abstencao": 0.9074,
+    "razao": 0.814,
+    "abstencao": 23635
+   },
+   "18 a 59": {
+    "parte_dos_aptos": 77.6984,
+    "parte_da_abstencao": 72.8018,
+    "razao": 0.937,
+    "abstencao": 1896221
+   },
+   "60 a 69": {
+    "parte_dos_aptos": 11.9652,
+    "parte_da_abstencao": 7.6791,
+    "razao": 0.6418,
+    "abstencao": 200013
+   },
+   "70 ou mais": {
+    "parte_dos_aptos": 9.2208,
+    "parte_da_abstencao": 18.61,
+    "razao": 2.0183,
+    "abstencao": 484723
+   },
+   "60 ou mais": {
+    "parte_dos_aptos": 21.1861,
+    "parte_da_abstencao": 26.2891,
+    "razao": 1.2409,
+    "abstencao": 684736
+   }
+  },
+  "Sudeste": {
+   "16 e 17": {
+    "parte_dos_aptos": 0.6049,
+    "parte_da_abstencao": 0.4721,
+    "razao": 0.7805,
+    "abstencao": 71113
+   },
+   "18 a 59": {
+    "parte_dos_aptos": 73.371,
+    "parte_da_abstencao": 62.9722,
+    "razao": 0.8583,
+    "abstencao": 9484596
+   },
+   "60 a 69": {
+    "parte_dos_aptos": 13.7253,
+    "parte_da_abstencao": 7.8324,
+    "razao": 0.5707,
+    "abstencao": 1179688
+   },
+   "70 ou mais": {
+    "parte_dos_aptos": 12.2982,
+    "parte_da_abstencao": 28.7217,
+    "razao": 2.3354,
+    "abstencao": 4325936
+   },
+   "60 ou mais": {
+    "parte_dos_aptos": 26.0235,
+    "parte_da_abstencao": 36.5542,
+    "razao": 1.4047,
+    "abstencao": 5505624
+   }
+  },
+  "Sul": {
+   "16 e 17": {
+    "parte_dos_aptos": 0.7764,
+    "parte_da_abstencao": 0.5711,
+    "razao": 0.7355,
+    "abstencao": 26711
+   },
+   "18 a 59": {
+    "parte_dos_aptos": 72.7156,
+    "parte_da_abstencao": 63.5498,
+    "razao": 0.874,
+    "abstencao": 2972391
+   },
+   "60 a 69": {
+    "parte_dos_aptos": 14.3609,
+    "parte_da_abstencao": 8.0569,
+    "razao": 0.561,
+    "abstencao": 376843
+   },
+   "70 ou mais": {
+    "parte_dos_aptos": 12.1468,
+    "parte_da_abstencao": 27.8216,
+    "razao": 2.2905,
+    "abstencao": 1301291
+   },
+   "60 ou mais": {
+    "parte_dos_aptos": 26.5077,
+    "parte_da_abstencao": 35.8785,
+    "razao": 1.3535,
+    "abstencao": 1678134
+   }
+  }
+ },
+ "I4": {
+  "Brasil": {
+   "código 0": {
+    "18 a 59": {
+     "aptos": 1596,
+     "comparecimento": 1355,
+     "abstencao": 241,
+     "taxa_comparecimento": 84.8997,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 7019,
+     "comparecimento": 5964,
+     "abstencao": 1055,
+     "taxa_comparecimento": 84.9694,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 14720,
+     "comparecimento": 3711,
+     "abstencao": 11009,
+     "taxa_comparecimento": 25.2106,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 21739,
+     "comparecimento": 9675,
+     "abstencao": 12064,
+     "taxa_comparecimento": 44.5053,
+     "maioria_votou": false
+    },
+    "7074": {
+     "aptos": 2969,
+     "comparecimento": 1737,
+     "abstencao": 1232,
+     "taxa_comparecimento": 58.5045,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 2849,
+     "comparecimento": 1076,
+     "abstencao": 1773,
+     "taxa_comparecimento": 37.7676,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 2592,
+     "comparecimento": 563,
+     "abstencao": 2029,
+     "taxa_comparecimento": 21.7207,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 2125,
+     "comparecimento": 243,
+     "abstencao": 1882,
+     "taxa_comparecimento": 11.4353,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 1364,
+     "comparecimento": 69,
+     "abstencao": 1295,
+     "taxa_comparecimento": 5.0587,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 1283,
+     "comparecimento": 20,
+     "abstencao": 1263,
+     "taxa_comparecimento": 1.5588,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 1538,
+     "comparecimento": 3,
+     "abstencao": 1535,
+     "taxa_comparecimento": 0.1951,
+     "maioria_votou": false
+    }
+   },
+   "homens": {
+    "18 a 59": {
+     "aptos": 56928284,
+     "comparecimento": 45254973,
+     "abstencao": 11673311,
+     "taxa_comparecimento": 79.4947,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 9275765,
+     "comparecimento": 8086099,
+     "abstencao": 1189666,
+     "taxa_comparecimento": 87.1745,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 7473053,
+     "comparecimento": 4147254,
+     "abstencao": 3325799,
+     "taxa_comparecimento": 55.4961,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 16748818,
+     "comparecimento": 12233353,
+     "abstencao": 4515465,
+     "taxa_comparecimento": 73.0401,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 3103255,
+     "comparecimento": 2232146,
+     "abstencao": 871109,
+     "taxa_comparecimento": 71.9292,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 2068681,
+     "comparecimento": 1189568,
+     "abstencao": 879113,
+     "taxa_comparecimento": 57.5037,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 1158068,
+     "comparecimento": 499071,
+     "abstencao": 658997,
+     "taxa_comparecimento": 43.0951,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 590213,
+     "comparecimento": 175202,
+     "abstencao": 415011,
+     "taxa_comparecimento": 29.6845,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 255266,
+     "comparecimento": 43406,
+     "abstencao": 211860,
+     "taxa_comparecimento": 17.0042,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 144768,
+     "comparecimento": 6873,
+     "abstencao": 137895,
+     "taxa_comparecimento": 4.7476,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 152802,
+     "comparecimento": 988,
+     "abstencao": 151814,
+     "taxa_comparecimento": 0.6466,
+     "maioria_votou": false
+    }
+   },
+   "mulheres": {
+    "18 a 59": {
+     "aptos": 61934726,
+     "comparecimento": 51942077,
+     "abstencao": 9992649,
+     "taxa_comparecimento": 83.8658,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 10832471,
+     "comparecimento": 9460365,
+     "abstencao": 1372106,
+     "taxa_comparecimento": 87.3334,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 9725931,
+     "comparecimento": 4604341,
+     "abstencao": 5121590,
+     "taxa_comparecimento": 47.3409,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 20558402,
+     "comparecimento": 14064706,
+     "abstencao": 6493696,
+     "taxa_comparecimento": 68.4134,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 3842021,
+     "comparecimento": 2551804,
+     "abstencao": 1290217,
+     "taxa_comparecimento": 66.4183,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 2685490,
+     "comparecimento": 1296762,
+     "abstencao": 1388728,
+     "taxa_comparecimento": 48.2877,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 1583469,
+     "comparecimento": 520100,
+     "abstencao": 1063369,
+     "taxa_comparecimento": 32.8456,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 872377,
+     "comparecimento": 180702,
+     "abstencao": 691675,
+     "taxa_comparecimento": 20.7138,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 407852,
+     "comparecimento": 46055,
+     "abstencao": 361797,
+     "taxa_comparecimento": 11.2921,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 191085,
+     "comparecimento": 7768,
+     "abstencao": 183317,
+     "taxa_comparecimento": 4.0652,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 143637,
+     "comparecimento": 1150,
+     "abstencao": 142487,
+     "taxa_comparecimento": 0.8006,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Norte": {
+   "código 0": {
+    "18 a 59": {
+     "aptos": 0,
+     "comparecimento": 0,
+     "abstencao": 0,
+     "taxa_comparecimento": null,
+     "maioria_votou": null
+    },
+    "60 a 69": {
+     "aptos": 1,
+     "comparecimento": 1,
+     "abstencao": 0,
+     "taxa_comparecimento": 100.0,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 6,
+     "comparecimento": 2,
+     "abstencao": 4,
+     "taxa_comparecimento": 33.3333,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 7,
+     "comparecimento": 3,
+     "abstencao": 4,
+     "taxa_comparecimento": 42.8571,
+     "maioria_votou": false
+    },
+    "7074": {
+     "aptos": 1,
+     "comparecimento": 1,
+     "abstencao": 0,
+     "taxa_comparecimento": 100.0,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 2,
+     "comparecimento": 1,
+     "abstencao": 1,
+     "taxa_comparecimento": 50.0,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 1,
+     "comparecimento": 0,
+     "abstencao": 1,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 2,
+     "comparecimento": 0,
+     "abstencao": 2,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 0,
+     "comparecimento": 0,
+     "abstencao": 0,
+     "taxa_comparecimento": null,
+     "maioria_votou": null
+    },
+    "9599": {
+     "aptos": 0,
+     "comparecimento": 0,
+     "abstencao": 0,
+     "taxa_comparecimento": null,
+     "maioria_votou": null
+    },
+    "9999": {
+     "aptos": 0,
+     "comparecimento": 0,
+     "abstencao": 0,
+     "taxa_comparecimento": null,
+     "maioria_votou": null
+    }
+   },
+   "homens": {
+    "18 a 59": {
+     "aptos": 5195101,
+     "comparecimento": 4127559,
+     "abstencao": 1067542,
+     "taxa_comparecimento": 79.451,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 629112,
+     "comparecimento": 539769,
+     "abstencao": 89343,
+     "taxa_comparecimento": 85.7986,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 472174,
+     "comparecimento": 268104,
+     "abstencao": 204070,
+     "taxa_comparecimento": 56.7808,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 1101286,
+     "comparecimento": 807873,
+     "abstencao": 293413,
+     "taxa_comparecimento": 73.3572,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 203812,
+     "comparecimento": 148138,
+     "abstencao": 55674,
+     "taxa_comparecimento": 72.6836,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 131926,
+     "comparecimento": 75714,
+     "abstencao": 56212,
+     "taxa_comparecimento": 57.3913,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 75922,
+     "comparecimento": 30825,
+     "abstencao": 45097,
+     "taxa_comparecimento": 40.6009,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 38188,
+     "comparecimento": 10334,
+     "abstencao": 27854,
+     "taxa_comparecimento": 27.0609,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 15298,
+     "comparecimento": 2511,
+     "abstencao": 12787,
+     "taxa_comparecimento": 16.4139,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 5121,
+     "comparecimento": 462,
+     "abstencao": 4659,
+     "taxa_comparecimento": 9.0217,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 1907,
+     "comparecimento": 120,
+     "abstencao": 1787,
+     "taxa_comparecimento": 6.2926,
+     "maioria_votou": false
+    }
+   },
+   "mulheres": {
+    "18 a 59": {
+     "aptos": 5428419,
+     "comparecimento": 4593344,
+     "abstencao": 835075,
+     "taxa_comparecimento": 84.6166,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 638118,
+     "comparecimento": 554002,
+     "abstencao": 84116,
+     "taxa_comparecimento": 86.8181,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 500179,
+     "comparecimento": 262191,
+     "abstencao": 237988,
+     "taxa_comparecimento": 52.4194,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 1138297,
+     "comparecimento": 816193,
+     "abstencao": 322104,
+     "taxa_comparecimento": 71.703,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 210033,
+     "comparecimento": 149088,
+     "abstencao": 60945,
+     "taxa_comparecimento": 70.9831,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 139256,
+     "comparecimento": 72673,
+     "abstencao": 66583,
+     "taxa_comparecimento": 52.1866,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 82267,
+     "comparecimento": 28375,
+     "abstencao": 53892,
+     "taxa_comparecimento": 34.4914,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 42921,
+     "comparecimento": 9315,
+     "abstencao": 33606,
+     "taxa_comparecimento": 21.7027,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 17674,
+     "comparecimento": 2236,
+     "abstencao": 15438,
+     "taxa_comparecimento": 12.6514,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 5633,
+     "comparecimento": 376,
+     "abstencao": 5257,
+     "taxa_comparecimento": 6.675,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 2395,
+     "comparecimento": 128,
+     "abstencao": 2267,
+     "taxa_comparecimento": 5.3445,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Nordeste": {
+   "código 0": {
+    "18 a 59": {
+     "aptos": 42,
+     "comparecimento": 29,
+     "abstencao": 13,
+     "taxa_comparecimento": 69.0476,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 108,
+     "comparecimento": 83,
+     "abstencao": 25,
+     "taxa_comparecimento": 76.8519,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 328,
+     "comparecimento": 63,
+     "abstencao": 265,
+     "taxa_comparecimento": 19.2073,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 436,
+     "comparecimento": 146,
+     "abstencao": 290,
+     "taxa_comparecimento": 33.4862,
+     "maioria_votou": false
+    },
+    "7074": {
+     "aptos": 43,
+     "comparecimento": 20,
+     "abstencao": 23,
+     "taxa_comparecimento": 46.5116,
+     "maioria_votou": false
+    },
+    "7579": {
+     "aptos": 55,
+     "comparecimento": 20,
+     "abstencao": 35,
+     "taxa_comparecimento": 36.3636,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 63,
+     "comparecimento": 9,
+     "abstencao": 54,
+     "taxa_comparecimento": 14.2857,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 65,
+     "comparecimento": 12,
+     "abstencao": 53,
+     "taxa_comparecimento": 18.4615,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 29,
+     "comparecimento": 2,
+     "abstencao": 27,
+     "taxa_comparecimento": 6.8966,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 36,
+     "comparecimento": 0,
+     "abstencao": 36,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 37,
+     "comparecimento": 0,
+     "abstencao": 37,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    }
+   },
+   "homens": {
+    "18 a 59": {
+     "aptos": 16067179,
+     "comparecimento": 12980353,
+     "abstencao": 3086826,
+     "taxa_comparecimento": 80.788,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 2310396,
+     "comparecimento": 2017954,
+     "abstencao": 292442,
+     "taxa_comparecimento": 87.3423,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 1841073,
+     "comparecimento": 1071180,
+     "abstencao": 769893,
+     "taxa_comparecimento": 58.1824,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 4151469,
+     "comparecimento": 3089134,
+     "abstencao": 1062335,
+     "taxa_comparecimento": 74.4106,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 750783,
+     "comparecimento": 551951,
+     "abstencao": 198832,
+     "taxa_comparecimento": 73.5167,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 531244,
+     "comparecimento": 314898,
+     "abstencao": 216346,
+     "taxa_comparecimento": 59.2756,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 307584,
+     "comparecimento": 137733,
+     "abstencao": 169851,
+     "taxa_comparecimento": 44.779,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 159287,
+     "comparecimento": 50827,
+     "abstencao": 108460,
+     "taxa_comparecimento": 31.9091,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 62317,
+     "comparecimento": 13132,
+     "abstencao": 49185,
+     "taxa_comparecimento": 21.0729,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 20316,
+     "comparecimento": 2233,
+     "abstencao": 18083,
+     "taxa_comparecimento": 10.9913,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 9542,
+     "comparecimento": 406,
+     "abstencao": 9136,
+     "taxa_comparecimento": 4.2549,
+     "maioria_votou": false
+    }
+   },
+   "mulheres": {
+    "18 a 59": {
+     "aptos": 17562328,
+     "comparecimento": 15238791,
+     "abstencao": 2323537,
+     "taxa_comparecimento": 86.7698,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 2715089,
+     "comparecimento": 2374732,
+     "abstencao": 340357,
+     "taxa_comparecimento": 87.4642,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 2359541,
+     "comparecimento": 1225313,
+     "abstencao": 1134228,
+     "taxa_comparecimento": 51.9301,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 5074630,
+     "comparecimento": 3600045,
+     "abstencao": 1474585,
+     "taxa_comparecimento": 70.942,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 930049,
+     "comparecimento": 650020,
+     "abstencao": 280029,
+     "taxa_comparecimento": 69.8909,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 682649,
+     "comparecimento": 356716,
+     "abstencao": 325933,
+     "taxa_comparecimento": 52.2547,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 402999,
+     "comparecimento": 147924,
+     "abstencao": 255075,
+     "taxa_comparecimento": 36.7058,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 216340,
+     "comparecimento": 54142,
+     "abstencao": 162198,
+     "taxa_comparecimento": 25.0263,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 88328,
+     "comparecimento": 13712,
+     "abstencao": 74616,
+     "taxa_comparecimento": 15.524,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 28103,
+     "comparecimento": 2378,
+     "abstencao": 25725,
+     "taxa_comparecimento": 8.4617,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 11073,
+     "comparecimento": 421,
+     "abstencao": 10652,
+     "taxa_comparecimento": 3.802,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Centro-Oeste": {
+   "código 0": {
+    "18 a 59": {
+     "aptos": 10,
+     "comparecimento": 5,
+     "abstencao": 5,
+     "taxa_comparecimento": 50.0,
+     "maioria_votou": false
+    },
+    "60 a 69": {
+     "aptos": 3,
+     "comparecimento": 1,
+     "abstencao": 2,
+     "taxa_comparecimento": 33.3333,
+     "maioria_votou": false
+    },
+    "70 ou mais": {
+     "aptos": 14,
+     "comparecimento": 1,
+     "abstencao": 13,
+     "taxa_comparecimento": 7.1429,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 17,
+     "comparecimento": 2,
+     "abstencao": 15,
+     "taxa_comparecimento": 11.7647,
+     "maioria_votou": false
+    },
+    "7074": {
+     "aptos": 0,
+     "comparecimento": 0,
+     "abstencao": 0,
+     "taxa_comparecimento": null,
+     "maioria_votou": null
+    },
+    "7579": {
+     "aptos": 1,
+     "comparecimento": 0,
+     "abstencao": 1,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 2,
+     "comparecimento": 1,
+     "abstencao": 1,
+     "taxa_comparecimento": 50.0,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 5,
+     "comparecimento": 0,
+     "abstencao": 5,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 4,
+     "comparecimento": 0,
+     "abstencao": 4,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 2,
+     "comparecimento": 0,
+     "abstencao": 2,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 0,
+     "comparecimento": 0,
+     "abstencao": 0,
+     "taxa_comparecimento": null,
+     "maioria_votou": null
+    }
+   },
+   "homens": {
+    "18 a 59": {
+     "aptos": 4424058,
+     "comparecimento": 3418691,
+     "abstencao": 1005367,
+     "taxa_comparecimento": 77.275,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 670499,
+     "comparecimento": 574029,
+     "abstencao": 96470,
+     "taxa_comparecimento": 85.6122,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 503003,
+     "comparecimento": 300052,
+     "abstencao": 202951,
+     "taxa_comparecimento": 59.6521,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 1173502,
+     "comparecimento": 874081,
+     "abstencao": 299421,
+     "taxa_comparecimento": 74.4848,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 214503,
+     "comparecimento": 158623,
+     "abstencao": 55880,
+     "taxa_comparecimento": 73.9491,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 141384,
+     "comparecimento": 86115,
+     "abstencao": 55269,
+     "taxa_comparecimento": 60.9086,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 80856,
+     "comparecimento": 37588,
+     "abstencao": 43268,
+     "taxa_comparecimento": 46.4876,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 41202,
+     "comparecimento": 13745,
+     "abstencao": 27457,
+     "taxa_comparecimento": 33.36,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 16632,
+     "comparecimento": 3355,
+     "abstencao": 13277,
+     "taxa_comparecimento": 20.172,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 5669,
+     "comparecimento": 553,
+     "abstencao": 5116,
+     "taxa_comparecimento": 9.7548,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 2757,
+     "comparecimento": 73,
+     "abstencao": 2684,
+     "taxa_comparecimento": 2.6478,
+     "maioria_votou": false
+    }
+   },
+   "mulheres": {
+    "18 a 59": {
+     "aptos": 4897412,
+     "comparecimento": 4006563,
+     "abstencao": 890849,
+     "taxa_comparecimento": 81.8098,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 764969,
+     "comparecimento": 661428,
+     "abstencao": 103541,
+     "taxa_comparecimento": 86.4647,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 603206,
+     "comparecimento": 321447,
+     "abstencao": 281759,
+     "taxa_comparecimento": 53.2898,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 1368175,
+     "comparecimento": 982875,
+     "abstencao": 385300,
+     "taxa_comparecimento": 71.8384,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 252882,
+     "comparecimento": 177314,
+     "abstencao": 75568,
+     "taxa_comparecimento": 70.1173,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 170314,
+     "comparecimento": 90506,
+     "abstencao": 79808,
+     "taxa_comparecimento": 53.1407,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 98949,
+     "comparecimento": 37037,
+     "abstencao": 61912,
+     "taxa_comparecimento": 37.4304,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 50799,
+     "comparecimento": 12657,
+     "abstencao": 38142,
+     "taxa_comparecimento": 24.9158,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 21135,
+     "comparecimento": 3282,
+     "abstencao": 17853,
+     "taxa_comparecimento": 15.5287,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 6641,
+     "comparecimento": 567,
+     "abstencao": 6074,
+     "taxa_comparecimento": 8.5379,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 2486,
+     "comparecimento": 84,
+     "abstencao": 2402,
+     "taxa_comparecimento": 3.3789,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Sudeste": {
+   "código 0": {
+    "18 a 59": {
+     "aptos": 1540,
+     "comparecimento": 1318,
+     "abstencao": 222,
+     "taxa_comparecimento": 85.5844,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 6898,
+     "comparecimento": 5873,
+     "abstencao": 1025,
+     "taxa_comparecimento": 85.1406,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 14361,
+     "comparecimento": 3643,
+     "abstencao": 10718,
+     "taxa_comparecimento": 25.3673,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 21259,
+     "comparecimento": 9516,
+     "abstencao": 11743,
+     "taxa_comparecimento": 44.7622,
+     "maioria_votou": false
+    },
+    "7074": {
+     "aptos": 2922,
+     "comparecimento": 1715,
+     "abstencao": 1207,
+     "taxa_comparecimento": 58.6927,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 2788,
+     "comparecimento": 1054,
+     "abstencao": 1734,
+     "taxa_comparecimento": 37.8049,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 2523,
+     "comparecimento": 553,
+     "abstencao": 1970,
+     "taxa_comparecimento": 21.9184,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 2051,
+     "comparecimento": 231,
+     "abstencao": 1820,
+     "taxa_comparecimento": 11.2628,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 1331,
+     "comparecimento": 67,
+     "abstencao": 1264,
+     "taxa_comparecimento": 5.0338,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 1245,
+     "comparecimento": 20,
+     "abstencao": 1225,
+     "taxa_comparecimento": 1.6064,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 1501,
+     "comparecimento": 3,
+     "abstencao": 1498,
+     "taxa_comparecimento": 0.1999,
+     "maioria_votou": false
+    }
+   },
+   "homens": {
+    "18 a 59": {
+     "aptos": 23235934,
+     "comparecimento": 18269245,
+     "abstencao": 4966689,
+     "taxa_comparecimento": 78.625,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 4144872,
+     "comparecimento": 3606497,
+     "abstencao": 538375,
+     "taxa_comparecimento": 87.0111,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 3457115,
+     "comparecimento": 1800932,
+     "abstencao": 1656183,
+     "taxa_comparecimento": 52.0935,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 7601987,
+     "comparecimento": 5407429,
+     "abstencao": 2194558,
+     "taxa_comparecimento": 71.1318,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 1415825,
+     "comparecimento": 993926,
+     "abstencao": 421899,
+     "taxa_comparecimento": 70.2012,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 916638,
+     "comparecimento": 507293,
+     "abstencao": 409345,
+     "taxa_comparecimento": 55.3428,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 506711,
+     "comparecimento": 207286,
+     "abstencao": 299425,
+     "taxa_comparecimento": 40.9081,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 264344,
+     "comparecimento": 71711,
+     "abstencao": 192633,
+     "taxa_comparecimento": 27.1279,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 127931,
+     "comparecimento": 17698,
+     "abstencao": 110233,
+     "taxa_comparecimento": 13.834,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 99214,
+     "comparecimento": 2707,
+     "abstencao": 96507,
+     "taxa_comparecimento": 2.7284,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 126452,
+     "comparecimento": 311,
+     "abstencao": 126141,
+     "taxa_comparecimento": 0.2459,
+     "maioria_votou": false
+    }
+   },
+   "mulheres": {
+    "18 a 59": {
+     "aptos": 25429063,
+     "comparecimento": 20911378,
+     "abstencao": 4517685,
+     "taxa_comparecimento": 82.2342,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 4952133,
+     "comparecimento": 4311845,
+     "abstencao": 640288,
+     "taxa_comparecimento": 87.0705,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 4685826,
+     "comparecimento": 2026791,
+     "abstencao": 2659035,
+     "taxa_comparecimento": 43.2537,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 9637959,
+     "comparecimento": 6338636,
+     "abstencao": 3299323,
+     "taxa_comparecimento": 65.7674,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 1812958,
+     "comparecimento": 1153003,
+     "abstencao": 659955,
+     "taxa_comparecimento": 63.5979,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 1241326,
+     "comparecimento": 557642,
+     "abstencao": 683684,
+     "taxa_comparecimento": 44.9231,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 738802,
+     "comparecimento": 218131,
+     "abstencao": 520671,
+     "taxa_comparecimento": 29.525,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 428177,
+     "comparecimento": 74703,
+     "abstencao": 353474,
+     "taxa_comparecimento": 17.4468,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 222323,
+     "comparecimento": 19599,
+     "abstencao": 202724,
+     "taxa_comparecimento": 8.8156,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 127743,
+     "comparecimento": 3313,
+     "abstencao": 124430,
+     "taxa_comparecimento": 2.5935,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 114497,
+     "comparecimento": 400,
+     "abstencao": 114097,
+     "taxa_comparecimento": 0.3494,
+     "maioria_votou": false
+    }
+   }
+  },
+  "Sul": {
+   "código 0": {
+    "18 a 59": {
+     "aptos": 4,
+     "comparecimento": 3,
+     "abstencao": 1,
+     "taxa_comparecimento": 75.0,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 9,
+     "comparecimento": 6,
+     "abstencao": 3,
+     "taxa_comparecimento": 66.6667,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 11,
+     "comparecimento": 2,
+     "abstencao": 9,
+     "taxa_comparecimento": 18.1818,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 20,
+     "comparecimento": 8,
+     "abstencao": 12,
+     "taxa_comparecimento": 40.0,
+     "maioria_votou": false
+    },
+    "7074": {
+     "aptos": 3,
+     "comparecimento": 1,
+     "abstencao": 2,
+     "taxa_comparecimento": 33.3333,
+     "maioria_votou": false
+    },
+    "7579": {
+     "aptos": 3,
+     "comparecimento": 1,
+     "abstencao": 2,
+     "taxa_comparecimento": 33.3333,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 3,
+     "comparecimento": 0,
+     "abstencao": 3,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 2,
+     "comparecimento": 0,
+     "abstencao": 2,
+     "taxa_comparecimento": 0.0,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 0,
+     "comparecimento": 0,
+     "abstencao": 0,
+     "taxa_comparecimento": null,
+     "maioria_votou": null
+    },
+    "9599": {
+     "aptos": 0,
+     "comparecimento": 0,
+     "abstencao": 0,
+     "taxa_comparecimento": null,
+     "maioria_votou": null
+    },
+    "9999": {
+     "aptos": 0,
+     "comparecimento": 0,
+     "abstencao": 0,
+     "taxa_comparecimento": null,
+     "maioria_votou": null
+    }
+   },
+   "homens": {
+    "18 a 59": {
+     "aptos": 8006012,
+     "comparecimento": 6459125,
+     "abstencao": 1546887,
+     "taxa_comparecimento": 80.6784,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 1520886,
+     "comparecimento": 1347850,
+     "abstencao": 173036,
+     "taxa_comparecimento": 88.6227,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 1199688,
+     "comparecimento": 706986,
+     "abstencao": 492702,
+     "taxa_comparecimento": 58.9308,
+     "maioria_votou": true
+    },
+    "60 ou mais": {
+     "aptos": 2720574,
+     "comparecimento": 2054836,
+     "abstencao": 665738,
+     "taxa_comparecimento": 75.5295,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 518332,
+     "comparecimento": 379508,
+     "abstencao": 138824,
+     "taxa_comparecimento": 73.2172,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 347489,
+     "comparecimento": 205548,
+     "abstencao": 141941,
+     "taxa_comparecimento": 59.1524,
+     "maioria_votou": true
+    },
+    "8084": {
+     "aptos": 186995,
+     "comparecimento": 85639,
+     "abstencao": 101356,
+     "taxa_comparecimento": 45.7975,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 87192,
+     "comparecimento": 28585,
+     "abstencao": 58607,
+     "taxa_comparecimento": 32.784,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 33088,
+     "comparecimento": 6710,
+     "abstencao": 26378,
+     "taxa_comparecimento": 20.2793,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 14448,
+     "comparecimento": 918,
+     "abstencao": 13530,
+     "taxa_comparecimento": 6.3538,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 12144,
+     "comparecimento": 78,
+     "abstencao": 12066,
+     "taxa_comparecimento": 0.6423,
+     "maioria_votou": false
+    }
+   },
+   "mulheres": {
+    "18 a 59": {
+     "aptos": 8617504,
+     "comparecimento": 7192001,
+     "abstencao": 1425503,
+     "taxa_comparecimento": 83.4581,
+     "maioria_votou": true
+    },
+    "60 a 69": {
+     "aptos": 1762162,
+     "comparecimento": 1558358,
+     "abstencao": 203804,
+     "taxa_comparecimento": 88.4344,
+     "maioria_votou": true
+    },
+    "70 ou mais": {
+     "aptos": 1577179,
+     "comparecimento": 768599,
+     "abstencao": 808580,
+     "taxa_comparecimento": 48.7325,
+     "maioria_votou": false
+    },
+    "60 ou mais": {
+     "aptos": 3339341,
+     "comparecimento": 2326957,
+     "abstencao": 1012384,
+     "taxa_comparecimento": 69.6831,
+     "maioria_votou": true
+    },
+    "7074": {
+     "aptos": 636099,
+     "comparecimento": 422379,
+     "abstencao": 213720,
+     "taxa_comparecimento": 66.4015,
+     "maioria_votou": true
+    },
+    "7579": {
+     "aptos": 451945,
+     "comparecimento": 219225,
+     "abstencao": 232720,
+     "taxa_comparecimento": 48.507,
+     "maioria_votou": false
+    },
+    "8084": {
+     "aptos": 260452,
+     "comparecimento": 88633,
+     "abstencao": 171819,
+     "taxa_comparecimento": 34.0305,
+     "maioria_votou": false
+    },
+    "8589": {
+     "aptos": 134140,
+     "comparecimento": 29885,
+     "abstencao": 104255,
+     "taxa_comparecimento": 22.279,
+     "maioria_votou": false
+    },
+    "9094": {
+     "aptos": 58392,
+     "comparecimento": 7226,
+     "abstencao": 51166,
+     "taxa_comparecimento": 12.375,
+     "maioria_votou": false
+    },
+    "9599": {
+     "aptos": 22965,
+     "comparecimento": 1134,
+     "abstencao": 21831,
+     "taxa_comparecimento": 4.9379,
+     "maioria_votou": false
+    },
+    "9999": {
+     "aptos": 13186,
+     "comparecimento": 117,
+     "abstencao": 13069,
+     "taxa_comparecimento": 0.8873,
+     "maioria_votou": false
+    }
+   }
+  }
+ },
+ "I5b": {
+  "abstencao": {
+   "principal": [
+    {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497508,
+     "b_por_10": -0.3515,
+     "ic975_por_10": [
+      -0.4844,
+      -0.276
+     ],
+     "efeito_interquartil_pp": -0.5339,
+     "quartis_x_sem_media_do_municipio": [
+      -8.124,
+      7.065
+     ]
+    },
+    {
+     "lugar": "Norte",
+     "municipios": 450,
+     "secoes": 43734,
+     "b_por_10": -0.7453,
+     "ic975_por_10": [
+      -1.0064,
+      -0.6225
+     ],
+     "efeito_interquartil_pp": -0.7609,
+     "quartis_x_sem_media_do_municipio": [
+      -5.66,
+      4.549
+     ]
+    },
+    {
+     "lugar": "Nordeste",
+     "municipios": 1794,
+     "secoes": 140655,
+     "b_por_10": -0.6117,
+     "ic975_por_10": [
+      -0.7644,
+      -0.5269
+     ],
+     "efeito_interquartil_pp": -0.7779,
+     "quartis_x_sem_media_do_municipio": [
+      -6.72,
+      5.999
+     ]
+    },
+    {
+     "lugar": "Centro-Oeste",
+     "municipios": 468,
+     "secoes": 38014,
+     "b_por_10": -0.2029,
+     "ic975_por_10": [
+      -0.2949,
+      -0.0871
+     ],
+     "efeito_interquartil_pp": -0.2361,
+     "quartis_x_sem_media_do_municipio": [
+      -6.171,
+      5.467
+     ]
+    },
+    {
+     "lugar": "Sudeste",
+     "municipios": 1668,
+     "secoes": 203145,
+     "b_por_10": -0.2842,
+     "ic975_por_10": [
+      -0.3621,
+      -0.2211
+     ],
+     "efeito_interquartil_pp": -0.5604,
+     "quartis_x_sem_media_do_municipio": [
+      -10.286,
+      9.433
+     ]
+    },
+    {
+     "lugar": "Sul",
+     "municipios": 1191,
+     "secoes": 71960,
+     "b_por_10": -0.21,
+     "ic975_por_10": [
+      -0.2307,
+      -0.1977
+     ],
+     "efeito_interquartil_pp": -0.3013,
+     "quartis_x_sem_media_do_municipio": [
+      -7.436,
+      6.917
+     ]
+    }
+   ],
+   "conferencias": {
+    "sem_peso": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497508,
+     "b_por_10": -0.3626,
+     "ic975_por_10": [
+      -0.4988,
+      -0.2856
+     ],
+     "efeito_interquartil_pp": -0.5539,
+     "quartis_x_sem_media_do_municipio": [
+      -8.174,
+      7.101
+     ]
+    },
+    "sem_agregadas": {
+     "lugar": "Brasil",
+     "municipios": 5569,
+     "secoes": 482586,
+     "b_por_10": -0.3519,
+     "ic975_por_10": [
+      -0.49,
+      -0.2795
+     ],
+     "efeito_interquartil_pp": -0.5315,
+     "quartis_x_sem_media_do_municipio": [
+      -8.055,
+      7.049
+     ]
+    },
+    "sem_aptos_que_mudam": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 496806,
+     "b_por_10": -0.3519,
+     "ic975_por_10": [
+      -0.498,
+      -0.2776
+     ],
+     "efeito_interquartil_pp": -0.5343,
+     "quartis_x_sem_media_do_municipio": [
+      -8.122,
+      7.062
+     ]
+    },
+    "p70": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497508,
+     "b_por_10": -0.5344,
+     "ic975_por_10": [
+      -0.7678,
+      -0.4208
+     ],
+     "efeito_interquartil_pp": -0.4619,
+     "quartis_x_sem_media_do_municipio": [
+      -4.834,
+      3.809
+     ]
+    },
+    "erro_agrupado_por_estado": {
+     "b_por_10": -0.3515,
+     "ic975_por_10": [
+      -0.4611,
+      -0.242
+     ]
+    },
+    "perfil_igual_aos_aptos": {
+     "lugar": "Brasil",
+     "municipios": 5569,
+     "secoes": 478824,
+     "b_por_10": -0.3534,
+     "ic975_por_10": [
+      -0.5035,
+      -0.2763
+     ],
+     "efeito_interquartil_pp": -0.5327,
+     "quartis_x_sem_media_do_municipio": [
+      -8.038,
+      7.034
+     ]
+    }
+   },
+   "contexto": {
+    "sem_efeito_de_municipio": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497508,
+     "b_por_10": -0.5395,
+     "ic975_por_10": [
+      -0.938,
+      -0.3696
+     ],
+     "efeito_interquartil_pp": -0.9048,
+     "quartis_x_sem_media_do_municipio": [
+      -9.17,
+      7.6
+     ]
+    },
+    "com_fatia_do_lula_no_1t": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497508,
+     "b_por_10": -0.3605,
+     "ic975_por_10": [
+      -0.5005,
+      -0.2917
+     ],
+     "efeito_interquartil_pp": -0.5482,
+     "quartis_x_sem_media_do_municipio": [
+      -8.134,
+      7.071
+     ]
+    }
+   },
+   "achado": true,
+   "tamanho": "não pequena"
+  },
+  "fatia_lula": {
+   "principal": [
+    {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497371,
+     "b_por_10": -0.2586,
+     "ic975_por_10": [
+      -0.2862,
+      -0.2343
+     ],
+     "efeito_interquartil_pp": -0.3928,
+     "quartis_x_sem_media_do_municipio": [
+      -8.125,
+      7.066
+     ]
+    },
+    {
+     "lugar": "Norte",
+     "municipios": 450,
+     "secoes": 43652,
+     "b_por_10": -0.3087,
+     "ic975_por_10": [
+      -0.4113,
+      -0.2625
+     ],
+     "efeito_interquartil_pp": -0.315,
+     "quartis_x_sem_media_do_municipio": [
+      -5.657,
+      4.549
+     ]
+    },
+    {
+     "lugar": "Nordeste",
+     "municipios": 1794,
+     "secoes": 140620,
+     "b_por_10": -0.2055,
+     "ic975_por_10": [
+      -0.2432,
+      -0.175
+     ],
+     "efeito_interquartil_pp": -0.2614,
+     "quartis_x_sem_media_do_municipio": [
+      -6.719,
+      5.999
+     ]
+    },
+    {
+     "lugar": "Centro-Oeste",
+     "municipios": 468,
+     "secoes": 38008,
+     "b_por_10": -0.4142,
+     "ic975_por_10": [
+      -0.6234,
+      -0.3066
+     ],
+     "efeito_interquartil_pp": -0.482,
+     "quartis_x_sem_media_do_municipio": [
+      -6.171,
+      5.467
+     ]
+    },
+    {
+     "lugar": "Sudeste",
+     "municipios": 1668,
+     "secoes": 203139,
+     "b_por_10": -0.2577,
+     "ic975_por_10": [
+      -0.2803,
+      -0.2336
+     ],
+     "efeito_interquartil_pp": -0.5082,
+     "quartis_x_sem_media_do_municipio": [
+      -10.286,
+      9.433
+     ]
+    },
+    {
+     "lugar": "Sul",
+     "municipios": 1191,
+     "secoes": 71952,
+     "b_por_10": -0.2618,
+     "ic975_por_10": [
+      -0.304,
+      -0.2345
+     ],
+     "efeito_interquartil_pp": -0.3758,
+     "quartis_x_sem_media_do_municipio": [
+      -7.436,
+      6.917
+     ]
+    }
+   ],
+   "conferencias": {
+    "sem_peso": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497371,
+     "b_por_10": -0.251,
+     "ic975_por_10": [
+      -0.2753,
+      -0.224
+     ],
+     "efeito_interquartil_pp": -0.3834,
+     "quartis_x_sem_media_do_municipio": [
+      -8.174,
+      7.102
+     ]
+    },
+    "sem_agregadas": {
+     "lugar": "Brasil",
+     "municipios": 5569,
+     "secoes": 482461,
+     "b_por_10": -0.2627,
+     "ic975_por_10": [
+      -0.2882,
+      -0.2386
+     ],
+     "efeito_interquartil_pp": -0.3968,
+     "quartis_x_sem_media_do_municipio": [
+      -8.056,
+      7.05
+     ]
+    },
+    "sem_aptos_que_mudam": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 496669,
+     "b_por_10": -0.2584,
+     "ic975_por_10": [
+      -0.2871,
+      -0.2318
+     ],
+     "efeito_interquartil_pp": -0.3924,
+     "quartis_x_sem_media_do_municipio": [
+      -8.122,
+      7.063
+     ]
+    },
+    "p70": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497371,
+     "b_por_10": -0.3728,
+     "ic975_por_10": [
+      -0.4047,
+      -0.3361
+     ],
+     "efeito_interquartil_pp": -0.3222,
+     "quartis_x_sem_media_do_municipio": [
+      -4.834,
+      3.809
+     ]
+    },
+    "erro_agrupado_por_estado": {
+     "b_por_10": -0.2586,
+     "ic975_por_10": [
+      -0.2852,
+      -0.232
+     ]
+    },
+    "perfil_igual_aos_aptos": {
+     "lugar": "Brasil",
+     "municipios": 5569,
+     "secoes": 478703,
+     "b_por_10": -0.2622,
+     "ic975_por_10": [
+      -0.2898,
+      -0.2368
+     ],
+     "efeito_interquartil_pp": -0.3951,
+     "quartis_x_sem_media_do_municipio": [
+      -8.038,
+      7.035
+     ]
+    }
+   },
+   "contexto": {
+    "sem_efeito_de_municipio": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497371,
+     "b_por_10": -0.17,
+     "ic975_por_10": [
+      -0.2396,
+      -0.0807
+     ],
+     "efeito_interquartil_pp": -0.285,
+     "quartis_x_sem_media_do_municipio": [
+      -9.167,
+      7.601
+     ]
+    },
+    "com_fatia_do_lula_no_1t": {
+     "lugar": "Brasil",
+     "municipios": 5571,
+     "secoes": 497371,
+     "b_por_10": -0.2756,
+     "ic975_por_10": [
+      -0.3028,
+      -0.2513
+     ],
+     "efeito_interquartil_pp": -0.4191,
+     "quartis_x_sem_media_do_municipio": [
+      -8.135,
+      7.071
+     ]
+    }
+   },
+   "achado": true,
+   "tamanho": "pequena"
+  }
+ },
+ "I5b_descritivo": {
+  "secoes_com_perfil": 497508,
+  "sem_perfil": 389,
+  "inscritos_sem_secao": 2043134,
+  "p60_quartis_ponderados": [
+   14.541,
+   21.472,
+   31.311
+  ],
+  "p70_quartis_ponderados": [
+   5.292,
+   9.009,
+   14.956
+  ],
+  "perfil_gerado_em": [
+   "14/07/2026"
+  ],
+  "secoes_perfil_difere_mais_de_5pct": 19073
+ }
+}

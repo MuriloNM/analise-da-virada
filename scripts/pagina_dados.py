@@ -8,6 +8,7 @@ Lê só arquivos já gerados e aprovados e grava site-analise/dados.js:
 - dados/dados_sociais_municipios.json (T26), os dados sociais de cada município, e os 35 testes do
   inferencia.json (T34);
 - dados/exploracao.json (T33), as cinco perguntas da exploração guiada;
+- dados/perfil_idade.json (T37), a rodada 2 da exploração (quem votou e quem faltou, por idade);
 - os títulos das notas de docs/analise/NOTAS.md, que vão para o catálogo de textos
   (site-analise/textos/pt-BR.js, bloco das notas; T30): dados.js guarda só os códigos.
 
@@ -443,6 +444,29 @@ exploracao_pag = {
     "E3": exp["E3"], "E4": exp["E4"], "E5": exp["E5"],
 }
 
+# --- Exploração guiada, rodada 2 (T37): quem votou e quem faltou, por idade -------------
+idd = json.load(open(DADOS / "perfil_idade.json", encoding="utf-8"))
+G_ID = {"16 e 17": "g1617", "18 a 59": "g1859", "60 a 69": "g6069", "70 ou mais": "g70", "60 ou mais": "g60"}  # códigos na página; o nome vem do catálogo
+cg = lambda k: G_ID.get(k, k)
+taxa_g = lambda d: {cg(g): [d["grupos"][g]["aptos"], d["grupos"][g]["comparecimento"]] for g in G_ID} | {"total": [d["total"]["aptos"], d["total"]["comparecimento"]]}
+idade_pag = {
+    "rotulo": idd["rotulo"], "turnos": idd["turnos_no_perfil"],
+    "grupos": {lg: taxa_g(d) for lg, d in idd["I1"].items()},
+    "faixas": {lg: {fx: [v["aptos"], v["comparecimento"]] for fx, v in d["faixas"].items()} for lg, d in idd["I1"].items() if "faixas" in d},
+    "primeira_abaixo_50": {lg: d["primeira_faixa_abaixo_de_50"] for lg, d in idd["I2"].items()},
+    "abstencao": {lg: {cg(g): v for g, v in d.items()} for lg, d in idd["I3"].items()},
+    "genero": {lg: {g: {cg(k): [v["aptos"], v["comparecimento"]] for k, v in d.items()} for g, d in x.items() if g in ("mulheres", "homens")} for lg, x in idd["I4"].items()},
+    "secoes": idd["I5b"], "secoes_desc": idd["I5b_descritivo"],
+    "facultativo": idd["conferencias_entrada"]["facultativo"],
+    "genero_sem": sum(v["aptos"] for k, v in idd["I4"]["Brasil"].get("código 0", {}).items() if k in ("18 a 59", "60 a 69", "70 ou mais")),
+}
+_meta_id = json.load(open(DADOS / "perfil_idade_meta.json", encoding="utf-8"))["conferencia_t03"]["1t"]["totais"]
+idade_pag["conf_t03"] = {"aptos": [_meta_id["perfil_aptos"], _meta_id["oficial_aptos"]], "comp": [_meta_id["perfil_comp"], _meta_id["oficial_comp"]],
+                         "tte": _meta_id["perfil_tte"]}
+br_id = idade_pag["grupos"]["Brasil"]
+confere(br_id["total"][0] == sum(v[0] for k, v in idade_pag["faixas"]["Brasil"].items()) and abs(100 * br_id["g70"][1] / br_id["g70"][0] - idd["I1"]["Brasil"]["grupos"]["70 ou mais"]["taxa_comparecimento"]) < 1e-3,
+        f"idade (T37): Brasil {br_id['total'][0]:,} aptos = soma das faixas; 70 ou mais {100 * br_id['g70'][1] / br_id['g70'][0]:.2f}%")
+
 # --- Escala dos partidos (T05), para a tabela de Método e fontes (T12) ------------
 def num(v):
     return float(v) if v != "" else None
@@ -462,7 +486,7 @@ confere(len(partidos) == 30 and sum(p["posicao"] is None for p in partidos) == 1
 saida = {
     "gerado": datetime.now().strftime("%d/%m/%Y %H:%M"),
     "fontes": "dados/analise_estados.csv e dados/analise_municipios.csv (T03); dados/inferencia.json (T06); "
-              "dados/historico_2t.json; dados/escala_partidos.csv (T05); dados/dados_sociais_municipios.json (T26); dados/secoes_inferencia.json (T35); dados/exploracao.json (T33); docs/analise/NOTAS.md",
+              "dados/historico_2t.json; dados/escala_partidos.csv (T05); dados/dados_sociais_municipios.json (T26); dados/secoes_inferencia.json (T35); dados/exploracao.json (T33); dados/perfil_idade.json (T37); docs/analise/NOTAS.md",
     "brasil": brasil,
     "regioes": regioes,
     "ufs": ufs,
@@ -501,6 +525,7 @@ saida = {
     "partidos": partidos,
     "sociais": sociais_pag,
     "exploracao": exploracao_pag,
+    "idade": idade_pag,
 }
 SAIDA.write_text("// Gerado por scripts/pagina_dados.py. Não editar à mão.\n"
                  "window.ESTUDO = " + json.dumps(saida, ensure_ascii=False, separators=(",", ":")) + ";\n",

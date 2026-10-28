@@ -1463,10 +1463,26 @@
       linhas: versoes.map(([k, x], i) => ({ nome: T(k), v: x.b_por_10, ic: x.ic95_por_10, destaque: i === 0,
         dica: { titulo: T(k), linhas: [{ t: T('c9.tab4.b'), v: fmt.pp(x.b_por_10, 2) },
           { t: T('tab.ic95'), v: T('g.de_a', { a: fmt.decSinal(x.ic95_por_10[0], 2), b: fmt.decSinal(x.ic95_por_10[1], 2) }) }] } })) }) });
+  // Rodada 2 (T37): quem votou e quem faltou, por idade (perfil de comparecimento do TSE, só o 1º turno) e as seções
+  // com mais inscritos de 60 anos ou mais (perfil do eleitorado por seção). As perguntas seguem a numeração: 6 a 10.
+  const ID = D.idade;
+  const taxaId = ([a, c]) => 100 * c / a;
+  const pctId = (v, c = 1) => fmt.pct(v, c);
+  const nomeFaixa = (fx, curto) => {
+    fx = +fx;
+    if (fx === 9999) return T(curto ? 'c9.faixa.100.curto' : 'c9.faixa.100');
+    const a = Math.floor(fx / 100), b = fx % 100;
+    return b === 0 ? (curto ? String(a) : T('c9.faixa.um', { a })) : (curto ? T('g.de_a', { a, b }) : T('c9.faixa.de_a', { a, b }));
+  };
+  const nomeLugarId = lg => (lg === 'Brasil' ? BR.nome : lg === 'Exterior' ? T('ficha.exterior') : NOME_UF[lg] || TD(lg));
+  const GRUPOS_ID = ['g1617', 'g1859', 'g6069', 'g70', 'g60', 'total']; // os nomes vêm do catálogo (c9.grupo.*)
+  const REG_ID = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'];
+  const F70_ID = ['7074', '7579', '8084', '8589', '9094', '9599', '9999'];
   function cap9(ctx) {
     const br1 = EXP.E1.por_lugar[0].fontes, E2 = EXP.E2, E3 = EXP.E3.desfechos.var_abstencao_pp;
     const E4br = EXP.E4.principal[0], E5 = EXP.E5;
-    cabecalho(ctx, ...T.f('c9.resposta', { fl: N(fmt.int(E2.casas.fl)), lf: N(fmt.int(E2.casas.lf)) }));
+    const GB = ID.grupos.Brasil;
+    cabecalho(ctx, ...T.f('c9.resposta', { fl: N(fmt.int(E2.casas.fl)), lf: N(fmt.int(E2.casas.lf)), p70: N(pctId(taxaId(GB['g70']))) }));
     // a caixa do rótulo, no lugar da caixa da hipótese
     const hp = el('div', 'hipotese exploratoria', undefined, ctx.cab);
     const ht = el('p', 'hip-texto', undefined, hp);
@@ -1475,13 +1491,15 @@
     // a pergunta 5 fica como "sem resposta firme" (D62), fora da conta dos achados
     const achados = [Object.keys(EXP.E1.achado_brasil).length > 0, Object.values(EXP.E3.desfechos).some(d => d.achado), EXP.E4.achado];
     const r = el('p', 'hip-res', undefined, hp);
-    r.append(...T.f('c9.rotulo.res', { n: B(String(achados.filter(Boolean).length)), s: B('1') }));
+    const S5 = ID.secoes, achado2 = S5.abstencao.achado || S5.fatia_lula.achado;
+    r.append(...T.f('c9.rotulo.res', { n: B(String(achados.filter(Boolean).length)), s: B('1'), r2: B(T(achado2 ? 'c9.r2.res.achado' : 'c9.r2.res.sem')) }));
     const bt = el('button', 'bt-link', T('hip.como_chegou'), r);
     bt.type = 'button';
     bt.addEventListener('click', () => abrirDetalhes(ctx.detalhes));
 
     // as cinco perguntas, na ordem do registro, cada uma com a resposta curta
-    const n1 = ctx.nf(), n2 = ctx.nf(), n3 = ctx.nf();
+    const n1 = ctx.nf(), n2 = ctx.nf(), n3 = ctx.nf(), n4 = ctx.nf(), n5 = ctx.nf(), n6 = ctx.nf();
+    P(ctx.cab, '', B(T('c9.rodada1')));
     const lista = el('ol', 'lista-exploracao', undefined, ctx.cab);
     const item = (k, ...partes) => { const li = el('li', '', undefined, lista); P(li, '', B(T('c9.' + k + '.p')), ' ', ...partes); };
     const fresto = br1.resto.flavio, f55 = br1['55'].flavio;
@@ -1492,6 +1510,25 @@
     item('e3', ...T.f('c9.e3.r', { a1: ptsS(E3.medias_pp.com_2t), a2: ptsS(E3.medias_pp.sem_2t), p: fmt.pct(E3.principal.p_permutacao * 100, 0) }));
     item('e4', ...T.f('c9.e4.r', { iq: pontos(Math.abs(E4br.efeito_interquartil_pp), 2), fig: n3 }));
     item('e5', ...T.f('c9.e5.r'));
+    // 2ª rodada (T37), na mesma lista numerada, a partir do 6
+    P(ctx.cab, '', B(T('c9.rodada2')));
+    const lista2 = el('ol', 'lista-exploracao', undefined, ctx.cab);
+    lista2.start = 6;
+    const item2 = (k, ...partes) => { const li = el('li', '', undefined, lista2); P(li, '', B(T('c9.' + k + '.p')), ' ', ...partes); };
+    const ufs70 = Object.keys(ID.grupos).filter(u => NOME_UF[u] && taxaId(ID.grupos[u]['g70']) < 50)
+      .sort((a, b) => taxaId(ID.grupos[a]['g70']) - taxaId(ID.grupos[b]['g70']));
+    item2('i1', ...T.f('c9.i1.r', { n70: fmt.miAbs(GB['g70'][0], 1), p70: pctId(taxaId(GB['g70'])), p6069: pctId(taxaId(GB['g6069'])),
+      p1859: pctId(taxaId(GB['g1859'])), nuf: fmt.int(ufs70.length), ufs: listaE(ufs70.map(u => NOME_UF[u])), fig: n4 }));
+    const FB = ID.faixas.Brasil;
+    item2('i2', ...T.f('c9.i2.r', { p7074: pctId(taxaId(FB['7074'])), p7579: pctId(taxaId(FB['7579'])), p8084: pctId(taxaId(FB['8084'])), fig: n4 }));
+    const AB = ID.abstencao.Brasil['g70'];
+    item2('i3', ...T.f('c9.i3.r', { pa: pctId(AB.parte_dos_aptos), pb: pctId(AB.parte_da_abstencao),
+      ka: fmt.int(Math.round(100 / AB.parte_dos_aptos)), kb: fmt.int(Math.round(100 / AB.parte_da_abstencao)) }));
+    const GN = ID.genero.Brasil, tg = (g, k) => pctId(taxaId(GN[g][k]));
+    item2('i4', ...T.f('c9.i4.r', { m6069: tg('mulheres', 'g6069'), h6069: tg('homens', 'g6069'), m70: tg('mulheres', 'g70'),
+      h70: tg('homens', 'g70'), m1859: tg('mulheres', 'g1859'), h1859: tg('homens', 'g1859'), fig: n5 }));
+    const iqa = pontos(Math.abs(S5.abstencao.principal[0].efeito_interquartil_pp), 2), iqs = pontos(Math.abs(S5.fatia_lula.principal[0].efeito_interquartil_pp), 2);
+    item2('i5', ...T.f('c9.i5.r', { iqa, iqs, fig: n6 }));
 
     const { fig, lado } = corpo(ctx);
     // 9.1 (E1): a divisão de cada fonte no Brasil, pela conta por seção com os outros candidatos separados
@@ -1545,6 +1582,54 @@
       fonte: T('c9.fig1.fonte', { sec: fmt.int(EXP.secoes) }),
       como: [T('c9.fig3.como1'), T('c9.fig3.como2', { n: fmt.int(1000) }), T('c9.como.script')],
       notas: ['N05', 'N22', 'N23'],
+    });
+    // 9.4 (perguntas 6 e 7): quem foi votar, por idade, no Brasil (contagem); a linha marca a metade
+    const faixasB = Object.keys(FB).filter(fx => +fx > 0).sort((a, b) => a - b);
+    figura(fig, {
+      n: n4, titulo: T('c9.fig4.titulo'), sub: T('c9.fig4.sub'), leitura: [T('c9.rotulo.curto'), T('c9.fig4.leitura')],
+      desenhar: caixa => G.barras(caixa, { aria: T('c9.fig4.aria'), margE: 130, margEstreito: 56, margD: 48, altLinha: 18,
+        x: { min: 0, max: 100, passo: 25, fmt: v => fmt.int(v), rotulo: T('c9.fig4.eixo') }, ref: { v: 50, rotulo: T('c9.fig4.ref') },
+        linhas: faixasB.map(fx => ({ nome: nomeFaixa(fx), curto: nomeFaixa(fx, true), v: taxaId(FB[fx]), rotulo: pctId(taxaId(FB[fx])),
+          dica: { titulo: nomeFaixa(fx), linhas: [{ t: T('c9.fig4.dica.taxa'), v: pctId(taxaId(FB[fx])) }, { t: T('c9.fig4.dica.aptos'), v: fmt.int(FB[fx][0]) },
+            { t: T('c9.fig4.dica.comp'), v: fmt.int(FB[fx][1]) }] } })) }),
+      fonte: T('c9.fig4.fonte'),
+      como: [T('c9.fig4.como1'), T('c9.fig4.como2'), T('c9.r2.script')],
+      notas: ['N24'],
+    });
+    // 9.5 (pergunta 9): mulheres e homens, por idade (contagem), com as séries neutras
+    const GRUPO_FX = { g1859: 1859, g6069: 6069 }; // os grupos entram como faixas largas
+    const linhasGen = ['g1859', 'g6069'].concat(F70_ID.slice(0, -1)).map(k => {
+      const nome = nomeFaixa(GRUPO_FX[k] || k), curto = nomeFaixa(GRUPO_FX[k] || k, true);
+      const m = taxaId(GN.mulheres[k]), h = taxaId(GN.homens[k]);
+      return { nome, curto, vals: [{ v: m, lado: 'ink' }, { v: h, lado: 'muted' }],
+        dica: { titulo: nome, linhas: [{ lado: 'ink', t: T('c9.gen.mulheres'), v: pctId(m) }, { lado: 'muted', t: T('c9.gen.homens'), v: pctId(h) }] } };
+    });
+    figura(fig, {
+      n: n5, titulo: T('c9.fig5.titulo'), sub: T('c9.fig5.sub'), leitura: [T('c9.rotulo.curto'), T('c9.fig5.leitura')],
+      legenda: [{ t: T('c9.gen.mulheres'), lado: 'ink' }, { t: T('c9.gen.homens'), lado: 'muted' }],
+      desenhar: caixa => G.linhasPontos(caixa, { aria: T('c9.fig5.aria'), margE: 130, margEstreito: 56, altLinha: 20,
+        series: { ink: T('c9.gen.mulheres'), muted: T('c9.gen.homens') },
+        x: { min: 0, max: 100, passo: 25, fmt: v => fmt.int(v), rotulo: T('c9.fig4.eixo') }, linhas: linhasGen }),
+      fonte: T('c9.fig4.fonte'),
+      como: [T('c9.fig4.como1'), T('c9.r2.script')],
+      notas: ['N24'],
+    });
+    // 9.6 (pergunta 10): seções com mais inscritos de 60 anos ou mais, seções da mesma cidade, nas duas medidas
+    const icId = x => T('g.de_a', { a: fmt.decSinal(x.ic975_por_10[0], 2), b: fmt.decSinal(x.ic975_por_10[1], 2) });
+    const linhaSec = (x, desf) => { const nome = nomeLugarId(x.lugar);
+      return { nome, v: x.b_por_10, ic: x.ic975_por_10, destaque: x.lugar === 'Brasil',
+        dica: { titulo: `${nome}: ${T(desf)}`, linhas: [{ t: T('c9.fig3.dica.b'), v: fmt.pp(x.b_por_10, 2) }, { t: T('tab.ic975'), v: icId(x) },
+          { t: T('c9.fig3.dica.iq'), v: fmt.pp(x.efeito_interquartil_pp, 2) }, { t: T('c9.fig3.dica.secoes'), v: fmt.int(x.secoes) }] } }; };
+    figura(fig, {
+      n: n6, titulo: T('c9.fig6.titulo'), sub: T('c9.fig6.sub'), leitura: [T('c9.rotulo.curto'), T('c9.fig6.leitura')],
+      legenda: [{ t: T('leg.ic975'), tipo: 'ic' }],
+      desenhar: caixa => G.coeficientes(caixa, { aria: T('c9.fig6.aria'), margE: 130, margEstreito: 92,
+        linhas: [{ grupo: T('c9.fig6.grupo_a') }].concat(S5.abstencao.principal.map(x => linhaSec(x, 'c9.fig6.grupo_a')),
+          [{ grupo: T('c9.fig6.grupo_s') }], S5.fatia_lula.principal.map(x => linhaSec(x, 'c9.fig6.grupo_s'))),
+        x: { min: -1.2, max: 0.2, passo: 0.2, fmt: v => fmt.decSinal(v, 1), rotulo: T('c9.fig6.eixo') } }),
+      fonte: T('c9.fig6.fonte', { sec: fmt.int(ID.secoes_desc.secoes_com_perfil) }),
+      como: [T('c9.fig6.como1'), T('c9.fig6.como2', { n: fmt.int(1000) }), T('c9.r2.script')],
+      notas: ['N22', 'N24'],
     });
     notaLateral(lado, T('c9.lado.tit'), T('c9.lado.1'), T('c9.lado.2'));
 
@@ -1633,10 +1718,64 @@
       grafico: graficoB10(versoesE5, T('c9.tab5.titulo'), T('vd.c9.e5_eixo')),
       colunas: [{ t: T('tab.versao'), v: ([k]) => T(k) }, { t: T('c9.tab5.b'), num: true, v: ([, x]) => x.b_por_10, f: v => fmt.pp(v, 2) },
         { t: T('tab.ic95'), v: ([, x]) => T('g.de_a', { a: fmt.decSinal(x.ic95_por_10[0], 2), b: fmt.decSinal(x.ic95_por_10[1], 2) }) }] });
-    // os limites, para as cinco
+    // 2ª rodada (T37): perguntas 6 a 10
+    const lugaresId = ['Brasil'].concat(REG_ID, Object.keys(ID.grupos).filter(u => NOME_UF[u]).sort((a, b) => NOME_UF[a].localeCompare(NOME_UF[b])), ['Exterior']);
+    const cT03 = ID.conf_t03;
+    const si1 = secao(det, T('c9.i1.sec'));
+    P(si1, '', ...T.f('c9.det.i1', { pa: fmt.int(cT03.aptos[0]), pc: fmt.int(cT03.comp[0]), oa: fmt.int(cT03.aptos[1]), oc: fmt.int(cT03.comp[1]),
+      tte: fmt.int(cT03.tte), n24: nd('N24'), anal: fmt.int(ID.facultativo['18_a_69_facultativo_aptos']) }));
+    G.tabela(si1, { legenda: { n: ctx.nt(), t: T('c9.tab6.titulo') }, ordenavel: true, linhas: lugaresId, destaque: lg => lg === 'Brasil',
+      grafico: { legenda: [{ t: T('c9.grupo.g70'), lado: 'ink' }, { t: T('c9.grupo.g1859'), lado: 'muted' }],
+        desenhar: caixa => G.linhasPontos(caixa, { aria: T('vd.aria', { t: T('c9.tab6.titulo') }), margE: 150, margEstreito: 40, altLinha: 16,
+          x: { min: 0, max: 100, passo: 25, fmt: v => fmt.int(v), rotulo: T('c9.fig4.eixo') },
+          linhas: lugaresId.map(lg => { const g = ID.grupos[lg], a = taxaId(g['g70']), b = taxaId(g['g1859']);
+            return { nome: nomeLugarId(lg), curto: NOME_UF[lg] ? lg : nomeLugarId(lg).slice(0, 3), destaque: lg === 'Brasil',
+              vals: [{ v: b, lado: 'muted' }, { v: a, lado: 'ink' }],
+              dica: { titulo: nomeLugarId(lg), linhas: [{ lado: 'ink', t: T('c9.grupo.g70'), v: pctId(a) }, { lado: 'muted', t: T('c9.grupo.g1859'), v: pctId(b) }] } }; }) }) },
+      colunas: [{ t: T('tab.lugar'), v: lg => nomeLugarId(lg) }].concat(GRUPOS_ID.map(g => ({ t: T('c9.grupo.' + g), num: true,
+        v: lg => taxaId(ID.grupos[lg][g]), f: v => pctId(v) }))) });
+    P(si1, 'nota-tab', T('c9.tab6.nota'));
+    const si2 = secao(det, T('c9.i2.sec'));
+    const cedo = Object.keys(ID.primeira_abaixo_50).filter(lg => lg !== 'Exterior' && ID.primeira_abaixo_50[lg] === 7579);
+    P(si2, '', ...T.f('c9.det.i2', { lugares: listaE(cedo.map(nomeLugarId)) }));
+    const lugF = ['Brasil'].concat(REG_ID);
+    G.tabela(si2, { legenda: { n: ctx.nt(), t: T('c9.tab7.titulo') }, ordenavel: false, linhas: lugF, destaque: lg => lg === 'Brasil',
+      colunas: [{ t: T('tab.lugar'), v: lg => nomeLugarId(lg) }].concat(F70_ID.map(fx => ({ t: nomeFaixa(fx, true), num: true,
+        v: lg => taxaId(ID.faixas[lg][fx]), f: v => pctId(v) })), [{ t: T('c9.tab7.primeira'), v: lg => nomeFaixa(ID.primeira_abaixo_50[lg]) }]) });
+    const si3 = secao(det, T('c9.i3.sec'));
+    P(si3, '', ...T.f('c9.det.i3'));
+    G.tabela(si3, { legenda: { n: ctx.nt(), t: T('c9.tab8.titulo') }, ordenavel: false, linhas: lugF, destaque: lg => lg === 'Brasil',
+      colunas: [{ t: T('tab.lugar'), v: lg => nomeLugarId(lg) }].concat(GRUPOS_ID.slice(0, 5).map(g => ({ t: T('c9.grupo.' + g),
+        v: lg => T('c9.tab8.cel', { b: pctId(ID.abstencao[lg][g].parte_da_abstencao), a: pctId(ID.abstencao[lg][g].parte_dos_aptos) }) }))) });
+    const si4 = secao(det, T('c9.i4.sec'));
+    P(si4, '', ...T.f('c9.det.i4', { sem: fmt.int(ID.genero_sem), fig: n5 }));
+    const linG = lugF.flatMap(lg => ['mulheres', 'homens'].map(g => [lg, g]));
+    G.tabela(si4, { legenda: { n: ctx.nt(), t: T('c9.tab9.titulo') }, ordenavel: false, linhas: linG, destaque: ([lg]) => lg === 'Brasil',
+      colunas: [{ t: T('tab.lugar'), v: ([lg]) => nomeLugarId(lg) }, { t: T('c9.tab9.genero'), v: ([, g]) => T('c9.gen.' + g) }]
+        .concat(['g1859', 'g6069', 'g70'].map(k => ({ t: T('c9.grupo.' + k), num: true,
+          v: ([lg, g]) => taxaId(ID.genero[lg][g][k]), f: v => pctId(v) })),
+        F70_ID.slice(0, 4).map(fx => ({ t: nomeFaixa(fx, true), num: true, v: ([lg, g]) => taxaId(ID.genero[lg][g][fx]), f: v => pctId(v) }))) });
+    const si5 = secao(det, T('c9.i5.sec'));
+    P(si5, '', ...T.f('c9.det.i5', { n: fmt.int(1000), fig: n6, iqa: pontos(Math.abs(S5.abstencao.principal[0].efeito_interquartil_pp), 2),
+      iqs: pontos(Math.abs(S5.fatia_lula.principal[0].efeito_interquartil_pp), 2), sp: fmt.int(ID.secoes_desc.sem_perfil) }));
+    const nomeV = k => T(['p70', 'perfil_igual_aos_aptos', 'sem_efeito_de_municipio', 'com_fatia_do_lula_no_1t'].includes(k) ? 'c9.tab10.' + k : 'c9.tab4.' + k);
+    const versoes10 = [['principal', d => d.principal[0]]].concat(['sem_peso', 'sem_agregadas', 'sem_aptos_que_mudam', 'p70', 'erro_agrupado_por_estado', 'perfil_igual_aos_aptos']
+      .map(k => [k, d => d.conferencias[k]]), ['sem_efeito_de_municipio', 'com_fatia_do_lula_no_1t'].map(k => [k, d => d.contexto[k]]));
+    const celV = x => `${fmt.pp(x.b_por_10, 2)} (${icId(x)})`;
+    G.tabela(si5, { legenda: { n: ctx.nt(), t: T('c9.tab10.titulo') }, ordenavel: false, linhas: versoes10, destaque: ([k]) => k === 'principal',
+      grafico: { legenda: [{ t: T('leg.ic975'), tipo: 'ic' }],
+        desenhar: caixa => G.coeficientes(caixa, { aria: T('vd.aria', { t: T('c9.tab10.titulo') }), margE: 260, margEstreito: 120, altLinha: 22,
+          x: eixo(['abstencao', 'fatia_lula'].flatMap(d => versoes10.flatMap(([, f]) => f(S5[d]).ic975_por_10)), tickPp, T('c9.fig6.eixo')),
+          linhas: [['abstencao', 'c9.fig6.grupo_a'], ['fatia_lula', 'c9.fig6.grupo_s']].flatMap(([d, kg]) => [{ grupo: T(kg) }].concat(versoes10.map(([k, f]) => {
+            const x = f(S5[d]);
+            return { nome: nomeV(k), v: x.b_por_10, ic: x.ic975_por_10, destaque: k === 'principal',
+              dica: { titulo: `${nomeV(k)}: ${T(kg)}`, linhas: [{ t: T('c9.fig3.dica.b'), v: fmt.pp(x.b_por_10, 2) }, { t: T('tab.ic975'), v: icId(x) }] } }; }))) }) },
+      colunas: [{ t: T('tab.versao'), v: ([k]) => nomeV(k) }, { t: T('c9.tab10.a'), v: ([, f]) => celV(f(S5.abstencao)) },
+        { t: T('c9.tab10.s'), v: ([, f]) => celV(f(S5.fatia_lula)) }] });
+    // os limites, para as dez
     const lim = secao(det, T('c9.limites.secao'));
     const ulL = el('ul', 'lista-texto', undefined, lim);
-    for (const k of ['1', '2', '3', '4']) el('li', '', T('c9.limites.' + k), ulL);
+    for (const k of ['1', '2', '3', '4', '5', '6']) el('li', '', T('c9.limites.' + k), ulL);
   }
 
   // ======================= Os 9 capítulos, um depois do outro =======================
@@ -1657,7 +1796,7 @@
     const ctx = { n, art, cab, nf: () => `${n}.${++kf}`, nt: () => T('cap.tabela_n', { n: `${n}.${++kt}` }) };
     c.montar(ctx);
     // T33: os capítulos dos assuntos da exploração guiada levam só um aviso com o link para o capítulo 9
-    if (['c1', 'c3', 'c4'].includes('c' + n) && ctx.detalhes) {
+    if (['c1', 'c3', 'c4', 'c8'].includes('c' + n) && ctx.detalhes) {
       const p = el('p', 'nota-tab', T('c9.link.c' + n), $('.detalhes-corpo', ctx.detalhes));
       ir(p, '#analise/9', T('c9.link.ir'));
     }

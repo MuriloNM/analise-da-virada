@@ -73,9 +73,9 @@ window.TEXTOS = {
   {
    "n": 9,
    "pergunta": "What else do the data show?",
-   "resposta": "Exploratory, not recorded before the calculations. There were five questions, asked after seeing the results. The clearest answers: Lula overtook Flávio in 211 municipalities, and Flávio overtook Lula in 1; and the other candidates' votes did not tilt the same way: in the polling-station calculation, the net of Augusto Cury's votes tilted to Lula, and the net of Ronaldo Caiado's to Flávio.",
-   "cartao": "Exploratory, not recorded before the calculations. There were five questions, asked after seeing the results.",
-   "descricao": "Exploratory, not recorded before the calculations. There were five questions, asked after seeing the results. The clearest answers: Lula overtook Flávio in 211 municipalities, and Flávio overtook Lula in 1…",
+   "resposta": "Exploratory, not recorded before the calculations. There were ten questions, in two rounds, asked after seeing the results. The clearest answers: Lula overtook Flávio in 211 municipalities, and Flávio overtook Lula in 1; the other candidates' votes did not tilt the same way: in the polling-station calculation, the net of Augusto Cury's votes tilted to Lula, and the net of Ronaldo Caiado's to Flávio; and, in the first round, just over half of voters aged 70 or over turned out (50.9%).",
+   "cartao": "Exploratory, not recorded before the calculations. There were ten questions, in two rounds, asked after seeing the results.",
+   "descricao": "Exploratory, not recorded before the calculations. There were ten questions, in two rounds, asked after seeing the results.",
    "fonte": "Exploratory, not recorded in advance. Source: TSE, by municipality and polling station"
   }
  ],

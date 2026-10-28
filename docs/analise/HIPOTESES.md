@@ -319,6 +319,39 @@ O autor escolheu as 5 perguntas às 10:37, na conversa da sessão (a sessão rec
 - **Conferências:** (a) sem a correção (a conta bruta, que exagera a queda); (b) a referência da divisão igual da M4, na seção: a mesma regressão aplicada ao Δs que a divisão igual daria (captura do Brasil, 73,67%), e a diferença observada − esperada; (c) só seções com pelo menos 200 votos nos dois no 1º turno; (d) sem peso; (e) sem as seções que receberam agregadas.
 - **Conta como achado:** o β corrigido com o intervalo inteiro abaixo de zero (ou acima) e o mesmo sinal em (b) a (e); a conta bruta não decide. A página compara com a H1 por município.
 
+#### Rodada 2 (T37; registrada em 28/10/2026, 13:40, sessão t37-perfil-idade, antes de qualquer conta de idade)
+O autor perguntou se os idosos, em sua maioria, votaram ou faltaram, e o que mudou no 2º turno (D87). Escolheu I1 a I4 e a I5b às 13:3x, na conversa da sessão (a sessão recomendou as cinco; a I5 original, por município, ficou de fora, trocada pela I5b, por seção). Valem para todas:
+- **Script e saídas:** `scripts/perfil_idade.py`, rodado com `python -I`, grava `dados/perfil_idade.json`; relatório em `docs/analise/exploracao/PERFIL-IDADE-2026-10-28.md`. Semente **20261026**.
+- **Dados:** I1 a I4, `dados/perfil_idade.csv.gz` (soma do perfil de comparecimento e abstenção do TSE, extração de 13/10/2026, **só o 1º turno**: o TSE não publicou o 2º, nem nos dados abertos nem no painel de estatísticas, consultados em 28/10), por `scripts/perfil_idade_base.py`. I5b, o perfil do eleitorado por seção do TSE (cadastro fechado; gerado em 14/07/2026), em `dados/tse_perfil_eleitor_secao/`, e as seções do T27 (`dados/secoes_presidente.csv.gz`).
+- **Já conferido antes do registro (só totais):** perfil × T03 no Brasil, 1º turno: aptos 158.745.463 × 158.745.502, comparecimento 125.277.230 × 125.275.835; nenhuma taxa por idade calculada. Por município, a diferença (320.025 aptos em módulo) cabe nos 595.156 eleitores em transferência temporária (trânsito), que o perfil conta na cidade de origem. Por isso, I1 a I4 saem no Brasil, nas regiões e nos estados, e nunca por município.
+- **Já visto:** as reportagens de 17/10/2026 com o 1º turno por idade (dados do TSE reunidos pelo Movimento Voto 70+; Agência Brasil e Times Brasil): comparecimento de 68,77% entre 70 e 74 anos, 52,23% entre 75 e 79, 37,12% entre 80 e 84, 24,30% entre 85 e 89, 13,46% entre 90 e 94 e 4,34% entre 95 e 99; abstenção dos 70 ou mais 49,1% (58,8% em 2022); e o painel do TSE (voto facultativo: 56,15% de comparecimento; obrigatório: 82,62%). No estudo: capítulo 8 (Censo, por município: onde há mais gente de 60 ou mais, a fatia do Lula variou um pouco menos, −0,27 ponto entre quartis, e a abstenção sem diferença clara) e a E4 (seções da mesma cidade: a abstenção caiu um pouco mais onde o Lula era mais forte). O reel do Radar do Voto que o autor viu pergunta "jovem ou idoso?" no 2º turno; o resultado dele não foi visto.
+- **Aviso em todas:** o cadastro ainda tem eleitores que morreram e não foram tirados, mais comuns nas faixas de cima; a abstenção medida nelas é maior que a real, e isso não se corrige aqui.
+- **Linguagem:** I1 a I4 são contagens de pessoas, agregadas: "dos eleitores de 70 anos ou mais, X% votaram" pode ser dito; em quem votaram, nunca. Na I5b, "seções com mais inscritos de 60 anos ou mais…", nunca "os idosos…"; mesma reta, lida dos dois lados, para os dois candidatos.
+- **Página:** as cinco saem juntas, com o resultado de todas e o rótulo "exploratório, não registrado antes das contas"; onde entra, com o autor depois do relatório. Manchete, nunca; Resumo, só contagem, com o rótulo, se o autor quiser.
+
+**I1. Os eleitores de cada idade, em sua maioria, votaram ou faltaram no 1º turno?**
+- **Conta (contagem):** taxa de comparecimento = comparecimento ÷ aptos do perfil, nas faixas do TSE (16, 17, 18, 19, 20, 21–24… 95–99, 100 ou mais; "inválido" à parte) e em cinco grupos: 16 e 17 (facultativo), 18 a 59, 60 a 69, 70 ou mais (facultativo) e 60 ou mais. No Brasil (sem o exterior), no exterior à parte, nas 5 regiões e nos 27 estados. "A maioria votou" se a taxa passa de 50%.
+- **Conferências:** soma das faixas = total do perfil em cada lugar; nos 16, 17 e 70 ou mais, comparecimento = coluna de voto facultativo, e nos 18 a 69, = obrigatório; o total do perfil contra o T03 por estado (diferença dita).
+- **Conta como achado:** é contagem; sai como é.
+
+**I2. Entre os de 70 anos ou mais, a partir de que idade a maioria faltou?**
+- **Conta (contagem):** a taxa da I1 em 70–74, 75–79… 100 ou mais, no Brasil e nas regiões; a primeira faixa abaixo de 50%. Nos estados, a faixa em que cada um cruza 50%.
+- **Conta como achado:** contagem; sai como é.
+
+**I3. De quem é a abstenção do 1º turno?**
+- **Conta (contagem):** dos que faltaram, a parte com 60 ou mais e com 70 ou mais, contra a parte deles entre os aptos (e a razão entre as duas); o mesmo para 16 e 17 e para 18 a 59. Brasil e regiões.
+- **Conta como achado:** contagem; sai como é.
+
+**I4. Entre os de 60 anos ou mais, mulheres e homens votaram na mesma proporção?**
+- **Conta (contagem):** a taxa da I1 em 60–69, 70 ou mais e nas faixas de 70–74 a 100 ou mais, separando mulheres e homens (gênero do cadastro; "não informado" à parte, se houver); 18 a 59 como referência. Brasil e regiões.
+- **Conta como achado:** contagem; sai como é.
+
+**I5b. Nas seções com mais inscritos de 60 anos ou mais, a abstenção e a fatia do Lula mudaram diferente do 1º para o 2º turno, comparando seções da mesma cidade?**
+- **Variável:** p60 = inscritos de 60 anos ou mais ÷ inscritos da seção, no perfil do eleitorado por seção (faixa "inválido" fora do numerador e dentro do denominador), em pontos percentuais. Casada às seções do T27 por UF, município, zona e seção. Seções: as da regra por seção (4.5), as 497.897 do Brasil, com perfil; as sem perfil saem e são contadas.
+- **Conta:** dois desfechos por seção: Δa (p.p., cada turno com os próprios aptos, como na E4) e Δs (p.p., fatia do Lula entre os dois, como na E5, seções com votos para os dois nos dois turnos). Δ = α_município + β × p60, peso E1. β por 10 pontos de p60. Lugares: Brasil e as 5 regiões. Intervalo: bootstrap de estados inteiros, 1.000 repetições, percentis; com dois desfechos, o intervalo é de **97,5%** (percentis 1,25 e 98,75; Bonferroni). Tamanho: efeito interquartil (quartis ponderados de p60 depois de tirar a média de cada município). Para o Flávio, Δs troca de sinal: a mesma reta, lida dos dois lados.
+- **Conferências:** (a) sem peso; (b) sem as seções que receberam agregadas; (c) sem as seções em que os aptos mudam mais de 5 entre os turnos; (d) p70 (70 ou mais, voto facultativo) no lugar de p60; (e) erro agrupado por estado (CR1) no Brasil; (f) sem as seções em que os inscritos do perfil e os aptos do 1º turno diferem mais de 5%. Saem também, como contexto e não como conferência: a mesma conta sem o efeito de município; e com a fatia do Lula no 1º turno (s1) junto de p60, para ver se a ligação com a idade é a mesma que a da força de cada um (E4).
+- **Conta como achado:** em cada desfecho, no Brasil, o intervalo de 97,5% inteiro de um lado de zero, com o mesmo sinal e o intervalo do mesmo lado em (a) a (f); abaixo de 0,5 p.p. de efeito interquartil, "pequena". Comparação com o capítulo 8 (município, Censo) e com a E4, sem decidir nada.
+
 ## Referências do método
 - Cameron, A. C.; Gelbach, J. B.; Miller, D. L. (2008). Bootstrap-based improvements for inference with clustered errors. *Review of Economics and Statistics*, 90(3), 414–427.
 - Duncan, O. D.; Davis, B. (1953). An alternative to ecological correlation. *American Sociological Review*, 18(6), 665–666.

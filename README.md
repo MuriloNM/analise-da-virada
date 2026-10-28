@@ -62,9 +62,9 @@ O que os dados não permitem dizer está em "Limites do estudo", na página. Em 
 
 ## Como citar
 
-> MARTINS, Murilo Neves de. **Análise da virada**: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município. Versão 1.1.2. [S. l.], 28 out. 2026. Disponível em: https://analise-da-virada.pages.dev/. Dados e scripts: https://github.com/MuriloNM/analise-da-virada.
+> MARTINS, Murilo Neves de. **Análise da virada**: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município. Versão 1.2. [S. l.], 28 out. 2026. Disponível em: https://analise-da-virada.pages.dev/. Dados e scripts: https://github.com/MuriloNM/analise-da-virada.
 
-APA: Martins, M. N. de (2026). *Análise da virada: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município* (Versão 1.1.2). https://analise-da-virada.pages.dev/
+APA: Martins, M. N. de (2026). *Análise da virada: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município* (Versão 1.2). https://analise-da-virada.pages.dev/
 
 O GitHub também mostra a citação pelo botão "Cite this repository" (arquivo [`CITATION.cff`](CITATION.cff)).
 
@@ -78,12 +78,13 @@ Detalhes em [`LICENCA-DADOS.md`](LICENCA-DADOS.md).
 
 ## Versão e correções
 
-**Versão 1.1.2, de 28/10/2026**: a primeira publicada, com uma correção de texto, a parte "Pergunte aos dados", o assistente "Pergunte ao estudo", gráficos com a tabela a um clique, o Mapa, a parte "Estudos externos" e as regras dos comentários (que abrem depois). A mesma versão da página e do PDF.
+**Versão 1.2, de 28/10/2026**: a primeira publicada, com uma correção de texto, a parte "Pergunte aos dados", o assistente "Pergunte ao estudo", gráficos com a tabela a um clique, o Mapa, a parte "Estudos externos", as regras dos comentários (que abrem depois) e a 2ª rodada da exploração guiada, sobre quem votou e quem faltou, por idade. A mesma versão da página e do PDF.
 
 Achou um erro? Abra um pedido em [Issues](../../issues) ("Achei um erro") ou escreva pela caixa "Escrever ao autor", na página. Cada correção entra aqui e em "Versão e correções", na página, com a data, o que mudou e, se a pessoa quiser, quem avisou.
 
 | Versão | Data | O que mudou |
 |---|---|---|
+| 1.2 | 28/10/2026 | Análise nova, exploratória: a 2ª rodada da exploração guiada no capítulo 9, com cinco perguntas sobre quem votou e quem faltou, por idade (perfil de comparecimento do TSE, só do 1º turno, e perfil do eleitorado por seção), registradas antes das contas (`docs/analise/HIPOTESES.md`, seção 8), e a nota N24. Dados e scripts novos: `perfil_idade*`. Nenhum número dos capítulos 1 a 8 mudou. |
 | 1.1.2 | 28/10/2026 | Novo na página: as regras dos comentários, no fim do estudo (os comentários abrem depois), uma contagem de uso sem nenhum dado pessoal (downloads do PDF, partes e capítulos abertos, buscas da cidade) e a página de privacidade atualizada. Nenhum número, medida ou hipótese mudou. |
 | 1.1.1 | 28/10/2026 | Novo na página: em Método e fontes, a parte "Estudos externos" compara, tema por tema, estudos de outras fontes sobre a mesma mudança com o que este estudo encontrou, com o link de cada um e a data da última verificação. Nenhum número, medida ou hipótese mudou. |
 | 1.1 | 28/10/2026 | Novo na página: as tabelas do estudo ganharam um gráfico ao lado, com a mesma informação em tabela a um clique, e o menu ganhou o Mapa, para passear pelos estados e municípios. Nenhum número, medida ou hipótese mudou. |
