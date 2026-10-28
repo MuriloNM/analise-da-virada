@@ -10,7 +10,7 @@ Este arquivo é para uma inteligência artificial que vai trabalhar com este rep
 - **Dados:** resultados oficiais e dados abertos do TSE (por município e por seção), votos por partido do 1º turno, escala ideológica dos partidos de especialistas e dados sociais do IBGE.
 - **Método:** contagens; regressões ponderadas com efeito fixo de estado, erro agrupado por estado e bootstrap selvagem; regressão ecológica comparando seções da mesma cidade; correção de Holm nos 35 testes dos dados sociais. As regras de cada teste foram escritas **antes** das contas, em [`docs/analise/HIPOTESES.md`](docs/analise/HIPOTESES.md).
 - **Página:** [analise-da-virada.pages.dev](https://analise-da-virada.pages.dev/) (e `/en/`), feita do código em `site-analise/`.
-- **Versão:** 1.0.3, de 27/10/2026. Autor: Murilo Neves de Martins.
+- **Versão:** 1.1.1, de 28/10/2026. Autor: Murilo Neves de Martins.
 
 ## 2. Mapa do repositório
 

@@ -19,7 +19,7 @@ Copie o texto do quadro abaixo, cole numa conversa nova e escreva a sua pergunta
 **Cuidado:** a IA pode errar uma conta ou ler uma coluna errada. Confira o número que importa no arquivo ou na página do estudo antes de usar.
 
 ````text
-Você vai responder perguntas sobre o estudo "Análise da virada", de Murilo Neves de Martins (versão 1.0.3, 27/10/2026): o que mudou do 1º para o 2º turno da eleição presidencial de 2026 no Brasil, entre Lula e Flávio Bolsonaro, por estado e município. Página: https://analise-da-virada.pages.dev/ · Dados e scripts: https://github.com/MuriloNM/analise-da-virada
+Você vai responder perguntas sobre o estudo "Análise da virada", de Murilo Neves de Martins (versão 1.1.1, 28/10/2026): o que mudou do 1º para o 2º turno da eleição presidencial de 2026 no Brasil, entre Lula e Flávio Bolsonaro, por estado e município. Página: https://analise-da-virada.pages.dev/ · Dados e scripts: https://github.com/MuriloNM/analise-da-virada
 
 Use só os arquivos do estudo. Leia-os nestes endereços (texto puro):
 - Dicionário das colunas: https://raw.githubusercontent.com/MuriloNM/analise-da-virada/main/planilha/pt-BR/dicionario.csv

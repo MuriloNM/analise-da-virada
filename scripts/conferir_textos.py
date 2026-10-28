@@ -27,10 +27,11 @@ textos = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(textos)
 
 # Scripts da página sem texto para o leitor: dados gerados por script e o próprio catálogo
-FORA = {"dados.js", "mapa.js", "apuracao-dados.js"}
+FORA = {"dados.js", "mapa.js", "apuracao-dados.js", "estudos-externos-dados.js"}  # o último: estudos de outras fontes, em pt e en (T13)
 # Literais conferidos à mão: nomes internos que vêm dos dados e o código compara (o texto que o
 # leitor vê sai do catálogo)
 PERMITIDOS = {
+    "sem mudança",  # situação do TSE gravada pelo monitoramento (T13); o leitor vê ee.tse_igual
     "sem peso, dentro dos estados", "sem peso, Brasil", "conjunto, dentro dos estados", "conjunto, Brasil",
     "sem peso", "escala contínua", "fatia entre os dois", "Missão pela regra B", "com sub judice",
     "sem sub judice acima de 5%", "com os outros no controle", "rodada de 2018", "espelho Flávio",

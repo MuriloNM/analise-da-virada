@@ -380,7 +380,7 @@
 
   // ======================= Índice das partes, como no Explorar e na Apuração ao vivo =======================
   const PARTES = [['metodo', 'nav.metodo'], ['passo', 'met.passo.tit'], ['fontes', 'met.fontes.tit'], ['partidos', 'met.partidos.tit'],
-    ['incerteza', 'met.inc.tit'], ['limites', 'met.limites.tit'], ['notas-dados', 'met.notas.tit'], ['nao-deu', 'met.nao_deu.tit'],
+    ['incerteza', 'met.inc.tit'], ['limites', 'met.limites.tit'], ['estudos-externos', 'met.ee.tit'], ['notas-dados', 'met.notas.tit'], ['nao-deu', 'met.nao_deu.tit'],
     ['glossario', 'met.glossario.tit'], ['dados', 'met.dados.tit'], ['sobre', 'met.sobre.tit']];
   if (window.ESTUDO_PARTES) window.ESTUDO_PARTES.indicePartes($('#met-lista-indice'), $('#metodo'),
     PARTES.map(([id, k]) => ({ id, nome: T(k), href: id === 'metodo' ? '#metodo' : '#metodo/' + id })));

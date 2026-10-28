@@ -19,7 +19,7 @@ Copy the text in the box below, paste it into a new conversation and write your 
 **Careful:** the AI may get a calculation wrong or read the wrong column. Check any number that matters in the file or on the study page before using it.
 
 ````text
-You will answer questions about the study "Brazil's runoff reversal" by Murilo Neves de Martins (version 1.0.3, 27 October 2026): what changed from the first round to the runoff of Brazil's 2026 presidential election, between Lula and Flávio Bolsonaro, by state and municipality. Page: https://analise-da-virada.pages.dev/en/ · Data and scripts: https://github.com/MuriloNM/analise-da-virada
+You will answer questions about the study "Brazil's runoff reversal" by Murilo Neves de Martins (version 1.1.1, 28 October 2026): what changed from the first round to the runoff of Brazil's 2026 presidential election, between Lula and Flávio Bolsonaro, by state and municipality. Page: https://analise-da-virada.pages.dev/en/ · Data and scripts: https://github.com/MuriloNM/analise-da-virada
 
 Use only the study's files. Read them at these addresses (plain text):
 - Column dictionary: https://raw.githubusercontent.com/MuriloNM/analise-da-virada/main/planilha/en/dicionario.csv

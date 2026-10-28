@@ -62,9 +62,9 @@ O que os dados não permitem dizer está em "Limites do estudo", na página. Em 
 
 ## Como citar
 
-> MARTINS, Murilo Neves de. **Análise da virada**: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município. Versão 1.0.3. [S. l.], 27 out. 2026. Disponível em: https://analise-da-virada.pages.dev/. Dados e scripts: https://github.com/MuriloNM/analise-da-virada.
+> MARTINS, Murilo Neves de. **Análise da virada**: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município. Versão 1.1.1. [S. l.], 28 out. 2026. Disponível em: https://analise-da-virada.pages.dev/. Dados e scripts: https://github.com/MuriloNM/analise-da-virada.
 
-APA: Martins, M. N. de (2026). *Análise da virada: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município* (Versão 1.0.3). https://analise-da-virada.pages.dev/
+APA: Martins, M. N. de (2026). *Análise da virada: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município* (Versão 1.1.1). https://analise-da-virada.pages.dev/
 
 O GitHub também mostra a citação pelo botão "Cite this repository" (arquivo [`CITATION.cff`](CITATION.cff)).
 
@@ -78,12 +78,14 @@ Detalhes em [`LICENCA-DADOS.md`](LICENCA-DADOS.md).
 
 ## Versão e correções
 
-**Versão 1.0.3, de 27/10/2026**: a primeira publicada, com uma correção de texto, a parte "Pergunte aos dados" e o assistente "Pergunte ao estudo". A mesma versão da página e do PDF.
+**Versão 1.1.1, de 28/10/2026**: a primeira publicada, com uma correção de texto, a parte "Pergunte aos dados", o assistente "Pergunte ao estudo", gráficos com a tabela a um clique, o Mapa e a parte "Estudos externos". A mesma versão da página e do PDF.
 
 Achou um erro? Abra um pedido em [Issues](../../issues) ("Achei um erro") ou escreva pela caixa "Escrever ao autor", na página. Cada correção entra aqui e em "Versão e correções", na página, com a data, o que mudou e, se a pessoa quiser, quem avisou.
 
 | Versão | Data | O que mudou |
 |---|---|---|
+| 1.1.1 | 28/10/2026 | Novo na página: em Método e fontes, a parte "Estudos externos" compara, tema por tema, estudos de outras fontes sobre a mesma mudança com o que este estudo encontrou, com o link de cada um e a data da última verificação. Nenhum número, medida ou hipótese mudou. |
+| 1.1 | 28/10/2026 | Novo na página: as tabelas do estudo ganharam um gráfico ao lado, com a mesma informação em tabela a um clique, e o menu ganhou o Mapa, para passear pelos estados e municípios. Nenhum número, medida ou hipótese mudou. |
 | 1.0.3 | 27/10/2026 | Novo na página: o botão "Pergunte ao estudo", um assistente de inteligência artificial que lê o estudo inteiro e responde citando o trecho onde conferir; cada número da resposta é conferido com o estudo antes de sair. Nenhum número, medida ou hipótese mudou. |
 | 1.0.2 | 27/10/2026 | Novo na página: "Pergunte aos dados", no Explorar, e cada endereço abre na sua língua. Nenhum número, medida ou hipótese mudou. |
 | 1.0.1 | 27/10/2026 | Revisão de neutralidade: a manchete, a linha fina e 33 trechos reescritos sem o ponto de vista de um dos candidatos. Nenhum número, medida ou hipótese mudou. |
