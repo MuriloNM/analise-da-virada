@@ -100,7 +100,7 @@ Os 30 partidos de 2026, com a posição na escala dos especialistas (0 a 10), o 
 
 ## esquerda_municipios.csv
 
-Voto no campo da esquerda para deputado e senador no 1º turno, por município, estado e Brasil (capítulo 5).
+Voto no campo da esquerda para deputado e senador no 1º turno, por município, estado e Brasil (capítulo 5). O do campo da direita, do espelho do Flávio, é 100% menos o da esquerda e o dos partidos sem posição.
 
 - **Fonte:** TSE, dados abertos, votacao_partido_munzona_2026.zip; escala de partidos.csv
 - **Feito por:** `scripts/votos_partido_1t.py`, `scripts/escala_partidos.py` → `dados/esquerda_1t_municipios.csv`

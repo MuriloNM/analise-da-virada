@@ -1350,7 +1350,7 @@
     const fresto = br1.resto.flavio, f55 = br1['55'].flavio;
     item('e1', ...T.f('c9.e1.r', { l70: pctE(br1['70'].lula), f55: pctE(f55), fresto: pctE(fresto), fig: n1 }));
     item('e2', ...T.f('c9.e2.r', { fl: fmt.int(E2.casas.fl), el: fmt.miAbs(E2.eleitores.fl, 1), lf: fmt.int(E2.casas.lf),
-      sub: fmt.int(E2.fatia.subiu), tot: fmt.int(5571), fig: n2 }));
+      ellf: fmt.int(E2.eleitores.lf), sub: fmt.int(E2.fatia.subiu), caiu: fmt.int(E2.fatia.caiu), tot: fmt.int(5571), fig: n2 }));
     const ptsS = v => T.p('un.pontos', v, { n: fmt.decSinal(v, 1) });
     item('e3', ...T.f('c9.e3.r', { a1: ptsS(E3.medias_pp.com_2t), a2: ptsS(E3.medias_pp.sem_2t), p: fmt.pct(E3.principal.p_permutacao * 100, 0) }));
     item('e4', ...T.f('c9.e4.r', { iq: pontos(Math.abs(E4br.efeito_interquartil_pp), 2), fig: n3 }));
@@ -1383,7 +1383,8 @@
     const ufLF = Object.entries(E2.por_uf).filter(([, v]) => v[1] > 0).map(([u]) => u);
     const maiorUf = ufsTroca[0];
     figura(fig, {
-      n: n2, titulo: T('c9.fig2.titulo', { fl: fmt.int(E2.casas.fl), nuf: fmt.int(maiorUf[1][0]), uf: NOME_UF[maiorUf[0]], lf: fmt.int(E2.casas.lf) }),
+      n: n2, titulo: T('c9.fig2.titulo', { fl: fmt.int(E2.casas.fl), nuf: fmt.int(maiorUf[1][0]), uf: NOME_UF[maiorUf[0]], lf: fmt.int(E2.casas.lf),
+        ufslf: listaE(ufLF.map(u => NOME_UF[u])) }),
       sub: T('c9.fig2.sub', { n: ufsTroca.length }), leitura: [T('c9.rotulo.curto'), T('c9.fig2.leitura', { lf: fmt.int(E2.casas.lf), ufs: listaE(ufLF.map(u => NOME_UF[u])) })],
       desenhar: caixa => G.barras(caixa, { aria: T('c9.fig2.aria'), margE: 150, margEstreito: 40, margD: 40,
         x: { min: 0, max: Math.ceil(maiorUf[1][0] / 20) * 20, passo: 20, fmt: v => fmt.int(v), rotulo: T('c9.fig2.eixo') },

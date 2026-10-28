@@ -100,7 +100,7 @@ The 30 parties of 2026, with their placement on the expert-survey scale (0 to 10
 
 ## esquerda_municipios.csv
 
-Left-bloc vote for deputy and senator in the first round, by municipality, state and Brazil (chapter 5).
+Left-bloc vote for deputy and senator in the first round, by municipality, state and Brazil (chapter 5). The right-bloc vote, used in Flávio's mirror version, is 100% minus the left-bloc vote and the vote for parties with no position.
 
 - **Source:** TSE, open data, votacao_partido_munzona_2026.zip; scale in partidos.csv
 - **Made by:** `scripts/votos_partido_1t.py`, `scripts/escala_partidos.py` → `dados/esquerda_1t_municipios.csv`
