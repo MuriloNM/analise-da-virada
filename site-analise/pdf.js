@@ -91,6 +91,9 @@
   for (const d of $$('details.detalhes, details.det-aninhado')) d.open = true; // também as notas recolhidas
   for (const p of $$('.fig-painel')) p.hidden = false;
   for (const r of $$('.capitulo details.detalhes > summary .det-rot')) r.textContent = T('pdf.detalhes');
+  // a nota de baixo de uma tabela vai junto com ela, que não quebra de página (estudo.css, @media print),
+  // e não fica sozinha no alto da página seguinte
+  for (const n of $$('.nota-tab')) if (n.previousElementSibling && n.previousElementSibling.matches('.tab-caixa')) n.previousElementSibling.append(n);
 
   // links internos: o trecho dentro do PDF, ou o endereço publicado para o que fica só na página
   for (const a of $$('a[href^="#"]')) {

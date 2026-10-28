@@ -5,15 +5,15 @@ window.PDF_ESTUDO = {
   "pt-BR": {
     "arquivo": "estudo-virada-v1.0.3.pdf",
     "versao": "1.0.3",
-    "paginas": 77,
-    "bytes": 7866260,
-    "sha256": "191f274ee8f8e67442ce59f7180ce5a370978e89a613cb5b1e89e8667704aa16"
+    "paginas": 92,
+    "bytes": 8405697,
+    "sha256": "acdabeb76e600d6165b51f7db590d5a5cdc18f440f6d7f06aa780b51ce040f73"
   },
   "en": {
     "arquivo": "runoff-reversal-study-v1.0.3.pdf",
     "versao": "1.0.3",
-    "paginas": 87,
-    "bytes": 8123386,
-    "sha256": "9c4b46df671792d3841ae5406e2b1c9d9ede4209b82a6321a41a8bbf658602b8"
+    "paginas": 92,
+    "bytes": 8355832,
+    "sha256": "867beef341eac2c30469e533ecafb4a384fa6d270b9026b84f0dbc2b1a0126f2"
   }
 };

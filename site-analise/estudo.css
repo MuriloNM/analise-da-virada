@@ -1015,6 +1015,21 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
   p,li{orphans:3;widows:3}
   .grafico svg{max-width:100%;height:auto}
   .tab-caixa{overflow:visible}
+  /* as colunas únicas em grade viram blocos: o Chrome, ao quebrar a página dentro de uma grade, punha o item
+     seguinte por cima das últimas linhas do anterior (a legenda da Tabela 2.3 sobre a 2.2, na 1.0.3) */
+  .detalhes-corpo,.det-secao,.como-chegou,.cap-corpo,.abertura{display:block}
+  .detalhes-corpo>*+*{margin-top:14px}
+  .det-secao>*+*,.como-chegou>*+*{margin-top:12px}
+  .abertura>*+*{margin-top:28px}
+  /* nenhuma tabela mais larga que a página: o Chrome encolhe a página inteira até caber a mais larga,
+     e o texto e os gráficos ficavam na esquerda, com a direita vazia */
+  .tab thead th,.tab thead .num{white-space:normal}
+  .tab th,.tab td{padding-left:8px;padding-right:8px}
+  /* tabela de até 15 linhas não quebra: o Chrome deixava a legenda e o cabeçalho no pé da página, com as
+     linhas na seguinte, e o que vinha depois da tabela subia por cima das últimas linhas */
+  .tab-caixa:not(:has(tbody tr:nth-child(16))){break-inside:avoid}
+  /* o botão de ordenar no cabeçalho: com ele, o Chrome repetia o cabeçalho em branco na continuação da tabela */
+  .ordenar{display:contents}
   .metodo .tab caption{position:static;max-width:none}
   .termo{text-decoration-color:var(--line-forte)}
   .nota-sup a::after{content:none}
