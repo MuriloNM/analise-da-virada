@@ -112,8 +112,14 @@
   }
   addEventListener('scroll', dicaEsconder, { passive: true });
   document.addEventListener('pointerdown', ev => { if (!ev.target.closest || !ev.target.closest('.grafico')) dicaEsconder(); });
+  /** T38: a linha "passe o mouse ou toque" sob o gráfico (CSS: .grafico[data-dica]::after), para a descoberta não depender do acaso. */
+  function marcarDica(alvo) {
+    const g = alvo.closest && alvo.closest('.grafico');
+    if (g && !g.dataset.dica) g.dataset.dica = T('graf.dica');
+  }
   /** Liga a dica a um alvo (retângulo transparente ou marca), com mouse, toque e teclado. */
   function ligarDica(alvo, titulo, linhas, aoMostrar) {
+    marcarDica(alvo);
     const mostra = ev => {
       const ls = typeof linhas === 'function' ? linhas() : linhas;
       if (ev && ev.clientX !== undefined && ev.pointerType !== 'touch') dicaMostrar(ev.clientX, ev.clientY, titulo, ls);
@@ -670,6 +676,7 @@
     const M = o.forma, larg = Math.min(caixa.clientWidth, o.largMax || 600), alt = Math.round(larg * M.altura / M.largura);
     caixa.replaceChildren();
     const s = el('svg', { width: larg, height: alt, viewBox: `0 0 ${M.largura} ${M.altura}`, role: 'group', 'aria-label': o.aria }, caixa);
+    marcarDica(s);
     const id = 'hachura-' + (++hachN);
     const pat = el('pattern', { id, patternUnits: 'userSpaceOnUse', width: 9, height: 9, patternTransform: 'rotate(45)' }, el('defs', {}, s));
     el('line', { x1: 0, y1: 0, x2: 0, y2: 9, class: 'hachura-linha' }, pat);

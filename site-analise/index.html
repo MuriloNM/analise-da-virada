@@ -131,12 +131,12 @@
       <textarea id="comentario-fim" name="texto" rows="1" maxlength="2000" data-t-placeholder="com.placeholder" placeholder="os comentários ainda não estão abertos" disabled></textarea>
       <p class="chamada-hip" data-t-html="com.chamada.html"><b>Alguma hipótese que você gostaria de ver estudada e não está aqui?</b> Escreva também: ela pode entrar na próxima versão, registrada antes das contas, como as deste estudo.</p>
       <div class="comentario-quem" hidden>
-        <label class="campo-linha"><span data-t="com.nome">Nome ou apelido (aparece junto do comentário)</span><input type="text" name="nome" maxlength="40" autocomplete="nickname" required></label>
-        <label class="campo-linha"><span data-t="com.email">E-mail, só se quiser ser avisado de respostas (opcional; não aparece)</span><input type="email" name="email" maxlength="120" autocomplete="email"></label>
+        <label class="campo-linha"><span class="rot" data-t="com.nome">Seu nome ou apelido (aparece junto do comentário)</span><input type="text" name="nome" maxlength="40" autocomplete="nickname" required></label>
+        <label class="campo-linha"><span class="rot" data-t="com.email">Seu e-mail (opcional; só para avisar de respostas, não aparece)</span><input type="email" name="email" maxlength="120" autocomplete="email"></label>
       </div>
       <p class="comentario-moderacao" hidden data-t-html="com.moderacao.html">Nenhum comentário aparece na hora: todos são lidos pelo autor antes, com a ajuda de uma inteligência artificial que olha o tom e o comportamento, nunca a opinião política. Comentário com ofensa, ataque a alguém ou outro item das regras abaixo não é liberado. Depois de enviar, não precisa mandar de novo: o comentário fica guardado, esperando a leitura. Veja as regras abaixo e a página de <a href="privacidade/">privacidade</a>.</p>
       <div class="comentario-robo" hidden></div>
-      <p class="comentario-pe"><button class="bt-enviar" type="submit" disabled data-t="com.enviar">Enviar</button> <span class="aviso-it" data-t="com.aviso">(os comentários ainda não estão abertos; até lá, escreva pela caixa “Escrever ao autor”)</span></p>
+      <p class="comentario-pe"><button class="bt-enviar" type="submit" disabled data-t="com.enviar">Enviar comentário</button> <span class="aviso-it" data-t="com.aviso">(os comentários ainda não estão abertos; até lá, escreva pela caixa “Escrever ao autor”)</span></p>
       <p class="comentario-situacao" role="status" aria-live="polite"></p>
     </form>
     <details class="detalhes regras-com">
@@ -269,7 +269,7 @@
         <!-- campo para robôs: escondido de quem lê; se vier preenchido, o Web3Forms descarta -->
         <input class="caixa-robo" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p data-t-html="rod.caixa.html">A mensagem chega só ao autor, sem anexo, e é usada só para responder; não é repassada. <a href="privacidade/">Privacidade</a>.</p>
-        <p class="contato-pe"><button class="bt-enviar" type="submit" data-t="com.enviar">Enviar</button> <span class="contato-situacao" role="status" aria-live="polite"></span></p>
+        <p class="contato-pe"><button class="bt-enviar" type="submit" data-t="com.enviar">Enviar comentário</button> <span class="contato-situacao" role="status" aria-live="polite"></span></p>
       </form>
 </dialog>
 
