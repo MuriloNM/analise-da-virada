@@ -2159,7 +2159,7 @@ window.TEXTOS['en'] = {
 // the decimal sign, for the scripts that write numbers without the browser's help (previas.py)
 "un.decimal": ".",
 // ======================= The "Ask the data" assistant (assistente.js; T14, Proposal 2) =======================
-"ia.botao": {"t": "Ask the study", "rotulo": 24},
+"ia.botao": {"t": "Ask the study a question", "rotulo": 30},
 "ia.tit": {"t": "Ask the study", "rotulo": 24},
 "ia.sub": "An artificial intelligence reads the whole study and answers by citing the section where you can check. It can be wrong: check the cited section.",
 "ia.fechar": {"t": "Close", "rotulo": 12},

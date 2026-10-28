@@ -2176,7 +2176,7 @@ window.TEXTOS['pt-BR'] = {
 "un.decimal": ",",
 
 // ======================= O assistente do "Pergunte aos dados" (assistente.js; T14, Proposta 2) =======================
-"ia.botao": {"t": "Pergunte ao estudo", "rotulo": 24},
+"ia.botao": {"t": "Faça uma pergunta ao estudo", "rotulo": 30},
 "ia.tit": {"t": "Pergunte ao estudo", "rotulo": 24},
 "ia.sub": "Uma inteligência artificial lê o estudo inteiro e responde citando o trecho onde conferir. Ela pode errar: confira no trecho citado.",
 "ia.fechar": {"t": "Fechar", "rotulo": 12},

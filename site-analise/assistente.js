@@ -48,10 +48,11 @@
   let info = null, conversa = [], aberto = false, ocupado = false;
   const botao = el('button', 'ia-botao');
   botao.type = 'button';
-  botao.setAttribute('aria-label', T('ia.botao'));
   botao.setAttribute('aria-expanded', 'false');
   botao.setAttribute('aria-controls', 'ia-painel');
+  // o "?" do revisor num círculo de papel, e ao lado, por extenso, o que o botão faz (pedido do autor, 27/10)
   el('span', 'ia-botao-sinal', '?', botao).setAttribute('aria-hidden', 'true');
+  el('span', 'ia-botao-txt', T('ia.botao'), botao);
   botao.hidden = true;
 
   const painel = el('section', 'ia-painel');

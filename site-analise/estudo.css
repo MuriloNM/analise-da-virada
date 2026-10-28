@@ -907,14 +907,17 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
    papel, com o fio duplo em cima; a pergunta do leitor em itálico, como anotação, e a resposta no
    texto do estudo. Só tinta e bege: o vermelho e o azul continuam dos candidatos. No celular, o
    painel ocupa a tela. */
-.ia-botao{position:fixed;right:24px;bottom:24px;z-index:40;width:56px;height:56px;border-radius:50%;border:0;padding:0;cursor:pointer;
-  background:var(--ink);color:var(--bg);box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--ink);display:grid;place-items:center}
+.ia-botao{position:fixed;right:24px;bottom:24px;z-index:40;height:52px;border-radius:26px;border:0;padding:0 20px 0 7px;cursor:pointer;
+  background:var(--ink);color:var(--bg);box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--ink),0 6px 18px rgba(29,26,22,.22);
+  display:flex;align-items:center;gap:10px}
 .ia-botao[hidden]{display:none}
-.ia-botao-sinal{font:italic 700 36px/1 var(--f-texto);transform:translateY(-1px)}
+.ia-botao-sinal{flex:none;width:38px;height:38px;border-radius:50%;background:var(--bg);color:var(--ink);display:grid;place-items:center;
+  font:italic 700 26px/1 var(--f-texto)}
+.ia-botao-txt{font:500 17px/1 var(--f-ui);white-space:nowrap}
 .ia-botao:hover{background:var(--ink-2)}
 .ia-botao:focus-visible{outline:2px solid var(--ink);outline-offset:6px}
 .ia-botao[aria-expanded="true"] .ia-botao-sinal{font-style:normal}
-.ia-painel{position:fixed;right:24px;bottom:96px;z-index:41;width:min(440px,calc(100vw - 48px));height:min(660px,calc(100vh - 128px));
+.ia-painel{position:fixed;right:24px;bottom:92px;z-index:41;width:min(440px,calc(100vw - 48px));height:min(660px,calc(100vh - 128px));
   display:flex;flex-direction:column;background:var(--bg);color:var(--ink);border:1px solid var(--ink);border-top:3px double var(--ink);
   box-shadow:0 12px 32px rgba(29,26,22,.18)}
 .ia-painel[hidden]{display:none}
@@ -967,7 +970,9 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
 .ia-aviso{margin:6px 0 0;font:400 12px/1.45 var(--f-ui);color:var(--muted)}
 .ia-aviso a{color:var(--ink-2)}
 @media (max-width: 599px){
-  .ia-botao{right:16px;bottom:16px}
+  .ia-botao{right:16px;bottom:16px;height:46px;padding-right:16px;gap:8px}
+  .ia-botao-sinal{width:34px;height:34px;font-size:23px}
+  .ia-botao-txt{font-size:16px}
   .ia-painel{inset:0;width:auto;height:auto;max-height:none;border:0;border-top:3px double var(--ink);box-shadow:none;height:100dvh}
   .ia-tela-cheia body{overflow:hidden}
   .ia-tela-cheia .ia-botao{display:none}
