@@ -1543,8 +1543,11 @@
     el, B, P, N, listaE, figura, figurasComAbas, grafico, sup, notaDados, nd, fichaCidade, busca, funilFig, tabelaVersoes,
     nomeVersao, curtoVersao, classeTexto, coefTxt, icTxt, partesConferencias, guarda, semMovimento, dadosComo, faixaOutros, linhasVieram, comumSecoes,
     SOC_VARS, socValor });
+  // "Pergunte aos dados" (T14, em pergunte.js): a primeira parte do Explorar
+  if (window.PERGUNTE) window.PERGUNTE({ D, G, BR, UFS, NOME_UF, REGIAO_UF, doBrasil, nomeMun, el, B, P, nd, semMovimento });
   indicePartes($('#exp-lista-indice'), $('#explorar'), [
     { id: 'explorar', nome: T('nav.explorar'), href: '#explorar' },
+    { id: 'explorar-pergunte', nome: T('exp.perg.tit'), href: '#explorar/pergunte' },
     { id: 'explorar-ponte', nome: T('exp.ponte.tit'), href: '#explorar/ponte' },
     { id: 'explorar-estados', nome: T('exp.estados.tit'), href: '#explorar/estados' },
     { id: 'explorar-municipios', nome: T('exp.municipios.tit'), href: '#explorar/municipios' },

@@ -14,10 +14,6 @@
 <link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/privacidade/">
 <link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/privacidade/">
 <link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/privacidade/">
-<script>
-/* O endereço desta língua abre sempre nela e grava a escolha, para a raiz do estudo levar a ela. */
-try { localStorage.setItem('analise-lingua', 'en'); } catch (_) {}
-</script>
 <!-- fim das línguas -->
 <script>
 (function(){ var t; try { t = localStorage.getItem('analise-tema'); } catch (_) {}
@@ -45,7 +41,7 @@ try { localStorage.setItem('analise-lingua', 'en'); } catch (_) {}
 <main id="conteudo" class="pagina priv" tabindex="-1">
   <h1 class="consulta-tit" data-t="priv.tit">Privacy</h1>
   <p class="linha-fina" data-t="priv.linha_fina">You do not have to give any data to read the study or download the PDF and the data. This page explains what happens to anything you choose to send: what it is used for, who sees it, how long it is kept and how to ask for it to be deleted.</p>
-  <p class="priv-agora" data-t="priv.agora">For now, only the message box to the author is open. The comments and the new-edition alerts are not yet: this page already explains how they will work once they open. If anything changes, this page changes first, with the date at the end.</p>
+  <p class="priv-agora" data-t="priv.agora">For now, the message box to the author and the typed questions in “Ask the data” are open. The comments and the new-edition alerts are not yet: this page already explains how they will work once they open. If anything changes, this page changes first, with the date at the end.</p>
 
   <section class="priv-parte" aria-labelledby="priv-quem">
     <h2 id="priv-quem" data-t="priv.quem.tit">Who is responsible for the data</h2>
@@ -55,7 +51,7 @@ try { localStorage.setItem('analise-lingua', 'en'); } catch (_) {}
   <section class="priv-parte" aria-labelledby="priv-ler">
     <h2 id="priv-ler" data-t="priv.ler.tit">When you read the page</h2>
     <p data-t="priv.ler.1">The page uses no cookies, neither for advertising nor for tracking, and has no social media buttons that report who visited. The fonts are served from the study's own address.</p>
-    <p data-t="priv.ler.2">It stores a few of your choices in your browser, to remember them on your next visit: light or dark mode, the language, and the charts and filters you left open. This stays on your device and is not sent to anyone; clearing the site's data in your browser clears these choices.</p>
+    <p data-t="priv.ler.2">It stores a few of your choices in your browser, to remember them on your next visit: light or dark mode, and the charts and filters you left open. This stays on your device and is not sent to anyone; clearing the site's data in your browser clears these choices.</p>
     <p data-t="priv.ler.3">The study is hosted on Cloudflare, which, like any hosting service, receives the internet address (IP) of each visitor in order to deliver the page and protect it from attacks. The visit count (Cloudflare Web Analytics) uses no cookies and does not identify readers: it only shows totals, such as visits per day, country and type of device.</p>
   </section>
 
@@ -67,7 +63,9 @@ try { localStorage.setItem('analise-lingua', 'en'); } catch (_) {}
     <p data-t="priv.comentarios">What is sent: the comment, the name or nickname you choose, which appears next to it, and, if you wish, an email address, only to be notified of replies; the email address never appears on the page. What for: to publish the comment and moderate the conversation. Every comment is assessed by an artificial intelligence service, which looks at tone and behavior, never at political opinion; comments held for review are read by the author before they appear. If you write an email address or a phone number in the text, that part is hidden from others. The internet address is stored only in scrambled form, to limit the number of comments per person. How long it is kept: for as long as the study is online, or until you ask for it to be deleted.</p>
     <h3 data-t="priv.avisos.tit">New-edition alerts, next to the PDF</h3>
     <p data-t="priv.avisos">What is sent: your email address and the date of the request. What for: to send you an email when a new edition of the study comes out, with the PDF and what changed; nothing else, no advertising and no other kind of message. Every email has a link to stop receiving them, which removes the address from the list. How long it is kept: until you stop receiving them, or until the study stops having new editions.</p>
-    <p class="priv-pe" data-t="priv.robos">In all three cases, an invisible protection against bots checks, without asking you anything, that the sender is a person. The legal basis for all of this is your consent (LGPD, article 7, item I): you send because you want to and can withdraw whenever you like.</p>
+    <h3 data-t="priv.pergunte.tit">Typed question, in “Ask the data”, under Explore</h3>
+    <p data-t="priv.pergunte">What is sent: the text of the question. What for: an artificial intelligence service reads the question only to pick which of the page's ready-made questions was asked and for which place; the answer comes from the TSE count, on the page itself. The question goes first to Cloudflare Workers AI and, once the day's free quota runs out, to Anthropic's Claude, up to a daily spending cap. The study does not store the text of the question: it stores only how many questions were asked each day and, until the end of the day, a scrambled code made from your internet address, to limit the number of questions per person. Do not type personal data in the question.</p>
+    <p class="priv-pe" data-t="priv.robos">In the first three cases, an invisible protection against bots checks, without asking you anything, that the sender is a person; for typed questions, the per-person limit does that job. The legal basis for all of this is your consent (LGPD, article 7, item I): you send because you want to and can withdraw whenever you like.</p>
   </section>
 
   <section class="priv-parte" aria-labelledby="priv-nao">
@@ -77,7 +75,7 @@ try { localStorage.setItem('analise-lingua', 'en'); } catch (_) {}
 
   <section class="priv-parte" aria-labelledby="priv-servicos">
     <h2 id="priv-servicos" data-t="priv.servicos.tit">Who else handles the data, on behalf of the study</h2>
-    <p data-t="priv.servicos">Only the services that make the study work, each for its own part: Cloudflare (hosting, database and protection against bots), the form service behind the message box (Web3Forms), the service that sends the new-edition emails and the artificial intelligence service that helps moderate the comments. Some of them store data outside Brazil.</p>
+    <p data-t="priv.servicos">Only the services that make the study work, each for its own part: Cloudflare (hosting, database, protection against bots and reading typed questions), the form service behind the message box (Web3Forms), the service that sends the new-edition emails, Anthropic (reading typed questions after Cloudflare's free quota) and the artificial intelligence service that helps moderate the comments. Some of them store data outside Brazil.</p>
   </section>
 
   <section class="priv-parte" aria-labelledby="priv-direitos">

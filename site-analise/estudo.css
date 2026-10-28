@@ -578,6 +578,36 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
 .exp-campo select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 .exp-campo option,.exp-campo optgroup{font-style:normal;color:var(--ink);background:var(--bg)}
 .exp-conta{font:400 16px/1.5 var(--f-ui);color:var(--ink-2);margin:6px 0 0;font-variant-numeric:lining-nums}
+
+/* "Pergunte aos dados" (T14): a pergunta é uma frase com lacunas; a escolha fica sobre o fio, como
+   a busca da cidade, e a resposta vem em frases logo abaixo */
+.perg-modelos{margin-bottom:10px}
+.perg-frase{font:italic 400 26px/1.45 var(--f-texto);color:var(--ink);max-width:30em;margin:6px 0 18px;scroll-margin-top:calc(var(--alto-cab) + 16px)}
+.perg-sel{font:inherit;font-style:normal;font-weight:700;color:var(--ink);background:var(--bg);border:0;border-bottom:2px solid var(--ink);
+  border-radius:0;padding:0 20px 1px 2px;margin:0 2px;max-width:100%;cursor:pointer;-webkit-appearance:none;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--ink-2) 50%),linear-gradient(135deg,var(--ink-2) 50%,transparent 50%);
+  background-position:calc(100% - 9px) 58%,calc(100% - 4px) 58%;background-size:5px 5px;background-repeat:no-repeat}
+.perg-sel:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.perg-regua{position:absolute;visibility:hidden;white-space:pre;left:-9999px;top:0;width:auto}
+.perg-sel option{font-weight:400;color:var(--ink);background:var(--bg)}
+.perg-campos{gap:14px 32px;align-items:flex-end}
+.perg-lugar{display:flex;flex-direction:column;gap:2px;flex:1 1 260px;max-width:420px}
+.perg-lugar .exp-campo-rot{font:italic 400 16px/1.3 var(--f-texto);color:var(--ink-2)}
+.perg-lugar .busca{flex:none;max-width:none}
+.perg-campo{font-size:19px}
+.perg-resp{margin-top:26px;max-width:36em}
+.perg-resp-tit{font:700 24px/1.25 var(--f-texto);margin:22px 0 8px}
+.perg-resp-in>.perg-resp-tit:first-child{margin-top:0}
+.perg-texto{font:400 19px/1.6 var(--f-texto);color:var(--ink);margin:0 0 8px;font-variant-numeric:lining-nums}
+.perg-texto b{font-weight:700}
+.perg-fecho{margin-top:16px}
+.perg-resp .tab-caixa{margin-top:8px}
+.perg-fonte a{margin-left:.15em}
+.perg-form{display:flex;flex-direction:column;gap:4px;max-width:36em}
+.perg-form .exp-campo-rot{font:italic 400 16px/1.3 var(--f-texto);color:var(--ink-2)}
+.perg-linha{display:flex;align-items:flex-end;gap:18px}
+.perg-linha .campo{flex:1 1 auto}
+.perg-situacao{font:400 17px/1.5 var(--f-texto);color:var(--ink-2);margin:12px 0 0;max-width:36em;min-height:1.5em}
 .exp-conta b{color:var(--ink)}
 .exp-conta .bt-link{margin-left:4px}
 .exp-eixos{margin:2px 0 14px}
@@ -628,6 +658,9 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
   .exp-sumario{font-size:16px;gap:4px 16px}
   .exp-recorte{gap:8px 18px}
   .exp-campo select{font-size:16px}
+  .perg-frase{font-size:21px}
+  .perg-texto{font-size:17px}
+  .perg-linha{flex-wrap:wrap}
   .exp-busca{font-size:18px}
 }
 /* ---------- Apuração ao vivo (T28): o registro da apuração do 2º turno, ligado ao capítulo 7 ----------

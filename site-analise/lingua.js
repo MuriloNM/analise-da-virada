@@ -10,8 +10,8 @@
    - T.lista([...]): "a, b e c" na língua (Intl.ListFormat).
    Chave que falta na língua cai no português; chave que não existe em nenhum catálogo aparece como
    o próprio nome e vai para o console como erro, para ser achada na conferência.
-   Também aqui: o botão de língua do menu do alto, que leva ao mesmo trecho na outra língua e guarda
-   a escolha, como o tema (a página principal confere a escolha guardada antes de desenhar). */
+   Também aqui: o botão de língua do menu do alto, que leva ao mesmo trecho na outra língua. A
+   escolha não fica guardada: cada endereço abre na sua língua (pedido do autor, 27/10). */
 (function () {
   'use strict';
   const ORIGEM = 'pt-BR';
@@ -88,9 +88,6 @@
     const leva = () => { a.href = a.getAttribute('href').replace(/#.*$/, '') + location.hash; };
     a.addEventListener('pointerdown', leva);
     a.addEventListener('focus', leva);
-    a.addEventListener('click', () => {
-      leva();
-      try { localStorage.setItem('analise-lingua', a.dataset.lingua); } catch (_) {}
-    });
+    a.addEventListener('click', leva);
   });
 })();

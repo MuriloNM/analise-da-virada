@@ -30,14 +30,6 @@
 <link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/">
 <link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/">
 <link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/">
-<script>
-/* A língua escolhida no botão fica guardada, como o tema: a raiz leva à versão dela, no mesmo trecho. */
-(function(){
-  var p = {"pt-BR": "", "en": "en/"}, l;
-  try { l = localStorage.getItem('analise-lingua'); } catch (_) {}
-  if (l && l !== 'pt-BR' && p.hasOwnProperty(l)) location.replace('' + p[l] + location.hash);
-})();
-</script>
 <!-- fim das línguas -->
 <script>
 /* Modo claro ou escuro antes de desenhar, para não piscar: segue o aparelho, ou a escolha lembrada. */
@@ -156,7 +148,12 @@
   <nav class="indice indice-partes" data-t-aria-label="exp.indice_aria" aria-label="Partes do Explorar"><ol id="exp-lista-indice"></ol></nav>
   <div class="consulta com-indice-corpo">
   <h1 class="consulta-tit" id="t-explorar" data-t="nav.explorar">Explorar</h1>
-  <p class="linha-fina" data-t="exp.linha_fina">Os mesmos números dos capítulos, para consultar lugar por lugar: como cada região e cada estado somaram a virada, os estados no mapa e na tabela, os municípios com recortes e busca, e as estimativas com o intervalo de cada uma.</p>
+  <p class="linha-fina" data-t="exp.linha_fina">Os mesmos números dos capítulos, para consultar lugar por lugar: perguntas em frases sobre qualquer lugar, como cada região e cada estado somaram a virada, os estados no mapa e na tabela, os municípios com recortes e busca, e as estimativas com o intervalo de cada uma.</p>
+  <section class="exp-parte" id="explorar-pergunte" aria-labelledby="t-exp-pergunte" tabindex="-1">
+    <h2 id="t-exp-pergunte" data-t="exp.perg.tit">Pergunte aos dados</h2>
+    <p class="exp-intro" data-t="exp.perg.intro">Monte a pergunta trocando as partes sublinhadas. A resposta sai da contagem oficial do TSE, a mesma dos capítulos, e diz de onde vem cada número.</p>
+    <div id="exp-pergunte"></div>
+  </section>
   <section class="exp-parte" id="explorar-ponte" aria-labelledby="t-exp-ponte" tabindex="-1">
     <h2 id="t-exp-ponte" data-t="exp.ponte.tit">Ponte da virada</h2>
     <p class="exp-intro" id="exp-ponte-intro"></p>
@@ -257,6 +254,7 @@
 <script src="mapa.js"></script>
 <script src="graficos.js"></script>
 <script src="explorar.js"></script>
+<script src="pergunte.js"></script>
 <script src="apuracao-dados.js"></script>
 <script src="apuracao.js"></script>
 <script src="estudo.js"></script>

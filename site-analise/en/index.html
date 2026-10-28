@@ -30,10 +30,6 @@
 <link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/">
 <link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/">
 <link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/">
-<script>
-/* O endereço desta língua abre sempre nela e grava a escolha, para a raiz do estudo levar a ela. */
-try { localStorage.setItem('analise-lingua', 'en'); } catch (_) {}
-</script>
 <!-- fim das línguas -->
 <script>
 /* Modo claro ou escuro antes de desenhar, para não piscar: segue o aparelho, ou a escolha lembrada. */
@@ -152,7 +148,12 @@ try { localStorage.setItem('analise-lingua', 'en'); } catch (_) {}
   <nav class="indice indice-partes" data-t-aria-label="exp.indice_aria" aria-label="Parts of Explore"><ol id="exp-lista-indice"></ol></nav>
   <div class="consulta com-indice-corpo">
   <h1 class="consulta-tit" id="t-explorar" data-t="nav.explorar">Explore</h1>
-  <p class="linha-fina" data-t="exp.linha_fina">The same numbers as in the chapters, to look up place by place: how each region and each state added up to the reversal of the margin, the states on the map and in the table, the municipalities with filters and search, and the estimates, each with its interval.</p>
+  <p class="linha-fina" data-t="exp.linha_fina">The same numbers as in the chapters, to look up place by place: questions in plain sentences about any place, how each region and each state added up to the reversal of the margin, the states on the map and in the table, the municipalities with filters and search, and the estimates, each with its interval.</p>
+  <section class="exp-parte" id="explorar-pergunte" aria-labelledby="t-exp-pergunte" tabindex="-1">
+    <h2 id="t-exp-pergunte" data-t="exp.perg.tit">Ask the data</h2>
+    <p class="exp-intro" data-t="exp.perg.intro">Build the question by changing the underlined parts. The answer comes from the TSE's official count, the same one used in the chapters, and says where each number comes from.</p>
+    <div id="exp-pergunte"></div>
+  </section>
   <section class="exp-parte" id="explorar-ponte" aria-labelledby="t-exp-ponte" tabindex="-1">
     <h2 id="t-exp-ponte" data-t="exp.ponte.tit">Margin waterfall</h2>
     <p class="exp-intro" id="exp-ponte-intro"></p>
@@ -254,6 +255,7 @@ try { localStorage.setItem('analise-lingua', 'en'); } catch (_) {}
 <script src="../mapa.js"></script>
 <script src="../graficos.js"></script>
 <script src="../explorar.js"></script>
+<script src="../pergunte.js"></script>
 <script src="../apuracao-dados.js"></script>
 <script src="../apuracao.js"></script>
 <script src="../estudo.js"></script>

@@ -29,7 +29,6 @@ Rodado também pelo scripts/previas.py, antes das prévias.
 """
 import html
 import importlib.util
-import json
 import re
 import sys
 from pathlib import Path
@@ -104,22 +103,8 @@ def pagina(molde, lingua, linguas, existente, sub=""):
     # links entre as versões, para a busca e as prévias, e a língua guardada (antes de desenhar)
     alternativas = "".join(f'<link rel="alternate" hreflang="{l["codigo"]}" href="{URL}{l["pasta"]}{sub}">\n' for l in linguas)
     alternativas += f'<link rel="alternate" hreflang="x-default" href="{URL}{sub}">\n'
-    destinos = json.dumps({l["codigo"]: l["pasta"] for l in linguas})
-    if sub and not pasta:
-        pass  # a subpágina em português não leva à língua guardada: só a raiz faz isso (D66)
-    elif not pasta:
-        # só a raiz obedece à língua guardada (D66)
-        alternativas += ("<script>\n/* A língua escolhida no botão fica guardada, como o tema: a raiz leva à versão dela, no mesmo trecho. */\n"
-                         "(function(){\n"
-                         f"  var p = {destinos}, l;\n"
-                         "  try { l = localStorage.getItem('analise-lingua'); } catch (_) {}\n"
-                         f"  if (l && l !== '{cod}' && p.hasOwnProperty(l)) location.replace('{raiz}' + p[l] + location.hash);\n"
-                         "})();\n</script>\n")
-    else:
-        # o endereço de uma língua abre sempre nela (o Voltar e o link compartilhado funcionam, D66); só grava a escolha
-        alternativas += ("<script>\n/* O endereço desta língua abre sempre nela e grava a escolha, para a raiz do estudo levar a ela. */\n"
-                         f"try {{ localStorage.setItem('analise-lingua', '{cod}'); }} catch (_) {{}}\n"
-                         "</script>\n")
+    # cada endereço abre na sua língua, sem levar a outra: o que a pessoa digitou vale (pedido do
+    # autor, 27/10, 21:5x, que substitui a raiz guiada pela língua guardada da D66)
     s = trocar_bloco(s, BLOCO_LINGUAS, alternativas)
     # o botão de língua: o nome de cada língua escrito nela mesma; a atual marcada
     if len(linguas) > 1:
