@@ -3,17 +3,17 @@
 // (SHA-256) de cada PDF, que "Versão e correções" mostra (D72).
 window.PDF_ESTUDO = {
   "pt-BR": {
-    "arquivo": "estudo-virada-v1.1.1.pdf",
-    "versao": "1.1.1",
+    "arquivo": "estudo-virada-v1.1.2.pdf",
+    "versao": "1.1.2",
     "paginas": 109,
-    "bytes": 9474152,
-    "sha256": "a3a5959233af0eb20f059b7df0f52e8ed3b6b34d1808d864480c6ca11ea33679"
+    "bytes": 9479633,
+    "sha256": "d759b44c28f7c1c90e4a7cbdf2212b38b16c993cb84d652d0a846f5e0c897a9c"
   },
   "en": {
-    "arquivo": "runoff-reversal-study-v1.1.1.pdf",
-    "versao": "1.1.1",
-    "paginas": 110,
-    "bytes": 9410260,
-    "sha256": "71005e32cc023c0eb10044dc5b79593e61783b2849ec95d9511988029056c175"
+    "arquivo": "runoff-reversal-study-v1.1.2.pdf",
+    "versao": "1.1.2",
+    "paginas": 111,
+    "bytes": 9418633,
+    "sha256": "05e821523cc39d5f64302f6487bd997de0f8bbfc229ed0c2cb8d4f8424b7a4a6"
   }
 };

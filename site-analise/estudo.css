@@ -325,7 +325,7 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
 .leitores{margin-top:80px;padding-top:28px;border-top:1px solid var(--ink)}
 .leitores h2{font-size:36px;font-weight:800;line-height:1.1;letter-spacing:-.015em}
 .comentario{margin-top:14px;max-width:36em;display:grid;gap:8px}
-.comentario label{font:italic 400 24px/1.3 var(--f-texto);color:var(--ink)}
+.comentario>label{font:italic 400 24px/1.3 var(--f-texto);color:var(--ink)}
 .comentario textarea{width:100%;font:400 21px/1.5 var(--f-texto);color:var(--ink);background:transparent;border:0;border-radius:0;
   border-bottom:1px solid var(--ink);padding:4px 2px;resize:none;min-height:2.2em;field-sizing:content}
 .comentario textarea::placeholder{color:var(--muted);font-style:italic;opacity:1}
@@ -336,6 +336,37 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
 .bt-enviar{border:0;background:none;padding:0;font:700 18px/1.3 var(--f-texto);color:var(--ink);cursor:pointer;
   text-decoration:underline;text-underline-offset:4px}
 .bt-enviar:disabled{color:var(--muted);cursor:not-allowed;text-decoration-color:var(--line-forte)}
+/* A caixa aberta (T16): o nome e o e-mail são mais duas linhas do caderno, lado a lado no computador */
+.comentario-quem{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:10px 24px;margin-top:6px}
+.comentario .campo-linha{display:grid;gap:2px;font:italic 400 16px/1.3 var(--f-texto);color:var(--ink-2)}
+.campo-linha input{font:400 18px/1.4 var(--f-texto);color:var(--ink);background:transparent;border:0;border-radius:0;
+  border-bottom:1px solid var(--ink);padding:4px 2px;min-width:0}
+.comentario-moderacao{font:400 16px/1.55 var(--f-texto);color:var(--ink-2)}
+.comentario-robo:empty{display:none}
+.comentario-situacao{font:italic 400 18px/1.5 var(--f-texto);color:var(--ink);margin:0}
+.comentario-situacao:empty{display:none}
+.regras-com{max-width:36em}
+.regras-lista{margin:0;padding-left:1.2em;font:400 18px/1.6 var(--f-texto);color:var(--ink-2)}
+/* A lista: cada comentário é uma anotação na margem, com um fio à esquerda. O que só quem escreveu vê
+   tem o fio tracejado; a resposta do autor, o fio duplo do cabeçalho */
+.com-lista{list-style:none;margin:28px 0 0;padding:0;max-width:36em;display:grid;gap:22px}
+.com-item{padding:2px 0 2px 16px;border-left:1px solid var(--ink)}
+.com-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;margin:0 0 4px;font:400 14px/1.4 var(--f-ui);color:var(--muted)}
+.com-nome{font:700 18px/1.3 var(--f-texto);color:var(--ink)}
+.com-n{margin-left:auto;font-variant-numeric:lining-nums}
+.com-texto{display:grid;gap:8px}
+.com-texto p{margin:0;font:400 18px/1.6 var(--f-texto);color:var(--ink);white-space:pre-line;overflow-wrap:anywhere}
+.com-resposta{margin:12px 0 0;padding-left:14px;border-left:3px double var(--ink)}
+.com-resp-rot{margin:0 0 4px;font:italic 700 16px/1.4 var(--f-texto);color:var(--ink)}
+.com-resp-rot time{font:400 14px/1.4 var(--f-ui);font-style:normal;color:var(--muted)}
+.com-em-analise,.com-retido{border-left-style:dashed;border-left-color:var(--line-forte)}
+.com-aviso-analise{margin:0;font:italic 400 16px/1.5 var(--f-texto);color:var(--muted)}
+.com-retido .com-texto p{color:var(--ink-2)}
+.com-nota{margin:8px 0 0;font:italic 400 16px/1.5 var(--f-texto);color:var(--ink-2)}
+.bt-apagar{border:0;background:none;padding:0;font:inherit;font-style:normal;color:var(--ink);cursor:pointer;
+  text-decoration:underline;text-decoration-color:var(--line-forte);text-underline-offset:3px;min-height:24px}
+.bt-apagar:hover{text-decoration-color:var(--ink)}
+.com-vazio{font:italic 400 18px/1.5 var(--f-texto);color:var(--muted)}
 
 /* Notas da leitura (as contas dos sobrescritos) */
 .notas{margin-top:72px;padding-top:16px;border-top:1px solid var(--ink);max-width:640px}
@@ -541,7 +572,7 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
   .manchete{font-size:48px}
   .linha-fina,.resposta,.achados p,.hip-texto,.comentario textarea{font-size:18px}
   .cap-titulo,.consulta-tit{font-size:36px}
-  .pergunta,.comentario label{font-size:21px}
+  .pergunta,.comentario>label{font-size:21px}
   .campo{font-size:18px}
   .fig-tit{font-size:21px}
   .leitores h2{font-size:36px}
@@ -1129,6 +1160,10 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
   .vd-grafico+.tab-caixa,.vd-junta .vd-grafico+.tab-caixa{margin-top:14px}
   .vd-grafico{break-inside:avoid}
   .figura.vd-junta{break-inside:auto} /* a figura com a tabela junta pode quebrar entre o gráfico e a tabela */
+  /* o título da tabela vai junto com o gráfico, e não fica sozinho no pé da página (a grade vira bloco, como abaixo) */
+  .vd{display:block}
+  .vd>*+*{margin-top:4px}
+  .vd-tit,.vd-sub{break-after:avoid;break-inside:avoid}
   p,li{orphans:3;widows:3}
   .grafico svg{max-width:100%;height:auto}
   .tab-caixa{overflow:visible}

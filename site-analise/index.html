@@ -119,17 +119,31 @@
 
   <div id="capitulos"></div>
 
-  <!-- Fim do estudo: o único lugar para comentar (diário, D31), bloqueado até o T16 -->
+  <!-- Fim do estudo: o único lugar para comentar (diário, D31). O formulário fica fechado até a função
+       /api/comentarios dizer que está aberto (comentarios.js, T16); os comentários só abrem ao público
+       com T21, T22 e T19 prontos -->
   <section class="leitores" id="comentarios" aria-labelledby="t-comentarios" tabindex="-1">
     <h2 id="t-comentarios" data-t="com.tit">Comentários</h2>
     <!-- "O que os leitores disseram" e a nuvem de palavras (T23) entram aqui só quando houver comentários
          reais liberados. Nada de comentário de exemplo (diário, D31). -->
-    <form class="comentario" data-comentario>
+    <form class="comentario" data-comentario novalidate>
       <label for="comentario-fim" data-t="com.pergunta">O que você achou do estudo?</label>
-      <textarea id="comentario-fim" rows="1" data-t-placeholder="com.placeholder" placeholder="os comentários ainda não estão abertos" disabled></textarea>
+      <textarea id="comentario-fim" name="texto" rows="1" maxlength="2000" data-t-placeholder="com.placeholder" placeholder="os comentários ainda não estão abertos" disabled></textarea>
       <p class="chamada-hip" data-t-html="com.chamada.html"><b>Alguma hipótese que você gostaria de ver estudada e não está aqui?</b> Escreva também: ela pode entrar na próxima versão, registrada antes das contas, como as deste estudo.</p>
+      <div class="comentario-quem" hidden>
+        <label class="campo-linha"><span data-t="com.nome">Nome ou apelido (aparece junto do comentário)</span><input type="text" name="nome" maxlength="40" autocomplete="nickname" required></label>
+        <label class="campo-linha"><span data-t="com.email">E-mail, só se quiser ser avisado de respostas (opcional; não aparece)</span><input type="email" name="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <p class="comentario-moderacao" hidden data-t-html="com.moderacao.html">Antes de aparecer, cada comentário passa por uma inteligência artificial que olha o tom e o comportamento, nunca a opinião política; o que ela marca, ou quando tem dúvida, fica em análise até o autor ler. Veja as regras abaixo e a página de <a href="privacidade/">privacidade</a>.</p>
+      <div class="comentario-robo" hidden></div>
       <p class="comentario-pe"><button class="bt-enviar" type="submit" disabled data-t="com.enviar">Enviar</button> <span class="aviso-it" data-t="com.aviso">(os comentários ainda não estão abertos; até lá, escreva pela caixa “Escrever ao autor”)</span></p>
+      <p class="comentario-situacao" role="status" aria-live="polite"></p>
     </form>
+    <details class="detalhes regras-com">
+      <summary><span class="det-rot" data-t="com.regras.rot">Regras dos comentários</span><span class="det-o-que" data-t="com.regras.o_que">o que manda um comentário para análise, e o que acontece depois</span></summary>
+      <div class="detalhes-corpo" id="regras-com"></div>
+    </details>
+    <ol class="com-lista" id="com-lista" data-t-aria-label="com.lista_aria" aria-label="Comentários dos leitores"></ol>
   </section>
 
   <section class="notas" id="notas" aria-labelledby="t-notas" tabindex="-1">
@@ -262,6 +276,7 @@
 <script src="textos/linguas.js"></script>
 <script src="textos/pt-BR.js"></script>
 <script src="lingua.js"></script>
+<script src="contar.js"></script>
 <script src="dados.js"></script>
 <script src="mapa.js"></script>
 <script src="graficos.js"></script>
@@ -283,5 +298,6 @@
 <script src="pdf.js"></script>
 <script src="contato.js"></script>
 <script src="assistente.js"></script>
+<script src="comentarios.js"></script>
 </body>
 </html>

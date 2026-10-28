@@ -337,7 +337,7 @@
   function busca(entrada, lista, ficha, prefixo, aoEscolher = fichaCidade) {
     let achadosBusca = [], ativo = -1, indice = null;
     const fechar = () => { lista.hidden = true; entrada.setAttribute('aria-expanded', 'false'); entrada.removeAttribute('aria-activedescendant'); ativo = -1; };
-    function escolher(m) { entrada.value = nomeMun(m); fechar(); aoEscolher(ficha, m); }
+    function escolher(m) { entrada.value = nomeMun(m); fechar(); aoEscolher(ficha, m); if (window.contar) contar('cidade', '', false); }
     function marcar(i) {
       ativo = i;
       $$('li', lista).forEach((li, j) => li.setAttribute('aria-selected', j === i ? 'true' : 'false'));
@@ -1779,6 +1779,7 @@
     $$('.vista').forEach(s => { s.hidden = s.dataset.vista !== v; });
     vistaAtual = v;
     G.dicaEsconder();
+    if (window.contar) contar('aba', v); // contadores próprios (T16, P35): uma vez por visita
     return true;
   }
   function marcarNav(secao) {
@@ -1795,6 +1796,7 @@
       if (a.dataset.trecho === id) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
     });
     $('#indice-atual').textContent = t.nome;
+    if (t.n && window.contar) contar('capitulo', t.n);
     marcarNav(id === 'resumo' ? 'resumo' : 'capitulos');
     document.title = t.n ? T('pag.titulo_cap', { n: t.n, p: t.p, nome: BASE_TITULO }) : T('pag.titulo', { titulo: T('pag.manchete'), nome: BASE_TITULO });
     if (mudarEndereco) {

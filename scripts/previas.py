@@ -231,7 +231,7 @@ PAGINA_CAP = """<!doctype html>
 <!-- Gerada por scripts/previas.py (T25, T30). Só existe para a prévia do link deste capítulo: o WhatsApp
      e o LinkedIn ignoram a parte do endereço depois do "#". Quem abre vai direto ao capítulo. -->
 {tags}
-<script>location.replace('/{pasta}#analise/{n}');</script>
+<script>location.replace('/{pasta}' + location.search + '#analise/{n}');</script>
 <style>
 :root{{color-scheme:light dark}}
 body{{margin:0;padding:48px 24px;background:#f5f1e8;color:#1d1a16;font:18px/1.6 Georgia,serif}}
