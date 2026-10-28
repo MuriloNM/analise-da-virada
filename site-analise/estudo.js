@@ -196,6 +196,21 @@
     return caixa;
   }
 
+  // ---------- T36: o eixo de um gráfico de tabela, com um passo redondo e o zero dentro ----------
+  function eixo(vals, f, rotulo, { zero = true, folga = 0 } = {}) {
+    let a = Math.min(...vals), b = Math.max(...vals);
+    if (zero) { a = Math.min(0, a); b = Math.max(0, b); }
+    const bruto = (b - a) / 5 || 1, ord = 10 ** Math.floor(Math.log10(bruto));
+    const passo = [1, 2, 2.5, 5, 10].map(k => k * ord).find(k => k >= bruto);
+    return { min: Math.floor((a - folga) / passo) * passo, max: Math.ceil((b + folga) / passo) * passo, passo, fmt: v => f(v, passo), rotulo };
+  }
+  const casas = passo => (passo >= 1 ? 0 : passo >= 0.1 ? 1 : 2);
+  /** A dica de uma linha de tabela no gráfico: todas as colunas, com o número exato (o gráfico mostra a ideia). */
+  const dicaColunas = (colunas, l, titulo) => ({ titulo, linhas: colunas.map(c => {
+    const v = c.v(l);
+    return { t: c.t, v: c.f ? c.f(v, l) : (v === null || v === undefined ? fmt.vazio : String(v)) };
+  }) });
+
   // ======================= Resumo =======================
   (function linhaFina() {
     const p = $('#linha-fina');
@@ -483,9 +498,9 @@
     el('li', '', T('regra.tamanho', { lim: nf(0.5, 1) }), ul);
   }
   /** Tabela das versões de um teste (principal e conferências). */
-  function tabelaVersoes(pai, n, titulo, versoes, fatorDe) {
-    G.tabela(pai, {
-      legenda: { n, t: titulo }, ordenavel: false, destaque: v => /principal$/.test(v.versao),
+  function tabelaVersoes(pai, n, titulo, versoes, fatorDe, grafico) {
+    return G.tabela(pai, {
+      legenda: { n, t: titulo }, ordenavel: false, destaque: v => /principal$/.test(v.versao), grafico,
       linhas: versoes,
       colunas: [
         { t: T('tab.versao'), v: v => nomeVersao(v) },
@@ -499,24 +514,34 @@
       ],
     });
   }
-  function forestVersoes(pai, H, fator, unidade) {
-    const vs = H.versoes;
-    const lim = Math.max(...vs.flatMap(v => v.ic95.map(x => Math.abs(x * fator))));
+  /** As versões de um teste como pontos com o intervalo de 95% (fatorDe: a escala de cada versão; todas na mesma). */
+  function forestOpcoes(vs, fatorDe, unidade) {
+    const lim = Math.max(...vs.flatMap(v => v.ic95.map(x => Math.abs(x * fatorDe(v)))));
     const passo = lim > 2 ? 1 : lim > 0.6 ? 0.25 : 0.1;
     const max = Math.ceil(lim / passo) * passo;
-    grafico(pai, caixa => G.coeficientes(caixa, {
+    return {
       aria: T('forest.aria'),
       x: { min: -max, max, passo, fmt: v => fmt.decSinal(v, passo >= 1 ? 0 : passo < 0.25 ? 1 : 2), rotulo: T('forest.eixo', { unidade }) },
-      lados: H.versoes[0].previsto === 'negativo' ? [T('forest.esq_previsto'), T('forest.dir_contrario')] : [T('forest.esq_contrario'), T('forest.dir_previsto')],
-      margE: 210, margEstreito: 116,
-      linhas: vs.map(v => ({ nome: curtoVersao(v, 0), curto: curtoVersao(v, 1),
+      lados: vs[0].previsto === 'negativo' ? [T('forest.esq_previsto'), T('forest.dir_contrario')] : [T('forest.esq_contrario'), T('forest.dir_previsto')],
+      margE: 260, margEstreito: 116,
+      linhas: vs.map(v => { const fator = fatorDe(v); return { nome: curtoVersao(v, 0), curto: curtoVersao(v, 1),
         v: v.coef * fator, ic: v.ic95.map(x => x * fator), destaque: /principal$/.test(v.versao),
         dica: { titulo: nomeVersao(v), linhas: [
           { t: T('tab.coeficiente'), v: coefTxt(v.coef, fator) }, { t: T('tab.ic95'), v: icTxt(v.ic95, fator) },
           { t: T('tab.ic95_cr1'), v: icTxt(v.ic95_cr1, fator) },
           { t: T('dica.valor_p'), v: fmt.p(v.p_selvagem) }, { t: T('tab.municipios'), v: fmt.int(v.n) },
-          { t: T('tab.resultado'), v: classeTexto(v) }] } })),
-    }));
+          { t: T('tab.resultado'), v: classeTexto(v) }] } }; }),
+    };
+  }
+  function forestVersoes(pai, H, fator, unidade) {
+    return grafico(pai, caixa => G.coeficientes(caixa, forestOpcoes(H.versoes, () => fator, unidade)));
+  }
+  /** O gráfico da tabela de versões (T36), quando ele não está numa figura ao lado: só as versões na unidade
+   *  principal; a de escala contínua, em outra unidade, fica só na tabela, e o texto acima do gráfico diz isso. */
+  function graficoVersoes(versoes, fatorDe, unidade) {
+    const fator = fatorDe(versoes[0]), vs = versoes.filter(v => fatorDe(v) === fator);
+    return { sub: vs.length < versoes.length ? T.p('vd.versoes_fora', versoes.length - vs.length, { n: versoes.length - vs.length }) : null,
+      desenhar: caixa => G.coeficientes(caixa, forestOpcoes(vs, () => fator, unidade)) };
   }
   /** cfg: {texto, porque, variavel, unidade, fator, n (figura), t (tabela)} */
   function comoSeChegou(pai, H, cfg) {
@@ -545,13 +570,27 @@
     const fonte = el('span', '', T('chegou.fig_fonte'), rod);
     sup(fonte, 'fig-' + cfg.n, T('fig.como', { n: cfg.n }), [T('chegou.fig_como1'), T('chegou.fig_como2'), dadosComo(['hipoteses'], [6])]);
     notaDados(fonte, 'N14');
-    tabelaVersoes(s, cfg.t, T('chegou.tabela', { unidade: cfg.unidade }), H.versoes, () => cfg.fator);
+    G.juntar(fig, tabelaVersoes(s, cfg.t, T('chegou.tabela', { unidade: cfg.unidade }), H.versoes, () => cfg.fator)); // T36: a tabela na mesma figura
     return s; // a chamada para sugerir hipóteses fica só no fim, junto do único campo de comentário (D31)
   }
-  function rankingMunicipios(pai, n, titulo, lista, colunas) {
-    G.tabela(pai, { legenda: { n, t: titulo }, ordenavel: false, linhas: lista,
-      colunas: [{ t: T('tab.municipio'), v: m => m.nome }, { t: T('tab.uf'), v: m => m.uf }].concat(colunas) });
+  /** g (T36): o gráfico da tabela, {v, rotulo, eixo} (barras de uma medida) ou {pares: [[lado, v, nome]], eixo, f} (os dois). */
+  function rankingMunicipios(pai, n, titulo, lista, colunas, g) {
+    const cols = [{ t: T('tab.municipio'), v: m => m.nome }, { t: T('tab.uf'), v: m => m.uf }].concat(colunas);
+    const nome = m => T('g.mun_uf', { nome: m.nome, uf: m.uf });
+    const curto = m => (m.nome.length > 13 ? m.nome.slice(0, 12).trim() + '…' : m.nome);
+    const grafico = g && { legenda: g.pares && g.pares.map(([lado, , t]) => ({ t, lado })),
+      desenhar: caixa => (g.pares
+        ? G.linhasPontos(caixa, { aria: T('vd.aria', { t: titulo }), margE: 190, margEstreito: 100, altLinha: 22,
+          x: eixo(lista.flatMap(m => g.pares.map(p => p[1](m))), g.f, g.eixo),
+          linhas: lista.map(m => ({ nome: nome(m), curto: curto(m), vals: g.pares.map(([lado, v]) => ({ v: v(m), lado })), dica: dicaColunas(cols.slice(2), m, nome(m)) })) })
+        : G.barras(caixa, { aria: T('vd.aria', { t: titulo }), margE: 190, margEstreito: 100, altLinha: 22, margD: 70,
+          x: eixo(lista.map(g.v), g.f, g.eixo),
+          linhas: lista.map(m => ({ nome: nome(m), curto: curto(m), v: g.v(m), rotulo: g.rotulo(m), dica: dicaColunas(cols.slice(2), m, nome(m)) })) })) };
+    return G.tabela(pai, { legenda: { n, t: titulo }, ordenavel: false, linhas: lista, colunas: cols, grafico });
   }
+  const tickPp = (v, passo) => fmt.decSinal(v, casas(passo));
+  const tickPct = (v, passo) => fmt.pct(v, casas(passo));
+  const tickVotos = v => (Math.abs(v) >= 1e6 ? fmt.mi(v, Math.abs(v) % 1e6 ? 1 : 0) : v === 0 ? '0' : fmt.comMil(fmt.decSinal(v / 1e3, 0)));
   function funilFig(pai, n, chave, valor, rotulo, titulo, sub, ladoAcima, ladoAbaixo, lista = doBrasil) {
     const F = D.funil[chave];
     const fig = el('figure', 'figura figura-det', undefined, pai);
@@ -662,7 +701,8 @@
         { t: T('tab.eleitorado'), num: true, v: m => m.E1, f: fmt.int },
         { t: T('tab.fatia_lula_1'), num: true, v: m => m.s1, f: x => fmt.pct(x, 1) },
         { t: T('tab.turno2_curto'), num: true, v: m => m.s2, f: x => fmt.pct(x, 1) },
-        { t: T('tab.variacao'), num: true, v: m => m.ds, f: x => fmt.pp(x) }]);
+        { t: T('tab.variacao'), num: true, v: m => m.ds, f: x => fmt.pp(x) }],
+      { v: m => m.ds, rotulo: m => fmt.pp(m.ds), f: tickPp, eixo: T('eixo.var_fatia_pp') });
     P(rk, 'nota-tab', T('c1.rank.nota'));
   }
 
@@ -712,25 +752,35 @@
     P(t, '', ...T.f('c2.texto.2', { cf: fmt.abs(cf.coef * 10, 2), cf0: fmt.abs(cf.ic95[0] * 10, 2), cf1: fmt.abs(cf.ic95[1] * 10, 2),
       cl0: fmt.decSinal(cl.ic95[0] * 10, 2), cl1: fmt.decSinal(cl.ic95[1] * 10, 2) }));
     const tb = secao(det, T('c2.tab.secao'));
-    G.tabela(tb, { legenda: { n: ctx.nt(), t: T('c2.tab.titulo') },
-      linhas: D.ufs, ordem: { col: 2, desc: true },
-      colunas: [
+    const cols21 = [
         { t: T('tab.estado'), v: u => u.nome }, { t: T('tab.lula_ganhos'), num: true, v: u => u.dL, f: fmt.intSinal },
         { t: T('tab.flavio_ganhos'), num: true, v: u => u.dF, f: fmt.intSinal },
         { t: T('tab.fatia_flavio_1'), num: true, v: u => 100 - u.s1, f: v => fmt.pct(v, 2) },
         { t: T('tab.turno2_curto'), num: true, v: u => 100 - u.s2, f: v => fmt.pct(v, 2) },
-        { t: T('tab.variacao'), num: true, v: u => -u.ds, f: v => fmt.pp(v) }] });
+        { t: T('tab.variacao'), num: true, v: u => -u.ds, f: v => fmt.pp(v) }];
+    const ufs21 = D.ufs.slice().sort((a, b) => (100 - b.s2) - (100 - a.s2));
+    G.tabela(tb, { legenda: { n: ctx.nt(), t: T('c2.tab.titulo') }, linhas: D.ufs, ordem: { col: 2, desc: true }, colunas: cols21,
+      grafico: { legenda: [{ t: T('g.turno1'), lado: 'muted' }, { t: T('g.turno2'), lado: 'f' }], sub: T('vd.c2.sub'),
+        desenhar: caixa => {
+          const r = G.linhasPontos(caixa, { aria: T('vd.aria', { t: T('c2.tab.titulo') }), margE: 150, margEstreito: 34, altLinha: 16, topo: 30,
+            x: Object.assign(eixo(ufs21.flatMap(u => [100 - u.s1, 100 - u.s2]).concat(50), tickPct, T('vd.c2.eixo'), { zero: false }), { ref: 50 }),
+            linhas: ufs21.map(u => ({ nome: u.nome, curto: u.codigo, vals: [{ v: 100 - u.s1, lado: 'muted' }, { v: 100 - u.s2, lado: 'f' }],
+              dica: dicaColunas(cols21.slice(1), u, u.nome) })) });
+          return r;
+        } } });
     const rk = secao(det, T('c2.rank.secao'));
     rankingMunicipios(rk, ctx.nt(), T('c2.rank.titulo1'),
       acimaDoPiso().filter(m => m.ds < 0).sort((a, b) => a.ds - b.ds).slice(0, 10), [
         { t: T('tab.eleitorado'), num: true, v: m => m.E1, f: fmt.int },
         { t: T('tab.fatia_flavio_1'), num: true, v: m => 100 - m.s1, f: v => fmt.pct(v, 1) },
         { t: T('tab.turno2_curto'), num: true, v: m => 100 - m.s2, f: v => fmt.pct(v, 1) },
-        { t: T('tab.variacao'), num: true, v: m => -m.ds, f: v => fmt.pp(v) }]);
+        { t: T('tab.variacao'), num: true, v: m => -m.ds, f: v => fmt.pp(v) }],
+      { v: m => -m.ds, rotulo: m => fmt.pp(-m.ds), f: tickPp, eixo: T('vd.eixo.var_flavio') });
     rankingMunicipios(rk, ctx.nt(), T('c2.rank.titulo2'),
       mun.slice().sort((a, b) => b.dF - a.dF).slice(0, 10), [
         { t: T('tab.flavio_ganhos'), num: true, v: m => m.dF, f: fmt.intSinal },
-        { t: T('tab.lula_ganhos'), num: true, v: m => m.dL, f: fmt.intSinal }]);
+        { t: T('tab.lula_ganhos'), num: true, v: m => m.dL, f: fmt.intSinal }],
+      { pares: [['l', m => m.dL, T('nome.lula')], ['f', m => m.dF, T('nome.flavio')]], f: tickVotos, eixo: T('vd.eixo.votos_ganhos') });
     P(rk, 'nota-tab', T('c2.rank.nota'));
   }
 
@@ -854,16 +904,28 @@
     // T32 (M1, m3): a matriz de transição, conferência calculada depois do parecer
     const M = TR.matriz, pc = x => fmt.comPct(fmt.dec(x * 100, 1));
     P(t, '', ...T.f('c3.texto.3', { ll: pc(M[0][0].valor), ff: pc(M[1][1].valor), fora: TR.celulas_fora_0_100.length, mun: fmt.int(D.limites_duncan_davis.municipios) }));
+    const pcIc = c => T('dica.pct_ic_curto', { v: pc(c.valor), a: fmt.dec(c.ic95[0] * 100, 0), b: fmt.dec(c.ic95[1] * 100, 0) });
     G.tabela(t, { legenda: { n: ctx.nt(), t: T('c3.trans.titulo') }, ordenavel: false,
+      grafico: { sub: T('vd.c3.trans_sub'), desenhar: caixa => G.calor(caixa, { aria: T('vd.aria', { t: T('c3.trans.titulo') }),
+        linhas: D.transicao.origens.map(o => ({ nome: T('trans.' + o) })), colunas: D.transicao.destinos.map(d => ({ nome: T('trans.' + d) })),
+        cel: (i, j) => ({ t: M[i][j].valor, rotulo: fmt.dec(M[i][j].valor * 100, 0),
+          dica: { titulo: T('vd.c3.trans_dica', { de: T('trans.' + D.transicao.origens[i]), para: T('trans.' + D.transicao.destinos[j]) }),
+            linhas: [{ t: T('vd.estimativa'), v: pcIc(M[i][j]) }] } }) }) },
       linhas: D.transicao.origens.map((o, i) => [o, M[i]]),
       colunas: [{ t: T('c3.trans.origem'), v: l => T('trans.' + l[0]) }].concat(D.transicao.destinos.map((d, j) => ({
         t: T('trans.' + d), num: true, v: l => l[1][j].valor,
-        f: (_, l) => T('dica.pct_ic_curto', { v: pc(l[1][j].valor), a: fmt.dec(l[1][j].ic95[0] * 100, 0), b: fmt.dec(l[1][j].ic95[1] * 100, 0) }) }))) });
+        f: (_, l) => pcIc(l[1][j]) }))) });
     P(t, 'nota-tab', T('c3.trans.nota'));
     const cf = D.ecologica.conferencias;
     const versoesEco = [[T('c3.tab.principal'), E], [T('c3.tab.intercepto'), cf.com_intercepto], [T('versao.sem_peso'), cf.sem_peso], [T('c3.tab.estados'), cf.bootstrap_municipios],
       [T('c3.tab.secoes'), S]];
+    const pctIcLula = e => T('dica.pct_ic', { v: fmt.comPct(nf(e.lula * 100, 1)), a: nf(e.lula_ic95[0] * 100, 1), b: nf(e.lula_ic95[1] * 100, 1) });
     G.tabela(t, { legenda: { n: ctx.nt(), t: T('c3.tab.titulo') }, ordenavel: false,
+      grafico: { legenda: [{ t: T('leg.ic95'), tipo: 'ic' }, { t: T('leg.cruza50'), tipo: 'barra', lado: 'dentro' }],
+        desenhar: caixa => G.divisao(caixa, { aria: T('vd.aria', { t: T('c3.tab.titulo') }), rotuloX: T('c3.fig2.eixo'), margE: 250, margEstreito: 112,
+          linhas: [['O', 'fonte.O'], ['C', 'fonte.C'], ['R', 'fonte.R']].flatMap(([k, n]) => [{ grupo: T(n) }].concat(versoesEco.map(([nome, e]) => ({
+            nome, curto: nome.length > 14 ? nome.slice(0, 13).trim() + '…' : nome, lula: e[k].lula, ic: e[k].lula_ic95, destaque: e === E,
+            dica: { titulo: T('vd.c3.versao_dica', { fonte: T(n), versao: nome }), linhas: [{ lado: 'l', t: T('nome.lula'), v: pctIcLula(e[k]) }] } })))) }) },
       linhas: versoesEco, destaque: l => l[1] === E,
       colunas: [{ t: T('tab.versao'), v: l => l[0] }].concat([['O', T('fonte.O.col')], ['C', T('fonte.C.col')], ['R', T('fonte.R.col')]].map(([k, n]) => ({
         t: n, num: true, v: l => l[1][k], f: e => T('dica.pct_ic_curto', { v: fmt.comPct(nf(e.lula * 100, 1)), a: nf(e.lula_ic95[0] * 100, 1), b: nf(e.lula_ic95[1] * 100, 1) }) }))) });
@@ -974,17 +1036,27 @@
       cf: fmt.abs(-cf.coef, 2), cf0: fmt.abs(-cf.ic95[1], 2), cf1: fmt.abs(-cf.ic95[0], 2) }));
     P(t, '', ...T.f('c4.texto.3', { n05: nd('N05') }));
     const tb = secao(det, T('c4.tab.secao'));
+    const lug4 = [BR, ...D.regioes.filter(r => r.codigo !== 'EX'), ...D.ufs.filter(u => u.codigo !== 'ZZ')];
+    const cols4 = [{ t: T('tab.lugar'), v: u => u.nome }, { t: T('tab.abst_1'), num: true, v: u => u.a1, f: v => fmt.pct(v, 2) },
+      { t: T('tab.turno2_curto'), num: true, v: u => u.a2, f: v => fmt.pct(v, 2) }, { t: T('tab.variacao'), num: true, v: u => u.da, f: v => fmt.pp(v) },
+      { t: T('tab.comparecimento'), num: true, v: u => u.C2 - u.C1, f: fmt.intSinal }];
+    const linha4 = u => ({ nome: u.nome, curto: u.codigo || u.nome.slice(0, 3), destaque: u === BR, vals: [{ v: u.a1, lado: 'muted' }, { v: u.a2, lado: 'ink' }],
+      dica: dicaColunas(cols4.slice(1), u, u.nome) });
     G.tabela(tb, { legenda: { n: ctx.nt(), t: T('c4.tab.titulo') },
       linhas: [BR, ...D.regioes, ...D.ufs.filter(u => u.codigo !== 'ZZ')], ordem: null, destaque: u => u === BR || D.regioes.includes(u),
-      colunas: [{ t: T('tab.lugar'), v: u => u.nome }, { t: T('tab.abst_1'), num: true, v: u => u.a1, f: v => fmt.pct(v, 2) },
-        { t: T('tab.turno2_curto'), num: true, v: u => u.a2, f: v => fmt.pct(v, 2) }, { t: T('tab.variacao'), num: true, v: u => u.da, f: v => fmt.pp(v) },
-        { t: T('tab.comparecimento'), num: true, v: u => u.C2 - u.C1, f: fmt.intSinal }] });
+      colunas: cols4,
+      grafico: { legenda: [{ t: T('g.turno1'), lado: 'muted' }, { t: T('g.turno2'), lado: 'ink' }],
+        desenhar: caixa => G.linhasPontos(caixa, { aria: T('vd.aria', { t: T('c4.tab.titulo') }), margE: 150, margEstreito: 40, altLinha: 16, topo: 26,
+          x: eixo(lug4.flatMap(u => [u.a1, u.a2]), tickPct, T('vd.c4.eixo'), { zero: false }),
+          linhas: [linha4(BR), { grupo: T('c4.grupo.regioes') }, ...D.regioes.filter(r => r.codigo !== 'EX').map(linha4),
+            { grupo: T('vd.grupo.estados') }, ...D.ufs.filter(u => u.codigo !== 'ZZ').slice().sort((a, b) => b.a2 - a.a2).map(linha4)] }) } });
     const rk = secao(det, T('c4.rank.secao'));
     const cols = [{ t: T('tab.eleitorado'), num: true, v: m => m.E1, f: fmt.int }, { t: T('tab.abst_1'), num: true, v: m => m.a1, f: v => fmt.pct(v, 1) },
       { t: T('tab.turno2_curto'), num: true, v: m => m.a2, f: v => fmt.pct(v, 1) }, { t: T('tab.variacao'), num: true, v: m => m.da, f: v => fmt.pp(v) }];
     const piso = acimaDoPiso();
-    rankingMunicipios(rk, ctx.nt(), T('c4.rank.titulo1'), piso.slice().sort((a, b) => b.da - a.da).slice(0, 10), cols);
-    rankingMunicipios(rk, ctx.nt(), T('c4.rank.titulo2'), piso.slice().sort((a, b) => a.da - b.da).slice(0, 10), cols);
+    const g4 = { v: m => m.da, rotulo: m => fmt.pp(m.da), f: tickPp, eixo: T('c4.fig1.eixo') };
+    rankingMunicipios(rk, ctx.nt(), T('c4.rank.titulo1'), piso.slice().sort((a, b) => b.da - a.da).slice(0, 10), cols, g4);
+    rankingMunicipios(rk, ctx.nt(), T('c4.rank.titulo2'), piso.slice().sort((a, b) => a.da - b.da).slice(0, 10), cols, g4);
     const munSubiu = doBrasil().filter(m => m.da > 0).length;
     P(rk, 'nota-tab', T('c4.rank.nota', { n: fmt.int(munSubiu), total: fmt.int(doBrasil().length) }));
     const fu = secao(det, T('c4.funil.secao'));
@@ -993,7 +1065,22 @@
     P(fu, '', T('c4.funil.texto', { p998: fmt.pct(99.8, 1), n: fmt.int(F.fora998), acima: fmt.int(F.fora998_acima) }));
     const es = secao(det, T('c4.lugar.secao'));
     const PLM = Object.fromEntries(D.por_lugar_municipios.map(l => [l.lugar, l.fontes]));
+    const pIc = c => ({ v: c.lula * 100, ic: c.lula_ic95.map(x => x * 100) });
+    const pctIcC = c => T('dica.pct_ic', { v: fmt.comPct(nf(c.lula * 100, 1)), a: nf(c.lula_ic95[0] * 100, 1), b: nf(c.lula_ic95[1] * 100, 1) });
+    const nomeL = l => (l.nivel === 'uf' ? NOME_UF[l.lugar] : l.lugar);
+    const linhaL = l => {
+      const c = l.fontes.C, m = PLM[l.lugar].C, vals = [];
+      if (c.passa) vals.push(Object.assign({ lado: 'ink', cheio: true }, pIc(c)));
+      if (m.passa) vals.push(Object.assign({ lado: 'muted', cheio: true }, pIc(m)));
+      return { nome: nomeL(l), curto: l.nivel === 'uf' ? l.lugar : l.codigo || nomeL(l).slice(0, 3), vals, destaque: l.nivel === 'brasil',
+        dica: { titulo: nomeL(l), linhas: [{ t: T('vd.c4.secoes'), v: c.passa ? pctIcC(c) : T('dica.nao_deu') }, { t: T('tab.por_municipio'), v: m.passa ? pctIcC(m) : T('dica.nao_deu') }] } };
+    };
+    const PLg = PL.filter(l => l.fontes.C.passa || PLM[l.lugar].C.passa);
     G.tabela(es, { legenda: { n: ctx.nt(), t: T('c4.lugar.titulo') }, ordenavel: false,
+      grafico: { legenda: [{ t: T('vd.c4.secoes'), lado: 'ink' }, { t: T('tab.por_municipio'), lado: 'muted' }, { t: T('leg.ic95'), tipo: 'ic' }],
+        sub: PLg.length < PL.length ? T.p('vd.c4.lugar_sub', PL.length - PLg.length, { n: PL.length - PLg.length }) : null,
+        desenhar: caixa => G.coeficientesPar(caixa, { aria: T('vd.aria', { t: T('c4.lugar.titulo') }), margE: 150, margEstreito: 40,
+          x: { min: 0, max: 100, passo: 25, ref: 50, fmt: v => fmt.pct(v, 0), rotulo: T('vd.c4.lugar_eixo') }, linhas: PLg.map(linhaL) }) },
       linhas: PL, destaque: l => l.nivel !== 'uf',
       colunas: [{ t: T('tab.lugar'), v: l => (l.nivel === 'uf' ? NOME_UF[l.lugar] : l.lugar) }, { t: T('tab.municipios'), num: true, v: l => l.n, f: fmt.int },
         { t: T('tab.comparecimento'), num: true, v: l => l.var_comparecimento, f: fmt.intSinal },
@@ -1064,8 +1151,8 @@
     for (const c of cargos) {
       const d = el('details', 'det-aninhado', undefined, s);
       el('summary', '', T('c5.chegou.todas', { cargo: H5[c].cargo.replace(/^\S+/, p => p.toLowerCase()) }), d);
-      tabelaVersoes(d, ctx.nt(), T('c5.chegou.tabela', { cargo: H5[c].cargo }),
-        H5[c].versoes, vv => (/escala contínua$/.test(vv.versao) ? 1 : 10));
+      const fat5 = vv => (/escala contínua$/.test(vv.versao) ? 1 : 10);
+      tabelaVersoes(d, ctx.nt(), T('c5.chegou.tabela', { cargo: H5[c].cargo }), H5[c].versoes, fat5, graficoVersoes(H5[c].versoes, fat5, T('un.10pontos')));
     }
     const t = secao(det, T('cap.resultado_texto'));
     const ve = H5.estadual.versoes[0], vs = H5.senador.versoes[0];
@@ -1130,12 +1217,22 @@
     const neg = dMs.filter(v => v < 0);
     P(t, '', T('c6.texto.concentra', { n50: fmt.int(ateParte(0.5)), n25: fmt.int(ateParte(0.25)), neg: fmt.int(neg.length),
       sneg: fmt.int(Math.abs(neg.reduce((s, v) => s + v, 0))) }));
-    G.tabela(t, { legenda: { n: ctx.nt(), t: T('c6.tab.titulo') },
-      linhas: [...D.regioes.filter(r => r.codigo !== 'EX'), ...D.ufs], ordem: { col: 4, desc: true }, destaque: u => D.regioes.includes(u),
-      colunas: [{ t: T('tab.lugar'), v: u => (D.regioes.includes(u) ? T('c6.tab.regiao', { nome: u.nome }) : u.nome) },
+    const cols6 = [{ t: T('tab.lugar'), v: u => (D.regioes.includes(u) ? T('c6.tab.regiao', { nome: u.nome }) : u.nome) },
         { t: T('c6.tab.dif1'), num: true, v: u => u.M1, f: fmt.intSinal }, { t: T('tab.turno2_curto'), num: true, v: u => u.M2, f: fmt.intSinal },
         { t: T('c6.tab.mudanca'), num: true, v: u => u.dM, f: fmt.intSinal }, { t: T('c6.tab.peso'), num: true, v: u => u.peso, f: v => fmt.pct(v, 1) },
-        { t: T('c6.dica.captura'), num: true, v: u => u.cap, f: v => fmt.pct(v, 1) }, { t: T('c6.tab.fatia_var'), num: true, v: u => u.ds, f: v => fmt.pp(v) }] });
+        { t: T('c6.dica.captura'), num: true, v: u => u.cap, f: v => fmt.pct(v, 1) }, { t: T('c6.tab.fatia_var'), num: true, v: u => u.ds, f: v => fmt.pp(v) }];
+    const nome6 = u => (D.regioes.includes(u) ? u.nome : u.nome);
+    const linha6 = u => ({ nome: nome6(u), curto: u.codigo === 'ZZ' ? T('c6.ext_curto') : u.codigo || u.nome.slice(0, 3),
+      vals: [{ v: u.M1, lado: 'muted' }, { v: u.M2, lado: 'ink' }], dica: dicaColunas(cols6.slice(1), u, cols6[0].v(u)) });
+    const regs6 = D.regioes.filter(r => r.codigo !== 'EX').sort((a, b) => b.dM - a.dM), ufs6 = D.ufs.slice().sort((a, b) => b.dM - a.dM);
+    G.tabela(t, { legenda: { n: ctx.nt(), t: T('c6.tab.titulo') },
+      linhas: [...D.regioes.filter(r => r.codigo !== 'EX'), ...D.ufs], ordem: { col: 4, desc: true }, destaque: u => D.regioes.includes(u),
+      colunas: cols6,
+      grafico: { legenda: [{ t: T('g.turno1'), lado: 'muted' }, { t: T('g.turno2'), lado: 'ink' }], sub: T('vd.c6.sub'),
+        desenhar: caixa => G.linhasPontos(caixa, { aria: T('vd.aria', { t: T('c6.tab.titulo') }), margE: 150, margEstreito: 40, altLinha: 16, topo: 30,
+          lados: [T('g.seta_esq', { t: T('vd.frente_f') }), T('g.seta_dir', { t: T('vd.frente_l') })],
+          x: eixo(regs6.concat(ufs6).flatMap(u => [u.M1, u.M2]), tickVotos, T('vd.c6.eixo')),
+          linhas: [{ grupo: T('c4.grupo.regioes') }, ...regs6.map(linha6), { grupo: T('vd.grupo.estados') }, ...ufs6.map(linha6)] }) } });
   }
 
   // ---------- Capítulo 7 ----------
@@ -1180,7 +1277,22 @@
     P(t, '', T('c7.texto.1', { erro: pontos(-f1.projecao.erro_medio), parcial: fmt.abs(-f1.parcial.erro_medio, 2), lim3: nf(0.3, 1),
       desde3: pctFaixa(fx[desde3]), lim1: nf(0.1, 1), desde: pctFaixa(fx[desde]), ate: pctFaixa(fx[ate]),
       b0: fmt.pct(buraco[0], 2), b1: fmt.pct(buraco[1], 1) }));
-    G.tabela(t, { legenda: { n: ctx.nt(), t: T('c7.tab.titulo') }, ordenavel: false,
+    tabelaErroFaixas(t, ctx.nt());
+    const a = secao(det, T('c7.ao_vivo.secao'));
+    P(a, '', ...T.f('c7.ao_vivo.texto', { link: irAoVivo(T('c7.link_ao_vivo')) }));
+  }
+  /** A tabela do erro por faixa de apurado (capítulo 7 e Explorar), com o gráfico do erro médio das duas leituras (T36). */
+  function tabelaErroFaixas(pai, n, comGrafico = true) {
+    const PR = D.projecao, fx = PR.faixas;
+    const nomeFx = f => (f.faixa === 'todas' ? T('c7.tab.todas') : T('c7.tab.faixa', { a: f.faixa.split(' a ')[0], b: f.faixa.split(' a ')[1] }));
+    const vals = fx.flatMap(f => [f.projecao.erro_medio, f.parcial.erro_medio]);
+    return G.tabela(pai, { legenda: { n, t: T('c7.tab.titulo') }, ordenavel: false,
+      grafico: comGrafico && { legenda: [{ t: T('c7.fig1.rot_proj'), lado: 'ink' }, { t: T('c7.fig1.rot_parc'), lado: 'muted' }], sub: T('vd.c7.sub'),
+        desenhar: caixa => G.linhasPontos(caixa, { aria: T('vd.aria', { t: T('c7.tab.titulo') }), margE: 110, margEstreito: 70, altLinha: 20,
+          x: eixo(vals, tickPp, T('vd.c7.eixo')),
+          linhas: fx.map(f => ({ nome: nomeFx(f), vals: [{ v: f.parcial.erro_medio, lado: 'muted' }, { v: f.projecao.erro_medio, lado: 'ink' }],
+            dica: { titulo: nomeFx(f), linhas: [{ lado: 'ink', t: T('c7.fig1.rot_proj'), v: fmt.decSinal(f.projecao.erro_medio, 3) },
+              { lado: 'muted', t: T('c7.fig1.rot_parc'), v: fmt.decSinal(f.parcial.erro_medio, 3) }, { t: T('c7.tab.leituras'), v: String(f.leituras) }] } })) }) },
       linhas: fx.concat([{ faixa: 'todas', leituras: PR.leituras, projecao: { erro_medio: PR.geral.projecao_erro_medio, erro_abs_medio: PR.geral.projecao_erro_abs_medio },
         parcial: { erro_medio: PR.geral.parcial_erro_medio, erro_abs_medio: PR.geral.parcial_erro_abs_medio } }]),
       destaque: f => f.faixa === 'todas',
@@ -1190,8 +1302,6 @@
         { t: T('c7.tab.abs_medio'), num: true, v: f => f.projecao.erro_abs_medio, f: v => fmt.dec(v, 3) },
         { t: T('c7.tab.parc_medio'), num: true, v: f => f.parcial.erro_medio, f: v => fmt.decSinal(v, 3) },
         { t: T('c7.tab.abs_medio'), num: true, v: f => f.parcial.erro_abs_medio, f: v => fmt.dec(v, 3) }] });
-    const a = secao(det, T('c7.ao_vivo.secao'));
-    P(a, '', ...T.f('c7.ao_vivo.texto', { link: irAoVivo(T('c7.link_ao_vivo')) }));
   }
 
   // ---------- Capítulo 8 (T34): como eram os lugares onde cada um cresceu ----------
@@ -1275,7 +1385,21 @@
     const disc = SOC.testes.filter(t => t.brasil.associacao !== t.principal.associacao
       || (t.brasil.associacao && t.brasil.direcao !== t.principal.direcao)).length;
     P(s, '', ...T.f('c8.chegou.resultado', { n: assoc.length, peq, lim: nf(0.5, 1), nb, disc }));
+    const DESF = [...new Set(SOC.testes.map(t => t.desfecho))];
+    // uma escala por medida (pequenos múltiplos): a parte do Lula nos votos a mais varia dez vezes mais que as outras
     G.tabela(s, { legenda: { n: ctx.nt(), t: T('c8.tab.titulo') }, ordenavel: true,
+      grafico: { legenda: legSoc(false).concat([{ t: T('leg.ic95'), tipo: 'ic' }]), sub: T('vd.c8.sub'),
+        desenhar: caixa => { caixa.replaceChildren(); DESF.forEach(d => {
+          el('p', 'vd-multiplo', T('soc.desf.' + d), caixa);
+          G.coeficientesPar(el('div', '', undefined, caixa), { aria: T('vd.aria', { t: T('c8.tab.titulo') + ' — ' + T('soc.desf.' + d) }), margE: 200, margEstreito: 96, altLinha: 20, topo: 12,
+          x: eixo(SOC.testes.filter(t => t.desfecho === d).flatMap(t => socIq(t).ic), tickPp, T('vd.c8.eixo')),
+          linhas: SOC_VARS.map(k => {
+            const t = socTeste(k, d), q = socIq(t);
+            return { nome: T('soc.var.' + k), curto: T('soc.var.' + k + '.curto'), vals: [{ lado: 'ink', v: q.v, ic: q.ic, cheio: t.principal.associacao }],
+              dica: { titulo: T('vd.c8.dica', { var: T('soc.var.' + k), medida: T('soc.desf.' + d) }), linhas: [
+                { t: T('tab.entre_quartis'), v: fmt.decSinal(q.v, 2) }, { t: T('tab.ic95'), v: icTxt(t.principal.ic95, t.larg_quartis) },
+                { t: T('soc.tab.p_holm'), v: fmt.p(t.principal.p_holm) }, { t: T('tab.resultado'), v: socResultado(t.principal) }] } };
+          }) }); }); } },
       linhas: SOC.testes, destaque: t => t.principal.associacao,
       colunas: [
         { t: T('soc.tab.caracteristica'), v: t => T('soc.var.' + t.var) },
@@ -1304,7 +1428,13 @@
     // como as características andam juntas: a correlação entre elas nos municípios (sem a eleição)
     const jt = secao(det, T('c8.juntas.secao'));
     P(jt, '', T('c8.juntas.texto', { mun: fmt.int(SOC.municipios) }));
+    const R8 = SOC.correlacoes;
     G.tabela(jt, { legenda: { n: ctx.nt(), t: T('c8.juntas.tab') }, ordenavel: false, linhas: SOC_VARS,
+      grafico: { sub: T('vd.c8.calor_sub'), desenhar: caixa => G.calor(caixa, { aria: T('vd.aria', { t: T('c8.juntas.tab') }),
+        linhas: SOC_VARS.map(k => ({ nome: T('soc.var.' + k), curto: T('soc.var.' + k + '.curto') })),
+        colunas: SOC_VARS.map(k => ({ nome: T('soc.var.' + k + '.curto'), curto: T('soc.var.' + k + '.curto').slice(0, 4) })),
+        cel: (i, j) => (i === j ? null : { t: Math.abs(R8[i][j]), rotulo: fmt.decSinal(R8[i][j], 2),
+          dica: { titulo: T('vd.c8.par', { a: T('soc.var.' + SOC_VARS[i]), b: T('soc.var.' + SOC_VARS[j]) }), linhas: [{ t: T('vd.c8.correlacao'), v: fmt.decSinal(R8[i][j], 2) }] } }) }) },
       colunas: [{ t: T('soc.tab.caracteristica'), v: k => T('soc.var.' + k) }].concat(SOC_VARS.map((k2, j) => ({
         t: T('soc.var.' + k2 + '.curto'), num: true, v: k => SOC.correlacoes[SOC_VARS.indexOf(k)][j], f: v => fmt.decSinal(v, 2) }))) });
 
@@ -1326,6 +1456,13 @@
   const pctE = v => fmt.pct(v * 100, 0);
   const pctIcE = (v, ic) => T('dica.pct_ic', { v: fmt.pct(v * 100, 1), a: nf(ic[0] * 100, 1), b: nf(ic[1] * 100, 1) });
   const leituraE1 = d => (d.passa ? T('c9.e1.lado.' + ({ Lula: 'l', 'Flávio': 'f' }[d.maior_parte] || 'sem')) : T('c9.e1.nao_deu', { motivo: d.motivo }));
+  /** As versões das perguntas 4 e 5 (a cada 10 pontos, com o intervalo de 95%), como pontos com intervalo (T36). */
+  const graficoB10 = (versoes, titulo, rotulo) => ({ legenda: [{ t: T('leg.ic95'), tipo: 'ic' }],
+    desenhar: caixa => G.coeficientes(caixa, { aria: T('vd.aria', { t: titulo }), margE: 230, margEstreito: 116, altLinha: 22,
+      x: eixo(versoes.flatMap(([, x]) => x.ic95_por_10), tickPp, rotulo),
+      linhas: versoes.map(([k, x], i) => ({ nome: T(k), v: x.b_por_10, ic: x.ic95_por_10, destaque: i === 0,
+        dica: { titulo: T(k), linhas: [{ t: T('c9.tab4.b'), v: fmt.pp(x.b_por_10, 2) },
+          { t: T('tab.ic95'), v: T('g.de_a', { a: fmt.decSinal(x.ic95_por_10[0], 2), b: fmt.decSinal(x.ic95_por_10[1], 2) }) }] } })) }) });
   function cap9(ctx) {
     const br1 = EXP.E1.por_lugar[0].fontes, E2 = EXP.E2, E3 = EXP.E3.desfechos.var_abstencao_pp;
     const E4br = EXP.E4.principal[0], E5 = EXP.E5;
@@ -1421,7 +1558,16 @@
     const s1 = secao(det, T('c9.e1.sec'));
     P(s1, '', ...T.f('c9.det.e1', { n: fmt.int(1000), fig: n1 }));
     const celE1 = d => (d.passa ? T('c9.tab.cel', { v: pctE(d.lula), ic: T('g.de_a', { a: nf(d.lula_ic95[0] * 100, 0), b: nf(d.lula_ic95[1] * 100, 0) }) }) : T('c9.tab.nao_deu'));
+    const nomesE1 = c => T(c === 'C' || c === 'R' ? 'fonte.' + c : 'c9.cand.' + c), curtosE1 = c => T(c === 'C' || c === 'R' ? 'fonte.' + c + '.curto' : 'c9.cand.' + c + '.curto');
     G.tabela(s1, { legenda: { n: ctx.nt(), t: T('c9.tab1.titulo') }, ordenavel: false, linhas: EXP.E1.por_lugar, destaque: l => l.nivel === 'brasil',
+      grafico: { legenda: [{ t: T('leg.ic95'), tipo: 'ic' }, { t: T('leg.cruza50'), tipo: 'barra', lado: 'dentro' }],
+        desenhar: caixa => G.divisao(caixa, { aria: T('vd.aria', { t: T('c9.tab1.titulo') }), rotuloX: T('c9.fig1.eixo'), margE: 230, margEstreito: 112,
+          linhas: EXP.E1.por_lugar.flatMap(l => { const lug = l.lugar === 'Brasil' ? BR.nome : l.lugar;
+            return [{ grupo: lug }].concat(CANDS_E1.concat(['C', 'R']).map(c => { const d = l.fontes[c];
+              return { nome: nomesE1(c), curto: curtosE1(c), lula: d.lula, ic: d.lula_ic95, naoDeu: d.passa ? null : d.motivo,
+                dica: { titulo: T('vd.c3.versao_dica', { fonte: nomesE1(c), versao: lug }), linhas: d.passa
+                  ? [{ lado: 'l', t: T('nome.lula'), v: pctIcE(d.lula, d.lula_ic95) }, { lado: 'f', t: T('nome.flavio'), v: pctIcE(d.flavio, d.flavio_ic95) }]
+                  : [{ t: T('dica.nao_deu'), v: '' }, { t: T('dica.motivo'), v: d.motivo }] } }; })); }) }) },
       colunas: [{ t: T('tab.lugar'), v: l => (l.lugar === 'Brasil' ? BR.nome : l.lugar) }].concat(CANDS_E1.concat(['C', 'R']).map(c => ({
         t: T(c === 'C' || c === 'R' ? 'fonte.' + c + '.curto' : 'c9.cand.' + c + '.curto'), num: true, v: l => l.fontes[c].lula,
         f: (_, l) => celE1(l.fontes[c]) }))) });
@@ -1432,7 +1578,15 @@
       ff: fmt.int(E2.casas.ff), emp: fmt.int(E2.casas.emp),
       sub: fmt.int(E2.fatia.subiu), caiu: fmt.int(E2.fatia.caiu), secfl: fmt.int(E2.secoes.fl), seclf: fmt.int(E2.secoes.lf),
       sec: fmt.int(Object.values(E2.secoes).reduce((a, b) => a + b, 0)), extfl: fmt.int(E2.exterior.fl), extlf: fmt.int(E2.exterior.lf) }));
+    const ufsE2 = Object.keys(E2.por_uf).sort((a, b) => E2.por_uf[b][0] - E2.por_uf[a][0] || E2.por_uf[b][1] - E2.por_uf[a][1] || a.localeCompare(b));
     G.tabela(s2, { legenda: { n: ctx.nt(), t: T('c9.tab2.titulo') }, ordenavel: true, linhas: Object.keys(E2.por_uf),
+      // D80, pendência 1: as trocas nos dois sentidos, no mesmo gráfico
+      grafico: { legenda: [{ t: T('c9.fig2.dica.fl'), lado: 'l' }, { t: T('c9.fig2.dica.lf'), lado: 'f' }], sub: T('vd.c9.e2_sub'),
+        desenhar: caixa => G.linhasPontos(caixa, { aria: T('vd.aria', { t: T('c9.tab2.titulo') }), margE: 150, margEstreito: 34, altLinha: 16,
+          x: eixo(ufsE2.flatMap(u => E2.por_uf[u].slice(0, 2)), v => fmt.int(v), T('vd.c9.e2_eixo')),
+          linhas: ufsE2.map(u => ({ nome: NOME_UF[u], curto: u, vals: [{ v: E2.por_uf[u][1], lado: 'f' }, { v: E2.por_uf[u][0], lado: 'l' }],
+            dica: { titulo: NOME_UF[u], linhas: [{ lado: 'l', t: T('c9.fig2.dica.fl'), v: fmt.int(E2.por_uf[u][0]) }, { lado: 'f', t: T('c9.fig2.dica.lf'), v: fmt.int(E2.por_uf[u][1]) },
+              { t: T('c9.fig2.dica.mun'), v: fmt.int(E2.por_uf[u][2]) }] } })) }) },
       colunas: [{ t: T('tab.estado'), v: u => NOME_UF[u] }, { t: T('c9.tab2.mun'), num: true, v: u => E2.por_uf[u][2], f: fmt.int },
         { t: T('c9.tab2.fl'), num: true, v: u => E2.por_uf[u][0], f: fmt.int }, { t: T('c9.tab2.lf'), num: true, v: u => E2.por_uf[u][1], f: fmt.int }] });
     // E3
@@ -1441,6 +1595,13 @@
     P(s3, '', ...T.f('c9.det.e3', { ufs: listaE(EXP.E3.estados_2t_governador.map(u => NOME_UF[u])), perm: fmt.int(D3.var_abstencao_pp.principal.permutacoes), p: P05 }));
     const versoesE3 = [['principal', 'c9.tab3.principal'], ['sem_peso', 'c9.tab3.sem_peso'], ['sem_df', 'c9.tab3.sem_df'], ['efeito_de_regiao', 'c9.tab3.regiao']];
     G.tabela(s3, { legenda: { n: ctx.nt(), t: T('c9.tab3.titulo') }, ordenavel: false, linhas: versoesE3,
+      grafico: { legenda: [{ t: T('c9.tab3.da'), lado: 'ink' }, { t: T('c9.tab3.ds'), lado: 'muted' }],
+        desenhar: caixa => G.linhasPontos(caixa, { aria: T('vd.aria', { t: T('c9.tab3.titulo') }), margE: 220, margEstreito: 110, altLinha: 22,
+          x: eixo(versoesE3.flatMap(([c]) => [D3.var_abstencao_pp[c].b_pp, D3.var_fatia_lula_pp[c].b_pp]), tickPp, T('vd.c9.e3_eixo')),
+          linhas: versoesE3.map(([c, k]) => ({ nome: T(k), destaque: c === 'principal',
+            vals: [{ v: D3.var_fatia_lula_pp[c].b_pp, lado: 'muted' }, { v: D3.var_abstencao_pp[c].b_pp, lado: 'ink' }],
+            dica: { titulo: T(k), linhas: [{ lado: 'ink', t: T('c9.tab3.da'), v: fmt.pp(D3.var_abstencao_pp[c].b_pp, 2) }, { t: T('c9.tab3.p'), v: fmt.p(D3.var_abstencao_pp[c].p_permutacao) },
+              { lado: 'muted', t: T('c9.tab3.ds'), v: fmt.pp(D3.var_fatia_lula_pp[c].b_pp, 2) }, { t: T('c9.tab3.p'), v: fmt.p(D3.var_fatia_lula_pp[c].p_permutacao) }] } })) }) },
       colunas: [{ t: T('tab.versao'), v: ([, k]) => T(k) },
         { t: T('c9.tab3.da'), num: true, v: ([c]) => D3.var_abstencao_pp[c].b_pp, f: v => fmt.pp(v, 2) },
         { t: T('c9.tab3.p'), num: true, v: ([c]) => D3.var_abstencao_pp[c].p_permutacao, f: fmt.p },
@@ -1457,7 +1618,7 @@
       ctx: fmt.pp(EXP.E4.contexto_sem_efeito_de_municipio.b_por_10, 2) }));
     const versoesE4 = [['c9.tab4.principal', E4br]].concat(['sem_peso', 'sem_agregadas', 'sem_aptos_que_mudam', 'fatia_entre_validos', 'erro_agrupado_por_estado']
       .map(k => ['c9.tab4.' + k, C4[k]]));
-    G.tabela(s4, { legenda: { n: ctx.nt(), t: T('c9.tab4.titulo') }, ordenavel: false, linhas: versoesE4,
+    G.tabela(s4, { legenda: { n: ctx.nt(), t: T('c9.tab4.titulo') }, ordenavel: false, linhas: versoesE4, grafico: graficoB10(versoesE4, T('c9.tab4.titulo'), T('c9.fig3.eixo')),
       colunas: [{ t: T('tab.versao'), v: ([k]) => T(k) }, { t: T('c9.tab4.b'), num: true, v: ([, x]) => x.b_por_10, f: v => fmt.pp(v, 2) },
         { t: T('tab.ic95'), v: ([, x]) => T('g.de_a', { a: fmt.decSinal(x.ic95_por_10[0], 2), b: fmt.decSinal(x.ic95_por_10[1], 2) }) }] });
     // E5
@@ -1469,6 +1630,7 @@
     const versoesE5 = [['c9.tab5.principal', E5.principal], ['c9.tab5.bruta', C5.bruta], ['c9.tab5.200', C5.pelo_menos_200_votos],
       ['c9.tab5.sem_peso', C5.sem_peso], ['c9.tab5.sem_agregadas', C5.sem_agregadas]];
     G.tabela(s5, { legenda: { n: ctx.nt(), t: T('c9.tab5.titulo') }, ordenavel: false, linhas: versoesE5, destaque: ([k]) => k === 'c9.tab5.principal',
+      grafico: graficoB10(versoesE5, T('c9.tab5.titulo'), T('vd.c9.e5_eixo')),
       colunas: [{ t: T('tab.versao'), v: ([k]) => T(k) }, { t: T('c9.tab5.b'), num: true, v: ([, x]) => x.b_por_10, f: v => fmt.pp(v, 2) },
         { t: T('tab.ic95'), v: ([, x]) => T('g.de_a', { a: fmt.decSinal(x.ic95_por_10[0], 2), b: fmt.decSinal(x.ic95_por_10[1], 2) }) }] });
     // os limites, para as cinco
@@ -1540,9 +1702,11 @@
   // ======================= Explorar (T24, em explorar.js) =======================
   // Montado aqui, antes da lista de notas, para as notas das figuras dele entrarem na mesma lista.
   if (window.EXPLORAR) window.EXPLORAR({ D, G, BR, UFS, NOME_UF, REGIAO_UF, PORTE, municipios, doBrasil, acimaDoPiso, nomeMun,
-    el, B, P, N, listaE, figura, figurasComAbas, grafico, sup, notaDados, nd, fichaCidade, busca, funilFig, tabelaVersoes,
+    el, B, P, N, listaE, figura, figurasComAbas, grafico, sup, notaDados, nd, fichaCidade, busca, funilFig, tabelaVersoes, graficoVersoes, tabelaErroFaixas, eixo,
     nomeVersao, curtoVersao, classeTexto, coefTxt, icTxt, partesConferencias, guarda, semMovimento, dadosComo, faixaOutros, linhasVieram, comumSecoes,
     SOC_VARS, socValor });
+  // O mapa para passear pelos dados (T36, em passear.js)
+  if (window.PASSEAR) window.PASSEAR({ D, G, BR, UFS, NOME_UF, municipios, nomeMun, el, B, P, busca, semMovimento });
   // "Pergunte aos dados" (T14, em pergunte.js): a primeira parte do Explorar
   if (window.PERGUNTE) window.PERGUNTE({ D, G, BR, UFS, NOME_UF, REGIAO_UF, doBrasil, nomeMun, el, B, P, nd, semMovimento });
   indicePartes($('#exp-lista-indice'), $('#explorar'), [
@@ -1598,6 +1762,7 @@
     const h = decodeURIComponent((hash || '').replace(/^#/, ''));
     const [a, b] = h.split('/');
     // canonico: o endereço que a página realmente mostra, quando o pedido não existe (#analise/99, #xyz); a URL passa a dizer a verdade (QA nº 11)
+    if (a === 'mapa') return { vista: 'mapa', alvo: 'mapa', canonico: b && !/^[A-Z]{2}$/.test(b) ? '#mapa' : null }; // T36: #mapa/SP abre o estado (passear.js)
     if (a === 'explorar') return { vista: 'explorar', alvo: b && document.getElementById('explorar-' + b) ? 'explorar-' + b : 'explorar', canonico: b && !document.getElementById('explorar-' + b) ? '#explorar' : null };
     if (a === 'apuracao') return { vista: 'apuracao', alvo: b && document.getElementById('apuracao-' + b) ? 'apuracao-' + b : 'apuracao', canonico: b && !document.getElementById('apuracao-' + b) ? '#apuracao' : null };
     if (a === 'metodo') return { vista: 'metodo', alvo: b && document.getElementById(b) ? b : 'metodo', canonico: b && !document.getElementById(b) ? '#metodo' : null };
@@ -1665,7 +1830,7 @@
     const trocou = mostrarVista(r.vista);
     if (r.vista !== 'leitura') {
       marcarNav(r.vista);
-      document.title = T('pag.titulo', { titulo: T({ explorar: 'nav.explorar', apuracao: 'nav.apuracao' }[r.vista] || 'nav.metodo'), nome: BASE_TITULO });
+      document.title = T('pag.titulo', { titulo: T({ explorar: 'nav.explorar', apuracao: 'nav.apuracao', mapa: 'nav.mapa' }[r.vista] || 'nav.metodo'), nome: BASE_TITULO });
     }
     const alvo = document.getElementById(r.alvo);
     // a nota dentro das notas recolhidas (ou de outro "Ver detalhes" fechado): abre antes de rolar até ela

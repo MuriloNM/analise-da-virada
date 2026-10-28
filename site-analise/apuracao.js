@@ -292,15 +292,23 @@ window.APURACAO = function (X) {
     { t: T('av.fim.col_l1'), num: true, v: u => u.s1, f: fatia },
     { t: T('av.fim.col_l2'), num: true, v: u => u.s2, f: fatia },
     { t: T('tab.variacao'), num: true, v: u => u.s2 - u.s1, f: v => fmt.pp(v) }];
+  // T36: a parte de cada um no 2º turno, em barras de 100% (o meio a meio no centro), com a tabela a um clique
+  const graficoParte = (titulo, lista, nome, curto) => ({ legenda: [{ t: T('nome.lula'), tipo: 'barra', lado: 'l' }, { t: T('nome.flavio'), tipo: 'barra', lado: 'f' }],
+    desenhar: caixa => G.divisao(caixa, { aria: T('vd.aria', { t: titulo }), rotuloX: T('vd.av.eixo'), margE: 170, margEstreito: 92, altLinha: 20,
+      linhas: lista.map(u => ({ nome: nome(u), curto: curto(u), lula: u.s2 / 100, destaque: u === BR,
+        dica: { titulo: nome(u), linhas: [{ lado: 'l', t: T('nome.lula'), v: fatia(u.s2) }, { lado: 'f', t: T('nome.flavio'), v: fatia(100 - u.s2) },
+          { t: T('av.fim.col_l1'), v: fatia(u.s1) }, { t: T('tab.eleitorado'), v: fmt.int(u.E2) }] } })) }) });
   const est = el('div', 'av-tabela', undefined, fim);
+  const linhasEst = [BR].concat(UFS.slice().sort((a, b) => b.E2 - a.E2), D.ufs.filter(u => u.codigo === 'ZZ'));
   G.tabela(est, { legenda: { n: ntab(), t: T('av.fim.tab_estados') },
-    linhas: [BR].concat(UFS.slice().sort((a, b) => b.E2 - a.E2), D.ufs.filter(u => u.codigo === 'ZZ')),
+    linhas: linhasEst, grafico: graficoParte(T('av.fim.tab_estados'), linhasEst, u => u.nome, u => u.codigo || u.nome.slice(0, 3)),
     ordem: { col: 1, desc: true }, destaque: u => u === BR,
     colunas: [{ t: T('tab.estado'), v: u => u.nome }, { t: T('tab.eleitorado'), num: true, v: u => u.E2, f: fmt.int }].concat(colunasFatia) });
   const mun = doBrasil().slice().sort((a, b) => b.E2 - a.E2).slice(0, 40);
   const tm = el('div', 'av-tabela', undefined, fim);
   G.tabela(tm, { legenda: { n: ntab(), t: T('av.fim.tab_municipios') },
     linhas: mun, ordem: { col: 1, desc: true },
+    grafico: graficoParte(T('av.fim.tab_municipios'), mun, m => nomeMun(m), m => (m.nome.length > 11 ? m.nome.slice(0, 10).trim() + '…' : m.nome)),
     colunas: [{ t: T('tab.municipio'), v: m => nomeMun(m) }, { t: T('tab.eleitorado'), num: true, v: m => m.E2, f: fmt.int }].concat(colunasFatia) });
   const pe = P(fim, 'av-nota', T('av.fim.fonte'));
   sup(pe, 'apuracao-fim', T('av.fim.como.tit'), [T('av.fim.como1', { pct: fmt.pct(99.77, 2) }), T('av.fim.como2')]);

@@ -51,6 +51,7 @@
     <nav class="nav" data-t-aria-label="nav.aria" aria-label="Study sections">
       <a href="#resumo" data-secao="resumo" data-t="nav.resumo">Summary</a>
       <a href="#analise/1" data-secao="capitulos" data-t="nav.capitulos">Chapters</a>
+      <a href="#mapa" data-secao="mapa" data-t="nav.mapa">Map</a>
       <a href="#explorar" data-secao="explorar" data-t="nav.explorar">Explore</a>
       <a href="#apuracao" data-secao="apuracao" data-t="nav.apuracao">Live count</a>
       <a href="#metodo" data-secao="metodo" data-t="nav.metodo">Method and sources</a>
@@ -112,6 +113,7 @@
         </div>
       </div>
       <div id="ficha-cidade" aria-live="polite"></div>
+      <p class="res-mapa" data-t-html="res.mapa.html">Or browse the <a href="#mapa">map</a>: state by state, municipality by municipality, with who came out ahead and by how much.</p>
     </section>
   </section>
 
@@ -140,6 +142,15 @@
   </section>
   </div>
 </div>
+
+<!-- ======================= Mapa: para passear pelos dados, estado e município (T36, D83; montado em passear.js) ======================= -->
+<section class="vista mapa" data-vista="mapa" id="mapa" aria-labelledby="t-mapa" tabindex="-1" hidden>
+  <div class="consulta">
+  <h1 class="consulta-tit" id="t-mapa" data-t="pas.tit">Browse the map</h1>
+  <p class="linha-fina" data-t="pas.linha_fina">Click a state to see its municipalities; click a place to see who came out ahead and by how much, from the first round to the runoff, and compare two places.</p>
+  <div id="mapa-corpo"></div>
+  </div>
+</section>
 
 <!-- ======================= Explorar: consulta, fora da leitura corrida (T24; montado em explorar.js) ======================= -->
 <section class="vista explorar" data-vista="explorar" id="explorar" aria-labelledby="t-explorar" tabindex="-1" hidden>
@@ -255,6 +266,7 @@
 <script src="../mapa.js"></script>
 <script src="../graficos.js"></script>
 <script src="../explorar.js"></script>
+<script src="../passear.js"></script>
 <script src="../pergunte.js"></script>
 <script src="../apuracao-dados.js"></script>
 <script src="../apuracao.js"></script>

@@ -255,7 +255,7 @@
     const x = escala(o.x.min, o.x.max, margE, larg - margD);
     const grade = el('g', { class: 'grade' }, s);
     for (const v of ticks(o.x.min, o.x.max, o.x.passo)) {
-      el('line', { x1: x(v), x2: x(v), y1: topo - 4, y2: alt - base + 4, class: Math.abs(v) < 1e-9 ? 'zero' : '' }, grade);
+      el('line', { x1: x(v), x2: x(v), y1: topo - 4, y2: alt - base + 4, class: Math.abs(v - (o.x.ref || 0)) < 1e-9 ? 'zero' : '' }, grade);
       texto(s, x(v), alt - base + 18, o.x.fmt(v), { 'text-anchor': 'middle', class: 'tick' });
     }
     texto(s, estreito ? 0 : margE, alt - 6, o.x.rotulo, { class: 'rotulo-eixo' });
@@ -340,7 +340,7 @@
    *  intervalo de 95%; ponto cheio onde o teste deu associação, anel vazio onde não deu (a legenda diz isso).
    *  o: {linhas: [{nome, curto, vals: [{lado, v, ic, cheio}], dica}], x, lados: [esq, dir], aria} */
   function coeficientesPar(caixa, o) {
-    const duas = o.linhas.some(l => l.vals.length > 1);
+    const duas = o.linhas.some(l => l.vals && l.vals.length > 1);
     return linhasBase(caixa, Object.assign({ topo: 30, altLinha: duas ? 30 : 22 }, o), (s, l, x, y0, yc) => {
       l.vals.forEach((v, i) => {
         const y = duas ? yc + (i ? 5 : -5) : yc;
@@ -735,6 +735,7 @@
   /** o: {legenda, colunas: [{t, v: linha => valor, f: valor => texto, num, abbr}], linhas, ordem: {col, desc},
    *      ordenavel, destaque: linha => bool, aoLinha: (tr, linha) => void} */
   function tabela(pai, o) {
+    if (o.grafico) pai = vistaDupla(pai, o);
     const caixa = h('div', 'tab-caixa', undefined, pai);
     const t = h('table', 'tab', undefined, caixa);
     if (o.legenda) {
@@ -781,7 +782,113 @@
       }
     }
     render();
+    if (o.grafico) { caixa.querySelector('caption').className = 'sr'; alternar(pai.querySelector('.vd-botoes'), pai.querySelector('.vd-grafico'), caixa); }
     return caixa;
+  }
+
+  // ---------- 9b. Gráfico primeiro, a mesma informação em tabela a um clique (T36, D83) ----------
+  /** Monta o título, a legenda e o gráfico de uma tabela (o.grafico: {desenhar, legenda, sub}); a tabela vem
+   *  logo depois, na aba "Tabela". O título fica fora das abas, à vista com qualquer uma. */
+  const observadores = [];
+  function vistaDupla(pai, o) {
+    const g = o.grafico, vd = h('div', 'vd', undefined, pai);
+    const tit = h('p', 'vd-tit', undefined, vd);
+    if (o.legenda.n) h('span', 'fig-n', o.legenda.n + '. ', tit);
+    tit.append(o.legenda.t);
+    h('div', 'botoes-escolha vd-botoes', undefined, vd);
+    const pg = h('div', 'vd-grafico', undefined, vd);
+    if (g.sub) h('p', 'vd-sub', g.sub, pg);
+    if (g.legenda) legenda(pg, g.legenda);
+    const cx = h('div', 'grafico', undefined, pg);
+    let ultima = -1;
+    const ro = new ResizeObserver(() => {
+      const w = Math.round(cx.clientWidth);
+      if (w > 0 && w !== ultima) { ultima = w; dicaEsconder(); g.desenhar(cx); }
+    });
+    ro.observe(cx);
+    observadores.push(ro); // guardado: um observador sem referência pode ser recolhido e o gráfico não sai
+    return vd;
+  }
+  /** Os botões "Gráfico | Tabela" em botoes (um div vazio), trocando entre os dois painéis. A tabela escondida
+   *  fica no DOM com hidden="until-found": a busca do navegador (Ctrl+F) acha o número e abre a aba sozinha;
+   *  o PDF e a impressão mostram os dois (pdf.js). Também junta uma tabela a uma figura que já existe. */
+  function alternar(botoes, painelG, painelT) {
+    botoes.setAttribute('role', 'group');
+    botoes.setAttribute('aria-label', T('vd.escolha'));
+    const paineis = [painelG, painelT];
+    const bs = [T('vd.grafico'), T('vd.tabela')].map((t, i) => {
+      const b = h('button', '', t, botoes);
+      b.type = 'button';
+      b.addEventListener('click', () => mostrar(i));
+      return b;
+    });
+    function mostrar(i) {
+      paineis.forEach((p, j) => { if (j === i) p.removeAttribute('hidden'); else if (j) p.setAttribute('hidden', 'until-found'); else p.hidden = true; });
+      bs.forEach((b, j) => b.setAttribute('aria-pressed', j === i ? 'true' : 'false'));
+      dicaEsconder();
+    }
+    painelT.addEventListener('beforematch', () => mostrar(1));
+    mostrar(0);
+    return { mostrar };
+  }
+  /** Junta uma tabela já montada (a caixa que tabela() devolve) a uma figura com gráfico: os botões vão logo
+   *  acima do gráfico, e a tabela entra na figura, no lugar do gráfico, antes do rodapé. */
+  function juntar(fig, tabCaixa) {
+    const g = fig.querySelector(':scope > .grafico'), rod = fig.querySelector(':scope > .fig-rodape');
+    const pg = h('div', 'vd-grafico');
+    const leg = fig.querySelector(':scope > .legenda');
+    fig.insertBefore(pg, leg || g);
+    if (leg) pg.appendChild(leg);
+    pg.appendChild(g);
+    const botoes = h('div', 'botoes-escolha vd-botoes');
+    fig.insertBefore(botoes, pg);
+    fig.insertBefore(tabCaixa, rod);
+    fig.classList.add('vd-junta');
+    return alternar(botoes, pg, tabCaixa);
+  }
+
+  // ---------- 9c. Mapa de calor (T36): uma cor de um tom só pela intensidade, o número escrito na célula ----------
+  /** o: {linhas: [{nome, curto}], colunas: [{nome, curto}], cel: (i, j) => {t (0 a 1), rotulo, dica: {titulo, linhas}} | null,
+   *      aria, margE, margEstreito}. Sem cor de candidato: a cor só diz "quanto", e o número diz o resto. */
+  function calor(caixa, o) {
+    const larg = caixa.clientWidth, estreito = larg < 520;
+    const nomeL = l => (estreito && l.curto ? l.curto : l.nome);
+    const s = svgNovo(caixa, larg, 10, o.aria, 'group');
+    // a margem cabe o nome mais comprido, também em outra língua; no máximo 45% da largura
+    const mede = t => { const e = texto(s, 0, 0, t, { class: 'nome-linha' }), w = e.getComputedTextLength(); e.remove(); return w; };
+    const margE = Math.min(Math.ceil(Math.max(...o.linhas.map(l => mede(nomeL(l))))) + 12, larg * 0.45);
+    const nc = o.colunas.length, cw = Math.min(84, (larg - margE) / nc), ch = estreito ? 30 : 34;
+    // o nome da coluna quebra em linhas quando não cabe na largura da coluna
+    const cab = o.colunas.map(c => {
+      const ls = [];
+      for (const p of (estreito && c.curto ? c.curto : c.nome).split(' ')) {
+        if (ls.length && mede(ls[ls.length - 1] + ' ' + p) <= cw - 4) ls[ls.length - 1] += ' ' + p; else ls.push(p);
+      }
+      return ls;
+    });
+    const topo = 14 + 16 * Math.max(...cab.map(ls => ls.length));
+    const alt = topo + o.linhas.length * ch + 8;
+    s.setAttribute('height', alt); s.setAttribute('viewBox', `0 0 ${larg} ${alt}`);
+    const seq = escalaSequencial(), tinta = css('--ink'), fundo = css('--bg');
+    cab.forEach((ls, j) => ls.forEach((t, k) => texto(s, limita(margE + j * cw + cw / 2, mede(t) / 2, larg - mede(t) / 2 - 2), topo - 10 - 16 * (ls.length - 1 - k), t,
+      { 'text-anchor': 'middle', class: 'nome-linha' })));
+    o.linhas.forEach((l, i) => {
+      const y = topo + i * ch;
+      texto(s, margE - 8, y + ch / 2 + 4, nomeL(l), { 'text-anchor': 'end', class: 'nome-linha' });
+      for (let j = 0; j < nc; j++) {
+        const c = o.cel(i, j);
+        if (!c) continue;
+        const x = margE + j * cw, t = limita(c.t, 0, 1);
+        el('rect', { x: x + 1, y: y + 1, width: cw - 2, height: ch - 2, rx: 3, style: 'fill:' + seq(t) }, s);
+        // o número em tinta clara sobre a cor forte e em tinta escura sobre a clara, nos dois temas
+        texto(s, x + cw / 2, y + ch / 2 + 4, c.rotulo, { 'text-anchor': 'middle', class: 'val-calor', style: 'fill:' + (t > 0.55 ? fundo : tinta) });
+        if (c.dica) {
+          const alvo = el('rect', { x, y, width: cw, height: ch, fill: 'transparent', tabindex: 0, class: 'alvo',
+            'aria-label': rotuloAria(c.dica.titulo, c.dica.linhas) }, s);
+          ligarDica(alvo, c.dica.titulo, c.dica.linhas, on => alvo.classList.toggle('ativo', on));
+        }
+      }
+    });
   }
 
   // ---------- 13. As leituras da apuração ao vivo (T28): linhas por % apurado, com a leitura escolhida ----------
@@ -908,6 +1015,6 @@
     return { marcar, mE, mD };
   }
 
-  window.GRAFICOS = { fmt, nf, h, legenda, dispersao, linhasPontos, barras, coeficientes, coeficientesPar, divisao, ponte, linhaApuracao, funil,
-    tabela, dicaEsconder, virada, mapa, legendaCor, escalaDivergente, escalaSequencial, leiturasApuracao };
+  window.GRAFICOS = { fmt, nf, h, legenda, dicaMostrar, dispersao, linhasPontos, barras, coeficientes, coeficientesPar, divisao, ponte, linhaApuracao, funil,
+    tabela, juntar, calor, dicaEsconder, virada, mapa, legendaCor, escalaDivergente, escalaSequencial, leiturasApuracao };
 })();

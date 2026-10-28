@@ -90,10 +90,14 @@
   // os detalhes abertos (com as tabelas de todas as versões) e as duas figuras de cada escolha
   for (const d of $$('details.detalhes, details.det-aninhado')) d.open = true; // também as notas recolhidas
   for (const p of $$('.fig-painel')) p.hidden = false;
+  for (const t of $$('.vd > .tab-caixa, .vd-junta > .tab-caixa')) t.removeAttribute('hidden'); // T36: o gráfico e a tabela
   for (const r of $$('.capitulo details.detalhes > summary .det-rot')) r.textContent = T('pdf.detalhes');
   // a nota de baixo de uma tabela vai junto com ela, que não quebra de página (estudo.css, @media print),
   // e não fica sozinha no alto da página seguinte
-  for (const n of $$('.nota-tab')) if (n.previousElementSibling && n.previousElementSibling.matches('.tab-caixa')) n.previousElementSibling.append(n);
+  for (const n of $$('.nota-tab')) {
+    const a = n.previousElementSibling, t = a && (a.matches('.tab-caixa') ? a : a.matches('.vd') ? $(':scope > .tab-caixa', a) : null);
+    if (t) t.append(n);
+  }
 
   // links internos: o trecho dentro do PDF, ou o endereço publicado para o que fica só na página
   for (const a of $$('a[href^="#"]')) {

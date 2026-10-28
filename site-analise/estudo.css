@@ -296,6 +296,18 @@ details.detalhes[open] .det-rot::after{content:" (fechar)";font-weight:400;font-
 .tab{border-collapse:collapse;font:400 16px/1.4 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums tabular-nums}
 .tab caption{text-align:left;font:700 18px/1.35 var(--f-texto);color:var(--ink);padding-bottom:8px}
 .tab caption .fig-n{font-weight:400}
+/* T36 (D83): gráfico primeiro e a mesma informação em tabela a um clique; o título fica à vista com as duas abas */
+.vd{display:grid;gap:4px}
+.vd-tit{margin:0;font:700 18px/1.35 var(--f-texto);color:var(--ink);max-width:36em}
+.vd-tit .fig-n{font-weight:400}
+.vd-botoes{margin:6px 0 8px}
+.vd-sub{margin:0 0 6px;font:400 16px/1.5 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums;max-width:40em}
+.vd-grafico .legenda{margin-bottom:6px}
+.vd-junta>.vd-botoes{margin-top:10px}
+.vd-junta>.tab-caixa{margin-top:4px}
+.grafico .val-calor{font:500 14px/1 var(--f-ui);font-variant-numeric:lining-nums tabular-nums}
+.grafico .vd-multiplo{margin:14px 0 0;font:700 15px/1.3 var(--f-ui);color:var(--ink)}
+.grafico .vd-multiplo:first-child{margin-top:0}
 .tab th,.tab td{padding:6px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .tab th:first-child,.tab td:first-child{padding-left:0}
 .tab thead th{border-bottom:1px solid var(--ink);font-weight:500;color:var(--ink);vertical-align:bottom}
@@ -451,6 +463,7 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
 .ic-l{stroke:var(--lula)} .ic-f{stroke:var(--flavio)} .ic-fraco{stroke-opacity:.5}
 .pt-vazio{fill:var(--fundo-grafico);stroke-width:2}
 .s-l{stroke:var(--lula)} .s-f{stroke:var(--flavio)} .s-ink{stroke:var(--ink)}
+.ic-muted,.s-muted{stroke:var(--muted)} /* T36: a segunda conta, ao lado da principal */
 .ref{stroke:var(--ink-2);stroke-width:1.5}
 .ref-fina{stroke:var(--line-forte);stroke-width:1}
 .trilho{fill:var(--realce);stroke:var(--line)}
@@ -634,6 +647,75 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
 .exp-ficha .ficha-tit{font-size:24px}
 .exp-ficha .ficha-meta{margin-bottom:6px}
 .exp-ficha .tab{font-size:14px}
+
+/* ---------- O mapa para passear (T36, passear.js): o mapa é a peça grande; a ficha, quieta, numa folha do caderno ---------- */
+.mapa .consulta{max-width:1120px}
+.pas-modos{margin:18px 0 6px}
+.pas-grade{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:20px 44px;align-items:start}
+.pas-col-mapa{min-width:0}
+.pas-trilha ol{list-style:none;margin:0 0 4px;padding:0;display:flex;flex-wrap:wrap;gap:2px 0;font:400 16px/1.4 var(--f-ui);color:var(--muted)}
+.pas-trilha li+li::before{content:"›";margin:0 8px;color:var(--muted)}
+.pas-trilha [aria-current]{color:var(--ink);font-weight:700}
+.pas-titulo{margin:0 0 6px;font:700 22px/1.3 var(--f-texto);color:var(--ink);max-width:30em;text-wrap:balance}
+.pas-legenda-cor{max-width:360px}
+.pas-mapa{margin-top:4px}
+.pas-mapa svg{display:block;max-width:100%;height:auto;overflow:hidden}
+.pas-area,.pas-contorno,.pas-vizinho{vector-effect:non-scaling-stroke}
+.pas-area{stroke-width:.6}
+.pas-area:hover{stroke:var(--ink);stroke-width:1.5}
+.pas-area:focus-visible{stroke:var(--ink);stroke-width:3}
+.pas-contorno{stroke-width:2.5}
+.pas-vizinho{fill:var(--line);stroke:var(--bg);stroke-width:1;opacity:.6}
+.pas-aviso{margin:6px 0 0;font:italic 400 15px/1.45 var(--f-texto);color:var(--muted);max-width:34em}
+.pas-aviso:empty{display:none}
+.pas-col-ficha{border-top:3px double var(--ink);padding-top:12px;min-width:0}
+.pas-ficha .ficha-tit{font-size:26px;line-height:1.2}
+.pas-ficha .ficha-meta{margin-bottom:12px}
+.pas-frente{margin:0 0 10px;font:500 17px/1.4 var(--f-ui);color:var(--ink);font-variant-numeric:lining-nums}
+.pas-div{display:grid;grid-template-columns:4.6em minmax(0,1fr);align-items:center;gap:8px;margin:6px 0}
+.pas-div-rot{font:400 14px/1.2 var(--f-ui);color:var(--ink-2)}
+.pas-div-barra{display:flex;gap:2px;height:24px;font:500 13px/24px var(--f-ui);font-variant-numeric:lining-nums tabular-nums}
+.pas-div-l,.pas-div-f{min-width:0;overflow:hidden;white-space:nowrap;padding:0 6px}
+.pas-div-l{background:var(--lula);color:var(--texto-sobre-l);border-radius:4px 0 0 4px}
+.pas-div-f{background:var(--flavio);color:var(--texto-sobre-f);border-radius:0 4px 4px 0;text-align:right}
+.pas-nota{margin:6px 0 0;font:400 15px/1.5 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums}
+.pas-sub{margin:16px 0 4px;font:700 15px/1.3 var(--f-ui);color:var(--ink)}
+.pas-ganho{display:grid;grid-template-columns:4.6em minmax(0,1fr) auto;align-items:center;gap:8px;margin:4px 0}
+.pas-ganho-trilho{height:12px;display:block}
+.pas-ganho-barra{display:block;height:100%;border-radius:0 4px 4px 0;min-width:2px}
+.pas-l{background:var(--lula)} .pas-f{background:var(--flavio)}
+.pas-neg{opacity:.45}
+.pas-ganho-val{font:400 14px/1.2 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums;white-space:nowrap}
+.pas-comp-tit{margin:0 0 6px;font:italic 400 16px/1.3 var(--f-texto);color:var(--muted)}
+.pas-par{display:grid;gap:18px}
+.pas-ficha-par+.pas-ficha-par{border-top:1px solid var(--line-forte);padding-top:12px}
+.pas-ficha-par .ficha-tit{font-size:21px}
+.pas-acoes{margin:14px 0 0}
+.pas-dica{margin:10px 0 0;font:italic 400 15px/1.45 var(--f-texto);color:var(--muted)}
+.pas-busca{margin-top:32px;max-width:520px}
+.pas-busca label{display:block;font:italic 400 18px/1.3 var(--f-texto);color:var(--ink-2);margin-bottom:4px}
+.pas-busca .busca{position:relative}
+.pas-lista{margin-top:30px;border-top:1px solid var(--ink);padding-top:12px}
+.pas-lista h2{font-size:24px;margin:0 0 6px}
+.pas-ordem{margin-bottom:6px}
+.pas-linhas{list-style:none;margin:0;padding:0;max-width:760px}
+.pas-linha{display:grid;grid-template-columns:minmax(8em,13em) minmax(0,1fr) 6.5em 5.5em;align-items:center;gap:12px;width:100%;
+  border:0;border-bottom:1px solid var(--line);background:none;padding:6px 4px;cursor:pointer;text-align:left;color:var(--ink);font:inherit}
+.pas-linha:hover,.pas-linhas .atual .pas-linha{background:var(--realce)}
+.pas-linhas .atual .pas-linha-nome{font-weight:700}
+.pas-linha-nome{font:400 16px/1.3 var(--f-texto);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pas-mini{height:10px}
+.pas-mini .pas-div-l,.pas-mini .pas-div-f{padding:0}
+.pas-linha-val,.pas-linha-var{font:400 14px/1.2 var(--f-ui);color:var(--ink-2);font-variant-numeric:lining-nums tabular-nums;text-align:right;white-space:nowrap}
+.pas-mais{margin-top:8px}
+.pas-ia{margin-top:30px;font:400 17px/1.5 var(--f-texto);color:var(--ink-2)}
+.pas-fonte{margin-top:6px;font:400 14px/1.5 var(--f-ui);color:var(--muted);max-width:44em}
+.res-mapa{margin:14px 0 0;font:italic 400 17px/1.5 var(--f-texto);color:var(--ink-2);max-width:34em}
+@media (max-width:860px){
+  .pas-grade{grid-template-columns:minmax(0,1fr)}
+  .pas-linha{grid-template-columns:minmax(6em,9em) minmax(0,1fr) 5.6em;gap:8px}
+  .pas-linha-var{display:none}
+}
 .exp-ficha .tab th,.exp-ficha .tab td{padding:4px 6px}
 .exp-ficha .ficha-pe{font-size:14px}
 .exp-ficha .exp-dica{font-style:italic;color:var(--muted)}
@@ -1012,6 +1094,10 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
   h1,h2,h3,.fig-cab,.nota-tit,summary{break-after:avoid}
   .figura,.fig-abertura,.fita,.hipotese,.nota-lateral,.achados li,.tab tr,.notas li,.notas-dados li,.citar-linha,.baixar li{break-inside:avoid}
   .fig-painel+.fig-painel{margin-top:28px}
+  /* T36: no papel, o gráfico e a tabela, um depois do outro (pdf.js tira o hidden das tabelas) */
+  .vd-grafico+.tab-caixa,.vd-junta .vd-grafico+.tab-caixa{margin-top:14px}
+  .vd-grafico{break-inside:avoid}
+  .figura.vd-junta{break-inside:auto} /* a figura com a tabela junta pode quebrar entre o gráfico e a tabela */
   p,li{orphans:3;widows:3}
   .grafico svg{max-width:100%;height:auto}
   .tab-caixa{overflow:visible}

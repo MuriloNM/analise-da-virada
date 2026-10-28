@@ -12,8 +12,8 @@
   const T = window.T;
   // 0.1 foi a versão de trabalho; a 1.0 é a primeira publicada (T25, item 8; sessão sobre-estudo, 27/10)
   const VERSAO = {
-    numero: '1.0.3',
-    data: '2026-10-27',
+    numero: '1.1',
+    data: '2026-10-28',
     situacao: T('ext.situacao'),
     // { data: 'AAAA-MM-DD', versao: '1.1', oQue: 'chave do catálogo: o que estava errado e o que mudou', onde: '#analise/3',
     //   quem: 'nome de quem avisou, só se a pessoa quiser (D72)' }
@@ -24,6 +24,8 @@
       { data: '2026-10-27', versao: '1.0.2', oQue: 'ext.corr.v102', onde: '#explorar/pergunte' },
       // T14, Proposta 2: o assistente do botão "Pergunte ao estudo" (D82; P36)
       { data: '2026-10-27', versao: '1.0.3', oQue: 'ext.corr.v103', onde: '#explorar/pergunte' },
+      // T36 (D83): gráfico primeiro e a tabela a um clique; o mapa para passear pelos dados
+      { data: '2026-10-28', versao: '1.1', oQue: 'ext.corr.v11', onde: '#mapa' },
     ],
   };
   const AUTOR = { nome: 'Murilo Neves de Martins', citacao: 'MARTINS, Murilo Neves de', apa: 'Martins, M. N. de',
