@@ -1961,7 +1961,7 @@ window.TEXTOS['pt-BR'] = {
 "csv.col.de_onde_vieram.aviso_modelo": "sim quando alguma fonte do lugar sai de 0 a 1: o modelo não descreve bem o lugar, e todas as fontes dele levam o aviso (marca † na página)",
 
 // ======================= Método e fontes: dados para baixar e "Sobre este estudo" (extras.js) =======================
-"ext.situacao": "primeira versão publicada, com uma correção de texto e a parte “Pergunte aos dados”",
+"ext.situacao": "primeira versão publicada, com uma correção de texto, a parte “Pergunte aos dados” e o assistente “Pergunte ao estudo”",
 "ext.subtitulo": "o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município",
 // os meses abreviados da norma ABNT (NBR 6023), em "Como citar": ficam em português em toda língua
 "ext.meses_abnt": ["jan.", "fev.", "mar.", "abr.", "maio", "jun.", "jul.", "ago.", "set.", "out.", "nov.", "dez."],
@@ -1998,6 +1998,7 @@ window.TEXTOS['pt-BR'] = {
 // o que mudou em cada correção (extras.js, VERSAO.correcoes, campo oQue)
 "ext.corr.v101": "Revisão de neutralidade: a manchete, a linha fina e 33 trechos foram reescritos sem o ponto de vista de um dos candidatos (respostas e títulos de figura, as perguntas dos capítulos 3 e 5, a pergunta da capa, notas, glossário e Método). A manchete era “Lula cresceu nos 27 estados e virou a diferença do 1º turno”. Nenhum número, medida ou hipótese mudou.",
 "ext.corr.v102": "Novo, sem mudar número nem conclusão: a parte “Pergunte aos dados”, no Explorar, com perguntas prontas sobre qualquer lugar e uma caixa para escrever a pergunta; a página de privacidade diz o que acontece com a pergunta escrita. E cada endereço passou a abrir na sua língua: a raiz abre sempre em português e /en/ em inglês, sem levar à língua escolhida antes.",
+"ext.corr.v103": "Novo, sem mudar número nem conclusão: o botão “Pergunte ao estudo”, no canto da página, abre um assistente de inteligência artificial que lê o estudo inteiro e responde citando o trecho onde conferir; cada número da resposta é conferido com o estudo antes de sair. A página de privacidade diz o que acontece com as perguntas.",
 "ext.sha": "Para conferir se uma cópia do PDF é igual à original, compare a impressão digital dela (SHA-256) com a daqui: se mudar uma letra do arquivo, ela muda inteira. No Windows, ela sai de {win}; no Mac e no Linux, de {mac}.",
 "ext.sha.win": "certutil -hashfile arquivo.pdf SHA256",
 "ext.sha.mac": "shasum -a 256 arquivo.pdf",
@@ -2121,7 +2122,7 @@ window.TEXTOS['pt-BR'] = {
 "exp.perg.livre.fora.previsao": "Essa pergunta pede uma previsão. O estudo olha só a eleição de 2026, já contada.",
 "exp.perg.livre.fora.outra": "Essa pergunta está fora do que estes dados respondem. Experimente uma das perguntas acima.",
 "exp.perg.livre.cota": "As perguntas escritas acabaram por hoje e voltam amanhã. As perguntas acima continuam funcionando.",
-"exp.perg.livre.limite": "Você chegou ao limite de perguntas escritas de hoje. As perguntas acima continuam funcionando.",
+"exp.perg.livre.limite": "Você chegou ao limite de perguntas escritas de hoje. Volte amanhã para escrever outras; as perguntas acima continuam funcionando.",
 "exp.perg.livre.erro": "A pergunta não chegou ao serviço. Tente de novo daqui a pouco, ou use as perguntas acima.",
 
 // ======================= Privacidade (privacidade/index.html; T17) =======================
@@ -2129,7 +2130,7 @@ window.TEXTOS['pt-BR'] = {
 "priv.descricao": "Para que servem os dados que você envia ao estudo, quem os vê, por quanto tempo ficam guardados e como pedir que sejam apagados.",
 "priv.tit": "Privacidade",
 "priv.linha_fina": "Para ler o estudo e baixar o PDF e os dados, você não precisa dar nenhum dado. Esta página diz o que acontece com o que você decidir enviar: para que serve, quem vê, por quanto tempo fica guardado e como pedir que seja apagado.",
-"priv.agora": "Hoje estão abertas a caixa de mensagem ao autor e as perguntas escritas do “Pergunte aos dados”. Os comentários e o aviso de novas edições ainda não: esta página já diz como vai ser quando abrirem. Se algo mudar, ela muda antes, com a data no fim.",
+"priv.agora": "Hoje estão abertas a caixa de mensagem ao autor, as perguntas escritas do “Pergunte aos dados” e o assistente do botão “Pergunte ao estudo”. Os comentários e o aviso de novas edições ainda não: esta página já diz como vai ser quando abrirem. Se algo mudar, ela muda antes, com a data no fim.",
 "priv.quem.tit": "Quem responde pelos dados",
 "priv.quem": "O autor do estudo, Murilo Neves de Martins, que o fez de forma independente, sem vínculo com partido, candidato ou campanha. Na Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018), ele é o controlador: decide para que os dados servem e responde por eles.",
 "priv.ler.tit": "Ao ler a página",
@@ -2145,11 +2146,13 @@ window.TEXTOS['pt-BR'] = {
 "priv.avisos": "O que vai: o seu e-mail e a data do pedido. Para quê: mandar um e-mail quando sair uma nova edição do estudo, com o PDF e o que mudou; só isso, sem propaganda e sem outro tipo de mensagem. Todo e-mail tem um link para deixar de receber, que tira o endereço da lista. Por quanto tempo: até você deixar de receber, ou até o estudo deixar de ter novas edições.",
 "priv.pergunte.tit": "Pergunta escrita, no “Pergunte aos dados”, em Explorar",
 "priv.pergunte": "O que vai: o texto da pergunta. Para quê: um serviço de inteligência artificial lê a pergunta só para escolher qual das perguntas prontas da página foi feita e com que lugar; a resposta sai da contagem do TSE, na própria página. A pergunta vai primeiro para o Workers AI, do Cloudflare, e, quando a cota grátis do dia acaba, para o Claude, da Anthropic, até um teto de gasto por dia. O estudo não guarda o texto da pergunta: guarda só quantas perguntas foram feitas por dia e, até o fim do dia, um código embaralhado feito do endereço de internet, para limitar o número de perguntas por pessoa. Não escreva dados pessoais na pergunta.",
+"priv.assistente": "O que vai: o texto da pergunta e as perguntas e respostas anteriores da mesma conversa. Para quê: um serviço de inteligência artificial lê o estudo e escreve a resposta, citando o trecho onde conferir. A pergunta vai para o gpt-oss, no Ollama, enquanto durar o uso grátis do mês; depois, as perguntas ao estudo param até o mês seguinte. O estudo guarda a pergunta e a resposta enquanto estiver no ar, para melhorar as respostas e montar a área de perguntas frequentes, que mostra cada pergunta reescrita pelo estudo, nunca o texto de quem perguntou. Junto da pergunta ficam só a data, a língua da página e a ordem dela na conversa: nem o endereço de internet nem nada que diga quem perguntou. Por isso não dá para achar depois a pergunta de uma pessoa. Para limitar o número de perguntas por pessoa, fica até o fim do dia um código embaralhado feito do endereço de internet, separado da pergunta. Não escreva dados pessoais na pergunta.",
+"priv.assistente.tit": "Perguntas ao assistente, pelo botão “Pergunte ao estudo”, no canto da página",
 "priv.robos": "Nos três primeiros casos, uma proteção invisível contra robôs confere, sem pedir nada, se quem envia é uma pessoa; nas perguntas escritas, o limite por pessoa faz esse papel. E a base de tudo isso é o seu consentimento (LGPD, artigo 7º, inciso I): você envia porque quer e pode desistir quando quiser.",
 "priv.nao.tit": "O que não é feito",
 "priv.nao": "Os dados não são vendidos, não são repassados a ninguém e não são usados para propaganda, pesquisa eleitoral ou campanha, de nenhum lado. Não são cruzados com outras bases nem usados para traçar o perfil de quem lê.",
 "priv.servicos.tit": "Quem mais toca nos dados, a serviço do estudo",
-"priv.servicos": "Só os serviços que fazem o estudo funcionar, cada um na sua parte: o Cloudflare (hospedagem, banco de dados, proteção contra robôs e a leitura das perguntas escritas), o serviço de formulário da caixa de mensagem (Web3Forms), o serviço que envia os e-mails de novas edições, a Anthropic (a leitura das perguntas escritas, depois da cota grátis do Cloudflare) e o de inteligência artificial que ajuda a moderar os comentários. Alguns deles guardam os dados fora do Brasil.",
+"priv.servicos": "Só os serviços que fazem o estudo funcionar, cada um na sua parte: o Cloudflare (hospedagem, banco de dados, proteção contra robôs e a leitura das perguntas escritas), o serviço de formulário da caixa de mensagem (Web3Forms), o serviço que envia os e-mails de novas edições, o Ollama (as respostas do assistente), a Anthropic (a leitura das perguntas escritas, depois da cota grátis do Cloudflare) e o de inteligência artificial que ajuda a moderar os comentários. Alguns deles guardam os dados fora do Brasil.",
 "priv.direitos.tit": "Seus direitos e como pedir",
 "priv.direitos.html": "Você pode pedir, quando quiser, para saber se há dados seus, para ver, corrigir ou apagar o que houver e para retirar o consentimento (LGPD, artigo 18). Para pedir, escreva ao autor pela caixa “Escrever ao autor”, no rodapé do estudo, ou pelo <a href=\"https://www.linkedin.com/in/murilomartins/\">LinkedIn</a>. O pedido é atendido em até 15 dias. Para deixar de receber o aviso de novas edições, basta o link que vem em todo e-mail. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (<a href=\"https://www.gov.br/anpd/\">ANPD</a>).",
 "priv.data": "Atualizada em 27 de outubro de 2026.",
@@ -2171,5 +2174,38 @@ window.TEXTOS['pt-BR'] = {
 "prev.ler": "Ler o capítulo {n}",
 // o sinal decimal, para os scripts que escrevem números sem a ajuda do navegador (previas.py)
 "un.decimal": ",",
+
+// ======================= O assistente do "Pergunte aos dados" (assistente.js; T14, Proposta 2) =======================
+"ia.botao": {"t": "Pergunte ao estudo", "rotulo": 24},
+"ia.tit": {"t": "Pergunte ao estudo", "rotulo": 24},
+"ia.sub": "Uma inteligência artificial lê o estudo inteiro e responde citando o trecho onde conferir. Ela pode errar: confira no trecho citado.",
+"ia.fechar": {"t": "Fechar", "rotulo": 12},
+"ia.frequentes": {"t": "Perguntas frequentes", "rotulo": 28},
+"ia.exemplos": {"t": "Para começar", "rotulo": 28},
+"ia.ex1": "A maior parte dos votos a mais veio de quem não tinha votado no 1º turno?",
+"ia.ex2": "O estudo diz por que o resultado mudou?",
+"ia.ex3": "Como o voto mudou em Campinas?",
+"ia.ex4": "O que o estudo não consegue afirmar?",
+"ia.label": {"t": "Sua pergunta sobre o estudo", "rotulo": 36},
+"ia.placeholder": "por exemplo: o comparecimento mudou?",
+"ia.enviar": {"t": "Perguntar", "rotulo": 14},
+"ia.contador": "Pergunta {n} de {max} desta conversa.",
+"ia.limite_dia": {"one": "Você tem {n} pergunta por dia sobre o estudo.", "other": "Você tem {n} perguntas por dia sobre o estudo."},
+"ia.restantes": {"one": "Resta {n} pergunta hoje.", "other": "Restam {n} perguntas hoje."},
+"ia.nova": {"t": "Começar outra conversa", "rotulo": 28},
+"ia.aviso": "As perguntas vão para um serviço de inteligência artificial e ficam guardadas, sem nenhum dado de quem perguntou, para melhorar as respostas. Não escreva dados pessoais. {priv}.",
+"ia.priv": "Privacidade",
+"ia.voce": {"t": "Você perguntou", "rotulo": 20},
+"ia.estudo": {"t": "O estudo responde", "rotulo": 20},
+"ia.onde": "Onde conferir:",
+"ia.esperando": "Lendo o estudo…",
+"ia.quem.ollama": "Respondido pelo gpt-oss, no Ollama.",
+"ia.quem.claude": "Respondido pelo Claude Haiku 5.5, da Anthropic.",
+"ia.curta": "Escreva a pergunta com algumas palavras.",
+"ia.cota": "As perguntas ao estudo acabaram por agora e voltam com o uso grátis do mês seguinte. As perguntas prontas do Explorar continuam funcionando.",
+"ia.limite": "Você chegou ao limite de perguntas de hoje. Volte amanhã para perguntar de novo; as perguntas prontas do Explorar continuam funcionando.",
+"ia.conversa_longa": "Esta conversa chegou ao fim. Comece outra para seguir perguntando.",
+"ia.erro": "A pergunta não chegou ao serviço. Tente de novo daqui a pouco.",
+"ia.prontas": "Perguntas prontas, sem IA",
 
 };

@@ -41,7 +41,7 @@
 <main id="conteudo" class="pagina priv" tabindex="-1">
   <h1 class="consulta-tit" data-t="priv.tit">Privacidade</h1>
   <p class="linha-fina" data-t="priv.linha_fina">Para ler o estudo e baixar o PDF e os dados, você não precisa dar nenhum dado. Esta página diz o que acontece com o que você decidir enviar: para que serve, quem vê, por quanto tempo fica guardado e como pedir que seja apagado.</p>
-  <p class="priv-agora" data-t="priv.agora">Hoje estão abertas a caixa de mensagem ao autor e as perguntas escritas do “Pergunte aos dados”. Os comentários e o aviso de novas edições ainda não: esta página já diz como vai ser quando abrirem. Se algo mudar, ela muda antes, com a data no fim.</p>
+  <p class="priv-agora" data-t="priv.agora">Hoje estão abertas a caixa de mensagem ao autor, as perguntas escritas do “Pergunte aos dados” e o assistente do botão “Pergunte ao estudo”. Os comentários e o aviso de novas edições ainda não: esta página já diz como vai ser quando abrirem. Se algo mudar, ela muda antes, com a data no fim.</p>
 
   <section class="priv-parte" aria-labelledby="priv-quem">
     <h2 id="priv-quem" data-t="priv.quem.tit">Quem responde pelos dados</h2>
@@ -65,6 +65,8 @@
     <p data-t="priv.avisos">O que vai: o seu e-mail e a data do pedido. Para quê: mandar um e-mail quando sair uma nova edição do estudo, com o PDF e o que mudou; só isso, sem propaganda e sem outro tipo de mensagem. Todo e-mail tem um link para deixar de receber, que tira o endereço da lista. Por quanto tempo: até você deixar de receber, ou até o estudo deixar de ter novas edições.</p>
     <h3 data-t="priv.pergunte.tit">Pergunta escrita, no “Pergunte aos dados”, em Explorar</h3>
     <p data-t="priv.pergunte">O que vai: o texto da pergunta. Para quê: um serviço de inteligência artificial lê a pergunta só para escolher qual das perguntas prontas da página foi feita e com que lugar; a resposta sai da contagem do TSE, na própria página. A pergunta vai primeiro para o Workers AI, do Cloudflare, e, quando a cota grátis do dia acaba, para o Claude, da Anthropic, até um teto de gasto por dia. O estudo não guarda o texto da pergunta: guarda só quantas perguntas foram feitas por dia e, até o fim do dia, um código embaralhado feito do endereço de internet, para limitar o número de perguntas por pessoa. Não escreva dados pessoais na pergunta.</p>
+    <h3 data-t="priv.assistente.tit">Perguntas ao assistente, pelo botão “Pergunte ao estudo”, no canto da página</h3>
+    <p data-t="priv.assistente">O que vai: o texto da pergunta e as perguntas e respostas anteriores da mesma conversa. Para quê: um serviço de inteligência artificial lê o estudo e escreve a resposta, citando o trecho onde conferir. A pergunta vai para o gpt-oss, no Ollama, enquanto durar o uso grátis do mês; depois, as perguntas ao estudo param até o mês seguinte. O estudo guarda a pergunta e a resposta enquanto estiver no ar, para melhorar as respostas e montar a área de perguntas frequentes, que mostra cada pergunta reescrita pelo estudo, nunca o texto de quem perguntou. Junto da pergunta ficam só a data, a língua da página e a ordem dela na conversa: nem o endereço de internet nem nada que diga quem perguntou. Por isso não dá para achar depois a pergunta de uma pessoa. Para limitar o número de perguntas por pessoa, fica até o fim do dia um código embaralhado feito do endereço de internet, separado da pergunta. Não escreva dados pessoais na pergunta.</p>
     <p class="priv-pe" data-t="priv.robos">Nos três primeiros casos, uma proteção invisível contra robôs confere, sem pedir nada, se quem envia é uma pessoa; nas perguntas escritas, o limite por pessoa faz esse papel. E a base de tudo isso é o seu consentimento (LGPD, artigo 7º, inciso I): você envia porque quer e pode desistir quando quiser.</p>
   </section>
 
@@ -75,7 +77,7 @@
 
   <section class="priv-parte" aria-labelledby="priv-servicos">
     <h2 id="priv-servicos" data-t="priv.servicos.tit">Quem mais toca nos dados, a serviço do estudo</h2>
-    <p data-t="priv.servicos">Só os serviços que fazem o estudo funcionar, cada um na sua parte: o Cloudflare (hospedagem, banco de dados, proteção contra robôs e a leitura das perguntas escritas), o serviço de formulário da caixa de mensagem (Web3Forms), o serviço que envia os e-mails de novas edições, a Anthropic (a leitura das perguntas escritas, depois da cota grátis do Cloudflare) e o de inteligência artificial que ajuda a moderar os comentários. Alguns deles guardam os dados fora do Brasil.</p>
+    <p data-t="priv.servicos">Só os serviços que fazem o estudo funcionar, cada um na sua parte: o Cloudflare (hospedagem, banco de dados, proteção contra robôs e a leitura das perguntas escritas), o serviço de formulário da caixa de mensagem (Web3Forms), o serviço que envia os e-mails de novas edições, o Ollama (as respostas do assistente), a Anthropic (a leitura das perguntas escritas, depois da cota grátis do Cloudflare) e o de inteligência artificial que ajuda a moderar os comentários. Alguns deles guardam os dados fora do Brasil.</p>
   </section>
 
   <section class="priv-parte" aria-labelledby="priv-direitos">

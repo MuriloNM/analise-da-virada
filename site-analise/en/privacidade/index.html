@@ -41,7 +41,7 @@
 <main id="conteudo" class="pagina priv" tabindex="-1">
   <h1 class="consulta-tit" data-t="priv.tit">Privacy</h1>
   <p class="linha-fina" data-t="priv.linha_fina">You do not have to give any data to read the study or download the PDF and the data. This page explains what happens to anything you choose to send: what it is used for, who sees it, how long it is kept and how to ask for it to be deleted.</p>
-  <p class="priv-agora" data-t="priv.agora">For now, the message box to the author and the typed questions in “Ask the data” are open. The comments and the new-edition alerts are not yet: this page already explains how they will work once they open. If anything changes, this page changes first, with the date at the end.</p>
+  <p class="priv-agora" data-t="priv.agora">For now, the message box to the author, the typed questions in “Ask the data” and the assistant behind the “Ask the study” button are open. The comments and the new-edition alerts are not yet: this page already explains how they will work once they open. If anything changes, this page changes first, with the date at the end.</p>
 
   <section class="priv-parte" aria-labelledby="priv-quem">
     <h2 id="priv-quem" data-t="priv.quem.tit">Who is responsible for the data</h2>
@@ -65,6 +65,8 @@
     <p data-t="priv.avisos">What is sent: your email address and the date of the request. What for: to send you an email when a new edition of the study comes out, with the PDF and what changed; nothing else, no advertising and no other kind of message. Every email has a link to stop receiving them, which removes the address from the list. How long it is kept: until you stop receiving them, or until the study stops having new editions.</p>
     <h3 data-t="priv.pergunte.tit">Typed question, in “Ask the data”, under Explore</h3>
     <p data-t="priv.pergunte">What is sent: the text of the question. What for: an artificial intelligence service reads the question only to pick which of the page's ready-made questions was asked and for which place; the answer comes from the TSE count, on the page itself. The question goes first to Cloudflare Workers AI and, once the day's free quota runs out, to Anthropic's Claude, up to a daily spending cap. The study does not store the text of the question: it stores only how many questions were asked each day and, until the end of the day, a scrambled code made from your internet address, to limit the number of questions per person. Do not type personal data in the question.</p>
+    <h3 data-t="priv.assistente.tit">Questions to the assistant, through the “Ask the study” button in the corner of the page</h3>
+    <p data-t="priv.assistente">What is sent: the text of the question and the earlier questions and answers in the same conversation. What for: an artificial intelligence service reads the study and writes the answer, citing the section where you can check. The question goes to gpt-oss, on Ollama, while the month's free usage lasts; after that, questions to the study stop until the following month. The study stores the question and the answer while it is online, to improve the answers and to build the frequent-questions area, which shows each question rewritten by the study, never the text of whoever asked. Stored with the question are only the date, the page language and its position in the conversation: not the internet address or anything that says who asked. That is why one person's question cannot be found later. To limit the number of questions per person, a scrambled code made from the internet address is kept until the end of the day, apart from the question. Do not type personal data in the question.</p>
     <p class="priv-pe" data-t="priv.robos">In the first three cases, an invisible protection against bots checks, without asking you anything, that the sender is a person; for typed questions, the per-person limit does that job. The legal basis for all of this is your consent (LGPD, article 7, item I): you send because you want to and can withdraw whenever you like.</p>
   </section>
 
@@ -75,7 +77,7 @@
 
   <section class="priv-parte" aria-labelledby="priv-servicos">
     <h2 id="priv-servicos" data-t="priv.servicos.tit">Who else handles the data, on behalf of the study</h2>
-    <p data-t="priv.servicos">Only the services that make the study work, each for its own part: Cloudflare (hosting, database, protection against bots and reading typed questions), the form service behind the message box (Web3Forms), the service that sends the new-edition emails, Anthropic (reading typed questions after Cloudflare's free quota) and the artificial intelligence service that helps moderate the comments. Some of them store data outside Brazil.</p>
+    <p data-t="priv.servicos">Only the services that make the study work, each for its own part: Cloudflare (hosting, database, protection against bots and reading typed questions), the form service behind the message box (Web3Forms), the service that sends the new-edition emails, Ollama (the assistant's answers), Anthropic (reading typed questions after Cloudflare's free quota) and the artificial intelligence service that helps moderate the comments. Some of them store data outside Brazil.</p>
   </section>
 
   <section class="priv-parte" aria-labelledby="priv-direitos">
