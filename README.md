@@ -1,6 +1,6 @@
 # Análise da virada: dados e scripts
 
-**English:** [README.en.md](README.en.md)
+**English:** [README.en.md](README.en.md) · **Español:** o estudo em [analise-da-virada.pages.dev/es/](https://analise-da-virada.pages.dev/es/); dicionário em [DICCIONARIO.md](DICCIONARIO.md)
 
 Os dados tratados e os scripts do estudo **[Análise da virada](https://analise-da-virada.pages.dev/)**: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município. Entre os votos dados aos dois candidatos, o Lula passou de 48,99% para 51,79%, e o Flávio Bolsonaro, de 51,01% para 48,21%. O estudo mostra onde e quanto isso mudou, com os dados oficiais do TSE, o mesmo tratamento para os dois e sem atribuir causas.
 
@@ -12,6 +12,7 @@ Aqui está tudo para conferir as contas ou fazer o seu próprio estudo, sem prec
 |---|---|
 | [`planilha/pt-BR/`](planilha/pt-BR/) | Os CSV para abrir no Excel em português (ponto e vírgula entre os campos, vírgula decimal). São os mesmos que a página oferece em "Baixar os dados", mais `votos_partido_1t.csv` |
 | [`planilha/en/`](planilha/en/) | Os mesmos números, com cabeçalhos em inglês, vírgula entre os campos e ponto decimal |
+| [`planilha/es/`](planilha/es/) | Os mesmos números, com cabeçalhos em espanhol, ponto e vírgula entre os campos e vírgula decimal |
 | [`DICIONARIO.md`](DICIONARIO.md) | Cada coluna de cada CSV: descrição, unidade, fórmula, fonte e o script que a faz (também em `planilha/*/dicionario.csv`) |
 | [`dados/`](dados/) | As bases como os scripts gravam (CSV com ponto decimal, JSON e as seções em `.csv.gz`). Guia em [`dados/LEIA-ME.md`](dados/LEIA-ME.md) |
 | [`scripts/`](scripts/) | Os scripts em Python que baixam as fontes e refazem as bases, na ordem. Guia em [`scripts/LEIA-ME.md`](scripts/LEIA-ME.md) |
@@ -62,9 +63,9 @@ O que os dados não permitem dizer está em "Limites do estudo", na página. Em 
 
 ## Como citar
 
-> MARTINS, Murilo Neves de. **Análise da virada**: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município. Versão 1.3. [S. l.], 29 out. 2026. Disponível em: https://analise-da-virada.pages.dev/. Dados e scripts: https://github.com/MuriloNM/analise-da-virada.
+> MARTINS, Murilo Neves de. **Análise da virada**: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município. Versão 1.3.1. [S. l.], 30 out. 2026. Disponível em: https://analise-da-virada.pages.dev/. Dados e scripts: https://github.com/MuriloNM/analise-da-virada.
 
-APA: Martins, M. N. de (2026). *Análise da virada: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município* (Versão 1.3). https://analise-da-virada.pages.dev/
+APA: Martins, M. N. de (2026). *Análise da virada: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município* (Versão 1.3.1). https://analise-da-virada.pages.dev/
 
 O GitHub também mostra a citação pelo botão "Cite this repository" (arquivo [`CITATION.cff`](CITATION.cff)).
 
@@ -78,12 +79,13 @@ Detalhes em [`LICENCA-DADOS.md`](LICENCA-DADOS.md).
 
 ## Versão e correções
 
-**Versão 1.3, de 29/10/2026**: a primeira publicada, com uma correção de texto, a parte "Pergunte aos dados", o assistente "Pergunte ao estudo", gráficos com a tabela a um clique, o Mapa, a parte "Estudos externos", as regras dos comentários (que abrem depois) a 2ª rodada da exploração guiada, sobre quem votou e quem faltou, por idade, e, no capítulo 7, as projeções da apuração refeitas pela hora de chegada dos boletins, com a parte "Métodos parecidos". A mesma versão da página e do PDF.
+**Versão 1.3.1, de 30/10/2026**: a primeira publicada, com uma correção de texto, a parte "Pergunte aos dados", o assistente "Pergunte ao estudo", gráficos com a tabela a um clique, o Mapa, a parte "Estudos externos", as regras dos comentários (que abrem depois) a 2ª rodada da exploração guiada, sobre quem votou e quem faltou, por idade, e, no capítulo 7, as projeções da apuração refeitas pela hora de chegada dos boletins, com a parte "Métodos parecidos", e o estudo inteiro em espanhol. A mesma versão da página e do PDF.
 
 Achou um erro? Abra um pedido em [Issues](../../issues) ("Achei um erro") ou escreva pela caixa "Escrever ao autor", na página. Cada correção entra aqui e em "Versão e correções", na página, com a data, o que mudou e, se a pessoa quiser, quem avisou.
 
 | Versão | Data | O que mudou |
 |---|---|---|
+| 1.3.1 | 30/10/2026 | Nova língua, sem mudar nenhum número nem conclusão: o estudo inteiro em espanhol, com o PDF, em https://analise-da-virada.pages.dev/es/ (e `planilha/es/`, `DICCIONARIO.md` aqui). Na versão em inglês, o título de uma nota e a linha da versão 1.3, que tinham ficado em português, agora estão em inglês. |
 | 1.3 | 29/10/2026 | Análise nova, exploratória, sem mudar nenhum número dos capítulos 1 a 6 nem das hipóteses: a apuração do 2º turno refeita pela hora em que o TSE recebeu cada boletim (o buraco do histórico preenchido, os estados leitura a leitura e a causa do salto da projeção às 19:43:31) e projeções que acertam o vencedor desde as primeiras urnas, testadas em 2022, 2018 e 2024 (capítulo 7, Figuras 7.2 e 7.3, e um achado no Resumo); a parte "Métodos parecidos" em Método e fontes; e a hora junto da data nas verificações dos estudos externos. Scripts novos: `reconstrucao_2t.py`, `projecoes_*.py`, `regra_*.py` e os `baixar_*.py` de 2018, 2022, 2024 e das pesquisas. |
 | 1.2 | 28/10/2026 | Análise nova, exploratória: a 2ª rodada da exploração guiada no capítulo 9, com cinco perguntas sobre quem votou e quem faltou, por idade (perfil de comparecimento do TSE, só do 1º turno, e perfil do eleitorado por seção), registradas antes das contas (`docs/analise/HIPOTESES.md`, seção 8), e a nota N24. Dados e scripts novos: `perfil_idade*`. Nenhum número dos capítulos 1 a 8 mudou. |
 | 1.1.2 | 28/10/2026 | Novo na página: as regras dos comentários, no fim do estudo (os comentários abrem depois), uma contagem de uso sem nenhum dado pessoal (downloads do PDF, partes e capítulos abertos, buscas da cidade) e a página de privacidade atualizada. Nenhum número, medida ou hipótese mudou. |

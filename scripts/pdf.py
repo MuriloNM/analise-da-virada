@@ -1,6 +1,6 @@
 """O estudo em PDF, em cada língua da página (T17; especificação 7.8; P25).
 
-    python -I scripts/pdf.py
+    python -I scripts/pdf.py [--lingua es …]
 
 Para cada língua de site-analise/textos/linguas.js:
 1. Serve site-analise/ num endereço local de passagem e abre a página da língua no Chrome sem
@@ -16,6 +16,9 @@ Para cada língua de site-analise/textos/linguas.js:
    páginas e versão de cada língua) e a impressão digital (SHA-256) de cada PDF, que "Versão e
    correções" mostra para quem quiser conferir se uma cópia é igual à original (D72). PDFs de versões
    antigas na pasta são apagados.
+
+Com --lingua, grava só as línguas pedidas (uma língua nova, T43): os PDFs das outras e as linhas delas em
+arquivos.js ficam como estão, com a mesma impressão digital.
 
 Rodar depois de mudar texto, número ou versão (e depois do scripts/previas.py, que grava as páginas
 das línguas). Nada é publicado: o PDF fica em site-analise/pdf/ e vai junto no T09.
@@ -127,11 +130,19 @@ def main():
     threading.Thread(target=servidor.serve_forever, daemon=True).start()
     base = f"http://127.0.0.1:{servidor.server_address[1]}/"
     SAIDA.mkdir(exist_ok=True)
+    pedidas = sys.argv[sys.argv.index("--lingua") + 1:] if "--lingua" in sys.argv else None
     lista, gravados = {}, set()
+    if pedidas:  # as outras línguas ficam como estão
+        velho = (SAIDA / "arquivos.js").read_text(encoding="utf-8")
+        lista = json.loads(velho[velho.index("{"):velho.rindex("}") + 1])
+        lista = {c: v for c, v in lista.items() if c not in pedidas}
+        gravados = {v["arquivo"] for v in lista.values()}
     try:
         with sync_playwright() as p:
             navegador = p.chromium.launch(channel="chrome")
             for l in textos.linguas():
+                if pedidas and l["codigo"] not in pedidas:
+                    continue
                 pdf, arquivo, versao, n, onde = gravar(navegador, base + l["pasta"] + "?pdf", l["codigo"])
                 (SAIDA / arquivo).write_bytes(pdf)
                 gravados.add(arquivo)
@@ -142,6 +153,7 @@ def main():
             navegador.close()
     finally:
         servidor.shutdown()
+    lista = {l["codigo"]: lista[l["codigo"]] for l in textos.linguas() if l["codigo"] in lista}
     for velho in SAIDA.glob("*.pdf"):
         if velho.name not in gravados:
             velho.unlink()

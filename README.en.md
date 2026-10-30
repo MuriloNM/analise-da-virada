@@ -1,6 +1,6 @@
 # Brazil's runoff reversal: data and scripts
 
-**Português:** [README.md](README.md)
+**Português:** [README.md](README.md) · **Español:** the study at [analise-da-virada.pages.dev/es/](https://analise-da-virada.pages.dev/es/); dictionary in [DICCIONARIO.md](DICCIONARIO.md)
 
 The processed data and the scripts of the study **[Brazil's runoff reversal](https://analise-da-virada.pages.dev/en/)**: what changed from the first round to the runoff of the 2026 presidential election, by state and municipality. Among the votes cast for the two candidates, Lula went from 48.99% to 51.79%, and Flávio Bolsonaro from 51.01% to 48.21%. The study shows where and by how much this changed, with the official TSE (Superior Electoral Court) data, the same treatment for both candidates and without attributing causes.
 
@@ -11,6 +11,7 @@ Everything needed to check the calculations or run your own study is here, witho
 | Folder or file | What it is |
 |---|---|
 | [`planilha/en/`](planilha/en/) | CSV files for Excel in English (commas between fields, dot for decimals). The same files the page offers under "Download the data", plus `votos_partido_1t.csv` |
+| [`planilha/es/`](planilha/es/) | The same numbers, with headers in Spanish, semicolons between fields and a comma for decimals |
 | [`planilha/pt-BR/`](planilha/pt-BR/) | The same numbers with Portuguese headers, semicolons between fields and a decimal comma |
 | [`DATA-DICTIONARY.md`](DATA-DICTIONARY.md) | Every column of every CSV: description, unit, formula, source and the script that makes it (also in `planilha/*/dicionario.csv`) |
 | [`dados/`](dados/) | The datasets as the scripts write them (CSV with a decimal dot, JSON and the polling stations in `.csv.gz`). Guide (in Portuguese) in [`dados/LEIA-ME.md`](dados/LEIA-ME.md) |
@@ -64,7 +65,7 @@ What the data do not allow us to say is under "Limitations of the study", on the
 
 ## How to cite
 
-Martins, M. N. de (2026). *Brazil's runoff reversal: what changed from the first round to the runoff of the 2026 presidential election, by state and municipality* (Version 1.3). https://analise-da-virada.pages.dev/en/. Data and scripts: https://github.com/MuriloNM/analise-da-virada
+Martins, M. N. de (2026). *Brazil's runoff reversal: what changed from the first round to the runoff of the 2026 presidential election, by state and municipality* (Version 1.3.1). https://analise-da-virada.pages.dev/en/. Data and scripts: https://github.com/MuriloNM/analise-da-virada
 
 GitHub also shows the citation through the "Cite this repository" button ([`CITATION.cff`](CITATION.cff)).
 
@@ -78,7 +79,7 @@ Details in [`LICENCA-DADOS.md`](LICENCA-DADOS.md).
 
 ## Version and corrections
 
-**Version 1.3, 29 October 2026**: the first published version, with a text correction, the "Ask the data" section, the "Ask the study" assistant, charts with the table one click away, the Map, the "External studies" section, the comment rules (comments open later) the second round of the guided exploration, on who voted and who stayed away, by age, and, in chapter 7, the projections of the count recomputed from the time each voting machine report arrived, with the "Similar methods" section. The same version as the page and the PDF.
+**Version 1.3.1, 30 October 2026**: the first published version, with a text correction, the "Ask the data" section, the "Ask the study" assistant, charts with the table one click away, the Map, the "External studies" section, the comment rules (comments open later) the second round of the guided exploration, on who voted and who stayed away, by age, and, in chapter 7, the projections of the count recomputed from the time each voting machine report arrived, with the "Similar methods" section, and the whole study in Spanish. The same version as the page and the PDF.
 
 Found an error? Open an [issue](../../issues) ("I found an error") or write through the "Write to the author" box on the page. Every correction goes here and into "Version and corrections" on the page, with the date, what changed and, if the person wishes, who reported it.
 

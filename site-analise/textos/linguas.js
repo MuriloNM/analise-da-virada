@@ -6,5 +6,6 @@
 // a página da língua e as prévias (e python -I scripts/csv_estudo.py, os CSV).
 window.LINGUAS = [
   {"codigo": "pt-BR", "nome": "Português", "pasta": "", "og": "pt_BR"},
-  {"codigo": "en", "nome": "English", "pasta": "en/", "og": "en_US"}
+  {"codigo": "en", "nome": "English", "pasta": "en/", "og": "en_US"},
+  {"codigo": "es", "nome": "Español", "pasta": "es/", "og": "es_LA"}
 ];

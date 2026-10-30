@@ -16,6 +16,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "Size of the change",
     "nosso": "The margin moved 6.66 million votes toward Lula, in all 27 states and abroad."
+   },
+   "es": {
+    "titulo": "Tamaño del cambio",
+    "nosso": "La diferencia se movió 6,66 millones de votos a favor de Lula, en los 27 estados y en el exterior."
    }
   },
   {
@@ -27,6 +31,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "1 · Where each one grew",
     "nosso": "Each candidate grew more where they had a smaller share in the first round: for every 10 more points of Lula's share, 0.51 point less growth, within the same state (H1 confirmed)."
+   },
+   "es": {
+    "titulo": "1 · Dónde creció cada uno",
+    "nosso": "Cada uno creció más donde tenía una parte menor en la primera vuelta: por cada 10 puntos más de Lula, 0,51 puntos menos de aumento, dentro del mismo estado (H1 respaldada)."
    }
   },
   {
@@ -38,6 +46,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "2 · Where Flávio grew",
     "nosso": "Flávio gained 3.72 million votes, in 21 of the 27 states and in 4,624 of the 5,571 municipalities."
+   },
+   "es": {
+    "titulo": "2 · Dónde creció Flávio",
+    "nosso": "Flávio ganó 3,72 millones de votos, en 21 de los 27 estados y en 4624 de los 5571 municipios."
    }
   },
   {
@@ -49,6 +61,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "3 · Other candidates' votes",
     "nosso": "It cannot be said with confidence: 46 to 61 of every 100 went to Lula, depending on the calculation (H3 inconclusive)."
+   },
+   "es": {
+    "titulo": "3 · Los votos de los otros candidatos",
+    "nosso": "No se puede saber con seguridad: de 46 a 61 de cada 100 para Lula, según el cálculo (H3 no concluyente)."
    }
   },
   {
@@ -60,6 +76,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "4 · Turnout",
     "nosso": "2.96 million more people voted; the abstention rate fell from 21.08% to 19.22% but rose in 9 states. Most of the vote gains did not come from turnout (H4 inconclusive)."
+   },
+   "es": {
+    "titulo": "4 · Participación",
+    "nosso": "Fueron a votar 2,96 millones de personas más; la abstención bajó del 21,08 % al 19,22 %, pero subió en 9 estados. La mayor parte de los votos ganados no vino de la participación (H4 no concluyente)."
    }
   },
   {
@@ -71,6 +91,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "5 · Deputies, senators and parties",
     "nosso": "No clear link appeared between the vote for deputy and senator and the change."
+   },
+   "es": {
+    "titulo": "5 · Diputados, senadores y partidos",
+    "nosso": "No apareció una relación clara entre el voto para diputado y senador y el cambio."
    }
   },
   {
@@ -82,6 +106,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "6 · Weight of regions and states",
     "nosso": "42.9% of the change came from the Southeast and 38.4% from the Northeast; São Paulo, 21.0%. Only Minas Gerais flipped."
+   },
+   "es": {
+    "titulo": "6 · Peso de regiones y estados",
+    "nosso": "El 42,9 % del cambio vino del Sudeste y el 38,4 % del Nordeste; São Paulo, el 21,0 %. Solo Minas Gerais cambió de lado."
    }
   },
   {
@@ -93,6 +121,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "7 · Live projection",
     "nosso": "With 10% to 20% of machines counted, the projection was off by 1.06 points on average; the partial count, by 1.84."
+   },
+   "es": {
+    "titulo": "7 · Proyección en vivo",
+    "nosso": "Con el 10 % al 20 % de las urnas, la proyección se equivocó en promedio 1,06 puntos; el escrutinio parcial, 1,84."
    }
   },
   {
@@ -104,6 +136,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "8 · Social data",
     "nosso": "Where more residents are low-income, Lula took 9.6 more points of the runoff vote gains, within the same state."
+   },
+   "es": {
+    "titulo": "8 · Datos sociales",
+    "nosso": "Donde hay más población de bajos ingresos, Lula se quedó con 9,6 puntos más de los votos ganados en la segunda vuelta, dentro del mismo estado."
    }
   },
   {
@@ -115,6 +151,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "9 · Flips and concentration",
     "nosso": "Lula overtook Flávio in 211 municipalities; 151 municipalities made up half of the change (exploratory)."
+   },
+   "es": {
+    "titulo": "9 · Cambios de lado y concentración",
+    "nosso": "Lula superó a Flávio en 211 municipios; 151 municipios sumaron la mitad del cambio (exploratorio)."
    }
   },
   {
@@ -126,6 +166,10 @@ window.ESTUDOS_EXTERNOS = {
    "en": {
     "titulo": "Limits: cause and path",
     "nosso": "Places, not people; where and how much, not why; net change, not each voter's path."
+   },
+   "es": {
+    "titulo": "Límites: causa y camino",
+    "nosso": "Lugares, no personas; dónde y cuánto, no por qué; saldo, no el camino de cada elector."
    }
   }
  ],
@@ -200,6 +244,34 @@ window.ESTUDOS_EXTERNOS = {
      "c9": "211 flips, 76 in Minas Gerais; 100 cities made up 45% (ours: 151 made up half).",
      "limites": "Says it shows patterns, not voter behaviour."
     }
+   },
+   "es": {
+    "titulo": "Lula subiu em 5.411 de 5.571 municípios, mas 100 cidades fizeram 45% da virada",
+    "veiculo": "Dado Bruto",
+    "autor": "sin autor individual",
+    "resumo": "Cambio de la parte de Lula entre los dos, municipio por municipio, con datos del TSE y del IBGE, regresiones, cortes por tamaño del municipio y comparación con 2022. Scripts publicados.",
+    "so_eles": [
+     "Los municipios que cambiaron de lado explican solo el 8 % del cambio; el 56 % vino de donde Lula ya iba adelante",
+     "De las 159 caídas de Lula, 85 en Bahia",
+     "Comparación con la segunda vuelta de 2022 (por debajo de 2022 en 4363 municipios)",
+     "Cambio por tamaño del municipio"
+    ],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "División de los votos de los otros candidatos (cap. 3)",
+     "Diputado y senador (cap. 5)",
+     "Proyección en vivo (cap. 7)",
+     "Datos sociales (cap. 8)"
+    ],
+    "temas": {
+     "resumo": "Los mismos 6,66 millones y 5411 municipios.",
+     "c1": "Correlación de −0,69 entre la parte inicial y el aumento.",
+     "c2": "Los mismos 3,72 millones de votos ganados por Flávio.",
+     "c4": "Relación débil entre participación y cambio (0,10).",
+     "c6": "Sudeste 43 %, Nordeste 39 %, São Paulo 21 %.",
+     "c9": "211 cambios de lado, 76 en Minas; 100 ciudades sumaron el 45 % (nosotros: 151 sumaron la mitad).",
+     "limites": "Dice que muestra patrones, no el comportamiento de los electores."
+    }
    }
   },
   {
@@ -257,6 +329,28 @@ window.ESTUDOS_EXTERNOS = {
      "c4": "Attributes 6.05 million of the change to people who did not vote for a candidate in the first round (3.17 million abstainers to Lula). It is a model-estimated flow; we give the net change, and most of the vote gains did not come from turnout. The numbers do not contradict each other; the reading does.",
      "limites": "Speaks of where voters went; we say the calculations do not show each voter's path. The author acknowledges the limit."
     }
+   },
+   "es": {
+    "titulo": "Transição de votos entre o 1º e o 2º turno de 2026",
+    "veiculo": "GitHub (repositorio)",
+    "autor": "lorande",
+    "resumo": "Inferencia ecológica con las 499.248 secciones electorales del TSE: una matriz de transición por estado, por mínimos cuadrados con restricciones y bootstrap. Código abierto.",
+    "so_eles": [
+     "Transición por estado: Flávio se quedó con más de los votos de los otros en 8 estados (AC, DF, GO, MS, PR, RR, RS, SC)",
+     "Destino de los votos en blanco y nulos de la primera vuelta (entre el 60 % y el 69 % para Lula)",
+     "La inferencia por sección que HIPOTESES.md (4.5) dejó fuera de esta ronda"
+    ],
+    "so_nos": [
+     "Límites de Duncan y Davis (hasta dónde llegan los datos sin un modelo)",
+     "Varias especificaciones del cap. 3, con el rango completo",
+     "Caps. 1, 5, 7 y 8"
+    ],
+    "temas": {
+     "resumo": "Diferencia de −2,22 a +4,43 millones.",
+     "c3": "Entre los dos, cerca del 53 % de los votos de los otros para Lula, dentro de nuestro rango de 46 a 61; su intervalo, más estrecho, mide solo el muestreo, como dice el propio autor.",
+     "c4": "Atribuye 6,05 millones del cambio a quienes no votaron por un candidato en la primera vuelta (3,17 millones de abstención para Lula). Es un flujo estimado; nosotros damos el saldo, y la mayor parte de los votos ganados no vino de la participación. Los números no se contradicen; la lectura sí.",
+     "limites": "Habla de adónde fueron los electores; nosotros decimos que los cálculos no muestran el camino de cada elector. El autor reconoce el límite."
+    }
    }
   },
   {
@@ -310,6 +404,26 @@ window.ESTUDOS_EXTERNOS = {
      "c3": "Regression across 27 states (R² 0.91); says the coefficients are not transfer rates.",
      "limites": "An opinion passage says the reversal was built with votes that were not Lula's in the first round; the study says the calculations give the net change, not each voter's path."
     }
+   },
+   "es": {
+    "titulo": "Votos de Lula do 1º ao 2º turno: estudo com dados do TSE",
+    "veiculo": "Pacto pelo Serviço Público",
+    "autor": "João Pedro Reis (Communicare)",
+    "resumo": "Descompone los votos ganados por los dos en candidatos eliminados, participación y votos en blanco y nulos, y hace una regresión entre los 27 estados.",
+    "so_eles": [
+     "Regresión del aumento de Lula entre los 27 estados",
+     "En 13 estados el aumento de Lula superó la reserva de votos de los eliminados en el estado"
+    ],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "Municipios y secciones, no solo estados"
+    ],
+    "temas": {
+     "resumo": "Los mismos totales del TSE.",
+     "c4": "El 66,1 % de los candidatos eliminados, el 21,0 % de la participación y el 12,9 % de los votos en blanco y nulos: nuestro cálculo de las fuentes.",
+     "c3": "Regresión entre 27 estados (R² 0,91); dice que los coeficientes no son transferencia.",
+     "limites": "Un pasaje de opinión afirma que la reversión se construyó con votos que no eran de Lula en la primera vuelta; el estudio dice que los cálculos dan el saldo, no el camino de cada elector."
+    }
    }
   },
   {
@@ -359,6 +473,25 @@ window.ESTUDOS_EXTERNOS = {
      "resumo": "A 2.2 million margin for Flávio became 4.4 million for Lula.",
      "c6": "Minas Gerais, the only state to flip.",
      "c9": "211 flips to Lula, one to Flávio (Uirapuru, GO). The 96.7% (5,385) measures the margin in points; our 5,411, the two-candidate share."
+    }
+   },
+   "es": {
+    "titulo": "Lula avança sobre Flávio em 97% dos municípios brasileiros e vira em 211",
+    "veiculo": "Folha de S.Paulo (en Estado de Minas)",
+    "autor": "Marina Pinhoni, Natália Santos e Nicholas Pretto",
+    "resumo": "Relevamiento con los datos del TSE: dónde Lula mejoró la diferencia, dónde cambió de lado el resultado, los mayores cambios de lado y las capitales.",
+    "so_eles": [
+     "Mayores cambios de lado por municipio (Itabirito, MG) y ciudades grandes que cambiaron de lado (Rio, Macapá)",
+     "Mayor ampliación de la ventaja (Lajedão, BA)"
+    ],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "Caps. 1 a 8"
+    ],
+    "temas": {
+     "resumo": "Una diferencia de 2,2 millones a favor de Flávio pasó a 4,4 millones a favor de Lula.",
+     "c6": "Minas, el único estado que cambió de lado.",
+     "c9": "211 cambios de lado a favor de Lula y uno a favor de Flávio (Uirapuru, GO). El 96,7 % (5385) mide la diferencia en puntos; nuestro 5411, la parte entre los dos."
     }
    }
   },
@@ -413,6 +546,26 @@ window.ESTUDOS_EXTERNOS = {
      "c9": "211 flips; one to Flávio.",
      "limites": "Attributes the reversal to a mix of factors, mobilization included; the study does not attribute causes."
     }
+   },
+   "es": {
+    "titulo": "Os fatores que levaram Lula à vitória no segundo turno",
+    "veiculo": "CartaCapital",
+    "autor": "Vinícius Nunes",
+    "resumo": "Reportaje con los datos del TSE: abstención, votos en blanco y nulos, cambios de lado y saldo por urna y por sección.",
+    "so_eles": [
+     "Saldo por urna (31.394 a favor de Lula, 565 a favor de Flávio) y por sección (85 % a favor de Lula)",
+     "Votos en blanco y nulos en número (de 5,98 a 4,15 millones)"
+    ],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "Caps. 1, 3, 5, 7 y 8"
+    ],
+    "temas": {
+     "resumo": "Cambio de cerca de 6,6 millones.",
+     "c4": "Abstención del 21,08 % al 19,22 %.",
+     "c9": "211 cambios de lado; uno a favor de Flávio.",
+     "limites": "Atribuye la reversión a una suma de factores, incluida la movilización; el estudio no atribuye causas."
+    }
    }
   },
   {
@@ -460,6 +613,24 @@ window.ESTUDOS_EXTERNOS = {
      "resumo": "Lula improved in every size band.",
      "limites": "The title says this explains the reversal, and the text suggests causes; the study does not attribute causes."
     }
+   },
+   "es": {
+    "titulo": "Lula ganhou, avançou nas duas pontas, e isso explica a virada eleitoral em 2026",
+    "veiculo": "Política em gráficos (Substack)",
+    "autor": "Emerson Cervi",
+    "resumo": "Divide los municipios en cinco franjas de tamaño con el mismo número de electores y compara la diferencia media y la abstención, en la primera y en la segunda vuelta, desde 2018.",
+    "so_eles": [
+     "Tamaño del municipio como corte (los pequeños volvieron a los niveles de 2022)",
+     "Serie desde 2018"
+    ],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "Caps. 1 a 9"
+    ],
+    "temas": {
+     "resumo": "Lula mejoró en todas las franjas de tamaño.",
+     "limites": "El título dice que eso explica la reversión, y el texto sugiere causas; el estudio no atribuye causas."
+    }
    }
   },
   {
@@ -505,6 +676,23 @@ window.ESTUDOS_EXTERNOS = {
      "c9": "2,875 municipalities for Lula and 2,695 for Flávio, as in the result.",
      "c5": "Mayor's party; we look at deputies and senators."
     }
+   },
+   "es": {
+    "titulo": "No 2º turno, Lula virou e Flávio perdeu em 70 cidades comandadas pelo PL",
+    "veiculo": "Metrópoles (columna de Tácio Lorran)",
+    "autor": "Mateus Salomão",
+    "resumo": "Cruza los cambios de lado con el partido del alcalde.",
+    "so_eles": [
+     "Partido del alcalde: 70 cambios de lado a favor de Lula en ciudades del PL, uno a favor de Flávio en una ciudad del PT"
+    ],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "Caps. 1 a 8"
+    ],
+    "temas": {
+     "c9": "2875 municipios de Lula y 2695 de Flávio, como en el resultado.",
+     "c5": "Partido del alcalde; nosotros miramos diputado y senador."
+    }
    }
   },
   {
@@ -548,6 +736,22 @@ window.ESTUDOS_EXTERNOS = {
      "resumo": "71% of vote gains to Lula (ours: 74%).",
      "c6": "São Paulo in the lead.",
      "c9": "Mentions 213 flips; the final result gives 211."
+    }
+   },
+   "es": {
+    "titulo": "Eleições 2026: veja onde Lula mais ganhou votos no segundo turno",
+    "veiculo": "CNN Brasil",
+    "autor": "Vitor Bonets, con Bruno Soller (Real Time Big Data)",
+    "resumo": "Entrevista con los estados en que Lula más votos ganó y la parte de los votos nuevos que fue para él.",
+    "so_eles": [],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "Todo lo que es método"
+    ],
+    "temas": {
+     "resumo": "El 71 % de los votos nuevos para Lula (nosotros: 74 %).",
+     "c6": "São Paulo adelante.",
+     "c9": "Habla de 213 cambios de lado; el resultado final da 211."
     }
    }
   },
@@ -600,6 +804,25 @@ window.ESTUDOS_EXTERNOS = {
      "c7": "Error of the eve-of-election polls (Flávio about 2 points ahead). Chapter 7 measures the projection during the count, not the eve-of-election polls.",
      "limites": "Says the data do not separate mobilization from vote switching."
     }
+   },
+   "es": {
+    "titulo": "Pesquisas não conseguiram captar virada de Lula",
+    "veiculo": "Poder360",
+    "autor": "Jonathan Karter",
+    "resumo": "Compara 33 encuestas de 11 empresas (del 30/09 al 24/10) con el resultado, en votos válidos, junto a los números de las urnas por estado y región.",
+    "so_eles": [
+     "Error de 33 encuestas de 11 empresas frente al resultado"
+    ],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "Caps. 1 a 9 por municipio"
+    ],
+    "temas": {
+     "resumo": "10,4 millones de votos ganados por Lula.",
+     "c4": "Abstención del 21,08 % al 19,22 %.",
+     "c7": "Error de las encuestas de la víspera (Flávio unos 2 puntos adelante). El cap. 7 mide la proyección durante el escrutinio, no las encuestas de la víspera.",
+     "limites": "Dice que los datos no separan la movilización del cambio de voto."
+    }
    }
   },
   {
@@ -644,6 +867,23 @@ window.ESTUDOS_EXTERNOS = {
     "temas": {
      "c7": "17 of the 21 polls outside their own margin of error. Chapter 7 measures the projection during the count, not the eve-of-election polls.",
      "limites": "Attributes no cause and says the error does not indicate irregularity."
+    }
+   },
+   "es": {
+    "titulo": "Todas as 21 pesquisas eleitorais erraram o resultado no 2º turno",
+    "veiculo": "Rede 98",
+    "autor": "Igor Teixeira",
+    "resumo": "21 encuestas nacionales de la recta final frente al resultado: en promedio, Flávio 1,9 puntos adelante; las urnas dieron a Lula 3,6 adelante.",
+    "so_eles": [
+     "Error de las 21 encuestas de la recta final"
+    ],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "Todo lo que es método"
+    ],
+    "temas": {
+     "c7": "17 de las 21 encuestas fuera de su propio margen de error. El cap. 7 mide la proyección durante el escrutinio, no las encuestas de la víspera.",
+     "limites": "No afirma una causa y dice que el error no indica irregularidad."
     }
    }
   },
@@ -694,6 +934,25 @@ window.ESTUDOS_EXTERNOS = {
      "c4": "Attributes the reversal to turnout among people the polls expected to stay home; we measured that most of the vote gains did not come from turnout. Its support is a poll breakdown (intention, not votes).",
      "c7": "Error of the eve-of-election polls. Chapter 7 measures the projection during the count, not the eve-of-election polls.",
      "limites": "Attributes the reversal to turnout among people the polls expected to stay home; the study does not attribute causes."
+    }
+   },
+   "es": {
+    "titulo": "Pesquisas erraram no 2º turno? O que os números revelam",
+    "veiculo": "Blog do Esmael",
+    "autor": "Esmael Morais",
+    "resumo": "12 encuestas del 23 y 24/10 frente al resultado, además de la abstención, los votos en blanco y nulos y un corte de Datafolha por propensión a votar.",
+    "so_eles": [
+     "Corte de Datafolha por propensión a votar (Flávio adelante entre los de alta propensión, Lula entre los de media o baja)",
+     "Votos en blanco y nulos del 4,77 % al 3,24 %"
+    ],
+    "so_nos": [
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 % y criterio de precisión fijados de antemano (HIPOTESES.md)",
+     "Cálculos por municipio y por sección"
+    ],
+    "temas": {
+     "c4": "Atribuye la reversión a la participación de quienes las encuestas daban como probables ausentes; nosotros medimos que la mayor parte de los votos ganados no vino de la participación. Su respaldo es un corte de encuesta (intención, no voto).",
+     "c7": "Error de las encuestas de la víspera. El cap. 7 mide la proyección durante el escrutinio, no las encuestas de la víspera.",
+     "limites": "Atribuye la reversión a la participación de quienes las encuestas daban como ausentes; el estudio no atribuye causas."
     }
    }
   }

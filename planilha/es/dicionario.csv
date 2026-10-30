@@ -1,0 +1,130 @@
+﻿archivo;columna;descripcion
+municipios.csv;cod_tse;código del municipio en el TSE, 5 dígitos
+municipios.csv;cod_ibge;"código del municipio en el IBGE, 7 dígitos; vacío en el exterior"
+municipios.csv;estado, municipio;sigla del estado (ZZ en el exterior) y nombre del municipio
+municipios.csv;region;"Norte, Nordeste, Centro-Oeste, Sudeste, Sul o Exterior, en portugués (Sul: Sur; nota N08)"
+municipios.csv;capital_interior;"capital, interior o exterior, en portugués (capital del estado, el resto del estado o exterior; nota N08)"
+municipios.csv;tamano, tamano_franja;franja de tamaño por el electorado de la primera vuelta: código de 1 a 5 (X en el exterior) y nombre, en portugués (nota N08)
+municipios.csv;electorado_1v, electorado_2v;electorado habilitado de cada vuelta (nota N05)
+municipios.csv;votos_emitidos_1v, votos_emitidos_2v;votos emitidos
+municipios.csv;abstencion_1v, abstencion_2v;abstención: electorado − votos emitidos
+municipios.csv;validos_1v, validos_2v;votos válidos (en Brasil, excluyen los votos en blanco y los nulos)
+municipios.csv;blancos_nulos_1v, blancos_nulos_2v;votos en blanco y nulos: votos emitidos − válidos (en la primera vuelta, juntos: nota N07)
+municipios.csv;blancos_2v, nulos_2v;votos en blanco y nulos por separado, solo en la segunda vuelta
+municipios.csv;lula_1v, flavio_1v, lula_2v, flavio_2v;votos de cada candidato
+municipios.csv;otros_1v;votos de los demás candidatos en la primera vuelta: válidos − Lula − Flávio
+municipios.csv;parte_lula_1v_pct, parte_lula_2v_pct;"parte de Lula entre los dos, Lula ÷ (Lula + Flávio), en %; vacío si ninguno de los dos tuvo votos (nota N09). La de Flávio es 100 − parte"
+municipios.csv;var_parte_pp;variación de la parte de Lula, segunda − primera vuelta, en puntos porcentuales
+municipios.csv;var_lula, var_flavio;votos ganados por cada uno de la primera a la segunda vuelta
+municipios.csv;dif_1v, dif_2v, var_dif;diferencia Lula − Flávio en cada vuelta y su variación
+municipios.csv;contrib_reversion_pct;contribución a la reversión: variación de la diferencia de la unidad ÷ la de Brasil, en %
+municipios.csv;parte_aumento_lula_pct;"parte del aumento: votos ganados por Lula ÷ votos ganados por los dos, en %; vacío cuando los dos juntos no ganaron votos; puede pasar de 100 o quedar por debajo de 0 (nota N09)"
+municipios.csv;var_votos_emitidos;variación de los votos emitidos, segunda − primera vuelta
+municipios.csv;var_blancos_nulos;variación de los votos en blanco y nulos, segunda − primera vuelta
+municipios.csv;var_electorado;variación del electorado, segunda − primera vuelta, solo como registro (nota N05)
+municipios.csv;tasa_abst_1v_pct, tasa_abst_2v_pct;tasa de abstención: abstención ÷ electorado, en %, cada vuelta con su propio electorado (nota N05)
+municipios.csv;var_tasa_abst_pp;variación de la tasa de abstención, en puntos porcentuales
+municipios.csv;residuo_identidad;"control: (votos ganados por los dos) − (otros de la primera vuelta + variación de los votos emitidos − variación de los votos en blanco y nulos); es cero en todas las filas"
+estados.csv;nivel;brasil, regiao o uf, en portugués (Brasil, región o estado)
+estados.csv;codigo, nombre;"código (BR, sigla de la región o del estado; ZZ y EX para el exterior) y nombre"
+estados.csv;region;"región del estado; vacío en Brasil"
+estados.csv;municipios;cuántos municipios suma la unidad
+estados.csv;electorado_1v, electorado_2v;electorado habilitado de cada vuelta (nota N05)
+estados.csv;votos_emitidos_1v, votos_emitidos_2v;votos emitidos
+estados.csv;abstencion_1v, abstencion_2v;abstención: electorado − votos emitidos
+estados.csv;validos_1v, validos_2v;votos válidos (en Brasil, excluyen los votos en blanco y los nulos)
+estados.csv;blancos_nulos_1v, blancos_nulos_2v;votos en blanco y nulos: votos emitidos − válidos (en la primera vuelta, juntos: nota N07)
+estados.csv;blancos_2v, nulos_2v;votos en blanco y nulos por separado, solo en la segunda vuelta
+estados.csv;lula_1v, flavio_1v, lula_2v, flavio_2v;votos de cada candidato
+estados.csv;otros_1v;votos de los demás candidatos en la primera vuelta: válidos − Lula − Flávio
+estados.csv;parte_lula_1v_pct, parte_lula_2v_pct;"parte de Lula entre los dos, Lula ÷ (Lula + Flávio), en %; vacío si ninguno de los dos tuvo votos (nota N09). La de Flávio es 100 − parte"
+estados.csv;var_parte_pp;variación de la parte de Lula, segunda − primera vuelta, en puntos porcentuales
+estados.csv;var_lula, var_flavio;votos ganados por cada uno de la primera a la segunda vuelta
+estados.csv;dif_1v, dif_2v, var_dif;diferencia Lula − Flávio en cada vuelta y su variación
+estados.csv;contrib_reversion_pct;contribución a la reversión: variación de la diferencia de la unidad ÷ la de Brasil, en %
+estados.csv;parte_aumento_lula_pct;"parte del aumento: votos ganados por Lula ÷ votos ganados por los dos, en %; vacío cuando los dos juntos no ganaron votos; puede pasar de 100 o quedar por debajo de 0 (nota N09)"
+estados.csv;var_votos_emitidos;variación de los votos emitidos, segunda − primera vuelta
+estados.csv;var_blancos_nulos;variación de los votos en blanco y nulos, segunda − primera vuelta
+estados.csv;var_electorado;variación del electorado, segunda − primera vuelta, solo como registro (nota N05)
+estados.csv;tasa_abst_1v_pct, tasa_abst_2v_pct;tasa de abstención: abstención ÷ electorado, en %, cada vuelta con su propio electorado (nota N05)
+estados.csv;var_tasa_abst_pp;variación de la tasa de abstención, en puntos porcentuales
+estados.csv;residuo_identidad;"control: (votos ganados por los dos) − (otros de la primera vuelta + variación de los votos emitidos − variación de los votos en blanco y nulos); es cero en todas las filas"
+partidos.csv;numero, sigla, nombre;número, sigla y nombre del partido en 2026
+partidos.csv;federacion_2026;federación de la que forma parte el partido en 2026, si la hay
+partidos.csv;posicion;"posición en la escala de la encuesta a expertos, ola de 2022: de 0 (extrema izquierda) a 10 (extrema derecha); vacío en Missão (nota N11)"
+partidos.csv;categoria;categoría del artículo de origen, en portugués (extrema esquerda, esquerda, centro-esquerda, centro, centro-direita, direita, extrema direita: de extrema izquierda a extrema derecha)
+partidos.csv;bloque_izquierda;sí para posición hasta 4,49 (extrema izquierda, izquierda y centroizquierda)
+partidos.csv;regla, regla_explicada;regla usada para vincular el partido de 2026 con el de la encuesta (fusiones, cambios de nombre, partidos nuevos: nota N10)
+partidos.csv;sigla_en_encuesta;sigla del partido en la base de la encuesta
+partidos.csv;expertos, desv_estandar;cuántos expertos dieron calificación y la desviación estándar de las calificaciones (nota N12)
+partidos.csv;fuente;la publicación y la base de datos
+partidos.csv;rob_2018_posicion, rob_2018_bloque_izquierda, rob_2018_regla, rob_2018_explicada;prueba de robustez con la ola de 2018 de la misma encuesta
+partidos.csv;rob_zucco_power_2021;"prueba de robustez con la escala de Zucco y Power (encuesta a diputados federales, 2021), de aproximadamente −1 a +1; solo el orden es comparable"
+esquerda_municipios.csv;nivel;mu (municipio), uf (estado) o br (Brasil)
+esquerda_municipios.csv;cod, estado, nombre;código TSE del municipio (vacío en estado y Brasil), estado y nombre
+esquerda_municipios.csv;cargo, cargo_nombre;5 senador, 6 deputado federal (diputado federal), 7 deputado estadual (diputado estatal), 8 deputado distrital (diputado distrital)
+esquerda_municipios.csv;validos, izq, pct_izq;votos válidos del cargo, votos de los partidos del bloque de izquierda y su proporción en los válidos, en %
+esquerda_municipios.csv;sin_posicion, pct_sin_posicion;votos del partido sin posición en la escala (Missão) y su proporción en los válidos (nota N11)
+esquerda_municipios.csv;escala;promedio de las posiciones de los partidos, ponderado por los votos, de 0 a 10, solo entre los votos con posición
+esquerda_municipios.csv;lula_1v, flavio_1v, parte_lula_1v;votos para presidente en la primera vuelta y la parte de Lula entre los dos, en %
+esquerda_municipios.csv;ventaja;"pct_izq − parte de Lula entre los dos, en puntos porcentuales. La prueba del capítulo 5 usa la proporción sobre los válidos (HIPOTESES.md, P14); esta columna es la de la prueba de robustez"
+esquerda_municipios.csv;sub_iudice, sub_iudice_izq, pct_izq_con_sj, escala_con_sj, ventaja_con_sj;la versión con los votos *sub iudice* sumados a los válidos y a sus partidos (nota N02)
+esquerda_municipios.csv;rob_2018_pct_izq, rob_2018_sin_posicion, rob_2018_escala, rob_2018_ventaja;prueba de robustez con la ola de 2018 de la escala
+hipoteses.csv;hipotesis, capitulo;la hipótesis (H1, H3, H4, H5) y el capítulo en que aparece
+hipoteses.csv;cargo;en el capítulo 5, el cargo (deputado federal, deputado estadual o senador: diputado federal, diputado estatal o senador)
+hipoteses.csv;version;la prueba principal o una prueba de robustez
+hipoteses.csv;dentro_de_estados;"sí: compara municipios del mismo estado (efecto fijo de estado); no: todos los municipios juntos"
+hipoteses.csv;peso;peso de cada municipio en la regresión
+hipoteses.csv;variable, controles;la variable puesta a prueba y los controles
+hipoteses.csv;n, grupos;cuántos municipios y cuántos estados entran
+hipoteses.csv;coef, error_estandar;"coeficiente (puntos de variación de la parte de Lula por punto de la variable; en los complementos, sin hipótesis, votos ganados por el candidato en % del electorado de la primera vuelta por punto de la variable) y error estándar agrupado por estado"
+hipoteses.csv;ic95_inf, ic95_sup;intervalo de confianza del 95 % del coeficiente por el error agrupado (t con el número de estados menos 1 grados de libertad)
+hipoteses.csv;ic95_salvaje_inf, ic95_salvaje_sup;intervalo del 95 % del bootstrap salvaje, por inversión de la prueba: el que muestran los gráficos (T32)
+hipoteses.csv;p_cr1, p_salvaje;valor p del error agrupado y del bootstrap salvaje por conglomerados (vacío donde no se calculó)
+hipoteses.csv;r2, r2_tipo;R² y de qué tipo (comum o dentro dos estados: común o dentro de los estados)
+hipoteses.csv;efecto_intercuartil_pp;diferencia prevista en la variación de la parte de Lula entre un municipio del cuartil inferior y uno del cuartil superior de la variable, en puntos
+hipoteses.csv;previsto, clasificacion, pequena;signo previsto antes de los cálculos, la clasificación (confirmada, contrária o inconclusiva: respaldada, contradicha o no concluyente) y si la asociación es pequeña (menos de 0,5 puntos)
+apuracao_ao_vivo.csv;urnas_escrutadas_pct, hora_tse;% de las urnas escrutadas en la lectura y la hora de la lectura en el TSE
+apuracao_ao_vivo.csv;lula_2v_pct;parte de Lula entre los dos en el conteo de la segunda vuelta hasta esa lectura, en %
+apuracao_ao_vivo.csv;lula_1v_mismas_urnas_pct;parte de Lula en la primera vuelta en las mismas urnas ya escrutadas en la segunda, en %
+apuracao_ao_vivo.csv;proyeccion_final_pct;proyección del resultado final mostrada en vivo, en % (parte de Lula)
+apuracao_ao_vivo.csv;lula_1v_por_estado_pct;parte de Lula en la primera vuelta en las mismas urnas tomadas solo por estado, en % (control de la página en vivo)
+dados_sociais.csv;cod_tse, cod_ibge, estado, municipio;código del municipio en el TSE (5 dígitos) y en el IBGE (7 dígitos), estado y nombre
+dados_sociais.csv;pct_60ymas;% de la población residente de 60 años o más (Censo de 2022)
+dados_sociais.csv;alfab_15ymas;tasa de alfabetización de las personas de 15 años o más, en %, como la publica el IBGE (Censo de 2022)
+dados_sociais.csv;pct_ingreso_hasta_medio_sm;% de residentes en hogares particulares permanentes con ingreso domiciliario per cápita de hasta medio salario mínimo, incluidos los que no tienen ingresos (Censo de 2022, muestra)
+dados_sociais.csv;pib_pc, ln_pib_pc;PIB per cápita de 2023, en reales, como lo publica el IBGE, y su logaritmo natural, que es el que se usa en las pruebas
+dados_sociais.csv;densidad, ln_densidad;habitantes por km² (Censo de 2022), como la publica el IBGE, y su logaritmo natural, que se usa en las pruebas
+dados_sociais.csv;pct_evangelicos;"% de evangélicos entre las personas de 10 años o más (Censo de 2022, muestra; nota N19)"
+dados_sociais.csv;pct_negros_pardos;% de negros y pardos (categorías del IBGE: pretos y pardos) en la población residente (Censo de 2022)
+dados_sociais.csv;pob, pob15, pob10, area_km2, pib_mil;"las bases: población residente, de 15 años o más y de 10 años o más, área en km² y PIB de 2023 en miles de reales; todo vacío en Boa Esperança do Norte (MT), nota N20"
+testes_sociais.csv;variable, resultado;la característica del municipio y la medida de la elección: ds (variación de la parte de Lula), gL y gF (votos ganados por Lula y por Flávio, en % del electorado de la primera vuelta), cap (parte de Lula en los votos que ganaron los dos) y da (variación de la abstención)
+testes_sociais.csv;dentro_de_estados;"sí: compara municipios del mismo estado (la versión que decide); no: todos los municipios juntos"
+testes_sociais.csv;n, grupos;cuántos municipios y cuántos estados entran
+testes_sociais.csv;coef, error_estandar;"coeficiente (puntos de la medida por 1 punto de la característica; por 1 unidad de logaritmo en el PIB per cápita y en la densidad) y error estándar agrupado por estado"
+testes_sociais.csv;ic95_inf, ic95_sup;intervalo de confianza del 95 % del coeficiente por el error agrupado
+testes_sociais.csv;ic95_salvaje_inf, ic95_salvaje_sup;intervalo del 95 % del bootstrap salvaje, por inversión de la prueba
+testes_sociais.csv;p_cr1, p_salvaje;valor p del error agrupado y del bootstrap salvaje
+testes_sociais.csv;p_holm, p_cr1_holm;los dos valores p corregidos por el método de Holm en las 35 pruebas de la misma versión
+testes_sociais.csv;efecto_intercuartil;diferencia prevista en la medida entre un municipio del cuartil inferior y uno del cuartil superior de la característica, en puntos
+testes_sociais.csv;asociacion, direccion, pequena;"sí cuando los dos valores p corregidos quedan por debajo de 0,05; la dirección (positiva o negativa) y si es pequeña (menos de 0,5 puntos entre cuartiles)"
+de_onde_vieram.csv;nivel, lugar, n;Brasil, región o estado, y cuántos municipios entran (con todas sus secciones)
+de_onde_vieram.csv;fuente;la fuente de los votos ganados: votos de los demás candidatos de la primera vuelta, variación de los votos emitidos o caída de los votos en blanco y nulos
+de_onde_vieram.csv;lula, lula_ic95_inf, lula_ic95_sup;la parte de la fuente que quedó, en saldo, con Lula (de 0 a 1) y el intervalo de confianza del 95 % por bootstrap (ver la columna intervalo)
+de_onde_vieram.csv;flavio, flavio_ic95_inf, flavio_ic95_sup;lo mismo para Flávio (las dos partes suman 1)
+de_onde_vieram.csv;semiamplitud;mitad del ancho del intervalo de confianza del 95 %, de 0 a 1
+de_onde_vieram.csv;cumple_criterio;"sí cuando cumple el criterio de precisión (al menos 30 municipios, estimación entre 0 y 1 y semiamplitud hasta 0,10; HIPOTESES.md 4.2, con el orden del T32)"
+de_onde_vieram.csv;mayor_parte, motivo;"con quién quedó la mayor parte, cuando cumple; el motivo, cuando no cumple (nota N16)"
+de_onde_vieram.csv;intervalo;qué remuestreó el bootstrap: estados enteros (Brasil y regiones) o municipios enteros, con todas sus secciones (estados)
+de_onde_vieram.csv;aviso_modelo;sí cuando alguna fuente del lugar sale del rango de 0 a 1: el modelo no describe bien el lugar, y todas sus fuentes llevan el aviso (marca † en la página)
+votos_partido_1t.csv;estado;sigla del estado
+votos_partido_1t.csv;cod_tse;código del municipio en el TSE, 5 dígitos (el mismo de municipios.csv)
+votos_partido_1t.csv;municipio;nombre del municipio según la lista del TSE
+votos_partido_1t.csv;cargo_codigo, cargo;cargo en la primera vuelta: 3 gobernador, 5 senador, 6 diputado federal, 7 diputado estatal, 8 diputado distrital (solo en el Distrito Federal, en lugar del estatal)
+votos_partido_1t.csv;partido_numero, partido_sigla;número y sigla del partido
+votos_partido_1t.csv;federacion_sigla;"federación de la que forma parte el partido; vacío fuera de una federación"
+votos_partido_1t.csv;votos_nominales;votos válidos para candidatos del partido (campo QT_VOTOS_NOMINAIS_VALIDOS del TSE)
+votos_partido_1t.csv;votos_partido;votos válidos solo al número del partido, con los nominales convertidos al partido (QT_TOTAL_VOTOS_LEG_VALIDOS)
+votos_partido_1t.csv;votos_validos;votos válidos del partido: votos_nominales + votos_partido. La suma del cargo en el municipio es igual a los válidos del resultado oficial. Senador: dos bancas en 2026, cada elector votó dos veces, y los válidos superan los votos emitidos
+votos_partido_1t.csv;anulados_sub_iudice;"votos anulados sub iudice (nominales + partido), fuera de los válidos como en el resultado oficial; pueden cambiar con una decisión judicial (notas sobre los datos, en Método y fuentes)"
+votos_partido_1t.csv;anulados;votos anulados (nominales + partido), fuera de los válidos

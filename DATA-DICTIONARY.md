@@ -1,8 +1,8 @@
 # Data dictionary
 
-Português: [DICIONARIO.md](DICIONARIO.md)
+Português: [DICIONARIO.md](DICIONARIO.md) · Español: [DICCIONARIO.md](DICCIONARIO.md)
 
-The files in `planilha/`, column by column. The files in `planilha/pt-BR/` and `planilha/en/` hold the same numbers; only the header language, the field separator and the decimal mark change. Each column's unit and formula are in its description. This file is generated from `planilha/en/dicionario.csv`.
+The files in `planilha/`, column by column. The files in `planilha/pt-BR/`, `planilha/en/` and `planilha/es/` hold the same numbers; only the header language, the field separator and the decimal mark change. Each column's unit and formula are in its description. This file is generated from `planilha/en/dicionario.csv`.
 
 ## municipios.csv
 

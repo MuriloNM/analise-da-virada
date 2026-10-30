@@ -1,104 +1,104 @@
 // Gravado por scripts/previas.py a partir da página montada e do catálogo de textos. Não editar à mão.
 window.TEXTOS = {
- "endereco": "analise-da-virada.pages.dev/en",
+ "endereco": "analise-da-virada.pages.dev/es",
  "capa": {
-  "pergunta": "Where and by how much did the margin change between the two rounds?",
-  "linha_fina": "In the 2026 presidential election, the first round ended with Flávio 2.22 million votes ahead and the runoff with Lula 4.43 million votes ahead: the margin between the two changed by 6.66 million votes."
+  "pergunta": "¿Dónde y cuánto cambió la diferencia de la primera a la segunda vuelta?",
+  "linha_fina": "En la elección presidencial de 2026, la primera vuelta terminó con Flávio 2,22 millones de votos adelante, y la segunda, con Lula 4,43 millones adelante: la diferencia entre los dos cambió en 6,66 millones de votos."
  },
  "capitulos": [
   {
    "n": 1,
-   "pergunta": "Where did Lula grow most: where he was already strong or where he was weak?",
-   "resposta": "Where he was weaker. Comparing municipalities in the same state, the larger Lula's first-round share, the less it rose: for every 10 points more, 0.51 points less. The same holds for Flávio: each candidate grew more where he was weaker.",
-   "cartao": "Where he was weaker. Comparing municipalities in the same state, the larger Lula's first-round share, the less it rose: for every 10 points more, 0.51 points less.",
-   "descricao": "Where he was weaker. Comparing municipalities in the same state, the larger Lula's first-round share, the less it rose: for every 10 points more, 0.51 points less. The same holds for Flávio: each candidate grew more where he was weaker.",
-   "fonte": "Source: TSE, first-round and runoff results; our calculations"
+   "pergunta": "¿Dónde creció más Lula: donde ya era fuerte o donde era débil?",
+   "resposta": "Donde era más débil. Al comparar municipios del mismo estado, cuanto mayor la parte de Lula en la primera vuelta, menos subió: por cada 10 puntos más, 0,51 puntos menos. Lo mismo vale para Flávio: cada uno creció más donde era más débil.",
+   "cartao": "Donde era más débil. Al comparar municipios del mismo estado, cuanto mayor la parte de Lula en la primera vuelta, menos subió: por cada 10 puntos más, 0,51 puntos menos.",
+   "descricao": "Donde era más débil. Al comparar municipios del mismo estado, cuanto mayor la parte de Lula en la primera vuelta, menos subió: por cada 10 puntos más, 0,51 puntos menos. Lo mismo vale para Flávio: cada uno creció más donde era más débil.",
+   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
   },
   {
    "n": 2,
-   "pergunta": "Where did Flávio grow?",
-   "resposta": "In votes, in most of the country: Flávio had 3.72 million more votes in the runoff, in 21 of the 27 states and in 4,624 of the 5,571 municipalities. As Lula had more (10.38 million), Flávio's share of the two-candidate vote fell in all 27 states and rose in 160 municipalities.",
-   "cartao": "In votes, in most of the country: Flávio had 3.72 million more votes in the runoff, in 21 of the 27 states and in 4,624 of the 5,571 municipalities.",
-   "descricao": "In votes, in most of the country: Flávio had 3.72 million more votes in the runoff, in 21 of the 27 states and in 4,624 of the 5,571 municipalities.",
-   "fonte": "Source: TSE, first-round and runoff results; our calculations"
+   "pergunta": "¿Dónde creció Flávio?",
+   "resposta": "En votos, en la mayor parte del país: Flávio obtuvo 3,72 millones más en la segunda vuelta, en 21 de los 27 estados y en 4624 de los 5571 municipios. Como Lula obtuvo más (10,38 millones), la parte de Flávio entre los dos bajó en los 27 estados y subió en 160 municipios.",
+   "cartao": "En votos, en la mayor parte del país: Flávio obtuvo 3,72 millones más en la segunda vuelta, en 21 de los 27 estados y en 4624 de los 5571 municipios.",
+   "descricao": "En votos, en la mayor parte del país: Flávio obtuvo 3,72 millones más en la segunda vuelta, en 21 de los 27 estados y en 4624 de los 5571 municipios.",
+   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
   },
   {
    "n": 3,
-   "pergunta": "How did the other first-round candidates' votes split between the two?",
-   "resposta": "It is not possible to say with confidence. Of the votes for the other first-round candidates, the part that went to Lula depends on how the calculation is done: from 46 to 61 out of every 100 (and from 39 to 54 for Flávio). And it was not clear whether Lula grew more where the other candidates got more votes.",
-   "cartao": "It is not possible to say with confidence.",
-   "descricao": "It is not possible to say with confidence. Of the votes for the other first-round candidates, the part that went to Lula depends on how the calculation is done: from 46 to 61 out of every 100 (and from 39 to 54 for Flávio).",
-   "fonte": "Source: TSE, first-round and runoff results; our calculations"
+   "pergunta": "¿Cómo se dividieron entre los dos los votos de los otros candidatos de la primera vuelta?",
+   "resposta": "No se puede saber con seguridad. De los votos de los otros candidatos de la primera vuelta, la parte que fue para Lula depende de cómo se haga el cálculo: de 46 a 61 de cada 100 (y de 39 a 54 para Flávio). Y no quedó claro si Lula creció más donde los otros candidatos tuvieron más votos.",
+   "cartao": "No se puede saber con seguridad.",
+   "descricao": "No se puede saber con seguridad. De los votos de los otros candidatos de la primera vuelta, la parte que fue para Lula depende de cómo se haga el cálculo: de 46 a 61 de cada 100 (y de 39 a 54 para Flávio).",
+   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
   },
   {
    "n": 4,
-   "pergunta": "Did turnout change?",
-   "resposta": "It rose: 2.96 million more voters turned out, and abstention fell from 21.08% to 19.22% (−1.86 percentage points). But abstention rose in 9 states: all 7 in the North, Maranhão, and Piauí. Where abstention fell the most, Lula's share did not clearly rise more.",
-   "cartao": "It rose: 2.96 million more voters turned out, and abstention fell from 21.08% to 19.22% (−1.86 percentage points). But abstention rose in 9 states: all 7 in the North, Maranhão, and Piauí.",
-   "descricao": "It rose: 2.96 million more voters turned out, and abstention fell from 21.08% to 19.22% (−1.86 percentage points). But abstention rose in 9 states: all 7 in the North, Maranhão, and Piauí.",
-   "fonte": "Source: TSE, first-round and runoff results; our calculations"
+   "pergunta": "¿Cambió la participación?",
+   "resposta": "Subió: 2,96 millones de electores más fueron a votar, y la abstención bajó de 21,08 % a 19,22 % (−1,86 puntos). Pero subió en 9 estados: los 7 del Norte, Maranhão y Piauí. Donde la abstención bajó más, la parte de Lula no subió de forma clara.",
+   "cartao": "Subió: 2,96 millones de electores más fueron a votar, y la abstención bajó de 21,08 % a 19,22 % (−1,86 puntos). Pero subió en 9 estados: los 7 del Norte, Maranhão y Piauí.",
+   "descricao": "Subió: 2,96 millones de electores más fueron a votar, y la abstención bajó de 21,08 % a 19,22 % (−1,86 puntos). Pero subió en 9 estados: los 7 del Norte, Maranhão y Piauí.",
+   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
   },
   {
    "n": 5,
-   "pergunta": "Is the vote for deputy and senator linked to the change between the rounds?",
-   "resposta": "No clear link appeared, on Lula's side or on Flávio's. Where voters already voted more for left-wing parties for federal deputy, Lula did not clearly grow more than in municipalities in the same state with the same first-round vote for him; where they voted more for right-wing parties, the same holds for Flávio. If there is a link, it is small. The same holds for state deputy and senator.",
-   "cartao": "No clear link appeared, on Lula's side or on Flávio's.",
-   "descricao": "No clear link appeared, on Lula's side or on Flávio's. Where voters already voted more for left-wing parties for federal deputy, Lula did not clearly grow more than in municipalities in the same state with the same first-round vote for him…",
-   "fonte": "Source: TSE, first-round and runoff results; our calculations"
+   "pergunta": "¿El voto para diputado y senador tiene relación con el cambio entre las vueltas?",
+   "resposta": "No apareció una relación clara, ni del lado de Lula ni del lado de Flávio. Donde el elector ya votaba más por partidos de izquierda para diputado federal, Lula no creció de forma clara más que en municipios del mismo estado en los que había tenido la misma votación en la primera vuelta; donde votaba más por partidos de derecha, lo mismo vale para Flávio. Si hay relación, es pequeña. Lo mismo vale para diputado estatal y senador.",
+   "cartao": "No apareció una relación clara, ni del lado de Lula ni del lado de Flávio.",
+   "descricao": "No apareció una relación clara, ni del lado de Lula ni del lado de Flávio.",
+   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
   },
   {
    "n": 6,
-   "pergunta": "What was each region's and state's share of the reversal?",
-   "resposta": "The margin between the two changed by 6.66 million votes in Lula's favor: 42.9% of this change came from the Southeast and 38.4% from the Northeast; São Paulo accounted for 21.0%. The margin moved in Lula's favor in all 27 states.",
-   "cartao": "The margin between the two changed by 6.66 million votes in Lula's favor: 42.9% of this change came from the Southeast and 38.4% from the Northeast; São Paulo accounted for 21.0%.",
-   "descricao": "The margin between the two changed by 6.66 million votes in Lula's favor: 42.9% of this change came from the Southeast and 38.4% from the Northeast; São Paulo accounted for 21.0%. The margin moved in Lula's favor in all 27 states.",
-   "fonte": "Source: TSE, first-round and runoff results; our calculations"
+   "pergunta": "¿Cuál fue la contribución de cada región y estado a la reversión?",
+   "resposta": "La diferencia entre los dos cambió en 6,66 millones de votos a favor de Lula: 42,9 % de ese cambio vino del Sudeste y 38,4 % del Nordeste; São Paulo representó 21,0 %. La diferencia cambió a favor de Lula en los 27 estados.",
+   "cartao": "La diferencia entre los dos cambió en 6,66 millones de votos a favor de Lula: 42,9 % de ese cambio vino del Sudeste y 38,4 % del Nordeste; São Paulo representó 21,0 %.",
+   "descricao": "La diferencia entre los dos cambió en 6,66 millones de votos a favor de Lula: 42,9 % de ese cambio vino del Sudeste y 38,4 % del Nordeste; São Paulo representó 21,0 %. La diferencia cambió a favor de Lula en los 27 estados.",
+   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
   },
   {
    "n": 7,
-   "pergunta": "How close did the live projection come to the final result?",
-   "resposta": "Close, and increasingly so: with 10% to 20% of voting machines counted, the live projection gave Lula, on average, 1.06 points less than he got in the end, and Flávio the same amount more; the partial count, without projection, was off by 1.84. From 60% counted onward, the error stayed below 0.1 percentage point. Recomputed afterwards with the first round polling station by polling station, the projections already pointed to the winner, within half a point, from 0.5% counted (exploratory).",
-   "cartao": "Close, and increasingly so: with 10% to 20% of voting machines counted, the live projection gave Lula, on average, 1.06 points less than he got in the end, and Flávio the same amount more…",
-   "descricao": "Close, and increasingly so: with 10% to 20% of voting machines counted, the live projection gave Lula, on average, 1.06 points less than he got in the end, and Flávio the same amount more; the partial count, without projection…",
-   "fonte": "Source: TSE readings recorded during the runoff live count; our calculations"
+   "pergunta": "¿Qué tan cerca llegó la proyección en vivo del resultado final?",
+   "resposta": "Cerca, y cada vez más: con entre el 10 % y el 20 % de las urnas escrutadas, la proyección en vivo le daba a Lula, en promedio, 1,06 puntos menos de lo que obtuvo al final, y a Flávio otro tanto más; el escrutinio parcial, sin proyección, se desviaba 1,84. A partir del 60 % escrutado, el error quedó por debajo de 0,1 puntos. Reconstruidas después con la primera vuelta sección por sección, las proyecciones ya señalaban al ganador, con un error de hasta medio punto, desde el 0,5 % escrutado (exploratorio).",
+   "cartao": "Cerca, y cada vez más: con entre el 10 % y el 20 % de las urnas escrutadas, la proyección en vivo le daba a Lula, en promedio, 1,06 puntos menos de lo que obtuvo al final…",
+   "descricao": "Cerca, y cada vez más: con entre el 10 % y el 20 % de las urnas escrutadas, la proyección en vivo le daba a Lula, en promedio, 1,06 puntos menos de lo que obtuvo al final, y a Flávio otro tanto más; el escrutinio parcial, sin proyección…",
+   "fonte": "Fuente: lecturas del TSE, escrutinio en vivo de la 2.ª vuelta; cálculo propio"
   },
   {
    "n": 8,
-   "pergunta": "What kind of places did each candidate gain in?",
-   "resposta": "Where there are more low-income residents, a larger part of the runoff vote gains went to Lula: 9.6 points more than in municipalities of the same state with fewer of them. For the other six characteristics, the split of those votes between the two changed little or had no clear direction.",
-   "cartao": "Where there are more low-income residents, a larger part of the runoff vote gains went to Lula: 9.6 points more than in municipalities of the same state with fewer of them.",
-   "descricao": "Where there are more low-income residents, a larger part of the runoff vote gains went to Lula: 9.6 points more than in municipalities of the same state with fewer of them.",
-   "fonte": "Source: TSE, by municipality; IBGE, 2022 Census and Municipal GDP 2023; our calculations"
+   "pergunta": "¿Cómo eran los lugares donde creció cada uno?",
+   "resposta": "Donde hay más habitantes de bajos ingresos, una parte mayor de los votos ganados en la 2.ª vuelta fue para Lula: 9,6 puntos más que en municipios del mismo estado con menos de ellos. En las otras seis características, el reparto de esos votos entre los dos cambió poco o sin un lado claro.",
+   "cartao": "Donde hay más habitantes de bajos ingresos, una parte mayor de los votos ganados en la 2.ª vuelta fue para Lula: 9,6 puntos más que en municipios del mismo estado con menos de ellos.",
+   "descricao": "Donde hay más habitantes de bajos ingresos, una parte mayor de los votos ganados en la 2.ª vuelta fue para Lula: 9,6 puntos más que en municipios del mismo estado con menos de ellos.",
+   "fonte": "Fuente: TSE, por municipio; IBGE, Censo de 2022 y PIB de los Municipios 2023; cálculo propio"
   },
   {
    "n": 9,
-   "pergunta": "What else do the data show?",
-   "resposta": "Exploratory, not recorded before the calculations. There were ten questions, in two rounds, asked after seeing the results. The clearest answers: Lula overtook Flávio in 211 municipalities, and Flávio overtook Lula in 1; the other candidates' votes did not tilt the same way: in the polling-station calculation, the net of Augusto Cury's votes tilted to Lula, and the net of Ronaldo Caiado's to Flávio; and, in the first round, just over half of voters aged 70 or over turned out (50.9%).",
-   "cartao": "Exploratory, not recorded before the calculations. There were ten questions, in two rounds, asked after seeing the results.",
-   "descricao": "Exploratory, not recorded before the calculations. There were ten questions, in two rounds, asked after seeing the results.",
-   "fonte": "Exploratory, not recorded in advance. Source: TSE, by municipality and polling station"
+   "pergunta": "¿Qué más muestran los datos?",
+   "resposta": "Exploratorio, no registrado antes de los cálculos. Fueron diez preguntas, en dos rondas, hechas después de ver los resultados. Las respuestas más claras: Lula superó a Flávio en 211 municipios, y Flávio superó a Lula en 1; los votos de los otros candidatos no se inclinaron hacia el mismo lado: en el cálculo por sección, el saldo de los de Augusto Cury se inclinó hacia Lula, y el de los de Ronaldo Caiado, hacia Flávio; y, en la primera vuelta, poco más de la mitad de los electores de 70 años o más fue a votar (50,9 %).",
+   "cartao": "Exploratorio, no registrado antes de los cálculos. Fueron diez preguntas, en dos rondas, hechas después de ver los resultados.",
+   "descricao": "Exploratorio, no registrado antes de los cálculos. Fueron diez preguntas, en dos rondas, hechas después de ver los resultados.",
+   "fonte": "Exploratorio, no registrado antes de los cálculos. Fuente: TSE, por municipio y por sección"
   }
  ],
  "ponte": [
-  "−2.22M",
-  "+4.43M"
+  "−2,22 M",
+  "+4,43 M"
  ],
- "lingua": "en",
+ "lingua": "es",
  "rotulos": {
-  "nome": "Brazil's runoff reversal",
-  "eleicao": "2026 presidential election",
-  "capitulo_de": "Chapter {n} of 9",
-  "ponte": "Lula − Flávio margin, in votes, summed region by region",
-  "turno1": "1st round",
-  "turno2": "Runoff",
-  "mi": "{n}M",
+  "nome": "La reversión en Brasil",
+  "eleicao": "Elección presidencial de 2026",
+  "capitulo_de": "Capítulo {n} de 9",
+  "ponte": "Diferencia Lula − Flávio, en votos, sumando el cambio de cada región",
+  "turno1": "1.ª vuelta",
+  "turno2": "2.ª vuelta",
+  "mi": "{n} M",
   "regioes": {
-   "N": "North",
-   "NE": "Northeast",
-   "CO": "Central-West",
-   "SE": "Southeast",
-   "S": "South",
-   "EX": "Abroad"
+   "N": "Norte",
+   "NE": "Nordeste",
+   "CO": "Centro-Oeste",
+   "SE": "Sudeste",
+   "S": "Sur",
+   "EX": "Exterior"
   }
  }
 };
