@@ -307,6 +307,80 @@ for p in pontos:
 confere(ok_hist, f"{len(pontos)} leituras do T06 iguais ao histórico, mais a final de 100% ({hist[-1][1]}%)")
 confere(abs(hist[-1][1] - round(brasil["s2"], 3)) < 1e-9, "a leitura de 100% é o resultado final (51,785%)")
 
+# --- Projeções refeitas (T41 → T42): reconstrução, métodos (a) a (d) e (m), outras disputas, regra de chamada ---
+print("\n## Projeções refeitas (dados/reconstrucao_2t e dados/projecoes_*, T41)")
+PJ_OUT = DADOS / "projecoes_outras"
+rec = json.load(open(DADOS / "reconstrucao_2t" / "conferencia.json", encoding="utf-8"))
+pj2t = json.load(open(DADOS / "projecoes_2t" / "resumo.json", encoding="utf-8"))
+media = json.load(open(PJ_OUT / "media_resumo.json", encoding="utf-8"))
+t22 = json.load(open(PJ_OUT / "teste2022_resumo.json", encoding="utf-8"))
+t18 = json.load(open(PJ_OUT / "teste2018_resumo.json", encoding="utf-8"))
+rsec = json.load(open(PJ_OUT / "regra_secoes.json", encoding="utf-8"))
+with open(DADOS / "reconstrucao_2t" / "leituras_br.csv", encoding="utf-8") as fh:
+    lbr = list(csv.DictReader(fh, delimiter=";"))
+MET = ("a", "b", "c", "d")
+confere(rec["bate"] and rec["cond0"]["lula"] == 51.7852, "reconstrução: as três condições batem e a soma dá 51,785%")
+salto = next(x for x in lbr if x["hora_tse"] == "19:43:31")
+buraco_rec = [x for x in lbr if x["tipo"] == "buraco"]
+fx_pj = [{"faixa": f["faixa"].replace("–", " a "), "leituras": f["leituras"],
+          **{m: {"medio": f[m]["medio"], "abs": f[m]["abs_medio"], **({"cobre": f[m]["cobre"]} if "cobre" in f[m] else {})}
+             for m in ("contagem",) + MET}} for f in pj2t["principal"]["faixas"]]
+confere(sum(f["leituras"] for f in fx_pj) == 127, "projeções: 127 instantes (114 leituras e 13 do buraco)")
+
+
+def media_disputas(res, chaves):
+    return {m: round(sum(res[k][m]["abs_medio"] for k in chaves) / len(chaves), 3) for m in MET + ("m",)}
+
+
+gov26 = [k for k in media if k.startswith("governador_2026_")]
+k22, k18 = [k for k in t22 if not k.startswith("_")], [k for k in t18 if not k.startswith("_")]
+grupos_pj = [
+    {"grupo": "pres2026", "n": 1, "abs": {m: media["presidente_2026_principal"][m]["abs_medio"] for m in MET + ("m",)}},
+    {"grupo": "gov2026", "n": len(gov26), "abs": media_disputas(media, gov26)},
+    {"grupo": "a2022", "n": len(k22), "abs": media_disputas({k: t22[k]["metodos"] for k in k22}, k22)},
+    {"grupo": "a2018", "n": len(k18), "abs": media_disputas({k: t18[k]["metodos"] for k in k18}, k18)},
+]
+for g, tot in (("a2018", t18["_total"]["abs_medio"]),):
+    gg = next(x for x in grupos_pj if x["grupo"] == g)
+    confere(all(abs(gg["abs"][m] - tot[m]) < 0.002 for m in MET + ("m",)), f"projeções {g}: média por disputa = _total do T41")
+confere(len(gov26) + len(k22) + len(k18) + 1 == 35, "projeções: 35 disputas (presidente 2026, 6 + 13 + 15)")
+ch = rsec["grade"]["R2|150"]
+fora = {k: v for k, v in rsec["deixa_um_de_fora"].items() if k.startswith("R2|")}
+confere(ch["tudo"]["erradas"] == 0 and all(v["N_escolhido"] == 150 and v["teste"]["erradas"] == 0 for v in fora.values()),
+        f"regra de chamada: R2 e 150 seções, 0 erradas em {ch['tudo']['disputas']} e nos {len(fora)} grupos de fora")
+projecoes_pag = {
+    "reconstrucao": {"secoes": rec["cond0"]["secoes_total"], "sem_boletim": rec["cond0"]["secoes_total"] - rec["cond0"]["secoes_com_boletim"],
+                     "dif_lula_mediana": rec["dif_lula_mediana"], "dif_lula_max": rec["dif_lula_max"], "leituras": rec["n"],
+                     "atraso_s": rec["atraso_mediana_s"], "buraco": len(buraco_rec),
+                     "buraco_lula": [float(buraco_rec[0]["lula_pct"]), float(buraco_rec[-1]["lula_pct"])],
+                     "salto": {"hora": "19:43:31", "gravada": 51.921, "refeita": float(salto["projecao_pct"])},
+                     # T42, etapa 2: as leituras refeitas no buraco, só para o desenho da Figura 7.1 (fora da Tabela 7.1)
+                     "pontos": [{"apurado": float(x["pct_secoes"]), "parcial": float(x["lula_pct"]),
+                                 "projecao": float(x["projecao_pct"]), "hora": x["hora_tse"]} for x in buraco_rec]},
+    "faixas": fx_pj,
+    "geral": {m: {k: media["presidente_2026_principal"][m][k] for k in ("abs_medio", "max_abs", "passa_a_acertar")} for m in MET + ("m",)},
+    "fino_passa": {m: media["presidente_2026_fino"][m]["passa_a_acertar"] for m in MET},
+    "cobre_d": sum(f["d"]["cobre"] for f in fx_pj),
+    "grupos": grupos_pj,
+    "chamada": {"secoes": 150, "disputas": ch["tudo"]["disputas"], "erradas": 0, "ic95": ch["tudo"]["ic95"],
+                "mediana_pg": ch["presidente_governador"]["pst_mediana"], "mediana_pref": ch["prefeito"]["pst_mediana"],
+                "erradas_100": rsec["grade"]["R2|100"]["tudo"]["erradas"]},
+}
+# T42 (autor: "Sim, cap. 7 e Resumo"): as duas figuras do corpo do capítulo 7
+with open(DADOS / "projecoes_2t" / "instantes.csv", encoding="utf-8") as fh:
+    fino = [r for r in csv.DictReader(fh, delimiter=";") if r["conjunto"] == "fino"]
+projecoes_pag["fino"] = [[float(r["pst"]), float(r["contagem"])] + [float(r[m]) for m in MET] for r in fino]
+confere(len(fino) == 199 and projecoes_pag["fino"][0][0] == 0.5, "figura 7.2: 199 instantes da grade fina, de 0,5% a 99,5%")
+chs = rsec["chamadas_R2_150"]
+projecoes_pag["chamadas"] = [[c["cargo"], c["pst"], c["secoes"]] for c in chs]
+confere(len(chs) == 86 and all(c["certo"] for c in chs), "figura 7.3: as 86 chamadas da regra R2 com 150 seções, todas certas")
+pesq = json.load(open(PJ_OUT / "pesquisas_resumo.json", encoding="utf-8"))["turnos"]["2"]
+projecoes_pag["pesquisas"] = {"com_pesquisa": pesq["com_pesquisa"], "certo": pesq["panorama"]["vencedor_certo"],
+                              "rmse": pesq["panorama"]["rmse"], "faixa": round(1.96 * pesq["panorama"]["rmse"], 1)}
+confere(pesq["com_pesquisa"] == 63 and pesq["panorama"]["vencedor_certo"] == 56,
+        "pesquisas (P43, só 2º turno): 63 disputas com pesquisa (com pesquisas_extra.csv), vencedor certo em 56")
+confere(abs(projecoes_pag["reconstrucao"]["salto"]["refeita"] - 50.648) < 0.001, "salto de 19:43:31: projeção refeita 50,648%")
+
 # --- Dados sociais: os 35 testes (T34; HIPOTESES.md, seção 6) ---------------------
 print("\n## Dados sociais (dados/dados_sociais_municipios.json e inferencia.json, T34)")
 soc = inf["sociais"]
@@ -521,6 +595,7 @@ saida = {
                "c_muda_de_lado": [x["lugar"] for x in sec["comparacao"] if x["fonte"] == "C" and x["classe"] == "muda de lado"]},
     "funil": {"var_fatia": funil(inf["funil"]["var_fatia"]), "var_abstencao": funil(inf["funil"]["var_abstencao"])},
     "projecao": {k: inf["projecao"][k] for k in ("resultado_final_pct", "leituras", "faixas", "geral", "pontos")},
+    "projecoes": projecoes_pag,
     "notas": [{"id": n["id"]} for n in notas],
     "partidos": partidos,
     "sociais": sociais_pag,

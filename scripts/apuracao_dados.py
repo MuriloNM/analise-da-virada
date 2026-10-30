@@ -66,6 +66,29 @@ confere(iguais, "JSON igual ao CSV gravado na mesma noite, campo a campo")
 buraco = max(((hist[i][0], hist[i + 1][0]) for i in range(len(hist) - 1)), key=lambda b: b[1] - b[0])
 confere(buraco == (60.85, 68.8), f"maior intervalo sem leitura: de {buraco[0]}% a {buraco[1]}% (nota N17)")
 
+# --- Leituras refeitas no buraco (T41; T42, etapa 2) ------------------------------------
+print("\n## Leituras refeitas no buraco (dados/reconstrucao_2t/leituras_br.csv, T41)")
+with open(DADOS / "reconstrucao_2t" / "leituras_br.csv", encoding="utf-8") as f:
+    refeitas = [[float(r["pct_secoes"]), float(r["lula_pct"]), float(r["lula_1t_mesmas_urnas_pct"]), float(r["projecao_pct"]), r["hora_tse"]]
+                for r in csv.DictReader(f, delimiter=";") if r["tipo"] == "buraco"]
+confere(len(refeitas) == 13 and all(buraco[0] < r[0] < buraco[1] for r in refeitas)
+        and all(refeitas[i][0] < refeitas[i + 1][0] for i in range(len(refeitas) - 1)),
+        f"{len(refeitas)} leituras refeitas, todas dentro do buraco, de {refeitas[0][0]}% a {refeitas[-1][0]}% ({refeitas[0][4]} a {refeitas[-1][4]})")
+
+# --- Estados leitura a leitura, refeitos (T41; T42, etapa 2b) ----------------------------
+print("\n## Estados leitura a leitura (dados/reconstrucao_2t/leituras_uf.csv, T41)")
+with open(DADOS / "reconstrucao_2t" / "leituras_uf.csv", encoding="utf-8") as f:
+    luf = [r for r in csv.DictReader(f, delimiter=";") if r["tipo"] == "gravada"]
+ufs_l = sorted({r["uf"] for r in luf})
+por_hora = {}
+for r in luf:
+    por_hora.setdefault(r["hora_tse"], {})[r["uf"]] = [float(r["pct_secoes"]), float(r["lula_pct"]), float(r["lula_1t_mesmas_urnas_pct"])]
+horas = [h[4] for h in hist[:-1]]
+confere(len(ufs_l) == 28 and set(por_hora) == set(horas) and all(len(v) == 28 for v in por_hora.values()),
+        f"{len(por_hora)} leituras × {len(ufs_l)} unidades, com a mesma hora do TSE das leituras gravadas")
+uf_leituras = {"ufs": [u.upper() for u in ufs_l], "campos": ["apurado", "contagem", "mesmas_urnas_1t"],
+               "leituras": [[por_hora[h][u] for u in ufs_l] for h in horas]}
+
 # --- Curva da contagem do 1º turno -----------------------------------------------------
 print("\n## Curva do 1º turno (dados/base_1t_compacta.json, t1c)")
 t1c = json.load(open(DADOS / "base_1t_compacta.json", encoding="utf-8"))["t1c"]
@@ -80,6 +103,11 @@ saida = {
     "campos": ["apurado", "contagem", "mesmas_urnas_1t", "projecao", "hora", "por_uf_1t"],
     "leituras": hist,
     "curva1t": t1c,
+    # T42: as leituras refeitas depois (T41), só no trecho sem leituras gravadas; ficam fora das contas da página
+    "refeitas_campos": ["apurado", "contagem", "mesmas_urnas_1t", "projecao", "hora"],
+    "refeitas": refeitas,
+    # T42: os estados em cada leitura gravada (menos a final), refeitos pela hora de recebimento dos boletins (T41)
+    "uf_leituras": uf_leituras,
 }
 SAIDA.write_text("// Gerado por scripts/apuracao_dados.py. Não editar à mão.\n"
                  "window.APURACAO_DADOS = " + json.dumps(saida, ensure_ascii=False, separators=(",", ":")) + ";\n",

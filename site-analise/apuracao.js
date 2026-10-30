@@ -20,6 +20,9 @@ window.APURACAO = function (X) {
   // ---------- As leituras, como gravadas ----------
   const L = A.leituras.map(h => ({ x: h[0], c: h[1], m: h[2], p: h[3], hora: h[4] }));
   const ULT = L.length - 1;
+  // T42: as leituras refeitas depois (T41) no trecho sem leituras gravadas; só desenhadas, fora da régua e das contas
+  const RF = (A.refeitas || []).map(h => ({ x: h[0], c: h[1], m: h[2], p: h[3], hora: h[4] }));
+  const rf = k => (RF.length ? RF.map(l => ({ x: l.x, y: l[k] })) : undefined);
   const T1 = A.curva1t.filter(q => q[0] >= Math.floor(L[0].x)).map(q => ({ x: q[0], y: q[1] }));
   const t1Em = xv => { // a curva do 1º turno no mesmo % apurado (interpolada entre dois pontos dela)
     let i = 1;
@@ -132,6 +135,7 @@ window.APURACAO = function (X) {
       regua.setAttribute('aria-valuetext', T('av.regua_valor', { i: atual + 1, n: L.length, hora: L[atual].hora, pct: fmt.pct(L[atual].x, 2) }));
     }
     mostrar(atual);
+    estadosNa(atual);
     if (anunciar) anuncio.textContent = resumoLeitura(atual);
   }
   const apontar = i => mostrar(i === null ? atual : i);
@@ -161,8 +165,8 @@ window.APURACAO = function (X) {
     leitura: (viradas.length ? T('av.a1.leitura_marcos') : '') + T('av.a1.leitura'),
     desenhar: desenho(f1, {
       series: [
-        { pontos: L.map(l => ({ x: l.x, y: l.c })), cls: 'linha-l', ponto: 'l', quebra: true, rotulo: { x: 86, texto: T('av.rot.lula2'), curto: T('av.rot.lula2'), dy: 18 } },
-        { pontos: L.map(l => ({ x: l.x, y: l.m })), cls: 'linha-l linha-1t tracejada', ponto: 'l1', quebra: true, rotulo: { x: 86, texto: T('av.rot.lula1'), curto: T('av.rot.lula1'), dy: 24 } },
+        { pontos: L.map(l => ({ x: l.x, y: l.c })), cls: 'linha-l', ponto: 'l', quebra: true, refeitas: rf('c'), rotulo: { x: 86, texto: T('av.rot.lula2'), curto: T('av.rot.lula2'), dy: 18 } },
+        { pontos: L.map(l => ({ x: l.x, y: l.m })), cls: 'linha-l linha-1t tracejada', ponto: 'l1', quebra: true, refeitas: rf('m'), rotulo: { x: 86, texto: T('av.rot.lula1'), curto: T('av.rot.lula1'), dy: 24 } },
       ],
       flavioEsquerda: true,
       faixa: [0, 1],
@@ -226,7 +230,7 @@ window.APURACAO = function (X) {
   const notaSalto = el('span');
   sup(notaSalto, 'apuracao-salto', T('av.salto.tit', { hora: hm(L[iSalto].hora) }), [
     T('av.salto.1', { hora: L[iSalto].hora, de: pct3(L[iSalto - 1].p), para: pct3(L[iSalto].p), volta: pct3(L[iSalto + 1].p), hora2: L[iSalto + 1].hora }),
-    T('av.salto.2'), T('av.salto.3'), T('av.salto.4')]);
+    T('av.salto.2', { refeita: pct3(D.projecoes.reconstrucao.salto.refeita) }), T('av.salto.3'), T('av.salto.4')]);
   const contraste = viradas.length === 2 && projSempre && aFrente(L[viradas[0]].c) !== projSempre
     ? T('av.a2.contraste', { quem: nomeDe(aFrente(L[viradas[0]].c)), de: L[viradas[0]].hora, ate: L[viradas[1]].hora }) : '';
   const yP = { min: Math.floor(Math.min(49.5, ...faixaP.map(f => f.lo))), max: Math.ceil(Math.max(...faixaP.map(f => f.hi)) * 2) / 2, passo: 1 };
@@ -241,7 +245,7 @@ window.APURACAO = function (X) {
       T('av.a2.leitura_erro'), ...T.f('av.a2.leitura_salto', { hora: L[iSalto].hora, nota: notaSalto, pct: fmt.pct(L[abaixo - 1].x, 2) })]],
     desenhar: desenho(f2, {
       y: yP,
-      series: [{ pontos: L.map(l => ({ x: l.x, y: l.p })), cls: 'linha-ink', ponto: 'ink', quebra: true, rotulo: { x: 35, texto: T('c7.fig1.rot_proj'), curto: T('av.rot.projecao_curto'), dy: -12 } }],
+      series: [{ pontos: L.map(l => ({ x: l.x, y: l.p })), cls: 'linha-ink', ponto: 'ink', quebra: true, refeitas: rf('p'), rotulo: { x: 35, texto: T('c7.fig1.rot_proj'), curto: T('av.rot.projecao_curto'), dy: -12 } }],
       faixaPontos: faixaP,
       marcos: [{ x: L[iSalto].x, y: L[iSalto].p, texto: T('av.marco', { hora: hm(L[iSalto].hora), t: T('av.marco_salto') }), curto: hm(L[iSalto].hora), dy: -14 }]
         .concat(desde > 0 ? [{ x: L[desde].x, y: faixaP[desde].lo, texto: T('av.marco', { hora: hm(L[desde].hora), t: T('av.marco_faixa', { p50 }) }), curto: hm(L[desde].hora), dy: 32 }] : []),
@@ -265,7 +269,7 @@ window.APURACAO = function (X) {
     leitura: T('av.a3.leitura', { v: T('av.a3.pontos', { n: fmt.decSinal(dif1t[ULT], 3) }) }),
     desenhar: desenho(f3, {
       series: [
-        { pontos: L.map(l => ({ x: l.x, y: l.c })), cls: 'linha-ink', ponto: 'ink', quebra: true, rotulo: { x: 30, texto: T('av.rot.contagem2'), curto: T('g.turno2') } },
+        { pontos: L.map(l => ({ x: l.x, y: l.c })), cls: 'linha-ink', ponto: 'ink', quebra: true, refeitas: rf('c'), rotulo: { x: 30, texto: T('av.rot.contagem2'), curto: T('g.turno2') } },
         { pontos: T1, cls: 'linha-muted pontilhada', ponto: 'muted', rotulo: { x: 62, texto: T('av.rot.contagem1'), curto: T('g.turno1') } },
       ],
       dica: i => ({ titulo: T('av.dica.titulo', { pct: fmt.pct(L[i].x, 2), hora: L[i].hora }), linhas: [
@@ -278,6 +282,29 @@ window.APURACAO = function (X) {
     fonte: T('av.a3.fonte'),
     notas: ['N17'],
   });
+  // T42 (etapa 2b): os estados na leitura escolhida, refeitos pela hora de recebimento dos boletins (T41). A página
+  // da noite não gravou os estados leitura a leitura; na leitura final, o resultado final de dados.js.
+  const UL = A.uf_leituras, caixaEst = el('div', 'av-tabela av-estados', undefined, raiz), nEst = ntab();
+  let estAtual = -1;
+  function estadosNa(i) {
+    if (!UL || i === estAtual) return;
+    estAtual = i;
+    caixaEst.replaceChildren();
+    const fim = i === ULT;
+    const linhas = UL.ufs.map((cod, k) => {
+      const u = D.ufs.find(x => x.codigo === cod), r = fim ? [100, u.s2, u.s1] : UL.leituras[i][k];
+      return { nome: u.nome, E: u.E2, x: r[0], c: r[1], m: r[2] };
+    });
+    G.tabela(caixaEst, { legenda: { n: nEst, t: T(fim ? 'av.est.tit_fim' : 'av.est.tit', { hora: L[i].hora, pct: fmt.pct(L[i].x, 2) }) },
+      linhas, ordem: { col: 1, desc: true },
+      colunas: [{ t: T('tab.estado'), v: u => u.nome }, { t: T('tab.eleitorado'), num: true, v: u => u.E, f: fmt.int },
+        { t: T('av.est.col_apurado'), num: true, v: u => u.x, f: v => fmt.pct(v, 2) },
+        { t: T('av.est.col_contagem'), num: true, v: u => u.c, f: pct3 },
+        { t: T('av.est.col_mesmas'), num: true, v: u => u.m, f: pct3 },
+        { t: T('tab.variacao'), num: true, v: u => u.c - u.m, f: v => fmt.pp(v) }] });
+    const pe = P(caixaEst, 'av-nota', T(fim ? 'av.fim.fonte' : 'av.est.fonte'));
+    if (!fim) pe.append(nd());
+  }
   escolher(ULT, false);
 
   // ---------- Ao fim da apuração ----------

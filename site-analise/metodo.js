@@ -281,6 +281,8 @@
     // T35: as notas dos dados por seção (T27)
     N21: () => ({ n: fmt.int(D.secoes.votos_28), pct: fmt.pct(100 * D.secoes.votos_28 / D.secoes.comparecimento_1t, 3) }),
     N22: () => ({ sec: fmt.int(D.secoes.secoes_total), muda: fmt.int(D.secoes.aptos_mudam) }),
+    // T42: as cidades com prefeito no 2º turno de 2024 nas projeções refeitas
+    N25: () => ({ cid: fmt.int(D.projecoes.chamadas.filter(c => c[0] === 'prefeito').length) }),
     N17: () => ({ n: fmt.int(PR.length + 1), a: fmt.pct(PR[0].apurado, 2), b0: fmt.pct(60.85, 2), b1: fmt.pct(68.8, 1), m: fmt.int(PR.length) }),
     // a revisão final (27/10): o texto da N19 e da N20 entrou no catálogo
     N19: () => ({ pct: fmt.pct(99.5, 1) }),
@@ -380,7 +382,7 @@
 
   // ======================= Índice das partes, como no Explorar e na Apuração ao vivo =======================
   const PARTES = [['metodo', 'nav.metodo'], ['passo', 'met.passo.tit'], ['fontes', 'met.fontes.tit'], ['partidos', 'met.partidos.tit'],
-    ['incerteza', 'met.inc.tit'], ['limites', 'met.limites.tit'], ['estudos-externos', 'met.ee.tit'], ['notas-dados', 'met.notas.tit'], ['nao-deu', 'met.nao_deu.tit'],
+    ['incerteza', 'met.inc.tit'], ['limites', 'met.limites.tit'], ['estudos-externos', 'met.ee.tit'], ['metodos-parecidos', 'met.mp.tit'], ['notas-dados', 'met.notas.tit'], ['nao-deu', 'met.nao_deu.tit'],
     ['glossario', 'met.glossario.tit'], ['dados', 'met.dados.tit'], ['sobre', 'met.sobre.tit']];
   if (window.ESTUDO_PARTES) window.ESTUDO_PARTES.indicePartes($('#met-lista-indice'), $('#metodo'),
     PARTES.map(([id, k]) => ({ id, nome: T(k), href: id === 'metodo' ? '#metodo' : '#metodo/' + id })));

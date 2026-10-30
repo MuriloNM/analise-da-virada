@@ -109,7 +109,7 @@ window.PASSEAR = function (X) {
     let vb, itens;
     if (!uf) { vb = [0, 0, FORMA.largura, FORMA.altura]; itens = UFS.map(u => [u.codigo, FORMA.caminhos[u.codigo], u]); }
     else {
-      const n = FORMA.caminhos[uf].match(/-?[0-9.]+/g).map(Number);
+      const n = (malha && malha.divisa || FORMA.caminhos[uf]).match(/-?[0-9.]+/g).map(Number);
       const xs = n.filter((_, i) => i % 2 === 0), ys = n.filter((_, i) => i % 2 === 1);
       const f = 0.04 * Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys));
       vb = [Math.min(...xs) - f, Math.min(...ys) - f, Math.max(...xs) - Math.min(...xs) + 2 * f, Math.max(...ys) - Math.min(...ys) + 2 * f];
@@ -160,7 +160,7 @@ window.PASSEAR = function (X) {
     }
     if (malha) { // a divisa do estado por cima dos municípios
       const p = document.createElementNS(NS, 'path');
-      p.setAttribute('d', FORMA.caminhos[uf]); p.setAttribute('class', 'pas-divisa');
+      p.setAttribute('d', malha.divisa || FORMA.caminhos[uf]); p.setAttribute('class', 'pas-divisa');
       s.appendChild(p);
     }
     contorno = document.createElementNS(NS, 'path');

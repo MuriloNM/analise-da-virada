@@ -64,7 +64,7 @@ What the data do not allow us to say is under "Limitations of the study", on the
 
 ## How to cite
 
-Martins, M. N. de (2026). *Brazil's runoff reversal: what changed from the first round to the runoff of the 2026 presidential election, by state and municipality* (Version 1.2). https://analise-da-virada.pages.dev/en/. Data and scripts: https://github.com/MuriloNM/analise-da-virada
+Martins, M. N. de (2026). *Brazil's runoff reversal: what changed from the first round to the runoff of the 2026 presidential election, by state and municipality* (Version 1.3). https://analise-da-virada.pages.dev/en/. Data and scripts: https://github.com/MuriloNM/analise-da-virada
 
 GitHub also shows the citation through the "Cite this repository" button ([`CITATION.cff`](CITATION.cff)).
 
@@ -78,7 +78,7 @@ Details in [`LICENCA-DADOS.md`](LICENCA-DADOS.md).
 
 ## Version and corrections
 
-**Version 1.2, 28 October 2026**: the first published version, with a text correction, the "Ask the data" section, the "Ask the study" assistant, charts with the table one click away, the Map, the "External studies" section, the comment rules (comments open later) and the second round of the guided exploration, on who voted and who stayed away, by age. The same version as the page and the PDF.
+**Version 1.3, 29 October 2026**: the first published version, with a text correction, the "Ask the data" section, the "Ask the study" assistant, charts with the table one click away, the Map, the "External studies" section, the comment rules (comments open later) the second round of the guided exploration, on who voted and who stayed away, by age, and, in chapter 7, the projections of the count recomputed from the time each voting machine report arrived, with the "Similar methods" section. The same version as the page and the PDF.
 
 Found an error? Open an [issue](../../issues) ("I found an error") or write through the "Write to the author" box on the page. Every correction goes here and into "Version and corrections" on the page, with the date, what changed and, if the person wishes, who reported it.
 

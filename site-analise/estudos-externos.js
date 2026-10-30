@@ -18,7 +18,8 @@
     return e;
   }
   const P = (pai, cls, partes) => { const p = el('p', cls, undefined, pai); p.append(...[].concat(partes)); return p; };
-  const dia = s => T.data(String(s).slice(0, 10));
+  // T42: data e hora (o dado tem as duas, AAAA-MM-DD HH:MM, horário de Brasília)
+  const dia = s => (String(s).length >= 16 ? T('ee.data_hora', { data: T.data(String(s).slice(0, 10)), hora: String(s).slice(11, 16) }) : T.data(String(s).slice(0, 10)));
   const SINAL = { igual: '=', diverge: '≠', so_eles: '+' };
   const ROT = { igual: 'ee.igual', diverge: 'ee.diverge', so_eles: 'ee.so_eles' };
   const curto = t => t.id === 'resumo' ? T('ee.col.resumo') : t.id === 'limites' ? T('ee.col.limites') : T('ee.col.cap', { n: t.id.slice(1) });

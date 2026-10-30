@@ -445,7 +445,8 @@
   }
 
   // ---------- 7. Linha da apuração ao vivo (projeção e contagem parcial) ----------
-  /** o: {pontos: [{x, proj, parc, hora}], final, buraco: [a, b], y: {min, max, passo}, aria} */
+  /** o: {pontos: [{x, proj, parc, hora}], final, buraco: [a, b], refeitas: [{x, proj, parc}] (T42: leituras refeitas
+   *  depois, no buraco; em traço curto, fora da dica), y: {min, max, passo}, aria} */
   function linhaApuracao(caixa, o) {
     const larg = caixa.clientWidth;
     const alt = Math.round(Math.max(260, Math.min(340, larg * 0.46)));
@@ -454,7 +455,7 @@
     const x = escala(0, 100, mE, larg - mD), y = escala(o.y.min, o.y.max, alt - mB, mT);
     if (o.buraco) {
       el('rect', { x: x(o.buraco[0]), y: mT, width: x(o.buraco[1]) - x(o.buraco[0]), height: alt - mB - mT, class: 'buraco' }, s);
-      texto(s, (x(o.buraco[0]) + x(o.buraco[1])) / 2, mT + 12, T('g.sem_leituras'), { 'text-anchor': 'middle', class: 'tick' });
+      texto(s, (x(o.buraco[0]) + x(o.buraco[1])) / 2, mT + 12, T(o.refeitas ? 'g.refeitas' : 'g.sem_leituras'), { 'text-anchor': 'middle', class: 'tick' });
     }
     const grade = el('g', { class: 'grade' }, s);
     for (const v of ticks(o.y.min, o.y.max, o.y.passo)) {
@@ -473,6 +474,12 @@
     }).join('');
     el('path', { d: caminho('parc'), class: 'linha linha-muted' }, s);
     el('path', { d: caminho('proj'), class: 'linha linha-ink' }, s);
+    if (o.refeitas && o.buraco) { // o trecho refeito liga a última leitura antes do buraco à primeira depois
+      const antes = o.pontos.filter(p => p.x <= o.buraco[0]).pop(), depois = o.pontos.find(p => p.x >= o.buraco[1]);
+      const ps = [antes, ...o.refeitas, depois].filter(Boolean);
+      for (const [chave, cls] of [['parc', 'linha-muted'], ['proj', 'linha-ink']])
+        el('path', { d: ps.map((p, i) => (i ? 'L' : 'M') + x(p.x).toFixed(1) + ' ' + y(p[chave]).toFixed(1)).join(''), class: ['linha', 'linha-refeita', cls].join(' ') }, s);
+    }
     if (o.rotulos) { // rótulo direto de cada linha, embaixo dela, no ponto o.rotulos.x (% apurado), onde as duas estão separadas
       const p0 = o.pontos.reduce((a, q) => (Math.abs(q.x - o.rotulos.x) < Math.abs(a.x - o.rotulos.x) ? q : a));
       texto(s, x(p0.x), y(p0.proj) + 17, o.rotulos.proj, { 'text-anchor': 'middle', class: 'nome-linha val-forte' });
@@ -500,6 +507,75 @@
     alvo.addEventListener('pointerleave', ev => {
       if (ev.pointerType === 'touch') return;
       for (const e of [cruz, m1, m2]) e.setAttribute('visibility', 'hidden');
+      dicaEsconder();
+    });
+  }
+
+  // ---------- 7b. Curvas por % apurado (T42: as projeções refeitas e a regra de chamada, capítulo 7) ----------
+  /** o: {series: [{pontos: [{x, y}], cls: 'linha-ink' | 'linha-muted', ponto: 'ink' | 'muted', nome, rotulo: {x, dy, abaixo},
+   *      degraus}], x: {min, max, passo, fmt}, y: {min, max, passo, fmt}, rotuloX, rotuloY, ref: {y, texto, x},
+   *      dica: xv => {titulo, linhas: [{lado, t, v}]}, aria}. Linhas de 2 px, rótulo direto de cada série, cursor com dica. */
+  function curvas(caixa, o) {
+    const larg = caixa.clientWidth;
+    const alt = Math.round(Math.max(250, Math.min(330, larg * 0.44)));
+    const mE = 44, mD = 14, mT = 22, mB = 44;
+    const s = svgNovo(caixa, larg, alt, o.aria);
+    const x = escala(o.x.min, o.x.max, mE, larg - mD), y = escala(o.y.min, o.y.max, alt - mB, mT);
+    const grade = el('g', { class: 'grade' }, s);
+    for (const v of ticks(o.y.min, o.y.max, o.y.passo)) {
+      el('line', { x1: mE, x2: larg - mD, y1: y(v), y2: y(v) }, grade);
+      texto(s, mE - 6, y(v) + 4, o.y.fmt(v), { 'text-anchor': 'end', class: 'tick' });
+    }
+    for (const v of ticks(o.x.min, o.x.max, o.x.passo))
+      texto(s, x(v), alt - mB + 18, o.x.fmt(v), { 'text-anchor': v === o.x.min ? 'start' : v === o.x.max ? 'end' : 'middle', class: 'tick' });
+    texto(s, mE, alt - 6, o.rotuloX, { class: 'rotulo-eixo' });
+    texto(s, 0, 12, o.rotuloY, { class: 'rotulo-eixo' });
+    if (o.ref) {
+      el('line', { x1: mE, x2: larg - mD, y1: y(o.ref.y), y2: y(o.ref.y), class: 'ref' }, s);
+      texto(s, x(o.ref.x === undefined ? o.x.min : o.ref.x) + 4, y(o.ref.y) - 7, o.ref.texto, { class: 'nome-linha val-forte' });
+    }
+    const dentro = p => p.x >= o.x.min && p.x <= o.x.max;
+    const cy = v => y(limita(v, o.y.min, o.y.max));
+    for (const sr of o.series) {
+      const ps = sr.pontos.filter(dentro);
+      const d = ps.map((p, i) => (i ? (sr.degraus ? 'H' + x(p.x).toFixed(1) + 'V' : 'L' + x(p.x).toFixed(1) + ' ') : 'M' + x(p.x).toFixed(1) + ' ') + cy(p.y).toFixed(1)).join('');
+      el('path', { d, class: 'linha ' + sr.cls }, s);
+      if (sr.rotulo) {
+        const p0 = ps.reduce((a, q) => (Math.abs(q.x - sr.rotulo.x) < Math.abs(a.x - sr.rotulo.x) ? q : a));
+        const t = texto(s, x(p0.x), cy(p0.y) + (sr.rotulo.dy || (sr.rotulo.abaixo ? 17 : -9)), sr.nome,
+          { 'text-anchor': 'middle', class: 'nome-linha' + (sr.ponto === 'ink' ? ' val-forte' : '') });
+        const w = t.getComputedTextLength(), px = +t.getAttribute('x');
+        if (px - w / 2 < mE + 2) t.setAttribute('x', mE + 2 + w / 2);
+        else if (px + w / 2 > larg - mD) t.setAttribute('x', larg - mD - w / 2);
+      }
+    }
+    if (!o.dica) return;
+    const cruz = el('line', { y1: mT, y2: alt - mB, class: 'cruz', visibility: 'hidden' }, s);
+    const aneis = o.series.map(sr => el('circle', { r: 4, class: 'pt-anel p-' + (sr.ponto || 'ink'), visibility: 'hidden' }, s));
+    const alvo = el('rect', { x: mE, y: mT, width: larg - mD - mE, height: alt - mB - mT, fill: 'transparent' }, s);
+    const valorEm = (sr, xv) => { // o valor da série no x (degrau: o último ponto até x; linha: o ponto mais perto)
+      const ps = sr.pontos.filter(dentro);
+      if (sr.degraus) { let v = null; for (const p of ps) if (p.x <= xv + 1e-9) v = p.y; return v; }
+      return ps.reduce((a, q) => (Math.abs(q.x - xv) < Math.abs(a.x - xv) ? q : a)).y;
+    };
+    const mover = ev => {
+      const r = s.getBoundingClientRect();
+      const xv = limita(o.x.min + (ev.clientX - r.left - mE) / (larg - mD - mE) * (o.x.max - o.x.min), o.x.min, o.x.max);
+      const xs = o.passoDica ? Math.max(o.x.min, Math.round(xv / o.passoDica) * o.passoDica) : xv;
+      cruz.setAttribute('x1', x(xs)); cruz.setAttribute('x2', x(xs)); cruz.setAttribute('visibility', 'visible');
+      o.series.forEach((sr, k) => {
+        const v = valorEm(sr, xs);
+        aneis[k].setAttribute('visibility', v === null ? 'hidden' : 'visible');
+        if (v !== null) { aneis[k].setAttribute('cx', x(xs)); aneis[k].setAttribute('cy', cy(v)); }
+      });
+      const d = o.dica(xs);
+      dicaMostrar(ev.clientX, ev.clientY, d.titulo, d.linhas);
+    };
+    alvo.addEventListener('pointermove', mover);
+    alvo.addEventListener('pointerdown', mover);
+    alvo.addEventListener('pointerleave', ev => {
+      if (ev.pointerType === 'touch') return;
+      for (const e of [cruz, ...aneis]) e.setAttribute('visibility', 'hidden');
       dicaEsconder();
     });
   }
@@ -899,7 +975,8 @@
   }
 
   // ---------- 13. As leituras da apuração ao vivo (T28): linhas por % apurado, com a leitura escolhida ----------
-  /** o: {series: [{pontos: [{x, y}], cls, ponto: 'ink' | 'muted', quebra, rotulo: {x, texto, curto (no celular), abaixo, dy}}],
+  /** o: {series: [{pontos: [{x, y}], cls, ponto: 'ink' | 'muted', quebra, refeitas: [{x, y}] (T42: leituras refeitas depois, no
+   *      buraco, em traço curto e fora do cursor), rotulo: {x, texto, curto (no celular), abaixo, dy}}],
    *      faixa: [i, j] (duas séries com os mesmos x), faixaPontos: [{x, lo, hi}], leituras: [x], atual, y: {min, max, passo}, buraco: [a, b],
    *      marcos: [{x, y, texto, curto (no celular), dy}], dica: i => {titulo, linhas}, rotuloCursor: i => texto,
    *      aoApontar: i | null => void, aoEscolher: i => void, aria}.
@@ -919,7 +996,7 @@
     }
     if (o.buraco) {
       el('rect', { x: x(o.buraco[0]), y: mT, width: x(o.buraco[1]) - x(o.buraco[0]), height: base - mT, class: 'buraco' }, s);
-      texto(s, (x(o.buraco[0]) + x(o.buraco[1])) / 2, mT + 12, T('g.sem_leituras'), { 'text-anchor': 'middle', class: 'tick' });
+      texto(s, (x(o.buraco[0]) + x(o.buraco[1])) / 2, mT + 12, T(o.series.some(sr => sr.refeitas) ? 'g.refeitas' : 'g.sem_leituras'), { 'text-anchor': 'middle', class: 'tick' });
     }
     const grade = el('g', { class: 'grade' }, s);
     for (const v of ticks(o.y.min, o.y.max, o.y.passo)) {
@@ -949,7 +1026,13 @@
       const hi = trechos({ quebra: true, pontos: o.faixaPontos.map(p => ({ x: p.x, y: p.hi })) });
       lo.forEach((tl, k) => el('path', { d: d(hi[k]) + d(tl.slice().reverse()).replace(/^M/, 'L') + 'Z', class: 'faixa-erro' }, s));
     }
-    for (const sr of o.series) el('path', { d: trechos(sr).map(d).join(''), class: 'linha ' + sr.cls }, s);
+    for (const sr of o.series) {
+      el('path', { d: trechos(sr).map(d).join(''), class: 'linha ' + sr.cls }, s);
+      if (sr.refeitas && o.buraco) { // o trecho refeito liga a última leitura antes do buraco à primeira depois
+        const antes = sr.pontos.filter(p => p.x <= o.buraco[0]).pop(), depois = sr.pontos.find(p => p.x >= o.buraco[1]);
+        el('path', { d: d([antes, ...sr.refeitas, depois].filter(Boolean)), class: ['linha', 'linha-refeita', sr.cls].join(' ') }, s);
+      }
+    }
     if (comZonas) {
       texto(s, mE + 6, mT + 14, T('g.lula_a_frente'), { class: 'zona-rot' });
       // o.flavioEsquerda: no canto de baixo à esquerda, longe do rótulo da linha do 1º turno, que fica à direita
@@ -1022,6 +1105,6 @@
     return { marcar, mE, mD };
   }
 
-  window.GRAFICOS = { fmt, nf, h, legenda, dicaMostrar, dispersao, linhasPontos, barras, coeficientes, coeficientesPar, divisao, ponte, linhaApuracao, funil,
+  window.GRAFICOS = { fmt, nf, h, legenda, dicaMostrar, dispersao, linhasPontos, barras, coeficientes, coeficientesPar, divisao, ponte, linhaApuracao, curvas, funil,
     tabela, juntar, calor, dicaEsconder, virada, mapa, legendaCor, escalaDivergente, escalaSequencial, leiturasApuracao };
 })();

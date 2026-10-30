@@ -276,6 +276,8 @@
     while (desde > 0 && Math.abs(fx[desde - 1].projecao.erro_medio) < 0.1) desde--;
     achado(7, 'res.ach.projecao', { n: N(pontos(-fx.find(f => f.faixa === '10 a 20').projecao.erro_medio)),
       desde: fmt.comPct(fx[desde].faixa.split(' ')[0]), lim: nf(0.1, 1) });
+    // T42 (autor: "Sim, cap. 7 e Resumo"): as projeções refeitas, exploratório, com o rótulo no próprio achado
+    achado(7, 'res.ach.projecoes', { n: N(fmt.pct(D.projecoes.fino[0][0], 1)), d: fmt.int(D.projecoes.chamada.disputas), rot: el('em', 'rotulo-exp', T('c9.rotulo.curto')) });
     // T34 (P27, decisão do autor): o teste registrado da renda × parte do Lula nos votos a mais; pagina_dados.py confere que ele dá associação positiva
     // revisão final (D63): o achado começa pelo número, o mesmo da resposta curta do capítulo 8
     const capRen8 = D.sociais.testes.find(t => t.var === 'ren' && t.desfecho === 'cap').principal.efeito_interquartil_pp;
@@ -1246,7 +1248,7 @@
     const ate = fx.findIndex(f => f.projecao.erro_medio >= 0);
     const pctFaixa = f => fmt.comPct(f.faixa.split(' ')[0]); // o começo da faixa ("50 a 60"): um inteiro
     cabecalho(ctx, ...T.f('c7.resposta', { erro: N(pontos(-f1.projecao.erro_medio)), parcial: fmt.abs(-f1.parcial.erro_medio, 2),
-      desde: pctFaixa(fx[desde]), lim: nf(0.1, 1) }));
+      desde: pctFaixa(fx[desde]), lim: nf(0.1, 1), pj: fmt.pct(D.projecoes.fino[0][0], 1) }));
     const { fig, lado } = corpo(ctx);
     const pts = PR.pontos.map(p => ({ x: p.apurado, proj: p.projecao, parc: p.parcial, hora: p.hora }));
     let buraco = null;
@@ -1257,6 +1259,7 @@
       sub: T('c7.fig1.sub'),
       leitura: T('c7.fig1.leitura'),
       desenhar: caixa => G.linhaApuracao(caixa, { pontos: pts, final: PR.resultado_final_pct, buraco,
+        refeitas: D.projecoes.reconstrucao.pontos.map(p => ({ x: p.apurado, proj: p.projecao, parc: p.parcial })),
         rotulos: { x: 30, proj: T('c7.fig1.rot_proj'), parc: T('c7.fig1.rot_parc') },
         y: { min: Math.floor(Math.min(...ys) * 2) / 2, max: Math.ceil(Math.max(...ys, PR.resultado_final_pct) * 2) / 2 + 0.5, passo: 1 },
         aria: T('c7.fig1.aria', { de: fmt.pct(pts[0].x, 2), ate: fmt.comPct('100'), final: fmt.pct(PR.resultado_final_pct, 2) }) }),
@@ -1267,6 +1270,7 @@
       fonte: T('c7.fig1.fonte'),
       notas: ['N17'],
     });
+    figurasProjecoes(fig, ctx);
     const irAoVivo = t => { const a = el('a', '', t); a.href = '#apuracao'; return a; };
     notaLateral(lado, T('c7.lado.tit'),
       T('c7.lado.1', { ate: pctFaixa(fx[ate]) }),
@@ -1278,8 +1282,101 @@
       desde3: pctFaixa(fx[desde3]), lim1: nf(0.1, 1), desde: pctFaixa(fx[desde]), ate: pctFaixa(fx[ate]),
       b0: fmt.pct(buraco[0], 2), b1: fmt.pct(buraco[1], 1) }));
     tabelaErroFaixas(t, ctx.nt());
+    projecoesRefeitas(det, ctx);
     const a = secao(det, T('c7.ao_vivo.secao'));
     P(a, '', ...T.f('c7.ao_vivo.texto', { link: irAoVivo(T('c7.link_ao_vivo')) }));
+  }
+  /** T42 (autor: "Sim, cap. 7 e Resumo"): as projeções refeitas no corpo do capítulo 7. Figura 7.2: o modelo
+   *  hierárquico (d) e a conta da noite (a) até 20% apurado, na grade fina; Figura 7.3: a parte das 86 disputas com o
+   *  vencedor já dito pela regra (R2 e 150 seções), por % apurado. Exploratório. */
+  function figurasProjecoes(fig, ctx) {
+    const PJ = D.projecoes, FIN = D.projecao.resultado_final_pct, ATE = 20;
+    const F = PJ.fino.map(r => ({ x: r[0], cont: r[1], a: r[2], b: r[3], c: r[4], d: r[5] }));
+    const p0 = F[0], vis = F.filter(r => r.x <= ATE), ys = vis.flatMap(r => [r.a, r.d]).concat(FIN);
+    const tail = F.filter(r => r.x > ATE), limTail = Math.max(...tail.flatMap(r => ['a', 'b', 'c', 'd'].map(m => Math.abs(r[m] - FIN))));
+    const perto = r => F.reduce((a, q) => (Math.abs(q.x - r) < Math.abs(a.x - r) ? q : a));
+    const pc = v => fmt.comPct(nf(v, 0));
+    figura(fig, {
+      n: ctx.nf(), titulo: T('c7.fig2.titulo', { pct: fmt.pct(Math.max(...['b', 'c', 'd'].map(m => PJ.fino_passa[m])), 1) }),
+      sub: T('c7.fig2.sub'),
+      leitura: T('c7.fig2.leitura', { pct: fmt.pct(p0.x, 1), erro_d: nf(Math.abs(p0.d - FIN), 2), erro_a: nf(Math.abs(p0.a - FIN), 2) }),
+      desenhar: caixa => G.curvas(caixa, {
+        x: { min: 0, max: ATE, passo: 5, fmt: pc }, y: { min: Math.floor(Math.min(...ys) * 2) / 2, max: Math.ceil(Math.max(...ys) * 2) / 2, passo: 0.5, fmt: v => fmt.comPct(nf(v, 1)) },
+        rotuloX: T('g.eixo_apurado'), rotuloY: T('g.eixo_fatia'), ref: { y: FIN, x: 10, texto: T('g.resultado_final', { pct: fmt.pct(FIN, 2) }) },
+        series: [{ pontos: vis.map(r => ({ x: r.x, y: r.a })), cls: 'linha-muted', ponto: 'muted', nome: T('c7.fig2.rot_a'), rotulo: { x: 6 } },
+          { pontos: vis.map(r => ({ x: r.x, y: r.d })), cls: 'linha-ink', ponto: 'ink', nome: T('c7.fig2.rot_d'), rotulo: { x: 15, abaixo: true } }],
+        passoDica: 0.5,
+        dica: xv => { const r = perto(xv); return { titulo: T('c7.fig2.dica_tit', { pct: fmt.pct(r.x, 1) }), linhas: [
+          { lado: 'ink', t: T('c7.fig2.rot_d'), v: T('g.valor_e_erro', { v: fmt.pct(r.d, 2), erro: fmt.pp(r.d - FIN) }) },
+          { t: T('c7.fig2.dica_b'), v: T('g.valor_e_erro', { v: fmt.pct(r.b, 2), erro: fmt.pp(r.b - FIN) }) },
+          { t: T('c7.fig2.dica_c'), v: T('g.valor_e_erro', { v: fmt.pct(r.c, 2), erro: fmt.pp(r.c - FIN) }) },
+          { lado: 'muted', t: T('c7.fig2.rot_a'), v: T('g.valor_e_erro', { v: fmt.pct(r.a, 2), erro: fmt.pp(r.a - FIN) }) }] }; },
+        aria: T('c7.fig2.aria', { de: fmt.pct(p0.x, 1), ate: pc(ATE), final: fmt.pct(FIN, 2) }) }),
+      como: [T.f('c7.fig2.como1', { final: fmt.pct(FIN, 3), n: fmt.int(F.length), de: fmt.pct(p0.x, 1), ate: fmt.pct(F[F.length - 1].x, 1),
+        ate_fig: pc(ATE), lim: nf(Math.ceil(limTail * 10) / 10, 1) }),
+        T.f('c7.fig2.como2', { link: Object.assign(el('a', '', T('c7.fig2.link_mp')), { href: '#metodo/metodos-parecidos' }) })],
+      fonte: T('c7.fig2.fonte'),
+      notas: ['N17', 'N25'],
+    });
+    const C = PJ.chamada, CH = PJ.chamadas, ATE3 = 30;
+    const grupo = cs => { const ps = cs.map(c => c[1]).sort((a, b) => a - b);
+      return { n: ps.length, pts: [{ x: 0, y: 0 }, ...ps.map((p, i) => ({ x: p, y: 100 * (i + 1) / ps.length })), { x: ATE3, y: 100 * ps.filter(p => p <= ATE3).length / ps.length }],
+        ate: xv => ps.filter(p => p <= xv + 1e-9).length }; };
+    const PG = grupo(CH.filter(c => c[0] !== 'prefeito')), PF = grupo(CH.filter(c => c[0] === 'prefeito'));
+    figura(fig, {
+      n: ctx.nf(), titulo: T('c7.fig3.titulo', { n: fmt.int(C.disputas) }),
+      sub: T('c7.fig3.sub', { secoes: fmt.int(C.secoes) }),
+      leitura: T('c7.fig3.leitura', { npg: fmt.int(PG.n), npref: fmt.int(PF.n) }),
+      desenhar: caixa => G.curvas(caixa, {
+        x: { min: 0, max: ATE3, passo: 5, fmt: pc }, y: { min: 0, max: 100, passo: 25, fmt: pc },
+        rotuloX: T('g.eixo_apurado'), rotuloY: T('c7.fig3.eixo_y'),
+        series: [{ pontos: PG.pts, cls: 'linha-ink', ponto: 'ink', degraus: true, nome: T('c7.fig3.rot_pg'), rotulo: { x: 16, abaixo: true } },
+          { pontos: PF.pts, cls: 'linha-muted', ponto: 'muted', degraus: true, nome: T('c7.fig3.rot_pref'), rotulo: { x: 22, abaixo: true } }],
+        passoDica: 0.5,
+        dica: xv => ({ titulo: T('c7.fig3.dica_tit', { pct: fmt.pct(xv, 1) }), linhas: [
+          { lado: 'ink', t: T('c7.fig3.rot_pg'), v: T('c7.fig3.dica_v', { k: fmt.int(PG.ate(xv)), n: fmt.int(PG.n) }) },
+          { lado: 'muted', t: T('c7.fig3.rot_pref'), v: T('c7.fig3.dica_v', { k: fmt.int(PF.ate(xv)), n: fmt.int(PF.n) }) }] }),
+        aria: T('c7.fig3.aria', { ate: pc(ATE3) }) }),
+      como: [T.f('c7.fig3.como1', { secoes: fmt.int(C.secoes) }),
+        T.f('c7.fig3.como2', { n: fmt.int(C.disputas), ic0: fmt.pct(C.ic95[0], 0), ic1: fmt.pct(C.ic95[1], 1) })],
+      fonte: T('c7.fig3.fonte'),
+      notas: ['N25'],
+    });
+  }
+  /** T42: as projeções refeitas depois da eleição (T41): a noite reconstruída, os métodos (a) a (d) e (m), as outras
+   *  34 disputas e a regra de chamada. Exploratório; os números vêm de D.projecoes (scripts/pagina_dados.py). */
+  function projecoesRefeitas(det, ctx) {
+    const PJ = D.projecoes, R = PJ.reconstrucao, G0 = PJ.geral, C = PJ.chamada;
+    const s = secao(det, T('c7.pj.secao'));
+    P(s, '', ...T.f('c7.pj.rotulo'));
+    P(s, '', ...T.f('c7.pj.rec', { secoes: fmt.int(R.secoes), leituras: fmt.int(R.leituras), dif: nf(R.dif_lula_mediana, 3),
+      max: nf(R.dif_lula_max, 3), atraso: fmt.int(R.atraso_s), buraco: fmt.int(R.buraco), b0: fmt.pct(R.buraco_lula[0], 2),
+      b1: fmt.pct(R.buraco_lula[1], 2), n17: nd('N17') }));
+    P(s, '', ...T.f('c7.pj.salto', { hora: R.salto.hora, gravada: fmt.pct(R.salto.gravada, 2), refeita: fmt.pct(R.salto.refeita, 2) }));
+    P(s, '', ...T.f('c7.pj.metodos'));
+    for (const m of ['a', 'b', 'c', 'd', 'm']) P(s, '', ...T.f('c7.pj.m.' + m));
+    const leit = PJ.faixas.reduce((t, f) => t + f.leituras, 0);
+    P(s, '', T('c7.pj.res', { n: fmt.int(leit), l: fmt.int(R.leituras), bu: fmt.int(R.buraco), a: nf(G0.a.abs_medio, 2),
+      b: nf(G0.b.abs_medio, 2), c: nf(G0.c.abs_medio, 2), d: nf(G0.d.abs_medio, 2), lim: nf(0.5, 1),
+      pa: fmt.pct(G0.a.passa_a_acertar, 2), pb: fmt.pct(G0.b.passa_a_acertar, 2), pf: fmt.pct(PJ.fino_passa.b, 1) }));
+    P(s, '', T('c7.pj.ganho'));
+    const nomeFx = f => T('c7.tab.faixa', { a: f.faixa.split(' a ')[0], b: f.faixa.split(' a ')[1] });
+    const col = (m, de) => ({ t: T('c7.pj.tab.' + m), num: true, v: x => de(x)[m], f: v => fmt.dec(v, 2) });
+    G.tabela(s, { legenda: { n: ctx.nt(), t: T('c7.pj.tab1.titulo') }, ordenavel: false, linhas: PJ.faixas,
+      colunas: [{ t: T('c7.tab.apurado'), v: nomeFx }, { t: T('c7.tab.leituras'), num: true, v: f => f.leituras },
+        ...['contagem', 'a', 'b', 'c', 'd'].map(m => ({ t: T('c7.pj.tab.' + m), num: true, v: f => f[m].abs, f: v => fmt.dec(v, 2) }))] });
+    const n = PJ.grupos.reduce((t, g) => t + g.n, 0);
+    P(s, '', ...T.f('c7.pj.outras', { n: fmt.int(n - 1), g26: fmt.int(PJ.grupos.find(g => g.grupo === 'gov2026').n), n25: nd('N25') }));
+    G.tabela(s, { legenda: { n: ctx.nt(), t: T('c7.pj.tab2.titulo') }, ordenavel: false, linhas: PJ.grupos,
+      colunas: [{ t: T('c7.pj.tab2.grupo'), v: g => T('c7.pj.g.' + g.grupo) }, { t: T('c7.pj.tab2.n'), num: true, v: g => g.n },
+        ...['a', 'b', 'c', 'd', 'm'].map(m => col(m, g => g.abs))] });
+    P(s, '', ...T.f('c7.pj.media'));
+    P(s, '', ...T.f('c7.pj.chamada', { secoes: fmt.int(C.secoes), n: fmt.int(C.disputas), cid: fmt.int(PJ.chamadas.filter(c => c[0] === 'prefeito').length) }));
+    P(s, '', ...T.f('c7.pj.limites', { n: fmt.int(C.disputas), ic0: fmt.pct(C.ic95[0], 0), ic1: fmt.pct(C.ic95[1], 1),
+      e100: fmt.int(C.erradas_100), secoes: fmt.int(C.secoes), mpg: fmt.pct(C.mediana_pg, 0), mpref: fmt.pct(C.mediana_pref, 0) }));
+    const PQ = PJ.pesquisas;
+    P(s, '', ...T.f('c7.pj.pesquisas', { certo: fmt.int(PQ.certo), n: fmt.int(PQ.com_pesquisa), rmse: nf(PQ.rmse, 1), faixa: nf(PQ.faixa, 0) }));
+    P(s, '', ...T.f('c7.pj.ressalva'));
   }
   /** A tabela do erro por faixa de apurado (capítulo 7 e Explorar), com o gráfico do erro médio das duas leituras (T36). */
   function tabelaErroFaixas(pai, n, comGrafico = true) {

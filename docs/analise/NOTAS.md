@@ -196,6 +196,7 @@ Registro vivo das notas que vão para a página (seção 7.3 da especificação)
 - **Onde pesa:** capítulo 7, Explorar ("erro da projeção") e a página Apuração ao vivo (T28).
 - **Marca "ver nota" na página (T08):** Figura 2.7 (capítulo 7).
 - **Fontes:** `dados/historico_2t.csv` (linha "Histórico da noite do 2º turno" da tabela "Onde cada fonte entra no estudo" do T12).
+- **Reconstrução (T41; na página no T42, 29/10/2026):** a apuração foi refeita pela hora de recebimento de cada boletim (`DT_BU_RECEBIDO` do `bweb_2t`, `scripts/reconstrucao_2t.py`, `dados/reconstrucao_2t/`). Bate com as 114 leituras (diferença no % do Lula de 0,004 ponto na mediana; atraso mediano de 28 s entre o recebimento e a leitura). Preenche o buraco com 13 leituras refeitas e dá os estados leitura a leitura. O salto de 19:43:31 não veio dos votos (projeção refeita: 50,648%): arquivos de UF mais velhos que os dos municípios, lidos na mesma consulta. Texto da nota na página: `nt.N17.3`; detalhe no T41, "Resultado da Parte 1". **Na Apuração ao vivo (T42, etapa 2b):** os estados de cada leitura gravada vêm da reconstrução (`uf_leituras` em `apuracao-dados.js`, de `leituras_uf.csv`), numa tabela que acompanha a leitura escolhida; o texto da nota na página (`nt.N17.2`) diz isso. As 13 leituras refeitas do buraco aparecem só nas figuras, em traço curto.
 - **Origem:** T06. Título trocado no T08 (antes, "Histórico da noite"): o título vai para a página, e para o leitor é sempre "apuração ao vivo" (diário, D29).
 
 ### N18. Contas refeitas com o valor completo
@@ -261,3 +262,11 @@ Registro vivo das notas que vão para a página (seção 7.3 da especificação)
 - **Marca "ver nota" na página:** figuras 9.4, 9.5 e 9.6 e o "Ver detalhes" do capítulo 9, pergunta 6; texto da nota na página em `nt.N24.1` e `nt.N24.2`.
 - **Fontes:** linhas "Perfil de comparecimento e abstenção (T37)" e "Perfil do eleitorado por seção (T37, I5b)" do registro do T12.
 - **Origem:** T37.
+
+### N25. Projeções refeitas: a ordem de chegada dos boletins em 2026, 2022, 2018 e 2024
+- **O que aconteceu:** as projeções refeitas do capítulo 7 (T41, exploratório) precisam da hora em que o TSE recebeu cada boletim. Em 2026 e 2022 ela está no boletim de urna (`DT_BU_RECEBIDO`); em 2018, só no `detalhe_votacao_secao_2018.zip` (`DT_RECEBIMENTO_BU_HOR_TSE`, preenchida nas 454.490 seções dos dois turnos). Em 2022, os dois campos são iguais seção a seção (AC: 7.925 de 7.925). Em 2014, nem o detalhe nem o boletim têm a hora.
+- **Como foi tratado:** 2018 entra com a ordem pelo detalhe; 2014 fica de fora. Em 2024, entram as 51 cidades com prefeito no 2º turno (eleição ordinária; o arquivo `_BRASIL` do detalhe repete as UFs e ficou de fora). Todas as seções do 2º turno têm hora e par no 1º turno. Numa cidade só, (a) vira a contagem e (d) fica quase igual a (c): o teste do prefeito é mais fraco para esses dois. Métodos, pisos e variáveis fixados antes de rodar; regras de cada teste escritas antes (T41).
+- **Onde pesa:** só no "Ver detalhes" do capítulo 7, seção "Projeções refeitas depois (exploratório)". Nenhum número dos capítulos 1 a 6 muda.
+- **Marca "ver nota" na página:** "Ver detalhes" do capítulo 7; texto da nota na página em `nt.N25.1` e `nt.N25.2`.
+- **Fontes:** linhas "Projeções refeitas: 2022, 2018 e 2024 (T41)" do registro do T12 (com os `baixados.json` de `dados/tse_2022/`, `dados/tse_2018/` e `dados/tse_2024/`).
+- **Origem:** T41; na página no T42.

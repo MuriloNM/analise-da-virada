@@ -57,7 +57,7 @@ window.TEXTOS = {
   {
    "n": 7,
    "pergunta": "How close did the live projection come to the final result?",
-   "resposta": "Close, and increasingly so: with 10% to 20% of voting machines counted, the live projection gave Lula, on average, 1.06 points less than he got in the end, and Flávio the same amount more; the partial count, without projection, was off by 1.84. From 60% counted onward, the error stayed below 0.1 percentage point.",
+   "resposta": "Close, and increasingly so: with 10% to 20% of voting machines counted, the live projection gave Lula, on average, 1.06 points less than he got in the end, and Flávio the same amount more; the partial count, without projection, was off by 1.84. From 60% counted onward, the error stayed below 0.1 percentage point. Recomputed afterwards with the first round polling station by polling station, the projections already pointed to the winner, within half a point, from 0.5% counted (exploratory).",
    "cartao": "Close, and increasingly so: with 10% to 20% of voting machines counted, the live projection gave Lula, on average, 1.06 points less than he got in the end, and Flávio the same amount more…",
    "descricao": "Close, and increasingly so: with 10% to 20% of voting machines counted, the live projection gave Lula, on average, 1.06 points less than he got in the end, and Flávio the same amount more; the partial count, without projection…",
    "fonte": "Source: TSE readings recorded during the runoff live count; our calculations"

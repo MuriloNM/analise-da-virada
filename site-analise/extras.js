@@ -12,8 +12,8 @@
   const T = window.T;
   // 0.1 foi a versão de trabalho; a 1.0 é a primeira publicada (T25, item 8; sessão sobre-estudo, 27/10)
   const VERSAO = {
-    numero: '1.2.3',
-    data: '2026-10-28',
+    numero: '1.3',
+    data: '2026-10-29',
     situacao: T('ext.situacao'),
     // { data: 'AAAA-MM-DD', versao: '1.1', oQue: 'chave do catálogo: o que estava errado e o que mudou', onde: '#analise/3',
     //   quem: 'nome de quem avisou, só se a pessoa quiser (D72)' }
@@ -36,6 +36,8 @@
       { data: '2026-10-28', versao: '1.2.1', oQue: 'ext.corr.v121', onde: '#comentarios' },
       { data: '2026-10-28', versao: '1.2.2', oQue: 'ext.corr.v122', onde: '#comentarios' },
       { data: '2026-10-28', versao: '1.2.3', oQue: 'ext.corr.v123', onde: '#comentarios' },
+      // T42 (T41): as projeções refeitas da apuração (capítulo 7, Resumo, Apuração ao vivo) e os métodos parecidos; exploratório
+      { data: '2026-10-29', versao: '1.3', oQue: 'ext.corr.v13', onde: '#analise/7' },
     ],
   };
   const AUTOR = { nome: 'Murilo Neves de Martins', citacao: 'MARTINS, Murilo Neves de', apa: 'Martins, M. N. de',

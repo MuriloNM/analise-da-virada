@@ -835,6 +835,7 @@ th[aria-sort="descending"] .ordenar::after{content:" ↓"}
 .faixa-erro{fill:var(--ink);fill-opacity:.11}
 .tracejada{stroke-dasharray:6 4}
 .pontilhada{stroke-dasharray:.5 5;stroke-width:2.5}
+.linha-refeita{stroke-dasharray:2 3}
 .regua{stroke:var(--muted);stroke-width:1;shape-rendering:crispEdges}
 .marco{fill:var(--fundo-grafico);stroke:var(--ink);stroke-width:1.5}
 .cursor-leitura{pointer-events:none}

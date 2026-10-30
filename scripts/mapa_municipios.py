@@ -106,6 +106,7 @@ for linha in estudo["municipios"]["linhas"].split("\n"):
         pagina[(uf, norm(nome))] = nome
 
 por_uf, sem_nome = {}, []
+refs_uf = {}  # UF -> {arco: vezes que os municípios do estado o usam}; arco usado uma vez só é divisa do estado
 for g in list(topo["objects"].values())[0]["geometries"]:
     cod = g["properties"]["codarea"]
     chave = ibge.get(cod)
@@ -113,6 +114,25 @@ for g in list(topo["objects"].values())[0]["geometries"]:
         sem_nome.append(cod)
         continue
     por_uf.setdefault(chave[0], {})[pagina[chave]] = caminho(g)
+    r = refs_uf.setdefault(chave[0], {})
+    for poligono in ([g["arcs"]] if g["type"] == "Polygon" else g["arcs"]):
+        for indices in poligono:
+            for i in indices:
+                r[i if i >= 0 else ~i] = r.get(i if i >= 0 else ~i, 0) + 1
+
+
+def divisa(uf):
+    """A divisa do estado feita com os próprios arcos dos municípios (mesma malha, encaixa sem folga)."""
+    partes = []
+    for a, n in refs_uf[uf].items():
+        if n == 1:
+            pts = []
+            for q in (proj(p) for p in arcos[a]):
+                if not pts or q != pts[-1]:
+                    pts.append(q)
+            if len(pts) >= 2:
+                partes.append("M" + "L".join(f"{x:g} {y:g}" for x, y in pts))
+    return "".join(partes)
 
 # municípios criados depois da malha do IBGE: ficam só na lista do Mapa, e o mapa do estado diz isso
 SEM_MALHA = {("MT", "BOA ESPERANCA DO NORTE")}  # instalado depois da malha do IBGE (2022)
@@ -130,7 +150,7 @@ total = 0
 for uf, caminhos in sorted(por_uf.items()):
     arq = SAIDA / f"mun-{uf}.js"
     corpo = json.dumps({"gerado": gerado, "fonte": "IBGE, malha dos municípios (qualidade mínima): dados/ibge_malha/br_mun_minima.json",
-                        "sem_desenho": sorted(pagina[k] for k in SEM_MALHA if k[0] == uf), "caminhos": caminhos}, ensure_ascii=False, separators=(",", ":"))
+                        "sem_desenho": sorted(pagina[k] for k in SEM_MALHA if k[0] == uf), "divisa": divisa(uf), "caminhos": caminhos}, ensure_ascii=False, separators=(",", ":"))
     arq.write_text(f"/* Gerado por scripts/mapa_municipios.py (T36). Não editar à mão. */\n"
                    f"(window.MAPA_MUN = window.MAPA_MUN || {{}})[{json.dumps(uf)}] = {corpo};\n", encoding="utf-8", newline="\n")
     total += arq.stat().st_size
