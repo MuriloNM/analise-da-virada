@@ -15,8 +15,11 @@
 @font-face{font-family:"Alegreya Sans";font-weight:400;src:url(../../site-analise/fontes/alegreya-sans-400.woff2) format("woff2")}
 @font-face{font-family:"Alegreya Sans";font-weight:500;src:url(../../site-analise/fontes/alegreya-sans-500.woff2) format("woff2")}
 @font-face{font-family:"Alegreya Sans";font-weight:700;src:url(../../site-analise/fontes/alegreya-sans-700.woff2) format("woff2")}
+/* os ideogramas do chinês (T44), no subconjunto da página (scripts/fontes_cjk.py) */
+@font-face{font-family:"Noto Serif SC";font-weight:400 800;src:url(../../site-analise/fontes/noto-serif-sc.woff2) format("woff2")}
+@font-face{font-family:"Noto Sans SC";font-weight:400 800;src:url(../../site-analise/fontes/noto-sans-sc.woff2) format("woff2")}
 :root{--lula:#c62f2a;--flavio:#1f5fae;--bg:#f5f1e8;--ink:#1d1a16;--ink-2:#3f3a32;--muted:#6a6155;--line:#ddd3c1;--line-forte:#b3a58c;
-  --f-texto:"Alegreya",Georgia,serif;--f-ui:"Alegreya Sans","Segoe UI",sans-serif}
+  --f-texto:"Alegreya","Noto Serif SC",Georgia,serif;--f-ui:"Alegreya Sans","Noto Sans SC","Segoe UI",sans-serif}
 *{box-sizing:border-box;margin:0}
 html,body{width:1200px;height:627px;overflow:hidden;background:var(--bg);color:var(--ink)}
 body{font-family:var(--f-texto);font-variant-numeric:lining-nums proportional-nums}
@@ -56,7 +59,8 @@ svg text{font-family:var(--f-ui)}
   const c = +(new URLSearchParams(location.search).get('c') || 0);
   const NS = 'http://www.w3.org/2000/svg';
   const nf = (v, k) => Math.abs(v).toLocaleString(T.lingua, { minimumFractionDigits: k, maximumFractionDigits: k });
-  const mi = v => R.mi.replace('{n}', (v < 0 ? '−' : '+') + nf(v / 1e6, 2));
+  // em chinês e japonês, os milhões em 万 (dez mil), no mesmo passo (graficos.js, nMi; T44)
+  const mi = v => R.mi.replace('{n}', (v < 0 ? '−' : '+') + (/^(zh|ja)/.test(T.lingua) ? nf(Math.round(Math.abs(v) / 1e4), 0) : nf(v / 1e6, 2)));
   const raiz = document.getElementById('cartao');
   function el(tag, cls, texto, pai) {
     const e = document.createElement(tag);

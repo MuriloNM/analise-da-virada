@@ -210,7 +210,7 @@ window.EXPLORAR = function (X) {
         svgEl('line', { x1: x, x2: x, y1: topo - 6, y2: base + 4, class: 'col-fio' }, s);
         svgTexto(s, x, topo - 11, t, { 'text-anchor': 'middle', class: 'cab-col' });
       });
-      const mi = hi >= 1e6 ? v => fmt.comMi(nf(v / 1e6, 2)) : v => fmt.comMil(nf(v / 1e3, 0)); // estados pequenos em milhares
+      const mi = hi >= 1e6 ? v => fmt.miCurto(v, 2) : v => fmt.mil(v, 0); // estados pequenos em milhares
       const afasta = (a, b) => { const d = 13 - Math.abs(a - b); return d > 0 ? (a <= b ? [a - d / 2, b + d / 2] : [a + d / 2, b - d / 2]) : [a, b]; };
       const [yl1, yf1] = afasta(y(u.L1), y(u.F1)), [yl2, yf2] = afasta(y(u.L2), y(u.F2));
       for (const [lado2, nome, v1, v2, t1, t2] of [['l', T('nome.lula'), u.L1, u.L2, yl1, yl2], ['f', T('nome.flavio'), u.F1, u.F2, yf1, yf2]]) {
@@ -372,7 +372,7 @@ window.EXPLORAR = function (X) {
       abstC: { piso: true, filtro: m => m.da < 0, ordem: (a, b) => a.da - b.da, cols: [colE, ...colAbs] },
     };
     // T36: a medida que ordena o ranking vira o gráfico (barras), com o número exato na dica e na aba Tabela
-    const ppR = (v, passo) => fmt.decSinal(v, passo >= 1 ? 0 : 1), vR = (v, passo) => (Math.abs(v) >= 1e6 ? fmt.mi(v, 1) : fmt.comMil(fmt.decSinal(v / 1e3, passo >= 1e3 ? 0 : 1)));
+    const ppR = (v, passo) => fmt.decSinal(v, passo >= 1 ? 0 : 1), vR = (v, passo) => (Math.abs(v) >= 1e6 ? fmt.mi(v, 1) : fmt.milSinal(v, passo >= 1e3 ? 0 : 1));
     Object.assign(RANK.fatiaL, { g: m => m.ds, gf: v => fmt.pp(v), gt: ppR, ge: 'eixo.var_fatia_pp' });
     Object.assign(RANK.fatiaF, { g: m => -m.ds, gf: v => fmt.pp(v), gt: ppR, ge: 'vd.eixo.var_flavio' });
     Object.assign(RANK.votosL, { g: m => m.dL, gf: fmt.intSinal, gt: vR, ge: 'vd.eixo.votos_lula' });
@@ -433,7 +433,7 @@ window.EXPLORAR = function (X) {
       a1: { v: m => m.a1, f: v => fmt.pct(v, 1), tick: v => fmt.comPct(nf(v, 0)) },
       da: { v: m => m.da, f: v => fmt.pp(v), tick: v => fmt.decSinal(v, v % 1 ? 1 : 0) },
       lE: { v: m => Math.log10(m.E1), f: v => fmt.int(10 ** v),
-        tick: v => (v >= 6 ? fmt.comMi(nf(10 ** v / 1e6, 0)) : fmt.comMil(nf(10 ** v / 1e3, 0))), fixa: { min: 3, max: 7, passo: 1 } },
+        tick: v => (v >= 6 ? fmt.miCurto(10 ** v, 0) : fmt.mil(10 ** v, 0)), fixa: { min: 3, max: 7, passo: 1 } },
       ds: { v: m => m.ds, f: v => fmt.pp(v), tick: v => fmt.decSinal(v, v % 1 ? 1 : 0), lado: m => (m.ds >= 0 ? 'l' : 'f') },
       gL: { v: m => 100 * m.dL / m.E1, f: v => fmt.comPct(fmt.decSinal(v, 2)), tick: v => fmt.comPct(fmt.decSinal(v, v % 1 ? 1 : 0)), lado: () => 'l' },
       gF: { v: m => 100 * m.dF / m.E1, f: v => fmt.comPct(fmt.decSinal(v, 2)), tick: v => fmt.comPct(fmt.decSinal(v, v % 1 ? 1 : 0)), lado: () => 'f' },
@@ -443,7 +443,7 @@ window.EXPLORAR = function (X) {
     const pctSoc = k => ({ v: m => m[k], f: v => fmt.pct(v, 1), tick: v => fmt.comPct(nf(v, 0)), social: true });
     for (const k of ['p60', 'alf', 'ren', 'eva', 'ppa']) VARS[k] = pctSoc(k);
     VARS.pib = { v: m => (m.pib ? Math.log10(m.pib) : null), f: v => X.socValor('pib', 10 ** v), social: true,
-      tick: v => (v >= 6 ? fmt.comMi(nf(10 ** v / 1e6, 0)) : fmt.comMil(nf(10 ** v / 1e3, 0))), fixa: { min: 3.8, max: 6, passo: 1 } };
+      tick: v => (v >= 6 ? fmt.miCurto(10 ** v, 0) : fmt.mil(10 ** v, 0)), fixa: { min: 3.8, max: 6, passo: 1 } };
     VARS.den = { v: m => (m.den ? Math.log10(m.den) : null), f: v => X.socValor('den', 10 ** v), social: true,
       tick: v => nf(10 ** v, v < 0 ? 1 : 0), fixa: { min: -1, max: 4.2, passo: 1 } };
     for (const k in VARS) Object.assign(VARS[k], { t: T('exp.var.' + k), eixo: T('exp.var.' + k + '.eixo') });

@@ -7,6 +7,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://analise-da-virada.pages.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://analise-da-virada.pages.dev/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/"/>
   </url>
   <url>
@@ -15,6 +16,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://analise-da-virada.pages.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://analise-da-virada.pages.dev/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/"/>
   </url>
   <url>
@@ -23,6 +25,16 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://analise-da-virada.pages.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://analise-da-virada.pages.dev/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/"/>
+  </url>
+  <url>
+    <loc>https://analise-da-virada.pages.dev/zh/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://analise-da-virada.pages.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://analise-da-virada.pages.dev/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/"/>
   </url>
 </urlset>

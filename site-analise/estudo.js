@@ -592,7 +592,7 @@
   }
   const tickPp = (v, passo) => fmt.decSinal(v, casas(passo));
   const tickPct = (v, passo) => fmt.pct(v, casas(passo));
-  const tickVotos = v => (Math.abs(v) >= 1e6 ? fmt.mi(v, Math.abs(v) % 1e6 ? 1 : 0) : v === 0 ? '0' : fmt.comMil(fmt.decSinal(v / 1e3, 0)));
+  const tickVotos = v => (Math.abs(v) >= 1e6 ? fmt.mi(v, Math.abs(v) % 1e6 ? 1 : 0) : v === 0 ? '0' : fmt.milSinal(v, 0));
   function funilFig(pai, n, chave, valor, rotulo, titulo, sub, ladoAcima, ladoAbaixo, lista = doBrasil) {
     const F = D.funil[chave];
     const fig = el('figure', 'figura figura-det', undefined, pai);

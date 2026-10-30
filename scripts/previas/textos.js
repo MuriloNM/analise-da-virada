@@ -1,104 +1,104 @@
 // Gravado por scripts/previas.py a partir da página montada e do catálogo de textos. Não editar à mão.
 window.TEXTOS = {
- "endereco": "analise-da-virada.pages.dev/es",
+ "endereco": "analise-da-virada.pages.dev/zh",
  "capa": {
-  "pergunta": "¿Dónde y cuánto cambió la diferencia de la primera a la segunda vuelta?",
-  "linha_fina": "En la elección presidencial de 2026, la primera vuelta terminó con Flávio 2,22 millones de votos adelante, y la segunda, con Lula 4,43 millones adelante: la diferencia entre los dos cambió en 6,66 millones de votos."
+  "pergunta": "从首轮到第二轮，票差在哪里变化、变化了多少？",
+  "linha_fina": "在2026年总统选举中，首轮投票结束时弗拉维奥领先222万票，第二轮投票结束时卢拉领先443万票：两人之间的票差变化了666万票。"
  },
  "capitulos": [
   {
    "n": 1,
-   "pergunta": "¿Dónde creció más Lula: donde ya era fuerte o donde era débil?",
-   "resposta": "Donde era más débil. Al comparar municipios del mismo estado, cuanto mayor la parte de Lula en la primera vuelta, menos subió: por cada 10 puntos más, 0,51 puntos menos. Lo mismo vale para Flávio: cada uno creció más donde era más débil.",
-   "cartao": "Donde era más débil. Al comparar municipios del mismo estado, cuanto mayor la parte de Lula en la primera vuelta, menos subió: por cada 10 puntos más, 0,51 puntos menos.",
-   "descricao": "Donde era más débil. Al comparar municipios del mismo estado, cuanto mayor la parte de Lula en la primera vuelta, menos subió: por cada 10 puntos más, 0,51 puntos menos. Lo mismo vale para Flávio: cada uno creció más donde era más débil.",
-   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
+   "pergunta": "卢拉在哪里增长更多：原本强的地方，还是原本弱的地方？",
+   "resposta": "在原本较弱的地方。比较同一州内的市镇，卢拉在首轮的占比越高，增幅越小：每高10个百分点，增幅少0.51个百分点。弗拉维奥也是如此：两人都在原本较弱的地方增长更多。",
+   "cartao": "在原本较弱的地方。比较同一州内的市镇，卢拉在首轮的占比越高，增幅越小：每高10个百分点，增幅少0.51个百分点。弗拉维奥也是如此：两人都在原本较弱的地方增长更多。",
+   "descricao": "在原本较弱的地方。比较同一州内的市镇，卢拉在首轮的占比越高，增幅越小：每高10个百分点，增幅少0.51个百分点。弗拉维奥也是如此：两人都在原本较弱的地方增长更多。",
+   "fonte": "来源：高等选举法院首轮和第二轮结果；作者计算"
   },
   {
    "n": 2,
-   "pergunta": "¿Dónde creció Flávio?",
-   "resposta": "En votos, en la mayor parte del país: Flávio obtuvo 3,72 millones más en la segunda vuelta, en 21 de los 27 estados y en 4624 de los 5571 municipios. Como Lula obtuvo más (10,38 millones), la parte de Flávio entre los dos bajó en los 27 estados y subió en 160 municipios.",
-   "cartao": "En votos, en la mayor parte del país: Flávio obtuvo 3,72 millones más en la segunda vuelta, en 21 de los 27 estados y en 4624 de los 5571 municipios.",
-   "descricao": "En votos, en la mayor parte del país: Flávio obtuvo 3,72 millones más en la segunda vuelta, en 21 de los 27 estados y en 4624 de los 5571 municipios.",
-   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
+   "pergunta": "弗拉维奥在哪里增长了？",
+   "resposta": "按票数看，在全国大部分地区：弗拉维奥在第二轮多得372万票，在27个州中的21个、5,571个市镇中的4,624个得票增加。由于卢拉增加得更多（1038万票），弗拉维奥在两人中的占比在全部27个州下降，在160个市镇上升。",
+   "cartao": "按票数看，在全国大部分地区：弗拉维奥在第二轮多得372万票，在27个州中的21个、5,571个市镇中的4,624个得票增加。由于卢拉增加得更多（1038万票），弗拉维奥在两人中的占比在全部27个州下降，在160个市镇上升。",
+   "descricao": "按票数看，在全国大部分地区：弗拉维奥在第二轮多得372万票，在27个州中的21个、5,571个市镇中的4,624个得票增加。由于卢拉增加得更多（1038万票），弗拉维奥在两人中的占比在全部27个州下降，在160个市镇上升。",
+   "fonte": "来源：高等选举法院首轮和第二轮结果；作者计算"
   },
   {
    "n": 3,
-   "pergunta": "¿Cómo se dividieron entre los dos los votos de los otros candidatos de la primera vuelta?",
-   "resposta": "No se puede saber con seguridad. De los votos de los otros candidatos de la primera vuelta, la parte que fue para Lula depende de cómo se haga el cálculo: de 46 a 61 de cada 100 (y de 39 a 54 para Flávio). Y no quedó claro si Lula creció más donde los otros candidatos tuvieron más votos.",
-   "cartao": "No se puede saber con seguridad.",
-   "descricao": "No se puede saber con seguridad. De los votos de los otros candidatos de la primera vuelta, la parte que fue para Lula depende de cómo se haga el cálculo: de 46 a 61 de cada 100 (y de 39 a 54 para Flávio).",
-   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
+   "pergunta": "首轮其他候选人的票在两人之间是怎样分配的？",
+   "resposta": "无法可靠地知道。首轮其他候选人的票中，流向卢拉的部分取决于计算方法：每100票中46至61票（弗拉维奥为39至54票）。也不清楚卢拉在其他候选人得票较多的地方是否增长更多。",
+   "cartao": "无法可靠地知道。首轮其他候选人的票中，流向卢拉的部分取决于计算方法：每100票中46至61票（弗拉维奥为39至54票）。也不清楚卢拉在其他候选人得票较多的地方是否增长更多。",
+   "descricao": "无法可靠地知道。首轮其他候选人的票中，流向卢拉的部分取决于计算方法：每100票中46至61票（弗拉维奥为39至54票）。也不清楚卢拉在其他候选人得票较多的地方是否增长更多。",
+   "fonte": "来源：高等选举法院首轮和第二轮结果；作者计算"
   },
   {
    "n": 4,
-   "pergunta": "¿Cambió la participación?",
-   "resposta": "Subió: 2,96 millones de electores más fueron a votar, y la abstención bajó de 21,08 % a 19,22 % (−1,86 puntos). Pero subió en 9 estados: los 7 del Norte, Maranhão y Piauí. Donde la abstención bajó más, la parte de Lula no subió de forma clara.",
-   "cartao": "Subió: 2,96 millones de electores más fueron a votar, y la abstención bajó de 21,08 % a 19,22 % (−1,86 puntos). Pero subió en 9 estados: los 7 del Norte, Maranhão y Piauí.",
-   "descricao": "Subió: 2,96 millones de electores más fueron a votar, y la abstención bajó de 21,08 % a 19,22 % (−1,86 puntos). Pero subió en 9 estados: los 7 del Norte, Maranhão y Piauí.",
-   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
+   "pergunta": "投票人数有变化吗？",
+   "resposta": "增加了：多出296万名选民前来投票，弃权率从21.08%降至19.22%（−1.86个百分点）。但有9个州弃权率上升：北部全部7个州、Maranhão和Piauí。在弃权率下降较多的地方，卢拉在两人中的占比没有明显上升。",
+   "cartao": "增加了：多出296万名选民前来投票，弃权率从21.08%降至19.22%（−1.86个百分点）。但有9个州弃权率上升：北部全部7个州、Maranhão和Piauí。在弃权率下降较多的地方，卢拉在两人中的占比没有明显上升。",
+   "descricao": "增加了：多出296万名选民前来投票，弃权率从21.08%降至19.22%（−1.86个百分点）。但有9个州弃权率上升：北部全部7个州、Maranhão和Piauí。在弃权率下降较多的地方，卢拉在两人中的占比没有明显上升。",
+   "fonte": "来源：高等选举法院首轮和第二轮结果；作者计算"
   },
   {
    "n": 5,
-   "pergunta": "¿El voto para diputado y senador tiene relación con el cambio entre las vueltas?",
-   "resposta": "No apareció una relación clara, ni del lado de Lula ni del lado de Flávio. Donde el elector ya votaba más por partidos de izquierda para diputado federal, Lula no creció de forma clara más que en municipios del mismo estado en los que había tenido la misma votación en la primera vuelta; donde votaba más por partidos de derecha, lo mismo vale para Flávio. Si hay relación, es pequeña. Lo mismo vale para diputado estatal y senador.",
-   "cartao": "No apareció una relación clara, ni del lado de Lula ni del lado de Flávio.",
-   "descricao": "No apareció una relación clara, ni del lado de Lula ni del lado de Flávio.",
-   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
+   "pergunta": "众议员和参议员选举的投票与两轮之间的变化有关联吗？",
+   "resposta": "没有看到明确的关联，卢拉一方和弗拉维奥一方都是如此。在联邦众议员选举中本来更多投给左翼政党的地方，与同一州内首轮卢拉占比相同的市镇相比，卢拉的增长并没有明显更多；在更多投给右翼政党的地方，弗拉维奥也是如此。即使存在关联，也很小。州议员和参议员选举的情况相同。",
+   "cartao": "没有看到明确的关联，卢拉一方和弗拉维奥一方都是如此。在联邦众议员选举中本来更多投给左翼政党的地方，与同一州内首轮卢拉占比相同的市镇相比，卢拉的增长并没有明显更多；在更多投给右翼政党的地方，弗拉维奥也是如此。即使存在关联，也很小。州议员和参议员选举的情况相同。",
+   "descricao": "没有看到明确的关联，卢拉一方和弗拉维奥一方都是如此。在联邦众议员选举中本来更多投给左翼政党的地方，与同一州内首轮卢拉占比相同的市镇相比，卢拉的增长并没有明显更多；在更多投给右翼政党的地方，弗拉维奥也是如此。即使存在关联，也很小。州议员和参议员选举的情况相同。",
+   "fonte": "来源：高等选举法院首轮和第二轮结果；作者计算"
   },
   {
    "n": 6,
-   "pergunta": "¿Cuál fue la contribución de cada región y estado a la reversión?",
-   "resposta": "La diferencia entre los dos cambió en 6,66 millones de votos a favor de Lula: 42,9 % de ese cambio vino del Sudeste y 38,4 % del Nordeste; São Paulo representó 21,0 %. La diferencia cambió a favor de Lula en los 27 estados.",
-   "cartao": "La diferencia entre los dos cambió en 6,66 millones de votos a favor de Lula: 42,9 % de ese cambio vino del Sudeste y 38,4 % del Nordeste; São Paulo representó 21,0 %.",
-   "descricao": "La diferencia entre los dos cambió en 6,66 millones de votos a favor de Lula: 42,9 % de ese cambio vino del Sudeste y 38,4 % del Nordeste; São Paulo representó 21,0 %. La diferencia cambió a favor de Lula en los 27 estados.",
-   "fonte": "Fuente: TSE, resultados de la 1.ª y la 2.ª vuelta; cálculo propio"
+   "pergunta": "各地区和各州对逆转的贡献率各是多少？",
+   "resposta": "两人的票差向有利于卢拉的方向变化了666万票：其中42.9%来自东南部，38.4%来自东北部；São Paulo占21.0%。票差在全部27个州都向有利于卢拉的方向变化。",
+   "cartao": "两人的票差向有利于卢拉的方向变化了666万票：其中42.9%来自东南部，38.4%来自东北部；São Paulo占21.0%。票差在全部27个州都向有利于卢拉的方向变化。",
+   "descricao": "两人的票差向有利于卢拉的方向变化了666万票：其中42.9%来自东南部，38.4%来自东北部；São Paulo占21.0%。票差在全部27个州都向有利于卢拉的方向变化。",
+   "fonte": "来源：高等选举法院首轮和第二轮结果；作者计算"
   },
   {
    "n": 7,
-   "pergunta": "¿Qué tan cerca llegó la proyección en vivo del resultado final?",
-   "resposta": "Cerca, y cada vez más: con entre el 10 % y el 20 % de las urnas escrutadas, la proyección en vivo le daba a Lula, en promedio, 1,06 puntos menos de lo que obtuvo al final, y a Flávio otro tanto más; el escrutinio parcial, sin proyección, se desviaba 1,84. A partir del 60 % escrutado, el error quedó por debajo de 0,1 puntos. Reconstruidas después con la primera vuelta sección por sección, las proyecciones ya señalaban al ganador, con un error de hasta medio punto, desde el 0,5 % escrutado (exploratorio).",
-   "cartao": "Cerca, y cada vez más: con entre el 10 % y el 20 % de las urnas escrutadas, la proyección en vivo le daba a Lula, en promedio, 1,06 puntos menos de lo que obtuvo al final…",
-   "descricao": "Cerca, y cada vez más: con entre el 10 % y el 20 % de las urnas escrutadas, la proyección en vivo le daba a Lula, en promedio, 1,06 puntos menos de lo que obtuvo al final, y a Flávio otro tanto más; el escrutinio parcial, sin proyección…",
-   "fonte": "Fuente: lecturas del TSE, escrutinio en vivo de la 2.ª vuelta; cálculo propio"
+   "pergunta": "实时推算与最终结果有多接近？",
+   "resposta": "很接近，而且越来越接近：在10%～20%的投票机完成计票时，实时推算给卢拉的占比平均比他最终所得少1.06个百分点，给弗拉维奥的则多出同样幅度；不做推算的部分计票结果偏差为1.84个百分点。从计票进度达到60%起，误差降到0.1个百分点以下。事后用首轮逐个投票站的数据重建的推算，从计票进度达到0.5%起就已指向胜者，误差不超过半个百分点（探索性）。",
+   "cartao": "很接近，而且越来越接近：在10%～20%的投票机完成计票时，实时推算给卢拉的占比平均比他最终所得少1.06个百分点，给弗拉维奥的则多出同样幅度；不做推算的部分计票结果偏差为1.84个百分点。从计票进度达到60%起，误差降到0.1个百分点以下。事后用首轮逐个投票站的数据重建的推算，从计票进度达到0.5%起就已指向胜者，误差不超过半个百分点（探索性）。",
+   "descricao": "很接近，而且越来越接近：在10%～20%的投票机完成计票时，实时推算给卢拉的占比平均比他最终所得少1.06个百分点，给弗拉维奥的则多出同样幅度；不做推算的部分计票结果偏差为1.84个百分点。从计票进度达到60%起，误差降到0.1个百分点以下。事后用首轮逐个投票站的数据重建的推算，从计票进度达到0.5%起就已指向胜者，误差不超过半个百分点（探索性）。",
+   "fonte": "来源：第二轮实时计票期间记录的高等选举法院读数；作者计算"
   },
   {
    "n": 8,
-   "pergunta": "¿Cómo eran los lugares donde creció cada uno?",
-   "resposta": "Donde hay más habitantes de bajos ingresos, una parte mayor de los votos ganados en la 2.ª vuelta fue para Lula: 9,6 puntos más que en municipios del mismo estado con menos de ellos. En las otras seis características, el reparto de esos votos entre los dos cambió poco o sin un lado claro.",
-   "cartao": "Donde hay más habitantes de bajos ingresos, una parte mayor de los votos ganados en la 2.ª vuelta fue para Lula: 9,6 puntos más que en municipios del mismo estado con menos de ellos.",
-   "descricao": "Donde hay más habitantes de bajos ingresos, una parte mayor de los votos ganados en la 2.ª vuelta fue para Lula: 9,6 puntos más que en municipios del mismo estado con menos de ellos.",
-   "fonte": "Fuente: TSE, por municipio; IBGE, Censo de 2022 y PIB de los Municipios 2023; cálculo propio"
+   "pergunta": "两人各自增长的地方有什么特点？",
+   "resposta": "低收入居民较多的地方，第二轮新增票数中有更大一部分投给了卢拉：比同一州内低收入居民较少的市镇多9.6个百分点。在其他六项特征上，这些新增票在两人之间的分配变化不大，或没有明确的方向。",
+   "cartao": "低收入居民较多的地方，第二轮新增票数中有更大一部分投给了卢拉：比同一州内低收入居民较少的市镇多9.6个百分点。在其他六项特征上，这些新增票在两人之间的分配变化不大，或没有明确的方向。",
+   "descricao": "低收入居民较多的地方，第二轮新增票数中有更大一部分投给了卢拉：比同一州内低收入居民较少的市镇多9.6个百分点。在其他六项特征上，这些新增票在两人之间的分配变化不大，或没有明确的方向。",
+   "fonte": "来源：高等选举法院分市镇结果；巴西地理统计局2022年人口普查和2023年市镇GDP；作者计算"
   },
   {
    "n": 9,
-   "pergunta": "¿Qué más muestran los datos?",
-   "resposta": "Exploratorio, no registrado antes de los cálculos. Fueron diez preguntas, en dos rondas, hechas después de ver los resultados. Las respuestas más claras: Lula superó a Flávio en 211 municipios, y Flávio superó a Lula en 1; los votos de los otros candidatos no se inclinaron hacia el mismo lado: en el cálculo por sección, el saldo de los de Augusto Cury se inclinó hacia Lula, y el de los de Ronaldo Caiado, hacia Flávio; y, en la primera vuelta, poco más de la mitad de los electores de 70 años o más fue a votar (50,9 %).",
-   "cartao": "Exploratorio, no registrado antes de los cálculos. Fueron diez preguntas, en dos rondas, hechas después de ver los resultados.",
-   "descricao": "Exploratorio, no registrado antes de los cálculos. Fueron diez preguntas, en dos rondas, hechas después de ver los resultados.",
-   "fonte": "Exploratorio, no registrado antes de los cálculos. Fuente: TSE, por municipio y por sección"
+   "pergunta": "数据还显示了什么？",
+   "resposta": "探索性分析，未在计算前登记。我们在看到结果之后分两批提出了10个问题。最明确的答案是：在211个市镇，卢拉由落后弗拉维奥转为领先；在1个市镇，弗拉维奥由落后卢拉转为领先。其他候选人的选票并未偏向同一方：按投票站计算，Augusto Cury的选票相抵后偏向卢拉，Ronaldo Caiado的偏向弗拉维奥。首轮投票中，70岁及以上的选民只有略过半数参加投票（50.9%）。",
+   "cartao": "探索性分析，未在计算前登记。我们在看到结果之后分两批提出了10个问题。最明确的答案是：在211个市镇，卢拉由落后弗拉维奥转为领先；在1个市镇，弗拉维奥由落后卢拉转为领先。其他候选人的选票并未偏向同一方：按投票站计算，Augusto Cury的选票相抵后偏向卢拉，Ronaldo Caiado的偏向弗拉维奥。首轮投票中，70岁及以上的选民只有略过半数参加投票（50.9%）。",
+   "descricao": "探索性分析，未在计算前登记。我们在看到结果之后分两批提出了10个问题。最明确的答案是：在211个市镇，卢拉由落后弗拉维奥转为领先；在1个市镇，弗拉维奥由落后卢拉转为领先。其他候选人的选票并未偏向同一方：按投票站计算，Augusto Cury的选票相抵后偏向卢拉，Ronaldo Caiado的偏向弗拉维奥。首轮投票中，70岁及以上的选民只有略过半数参加投票（50.9%）。",
+   "fonte": "探索性分析，未在计算前登记。来源：高等选举法院，分市镇和分投票站数据"
   }
  ],
  "ponte": [
-  "−2,22 M",
-  "+4,43 M"
+  "−222万",
+  "+443万"
  ],
- "lingua": "es",
+ "lingua": "zh-Hans",
  "rotulos": {
-  "nome": "La reversión en Brasil",
-  "eleicao": "Elección presidencial de 2026",
-  "capitulo_de": "Capítulo {n} de 9",
-  "ponte": "Diferencia Lula − Flávio, en votos, sumando el cambio de cada región",
-  "turno1": "1.ª vuelta",
-  "turno2": "2.ª vuelta",
-  "mi": "{n} M",
+  "nome": "巴西第二轮投票的逆转",
+  "eleicao": "2026年总统选举",
+  "capitulo_de": "第{n}章（共9章）",
+  "ponte": "卢拉−弗拉维奥票差（票数），由各地区的变化累加而成",
+  "turno1": "首轮",
+  "turno2": "第二轮",
+  "mi": "{n}万",
   "regioes": {
-   "N": "Norte",
-   "NE": "Nordeste",
-   "CO": "Centro-Oeste",
-   "SE": "Sudeste",
-   "S": "Sur",
-   "EX": "Exterior"
+   "N": "北部",
+   "NE": "东北部",
+   "CO": "中西部",
+   "SE": "东南部",
+   "S": "南部",
+   "EX": "海外"
   }
  }
 };

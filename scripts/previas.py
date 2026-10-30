@@ -125,18 +125,21 @@ def limpa(s):
 
 def ate(texto, limite, encher=False):
     """As frases inteiras que cabem no limite. Com encher, uma resposta curta leva o começo da frase seguinte."""
-    frases = re.split(r"(?<=[.!?。！？])\s*", texto) if re.search(r"[。！？]", texto) else re.split(r"(?<=[.!?])\s+", texto)
+    # chinês e japonês: a frase termina no 。！？ e as frases se juntam sem espaço; o ponto de "0.51" não corta (T44)
+    cjk = bool(re.search(r"[。！？]", texto))
+    frases = [f for f in re.split(r"(?<=[。！？])", texto) if f] if cjk else re.split(r"(?<=[.!?])\s+", texto)
+    junta = "" if cjk else " "
     saida = ""
     for f in frases:
-        if len(saida) + len(f) + 1 > limite:
+        if len(saida) + len(f) + len(junta) > limite:
             break
-        saida = (saida + " " + f).strip()
+        saida = (saida + junta + f).strip()
     # sem nenhuma frase inteira no limite (o cartão do capítulo 7), corta do mesmo jeito, para o cartão não sair vazio
     if (encher or not saida) and len(saida) < 60 and len(texto) > len(saida):
         # resposta curta seguida de frase longa: leva o começo da frase seguinte, cortado numa vírgula ou num espaço
-        corte = max(texto.rfind(",", 0, limite), texto.rfind(";", 0, limite))
+        corte = max(texto.rfind(s, 0, limite) for s in (",", ";", "，", "；"))
         if corte < len(saida) + 40:
-            corte = texto.rfind(" ", 0, limite)
+            corte = limite - 1 if cjk else texto.rfind(" ", 0, limite)
         saida = texto[:corte].rstrip(" ,;:") + "…"
     return saida
 
@@ -156,6 +159,9 @@ class Lingua:
 
     def mi(self, v):
         """+4,43 mi: a mesma conta da ponte do capítulo 6, com o sinal decimal da língua."""
+        if self.codigo.startswith(("zh", "ja")):  # em 万, no mesmo passo (graficos.js, nMi)
+            n = ("−" if v < 0 else "+") + f"{int(abs(v) / 1e4 + 0.5)}"
+            return self.t("un.mi", n=n)
         n = ("−" if v < 0 else "+") + f"{abs(v) / 1e6:.2f}".replace(".", self.t("un.decimal"))
         return self.t("un.mi", n=n)
 
@@ -172,7 +178,7 @@ def textos_da_pagina(lingua, perfil):
     for n in range(1, NCAP + 1):
         resposta = t[f"resposta{n}"]
         # a exploração leva o rótulo também no cartão e na descrição (HIPOTESES.md, seção 8; revisão final, D63)
-        rot = lingua.t("c9.rotulo.curto") + " " if n == 9 else ""
+        rot = lingua.t("c9.rotulo.curto") + ("" if lingua.codigo.startswith(("zh", "ja")) else " ") if n == 9 else ""
         caps.append({"n": n, "pergunta": t[f"pergunta{n}"], "resposta": rot + resposta,
                      "cartao": rot + ate(resposta, 190 - len(rot)), "descricao": rot + ate(resposta, 240 - len(rot), encher=True),
                      "fonte": lingua.t({7: "prev.fonte_cap7", 8: "prev.fonte_cap8", 9: "prev.fonte_cap9"}.get(n, "prev.fonte"))})

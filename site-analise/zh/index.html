@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!-- Os textos desta página vêm do catálogo da língua (textos/pt-BR.js, T30): data-t troca o texto do
+     elemento, data-t-html o texto com marcação e data-t-<atributo> o atributo. scripts/linguas.py
+     grava aqui o texto do catálogo e, a partir deste arquivo, a página de cada língua (en/index.html…).
+     Mudar o texto no catálogo, não aqui, e rodar python -I scripts/linguas.py (ou previas.py). -->
+<title data-t="pag.titulo">首轮的票差在第二轮逆转，27个州的选票变化方向一致 · 巴西第二轮投票的逆转</title>
+<meta name="description" data-t-content="pag.descricao" content="2026年巴西总统选举从首轮到第二轮，选票在哪里变化、变化多少：按州和市镇分析，附受检验的假设、数据来源和可下载的数据。">
+<!-- verificação do site no Google Search Console (T20) -->
+<meta name="google-site-verification" content="OmZERzEdHddmzzBuV3vnMhmzoS-0VyN3T3cUSynLuyw">
+<!-- prévias de link: gravado por scripts/previas.py (T25); texto provisório até o T11 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="巴西第二轮投票的逆转">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:title" content="首轮的票差在第二轮逆转，27个州的选票变化方向一致">
+<meta property="og:description" content="在2026年总统选举中，首轮投票结束时弗拉维奥领先222万票，第二轮投票结束时卢拉领先443万票：两人之间的票差变化了666万票。">
+<meta property="og:url" content="https://analise-da-virada.pages.dev/zh/">
+<meta property="og:image" content="https://analise-da-virada.pages.dev/img/previa/zh/capa.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="从首轮到第二轮，票差在哪里变化、变化了多少？票差瀑布图：卢拉与弗拉维奥的票差从首轮的−222万变为第二轮的+443万，由各地区的变化累加而成。">
+<meta name="twitter:card" content="summary_large_image">
+<!-- fim das prévias de link -->
+<!-- línguas: gravado por scripts/linguas.py (T30) -->
+<link rel="alternate" hreflang="pt-BR" href="https://analise-da-virada.pages.dev/">
+<link rel="alternate" hreflang="en" href="https://analise-da-virada.pages.dev/en/">
+<link rel="alternate" hreflang="es" href="https://analise-da-virada.pages.dev/es/">
+<link rel="alternate" hreflang="zh-Hans" href="https://analise-da-virada.pages.dev/zh/">
+<link rel="alternate" hreflang="x-default" href="https://analise-da-virada.pages.dev/">
+<!-- fim das línguas -->
+<script>
+/* Modo claro ou escuro antes de desenhar, para não piscar: segue o aparelho, ou a escolha lembrada. */
+(function(){
+  var t; try { t = localStorage.getItem('analise-tema'); } catch (_) {}
+  if (t === 'claro' || t === 'escuro') document.documentElement.setAttribute('data-tema', t);
+})();
+</script>
+<link rel="preload" href="../fontes/alegreya.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fontes/alegreya-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../estudo.css">
+</head>
+<body>
+<a class="pular" href="#conteudo" data-t="pag.pular">跳到正文</a>
+
+<header class="cab">
+  <div class="cab-in">
+    <a class="nome" href="#resumo" data-t="pag.nome">巴西第二轮投票的逆转</a>
+    <nav class="nav" data-t-aria-label="nav.aria" aria-label="研究各部分">
+      <a href="#resumo" data-secao="resumo" data-t="nav.resumo">摘要</a>
+      <a href="#analise/1" data-secao="capitulos" data-t="nav.capitulos">章节</a>
+      <a href="#mapa" data-secao="mapa" data-t="nav.mapa">地图</a>
+      <a href="#explorar" data-secao="explorar" data-t="nav.explorar">探索</a>
+      <a href="#apuracao" data-secao="apuracao" data-t="nav.apuracao">实时计票</a>
+      <a href="#metodo" data-secao="metodo" data-t="nav.metodo">方法与来源</a>
+    </nav>
+    <button class="bt-escrever" type="button" data-abrir-contato aria-haspopup="dialog"><span class="e-longo" data-t="rod.escrever">给作者写信</span><span class="e-curto" data-t="rod.contato_curto">联系</span></button>
+    <!-- botão de língua: gravado por scripts/linguas.py (T30) -->
+    <details class="linguas">
+      <summary><span class="sr">语言：</span><span class="ling-nome" lang="zh-Hans">简体中文</span><span class="ling-curto" lang="zh-Hans">zh</span></summary>
+      <ul aria-label="本研究的语言版本">
+        <li><a href="../" lang="pt-BR" hreflang="pt-BR" data-lingua="pt-BR">Português</a></li>
+        <li><a href="../en/" lang="en" hreflang="en" data-lingua="en">English</a></li>
+        <li><a href="../es/" lang="es" hreflang="es" data-lingua="es">Español</a></li>
+        <li><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans" data-lingua="zh-Hans" aria-current="true">简体中文</a></li>
+      </ul>
+    </details>
+    <!-- fim do botão de língua -->
+    <button class="bt-tema" type="button" data-t="cab.modo_escuro">深色模式</button>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+<noscript><p data-t="pag.noscript">本页面需要JavaScript来绘制图表。</p></noscript>
+
+<!-- ======================= A leitura: Resumo, os 9 capítulos e o fim, numa rolagem só (D34) ======================= -->
+<div class="vista leitura" data-vista="leitura">
+  <nav class="indice" id="indice" data-t-aria-label="ind.aria" aria-label="研究章节">
+    <ol id="lista-indice"></ol>
+    <p class="indice-atual" id="indice-atual" aria-hidden="true"></p>
+  </nav>
+
+  <div class="leitura-corpo">
+  <section id="resumo" aria-labelledby="t-resumo" tabindex="-1">
+    <h1 class="manchete" id="t-resumo" data-t="pag.manchete">首轮的票差在第二轮逆转，27个州的选票变化方向一致</h1>
+    <p class="linha-fina" id="linha-fina"></p>
+
+    <div class="abertura">
+      <figure class="fig-abertura" data-t-aria-label="res.fig_aria" aria-label="卢拉与弗拉维奥在首轮和第二轮的票差">
+        <div id="grafico-virada"></div>
+        <figcaption class="fig-rodape"><span data-t="res.fig_rodape">两人在每一轮的票差，单位：万票。平局线以下为弗拉维奥领先，以上为卢拉领先。两人各自的票数见起始总票数。来源：高等选举法院，首轮和第二轮结果。</span></figcaption>
+      </figure>
+      <aside class="fita" id="fita" data-t-aria-label="res.fita_aria" aria-label="起始总票数，仿照印刷的计票单"></aside>
+    </div>
+
+    <section class="achados" aria-labelledby="t-achados">
+      <h2 id="t-achados" data-t="res.achados_tit">数据显示了什么</h2>
+      <ul id="lista-achados"></ul>
+    </section>
+    <p class="res-sobre" data-t-html="res.sobre.html">本中文版由人工智能（Claude）翻译，没有经过以中文为母语的人审校，只通过回译和数字核对进行了检查；如有出入，以葡萄牙语原文为准。独立研究，不偏向任何一方，旨在为观点之争提供数据。可能有错误：<a href="#metodo/sobre">了解本研究的缘起以及如何提供帮助</a>。</p>
+    <p class="pdf-baixar" data-pdf-baixar></p>
+
+    <!-- Lugar de uma citação de leitor em destaque (T23): só aparece quando houver comentário real
+         liberado e escolhido pelo autor. Nada de citação de exemplo (diário, D31). -->
+
+    <section class="cidade" data-t-aria-label="res.cidade_aria" aria-label="您所在市镇的情况">
+      <div class="pergunta">
+        <label for="busca-cidade" data-t="res.cidade">您所在的市镇呢？</label>
+        <div class="busca">
+          <input class="campo" id="busca-cidade" type="search" data-t-placeholder="res.cidade_placeholder" placeholder="市镇名称" autocomplete="off" spellcheck="false"
+            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="busca-lista">
+          <ul id="busca-lista" role="listbox" data-t-aria-label="busca.aria" aria-label="找到的市镇" hidden></ul>
+        </div>
+      </div>
+      <div id="ficha-cidade" aria-live="polite"></div>
+      <p class="res-mapa" data-t-html="res.mapa.html">或者浏览<a href="#mapa">地图</a>：逐州、逐个市镇查看谁领先、领先多少。</p>
+    </section>
+  </section>
+
+  <div id="capitulos"></div>
+
+  <!-- Fim do estudo: o único lugar para comentar (diário, D31). O formulário fica fechado até a função
+       /api/comentarios dizer que está aberto (comentarios.js, T16); os comentários só abrem ao público
+       com T21, T22 e T19 prontos -->
+  <section class="leitores" id="comentarios" aria-labelledby="t-comentarios" tabindex="-1">
+    <h2 id="t-comentarios" data-t="com.tit">评论</h2>
+    <!-- "O que os leitores disseram" e a nuvem de palavras (T23) entram aqui só quando houver comentários
+         reais liberados. Nada de comentário de exemplo (diário, D31). -->
+    <form class="comentario" data-comentario novalidate>
+      <label for="comentario-fim" data-t="com.pergunta">您对本研究有什么看法？</label>
+      <textarea id="comentario-fim" name="texto" rows="1" maxlength="2000" data-t-placeholder="com.placeholder" placeholder="评论功能尚未开放" disabled></textarea>
+      <p class="chamada-hip" data-t-html="com.chamada.html"><b>有没有您希望研究、但这里没有的假设？</b>也请写下来：它可能进入下一版，并像本研究的假设一样，在计算之前登记。</p>
+      <div class="comentario-quem" hidden>
+        <label class="campo-linha"><span class="rot" data-t="com.nome">您的名字或昵称（会和评论一起显示）</span><input type="text" name="nome" maxlength="40" autocomplete="nickname" required></label>
+        <label class="campo-linha"><span class="rot" data-t="com.email">您的电子邮箱（选填；仅用于通知回复，不会显示）</span><input type="email" name="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <p class="comentario-moderacao" hidden data-t-html="com.moderacao.html">评论不会立即显示：所有评论都先由作者阅读，并借助人工智能检查语气和行为，从不看政治观点。含有冒犯、攻击他人或违反下列其他规则的评论不会放行。提交后无需重发：评论会被保存，等待阅读。请查看下列规则和<a href="privacidade/">隐私</a>页面。</p>
+      <div class="comentario-robo" hidden></div>
+      <p class="comentario-pe"><button class="bt-enviar" type="submit" disabled data-t="com.enviar">发表评论</button> <span class="aviso-it" data-t="com.aviso">（评论功能尚未开放；在此之前，请通过“给作者写信”框留言）</span></p>
+      <p class="comentario-situacao" role="status" aria-live="polite"></p>
+    </form>
+    <details class="detalhes regras-com">
+      <summary><span class="det-rot" data-t="com.regras.rot">评论规则</span><span class="det-o-que" data-t="com.regras.o_que">哪些评论会进入审核，以及之后会怎样</span></summary>
+      <div class="detalhes-corpo" id="regras-com"></div>
+    </details>
+    <ol class="com-lista" id="com-lista" data-t-aria-label="com.lista_aria" aria-label="读者评论"></ol>
+  </section>
+
+  <section class="notas" id="notas" aria-labelledby="t-notas" tabindex="-1">
+    <h2 id="t-notas" data-t="notas.tit">注释</h2>
+    <!-- recolhidas: o sobrescrito no texto abre a caixa e leva à nota (estudo.js, navegar) -->
+    <details class="detalhes notas-det">
+      <summary><span class="det-rot" data-t="notas.ver">查看注释</span><span class="det-o-que" data-t="notas.o_que">正文中每个数字是如何计算的，附来源和可下载的数据</span></summary>
+      <ol id="lista-notas"></ol>
+    </details>
+  </section>
+  </div>
+</div>
+
+<!-- ======================= Mapa: para passear pelos dados, estado e município (T36, D83; montado em passear.js) ======================= -->
+<section class="vista mapa" data-vista="mapa" id="mapa" aria-labelledby="t-mapa" tabindex="-1" hidden>
+  <div class="consulta">
+  <h1 class="consulta-tit" id="t-mapa" data-t="pas.tit">浏览地图</h1>
+  <p class="linha-fina" data-t="pas.linha_fina">点击一个州，查看其下属市镇；点击一个地点，查看从首轮到第二轮谁领先、领先多少，还可比较两个地点。</p>
+  <div id="mapa-corpo"></div>
+  </div>
+</section>
+
+<!-- ======================= Explorar: consulta, fora da leitura corrida (T24; montado em explorar.js) ======================= -->
+<section class="vista explorar" data-vista="explorar" id="explorar" aria-labelledby="t-explorar" tabindex="-1" hidden>
+  <div class="com-indice">
+  <!-- índice das partes, como o dos capítulos (revisão do autor, D39; montado em estudo.js) -->
+  <nav class="indice indice-partes" data-t-aria-label="exp.indice_aria" aria-label="“探索”的各部分"><ol id="exp-lista-indice"></ol></nav>
+  <div class="consulta com-indice-corpo">
+  <h1 class="consulta-tit" id="t-explorar" data-t="nav.explorar">探索</h1>
+  <p class="linha-fina" data-t="exp.linha_fina">与各章相同的数字，可逐地查询：用句子就任何地点提问；各地区和各州如何累计成票差逆转；地图和表格中的各州；可筛选和搜索的市镇；以及各项估计值及其置信区间。</p>
+  <section class="exp-parte" id="explorar-pergunte" aria-labelledby="t-exp-pergunte" tabindex="-1">
+    <h2 id="t-exp-pergunte" data-t="exp.perg.tit">向数据提问</h2>
+    <p class="exp-intro" data-t="exp.perg.intro">替换带下划线的部分来组织问题。回答来自巴西高等选举法院（TSE）的官方计票，与各章使用的相同，并注明每个数字的来源。</p>
+    <div id="exp-pergunte"></div>
+  </section>
+  <section class="exp-parte" id="explorar-ponte" aria-labelledby="t-exp-ponte" tabindex="-1">
+    <h2 id="t-exp-ponte" data-t="exp.ponte.tit">票差瀑布图</h2>
+    <p class="exp-intro" id="exp-ponte-intro"></p>
+    <div id="exp-ponte"></div>
+  </section>
+  <section class="exp-parte" id="explorar-estados" aria-labelledby="t-exp-estados" tabindex="-1">
+    <h2 id="t-exp-estados" data-t="exp.estados.tit">各州</h2>
+    <p class="exp-intro" data-t="exp.estados.intro">地图、概况卡和表格联动：您在其中一处选中的州会在其他各处显示。</p>
+    <div id="exp-estados"></div>
+  </section>
+  <section class="exp-parte" id="explorar-municipios" aria-labelledby="t-exp-municipios" tabindex="-1">
+    <h2 id="t-exp-municipios" data-t="exp.municipios.tit">市镇</h2>
+    <p class="exp-intro" data-t="exp.municipios.intro">筛选条件适用于排名、散点图和漏斗图；搜索则在所有市镇中查找。</p>
+    <div id="exp-municipios"></div>
+  </section>
+  <section class="exp-parte" id="explorar-incerteza" aria-labelledby="t-exp-incerteza" tabindex="-1">
+    <h2 id="t-exp-incerteza" data-t="exp.incerteza.tit">假设与不确定性</h2>
+    <p class="exp-intro" data-t="exp.incerteza.intro">本研究的各项估计值及其95%置信区间，以及无法可靠估计的内容和原因。</p>
+    <div id="exp-incerteza"></div>
+  </section>
+  </div>
+  </div>
+</section>
+
+<!-- ======================= Apuração ao vivo: o registro da apuração do 2º turno, ligado ao capítulo 7 (T28; montado em apuracao.js) ======================= -->
+<section class="vista apuracao" data-vista="apuracao" id="apuracao" aria-labelledby="t-apuracao" tabindex="-1" hidden>
+  <div class="com-indice">
+  <!-- índice das partes, como o dos capítulos: na margem no computador, numa barra presa no topo no celular (revisão do autor, D39) -->
+  <nav class="indice indice-partes" data-t-aria-label="av.indice_aria" aria-label="“实时计票”的各部分"><ol id="av-lista-indice"></ol></nav>
+  <div class="consulta com-indice-corpo">
+  <h1 class="consulta-tit" id="t-apuracao" data-t="nav.apuracao">实时计票</h1>
+  <p class="linha-fina" id="av-linha-fina"></p>
+  <div id="av-corpo"></div>
+  <section class="av-parte" id="apuracao-fim" aria-labelledby="t-av-fim" tabindex="-1">
+    <h2 id="t-av-fim" data-t="av.fim.tit">计票结束时</h2>
+  </section>
+  <section class="av-parte" id="apuracao-como" aria-labelledby="t-av-como" tabindex="-1">
+    <h2 id="t-av-como" data-t="av.como.tit">页面如何运作</h2>
+  </section>
+  </div>
+  </div>
+</section>
+
+<!-- ======================= Método e fontes: consulta, fora da leitura corrida ======================= -->
+<!-- T12: as partes são montadas por metodo.js a partir dos dados e do catálogo; o glossário vem de
+     glossario.js, e os dados para baixar e "Sobre este estudo", de extras.js (T25) -->
+<section class="vista metodo" data-vista="metodo" id="metodo" aria-labelledby="t-metodo" tabindex="-1" hidden>
+  <div class="com-indice">
+  <nav class="indice indice-partes" data-t-aria-label="met.indice_aria" aria-label="“方法与来源”的各部分"><ol id="met-lista-indice"></ol></nav>
+  <div class="consulta com-indice-corpo">
+  <h1 class="consulta-tit" id="t-metodo" data-t="nav.metodo">方法与来源</h1>
+  <p class="linha-fina" data-t="met.linha_fina">本研究是如何完成的、数据来自哪里，以及数据不能说明什么。这里还有关于每项数据的注释、术语表和用于重新计算的文件。</p>
+  <section class="met-parte" id="passo" aria-labelledby="t-met-passo" tabindex="-1"><h2 id="t-met-passo" data-t="met.passo.tit">逐步计算过程</h2><div id="met-passo"></div></section>
+  <section class="met-parte" id="fontes" aria-labelledby="t-met-fontes" tabindex="-1"><h2 id="t-met-fontes" data-t="met.fontes.tit">来源</h2><div id="met-fontes"></div></section>
+  <section class="met-parte" id="partidos" aria-labelledby="t-met-partidos" tabindex="-1"><h2 id="t-met-partidos" data-t="met.partidos.tit">政党分类</h2><div id="met-partidos"></div></section>
+  <section class="met-parte" id="incerteza" aria-labelledby="t-met-inc" tabindex="-1"><h2 id="t-met-inc" data-t="met.inc.tit">假设与不确定性</h2><div id="met-incerteza"></div></section>
+  <section class="met-parte" id="limites" aria-labelledby="t-met-limites" tabindex="-1"><h2 id="t-met-limites" data-t="met.limites.tit">研究的局限</h2><div id="met-limites"></div></section>
+  <section class="met-parte" id="estudos-externos" aria-labelledby="t-met-ee" tabindex="-1"><h2 id="t-met-ee" data-t="met.ee.tit">外部研究</h2><div id="met-estudos-externos"></div></section>
+  <section class="met-parte" id="metodos-parecidos" aria-labelledby="t-met-mp" tabindex="-1"><h2 id="t-met-mp" data-t="met.mp.tit">类似方法</h2><div id="met-metodos-parecidos"></div></section>
+  <section class="met-parte" id="notas-dados" aria-labelledby="t-met-notas" tabindex="-1"><h2 id="t-met-notas" data-t="met.notas.tit">数据注释</h2><div id="met-notas-intro"></div>
+    <ol class="notas-dados" id="lista-notas-dados"></ol></section>
+  <section class="met-parte" id="nao-deu" aria-labelledby="t-met-nao-deu" tabindex="-1"><h2 id="t-met-nao-deu" data-t="met.nao_deu.tit">未能得出的估计</h2><div id="met-nao-deu"></div></section>
+  <section class="met-parte" id="glossario" aria-labelledby="t-met-glossario" tabindex="-1"><h2 id="t-met-glossario" data-t="met.glossario.tit">术语表</h2><p class="met-intro" data-t="met.glossario.txt">本研究的所有术语，按汉语拼音顺序排列。与将鼠标移到带点状下划线的术语上、点触它或用键盘到达它时出现的列表相同。</p>
+    <dl class="glossario" id="lista-glossario"></dl></section>
+  <section class="met-parte" id="dados" aria-labelledby="t-met-dados" tabindex="-1"><h2 id="t-met-dados" data-t="met.dados.tit">下载数据</h2><p class="pdf-baixar" data-pdf-baixar></p><div id="dados-baixar"></div></section>
+  <section class="met-parte" id="sobre" aria-labelledby="t-met-sobre" tabindex="-1"><h2 id="t-met-sobre" data-t="met.sobre.tit">关于本研究</h2><div id="sobre-estudo"></div></section>
+  </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="rodape-in">
+    <p data-t-html="rod.texto.html"><i>巴西第二轮投票的逆转</i>，2026年总统选举：从首轮到第二轮发生了哪些变化，按州和市镇。另见<a href="#metodo/sobre">关于本研究</a>、<a href="#metodo/dados">数据下载</a>、逐次读数的<a href="#apuracao">第二轮实时计票</a>，以及<a href="privacidade/">隐私</a>页面。</p>
+    <p><button class="bt-escrever-rod" type="button" data-abrir-contato aria-haspopup="dialog" data-t="rod.escrever">给作者写信</button></p>
+    <p data-t="rod.versao">字体：Alegreya和Alegreya Sans（Huerta Tipográfica）、Courier Prime，以及Noto Serif SC和Noto Sans SC（Google），均为SIL OFL 1.1许可。</p>
+  </div>
+</footer>
+
+<!-- A caixa "Escrever ao autor", aberta pelo link do cabeçalho e pelo do rodapé, em qualquer parte do estudo.
+     A mensagem vai para o e-mail do autor pelo Web3Forms, sem mostrar o endereço (contato.js; P08, D71) -->
+<dialog class="dialogo-contato" aria-labelledby="t-contato">
+  <div class="dialogo-cab"><h2 id="t-contato" data-t="rod.escrever">给作者写信</h2>
+    <button class="bt-escrever dialogo-fechar" type="button" data-fechar-contato data-t="rod.fechar">关闭</button></div>
+      <form class="contato-form" novalidate>
+        <label><span data-t="rod.nome">姓名（可选）</span><input type="text" name="nome" autocomplete="name" maxlength="80"></label>
+        <label><span data-t="rod.email">电子邮箱，如需回复（可选）</span><input type="email" name="email" autocomplete="email" maxlength="120"></label>
+        <label><span data-t="rod.mensagem">留言</span><textarea name="mensagem" maxlength="4000" required></textarea></label>
+        <!-- campo para robôs: escondido de quem lê; se vier preenchido, o Web3Forms descarta -->
+        <input class="caixa-robo" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p data-t-html="rod.caixa.html">留言只发给作者，不带附件，只用于回复，不会转给他人。<a href="privacidade/">隐私</a>。</p>
+        <p class="contato-pe"><button class="bt-enviar" type="submit" data-t="com.enviar">发表评论</button> <span class="contato-situacao" role="status" aria-live="polite"></span></p>
+      </form>
+</dialog>
+
+<script src="../textos/linguas.js"></script>
+<script src="../textos/pt-BR.js"></script>
+<script src="../textos/zh-Hans.js"></script>
+<script src="../lingua.js"></script>
+<script src="../contar.js"></script>
+<script src="../dados.js"></script>
+<script src="../mapa.js"></script>
+<script src="../graficos.js"></script>
+<script src="../explorar.js"></script>
+<script src="../passear.js"></script>
+<script src="../pergunte.js"></script>
+<script src="../apuracao-dados.js"></script>
+<script src="../apuracao.js"></script>
+<script src="../estudo.js"></script>
+<script src="../glossario.js"></script>
+<script src="../descricoes.js"></script>
+<script src="../csv/zh/arquivos.js"></script>
+<script src="../extras.js"></script>
+<script src="../estudos-externos-dados.js"></script>
+<script src="../estudos-externos.js"></script>
+<script src="../metodos-parecidos.js"></script>
+<script src="../metodo.js"></script>
+<script src="../externos.js"></script>
+<script src="../pdf/arquivos.js"></script>
+<script src="../pdf.js"></script>
+<script src="../contato.js"></script>
+<script src="../assistente.js"></script>
+<script src="../comentarios.js"></script>
+</body>
+</html>

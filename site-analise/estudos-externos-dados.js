@@ -20,6 +20,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "Tamaño del cambio",
     "nosso": "La diferencia se movió 6,66 millones de votos a favor de Lula, en los 27 estados y en el exterior."
+   },
+   "zh-Hans": {
+    "titulo": "变化的幅度",
+    "nosso": "在27个州和海外，票差朝有利于卢拉的方向共变化了666万票。"
    }
   },
   {
@@ -35,6 +39,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "1 · Dónde creció cada uno",
     "nosso": "Cada uno creció más donde tenía una parte menor en la primera vuelta: por cada 10 puntos más de Lula, 0,51 puntos menos de aumento, dentro del mismo estado (H1 respaldada)."
+   },
+   "zh-Hans": {
+    "titulo": "1 · 各自在哪里增长",
+    "nosso": "两人都在首轮占比较低的地方增长更多：在同一个州内，卢拉首轮占比每高10个百分点，增幅就低0.51个百分点（H1获支持）。"
    }
   },
   {
@@ -50,6 +58,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "2 · Dónde creció Flávio",
     "nosso": "Flávio ganó 3,72 millones de votos, en 21 de los 27 estados y en 4624 de los 5571 municipios."
+   },
+   "zh-Hans": {
+    "titulo": "2 · 弗拉维奥在哪里增长",
+    "nosso": "弗拉维奥新增372万票，在27个州中的21个、5,571个市镇中的4,624个得票增加。"
    }
   },
   {
@@ -65,6 +77,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "3 · Los votos de los otros candidatos",
     "nosso": "No se puede saber con seguridad: de 46 a 61 de cada 100 para Lula, según el cálculo (H3 no concluyente)."
+   },
+   "zh-Hans": {
+    "titulo": "3 · 其他候选人的选票",
+    "nosso": "无法确定：按不同算法，每100票中有46～61票归卢拉（H3无定论）。"
    }
   },
   {
@@ -80,6 +96,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "4 · Participación",
     "nosso": "Fueron a votar 2,96 millones de personas más; la abstención bajó del 21,08 % al 19,22 %, pero subió en 9 estados. La mayor parte de los votos ganados no vino de la participación (H4 no concluyente)."
+   },
+   "zh-Hans": {
+    "titulo": "4 · 投票人数",
+    "nosso": "投票人数增加296万；弃权率从21.08%降至19.22%，但在9个州上升。新增票数大部分并非来自投票人数的增加（H4无定论）。"
    }
   },
   {
@@ -95,6 +115,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "5 · Diputados, senadores y partidos",
     "nosso": "No apareció una relación clara entre el voto para diputado y senador y el cambio."
+   },
+   "zh-Hans": {
+    "titulo": "5 · 众议员、参议员与政党",
+    "nosso": "众议员和参议员选举的投票与票差变化之间，没有出现明确的关联。"
    }
   },
   {
@@ -110,6 +134,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "6 · Peso de regiones y estados",
     "nosso": "El 42,9 % del cambio vino del Sudeste y el 38,4 % del Nordeste; São Paulo, el 21,0 %. Solo Minas Gerais cambió de lado."
+   },
+   "zh-Hans": {
+    "titulo": "6 · 各地区和各州的比重",
+    "nosso": "42.9%的变化来自东南部，38.4%来自东北部；São Paulo占21.0%。只有Minas Gerais的领先方发生了改变。"
    }
   },
   {
@@ -125,6 +153,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "7 · Proyección en vivo",
     "nosso": "Con el 10 % al 20 % de las urnas, la proyección se equivocó en promedio 1,06 puntos; el escrutinio parcial, 1,84."
+   },
+   "zh-Hans": {
+    "titulo": "7 · 实时推算",
+    "nosso": "在已统计10%～20%投票机时，实时推算的平均误差为1.06个百分点；部分计票结果的误差为1.84个百分点。"
    }
   },
   {
@@ -140,6 +172,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "8 · Datos sociales",
     "nosso": "Donde hay más población de bajos ingresos, Lula se quedó con 9,6 puntos más de los votos ganados en la segunda vuelta, dentro del mismo estado."
+   },
+   "zh-Hans": {
+    "titulo": "8 · 社会数据",
+    "nosso": "在同一个州内，低收入人口较多的地方，卢拉在第二轮新增票数中的占比高出9.6个百分点。"
    }
   },
   {
@@ -155,6 +191,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "9 · Cambios de lado y concentración",
     "nosso": "Lula superó a Flávio en 211 municipios; 151 municipios sumaron la mitad del cambio (exploratorio)."
+   },
+   "zh-Hans": {
+    "titulo": "9 · 领先方改变与集中度",
+    "nosso": "在211个市镇，卢拉由落后转为领先弗拉维奥；151个市镇贡献了一半的变化（探索性）。"
    }
   },
   {
@@ -170,6 +210,10 @@ window.ESTUDOS_EXTERNOS = {
    "es": {
     "titulo": "Límites: causa y camino",
     "nosso": "Lugares, no personas; dónde y cuánto, no por qué; saldo, no el camino de cada elector."
+   },
+   "zh-Hans": {
+    "titulo": "局限：原因与路径",
+    "nosso": "研究的是地方，不是个人；是在哪里、变化多少，不是为什么；是净变化，不是每位选民的路径。"
    }
   }
  ],
@@ -272,6 +316,34 @@ window.ESTUDOS_EXTERNOS = {
      "c9": "211 cambios de lado, 76 en Minas; 100 ciudades sumaron el 45 % (nosotros: 151 sumaron la mitad).",
      "limites": "Dice que muestra patrones, no el comportamiento de los electores."
     }
+   },
+   "zh-Hans": {
+    "titulo": "Lula subiu em 5.411 de 5.571 municípios, mas 100 cidades fizeram 45% da virada",
+    "veiculo": "Dado Bruto",
+    "autor": "无个人署名",
+    "resumo": "逐个市镇计算卢拉在两人合计票数中的占比变化，使用巴西高等选举法院（TSE）和巴西地理统计局（IBGE）的数据，包括回归、按市镇规模的分组和与2022年的比较。公开了脚本。",
+    "so_eles": [
+     "领先方改变的市镇只占变化的8%；56%来自卢拉原本已领先的地方",
+     "卢拉占比下降的159个市镇中，85个在Bahia",
+     "与2022年第二轮比较（4,363个市镇低于2022年）",
+     "按市镇规模的变化"
+    ],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "其他候选人选票的分配（第3章）",
+     "众议员和参议员（第5章）",
+     "实时推算（第7章）",
+     "社会数据（第8章）"
+    ],
+    "temas": {
+     "resumo": "同样的666万票和5,411个市镇。",
+     "c1": "首轮占比与增幅之间的相关系数为−0.69。",
+     "c2": "弗拉维奥同样新增372万票。",
+     "c4": "投票人数与票差变化之间的关联较弱（0.10）。",
+     "c6": "东南部占43%，东北部占39%，São Paulo占21%。",
+     "c9": "211个市镇领先方改变，其中76个在Minas Gerais；100个市镇贡献了45%（本研究：151个市镇贡献了一半）。",
+     "limites": "称其展示的是规律，而不是选民的行为。"
+    }
    }
   },
   {
@@ -351,6 +423,28 @@ window.ESTUDOS_EXTERNOS = {
      "c4": "Atribuye 6,05 millones del cambio a quienes no votaron por un candidato en la primera vuelta (3,17 millones de abstención para Lula). Es un flujo estimado; nosotros damos el saldo, y la mayor parte de los votos ganados no vino de la participación. Los números no se contradicen; la lectura sí.",
      "limites": "Habla de adónde fueron los electores; nosotros decimos que los cálculos no muestran el camino de cada elector. El autor reconoce el límite."
     }
+   },
+   "zh-Hans": {
+    "titulo": "Transição de votos entre o 1º e o 2º turno de 2026",
+    "veiculo": "GitHub（代码库）",
+    "autor": "lorande",
+    "resumo": "用巴西高等选举法院（TSE）499,248个投票站的数据做生态推断：每个州一个转移矩阵，采用带约束的最小二乘法和自助法。代码公开。",
+    "so_eles": [
+     "分州转移：在8个州（AC、DF、GO、MS、PR、RR、RS、SC），弗拉维奥获得的其他候选人选票更多",
+     "首轮空白票和无效票的去向（约60%～69%归卢拉）",
+     "HIPOTESES.md（4.5）在本轮分析中未纳入的投票站层面推断"
+    ],
+    "so_nos": [
+     "邓肯–戴维斯界限法（不借助模型时数据能说明到什么程度）",
+     "第3章的多种设定，给出完整范围",
+     "第1、5、7、8章"
+    ],
+    "temas": {
+     "resumo": "票差从−222万变为+443万。",
+     "c3": "在两人之间，其他候选人的选票约53%归卢拉，落在本研究46～61的范围内；其区间更窄，只反映抽样误差，作者本人也这样说明。",
+     "c4": "将变化中的605万票归于首轮没有投给任何候选人的人（其中317万来自弃权者、归卢拉）。这是估计的流向；本研究给出的是净变化，新增票数大部分并非来自投票人数的增加。两者的数字并不矛盾，不同的是解读。",
+     "limites": "谈的是选民去了哪里；本研究认为，这些计算显示不出每位选民的路径。作者承认这一局限。"
+    }
    }
   },
   {
@@ -424,6 +518,26 @@ window.ESTUDOS_EXTERNOS = {
      "c3": "Regresión entre 27 estados (R² 0,91); dice que los coeficientes no son transferencia.",
      "limites": "Un pasaje de opinión afirma que la reversión se construyó con votos que no eran de Lula en la primera vuelta; el estudio dice que los cálculos dan el saldo, no el camino de cada elector."
     }
+   },
+   "zh-Hans": {
+    "titulo": "Votos de Lula do 1º ao 2º turno: estudo com dados do TSE",
+    "veiculo": "Pacto pelo Serviço Público",
+    "autor": "João Pedro Reis (Communicare)",
+    "resumo": "把两人的新增票数分解为来自被淘汰候选人、投票人数变化和空白票与无效票三部分，并在27个州之间做回归。",
+    "so_eles": [
+     "卢拉增幅在27个州之间的回归",
+     "在13个州，卢拉的增幅超过了该州被淘汰候选人的票数总量"
+    ],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "市镇和投票站层面，而不只是州"
+    ],
+    "temas": {
+     "resumo": "与高等选举法院相同的总数。",
+     "c4": "66.1%来自被淘汰的候选人，21.0%来自投票人数，12.9%来自空白票和无效票：与本研究对来源的计算相同。",
+     "c3": "27个州之间的回归（R² 0.91）；称系数并不代表选票转移。",
+     "limites": "一段评论称，票差逆转是靠首轮不属于卢拉的选票实现的；本研究认为，这些计算给出的是净变化，而不是每位选民的路径。"
+    }
    }
   },
   {
@@ -492,6 +606,25 @@ window.ESTUDOS_EXTERNOS = {
      "resumo": "Una diferencia de 2,2 millones a favor de Flávio pasó a 4,4 millones a favor de Lula.",
      "c6": "Minas, el único estado que cambió de lado.",
      "c9": "211 cambios de lado a favor de Lula y uno a favor de Flávio (Uirapuru, GO). El 96,7 % (5385) mide la diferencia en puntos; nuestro 5411, la parte entre los dos."
+    }
+   },
+   "zh-Hans": {
+    "titulo": "Lula avança sobre Flávio em 97% dos municípios brasileiros e vira em 211",
+    "veiculo": "Folha de S.Paulo（刊于Estado de Minas）",
+    "autor": "Marina Pinhoni, Natália Santos e Nicholas Pretto",
+    "resumo": "根据巴西高等选举法院（TSE）数据的统计：票差朝有利于卢拉方向变化的地方、领先方改变的地方、领先方改变幅度最大的市镇，以及各州首府。",
+    "so_eles": [
+     "领先方改变幅度最大的市镇（Itabirito，MG）和领先方改变的大城市（Rio、Macapá）",
+     "领先幅度扩大最多的市镇（Lajedão，BA）"
+    ],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "第1～8章"
+    ],
+    "temas": {
+     "resumo": "弗拉维奥领先220万票的票差，变为卢拉领先440万票。",
+     "c6": "Minas Gerais是唯一领先方改变的州。",
+     "c9": "211个市镇领先方转为卢拉，1个转为弗拉维奥（Uirapuru，GO）。96.7%（5,385个）衡量的是以百分点计的票差；本研究的5,411衡量的是两人之间的占比。"
     }
    }
   },
@@ -566,6 +699,26 @@ window.ESTUDOS_EXTERNOS = {
      "c9": "211 cambios de lado; uno a favor de Flávio.",
      "limites": "Atribuye la reversión a una suma de factores, incluida la movilización; el estudio no atribuye causas."
     }
+   },
+   "zh-Hans": {
+    "titulo": "Os fatores que levaram Lula à vitória no segundo turno",
+    "veiculo": "CartaCapital",
+    "autor": "Vinícius Nunes",
+    "resumo": "基于巴西高等选举法院（TSE）数据的报道：弃权、空白票和无效票、领先方改变，以及按投票机和按投票站的净变化。",
+    "so_eles": [
+     "按投票机的净变化（31,394台有利于卢拉，565台有利于弗拉维奥）和按投票站的净变化（85%有利于卢拉）",
+     "空白票和无效票的票数（从598万降至415万）"
+    ],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "第1、3、5、7、8章"
+    ],
+    "temas": {
+     "resumo": "变化约660万票。",
+     "c4": "弃权率从21.08%降至19.22%。",
+     "c9": "211个市镇领先方改变；其中1个转为弗拉维奥。",
+     "limites": "把票差逆转归因于多种因素的叠加，包括动员；本研究不判断原因。"
+    }
    }
   },
   {
@@ -631,6 +784,24 @@ window.ESTUDOS_EXTERNOS = {
      "resumo": "Lula mejoró en todas las franjas de tamaño.",
      "limites": "El título dice que eso explica la reversión, y el texto sugiere causas; el estudio no atribuye causas."
     }
+   },
+   "zh-Hans": {
+    "titulo": "Lula ganhou, avançou nas duas pontas, e isso explica a virada eleitoral em 2026",
+    "veiculo": "Política em gráficos (Substack)",
+    "autor": "Emerson Cervi",
+    "resumo": "将市镇按规模分为合格选民人数相同的五档，比较2018年以来首轮和第二轮的平均票差和弃权率。",
+    "so_eles": [
+     "以市镇规模分组（小市镇回到2022年的水平）",
+     "2018年以来的时间序列"
+    ],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "第1～9章"
+    ],
+    "temas": {
+     "resumo": "卢拉在所有规模档次都有改善。",
+     "limites": "标题称这解释了票差逆转，正文也暗示了原因；本研究不判断原因。"
+    }
    }
   },
   {
@@ -693,6 +864,23 @@ window.ESTUDOS_EXTERNOS = {
      "c9": "2875 municipios de Lula y 2695 de Flávio, como en el resultado.",
      "c5": "Partido del alcalde; nosotros miramos diputado y senador."
     }
+   },
+   "zh-Hans": {
+    "titulo": "No 2º turno, Lula virou e Flávio perdeu em 70 cidades comandadas pelo PL",
+    "veiculo": "Metrópoles（Tácio Lorran专栏）",
+    "autor": "Mateus Salomão",
+    "resumo": "将领先方改变的市镇与市长所属政党交叉对照。",
+    "so_eles": [
+     "市长所属政党：自由党（PL）执政的城市中有70个领先方转为卢拉，劳工党（PT）执政的城市中有1个转为弗拉维奥"
+    ],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "第1～8章"
+    ],
+    "temas": {
+     "c9": "卢拉领先2,875个市镇，弗拉维奥领先2,695个，与结果一致。",
+     "c5": "市长所属政党；本研究看的是众议员和参议员。"
+    }
    }
   },
   {
@@ -752,6 +940,22 @@ window.ESTUDOS_EXTERNOS = {
      "resumo": "El 71 % de los votos nuevos para Lula (nosotros: 74 %).",
      "c6": "São Paulo adelante.",
      "c9": "Habla de 213 cambios de lado; el resultado final da 211."
+    }
+   },
+   "zh-Hans": {
+    "titulo": "Eleições 2026: veja onde Lula mais ganhou votos no segundo turno",
+    "veiculo": "CNN Brasil",
+    "autor": "Vitor Bonets，Bruno Soller（Real Time Big Data）参与",
+    "resumo": "访谈：卢拉新增票数最多的州，以及新增票中归卢拉的比例。",
+    "so_eles": [],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "所有方法层面的内容"
+    ],
+    "temas": {
+     "resumo": "新增票的71%归卢拉（本研究：74%）。",
+     "c6": "São Paulo居首。",
+     "c9": "称有213个市镇领先方改变；最终结果为211个。"
     }
    }
   },
@@ -823,6 +1027,25 @@ window.ESTUDOS_EXTERNOS = {
      "c7": "Error de las encuestas de la víspera (Flávio unos 2 puntos adelante). El cap. 7 mide la proyección durante el escrutinio, no las encuestas de la víspera.",
      "limites": "Dice que los datos no separan la movilización del cambio de voto."
     }
+   },
+   "zh-Hans": {
+    "titulo": "Pesquisas não conseguiram captar virada de Lula",
+    "veiculo": "Poder360",
+    "autor": "Jonathan Karter",
+    "resumo": "将11家机构的33项民调（9月30日至10月24日）与以有效票计的结果比较，并列出各州和各地区的计票数字。",
+    "so_eles": [
+     "11家机构33项民调相对于结果的误差"
+    ],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "第1～9章，按市镇"
+    ],
+    "temas": {
+     "resumo": "卢拉新增1040万票。",
+     "c4": "弃权率从21.08%降至19.22%。",
+     "c7": "投票前民调的误差（弗拉维奥领先约2个百分点）。第7章衡量的是计票过程中的实时推算，而不是投票前的民调。",
+     "limites": "称数据无法区分动员与改投。"
+    }
    }
   },
   {
@@ -884,6 +1107,23 @@ window.ESTUDOS_EXTERNOS = {
     "temas": {
      "c7": "17 de las 21 encuestas fuera de su propio margen de error. El cap. 7 mide la proyección durante el escrutinio, no las encuestas de la víspera.",
      "limites": "No afirma una causa y dice que el error no indica irregularidad."
+    }
+   },
+   "zh-Hans": {
+    "titulo": "Todas as 21 pesquisas eleitorais erraram o resultado no 2º turno",
+    "veiculo": "Rede 98",
+    "autor": "Igor Teixeira",
+    "resumo": "最后阶段的21项全国民调与结果对比：平均而言弗拉维奥领先1.9个百分点；计票结果是卢拉领先3.6个百分点。",
+    "so_eles": [
+     "最后阶段21项民调的误差"
+    ],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "所有方法层面的内容"
+    ],
+    "temas": {
+     "c7": "21项民调中有17项超出自身的误差范围。第7章衡量的是计票过程中的实时推算，而不是投票前的民调。",
+     "limites": "不断言原因，并说明误差并不意味着违规。"
     }
    }
   },
@@ -953,6 +1193,25 @@ window.ESTUDOS_EXTERNOS = {
      "c4": "Atribuye la reversión a la participación de quienes las encuestas daban como probables ausentes; nosotros medimos que la mayor parte de los votos ganados no vino de la participación. Su respaldo es un corte de encuesta (intención, no voto).",
      "c7": "Error de las encuestas de la víspera. El cap. 7 mide la proyección durante el escrutinio, no las encuestas de la víspera.",
      "limites": "Atribuye la reversión a la participación de quienes las encuestas daban como ausentes; el estudio no atribuye causas."
+    }
+   },
+   "zh-Hans": {
+    "titulo": "Pesquisas erraram no 2º turno? O que os números revelam",
+    "veiculo": "Blog do Esmael",
+    "autor": "Esmael Morais",
+    "resumo": "10月23日和24日的12项民调与结果对比，另有弃权、空白票和无效票，以及Datafolha按投票意愿的分组。",
+    "so_eles": [
+     "Datafolha按投票意愿的分组（投票意愿高的人中弗拉维奥领先，意愿中等或较低的人中卢拉领先）",
+     "空白票和无效票从4.77%降至3.24%"
+    ],
+    "so_nos": [
+     "在每个州内部检验，95%置信区间和精度标准均事先设定（HIPOTESES.md）",
+     "按市镇和按投票站的计算"
+    ],
+    "temas": {
+     "c4": "把票差逆转归因于民调原本认为可能不去投票的人参加了投票；本研究测得新增票数大部分并非来自投票人数的增加。其依据是民调的分组（投票意向，而非实际投票）。",
+     "c7": "投票前民调的误差。第7章衡量的是计票过程中的实时推算，而不是投票前的民调。",
+     "limites": "把票差逆转归因于民调认为不会投票的人参加了投票；本研究不判断原因。"
     }
    }
   }

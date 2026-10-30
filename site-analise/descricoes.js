@@ -15,7 +15,7 @@
   const MAX_ITENS = 60;
   let seq = 0;
   const limpa = s => (s || '').replace(/\s+/g, ' ').trim();
-  const semPonto = s => s.replace(/[.\s]+$/, '');
+  const semPonto = s => s.replace(/[.。\s]+$/, ''); // o chinês fecha a frase com 。 (T44)
 
   function el(tag, cls, texto, pai) {
     const e = document.createElement(tag);

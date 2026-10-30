@@ -19,6 +19,22 @@
   const sinalDe = (v, c) => { const r = Math.round(v * 10 ** c); return r > 0 ? '+' : r < 0 ? MENOS : ''; };
   const negDe = (v, c) => (Math.round(v * 10 ** c) < 0 ? MENOS : '');
   const VAZIO = T('un.vazio');
+  // Chinês e japonês contam em 万 (dez mil): 6,66 milhões vira 666万, com o mesmo arredondamento (T44).
+  const DEZ_MIL = /^(zh|ja)/.test(LINGUA);
+  const NFL = {};
+  const nfAte = (v, c, grupo = true) => (NFL[c + '' + grupo] || (NFL[c + '' + grupo] = new Intl.NumberFormat(LINGUA, { minimumFractionDigits: grupo ? 0 : c, maximumFractionDigits: c, useGrouping: grupo }))).format(Math.abs(v));
+  /** Só o número de milhões, sem unidade nem sinal; em 万, arredondado no mesmo passo. */
+  const nMi = (v, c = 2) => {
+    if (!DEZ_MIL) return nf(v / 1e6, c);
+    const passo = 10 ** (6 - c);
+    return nfAte(Math.round(Math.abs(v) / passo) * passo / 1e4, Math.max(0, c - 2), false); // 1500万, sem separador, como a imprensa
+  };
+  /** Milhares com a unidade, sem sinal: "5 mil"; em chinês e japonês, 5000 ou 5万. */
+  const mil = (v, c = 0) => {
+    if (!DEZ_MIL) return T('un.mil', { n: nf(v / 1e3, c) });
+    const passo = 10 ** (3 - c), r = Math.round(Math.abs(v) / passo) * passo;
+    return r >= 1e4 ? T('un.mi', { n: nfAte(r / 1e4, c + 1) }) : nf(r, 0);
+  };
   const fmt = {
     int: v => negDe(v, 0) + nf(v, 0),
     intSinal: v => sinalDe(v, 0) + nf(v, 0),
@@ -27,8 +43,13 @@
     abs: (v, c = 2) => nf(v, c),
     pct: (v, c = 1) => (v === null || v === undefined ? VAZIO : T('un.pct', { n: negDe(v, c) + nf(v, c) })),
     pp: (v, c = 2) => (v === null || v === undefined ? VAZIO : T('un.pp', { n: sinalDe(v, c) + nf(v, c) })),
-    mi: (v, c = 2) => T('un.mi', { n: sinalDe(v / 1e6, c) + nf(v / 1e6, c) }),
-    miAbs: (v, c = 2) => T.p('un.milhoes', v / 1e6, { n: nf(v / 1e6, c) }),
+    mi: (v, c = 2) => T('un.mi', { n: sinalDe(v / 1e6, c) + nMi(v, c) }),
+    miAbs: (v, c = 2) => T.p('un.milhoes', v / 1e6, { n: nMi(v, c) }),
+    /** Milhões sem sinal ("4 mi"), milhares sem e com sinal ("5 mil", "+5 mil"), de um número em votos. */
+    miCurto: (v, c = 2) => T('un.mi', { n: nMi(v, c) }),
+    mil,
+    milSinal: (v, c = 0) => sinalDe(v / 1e3, c) + mil(v, c),
+    nMi,
     p: v => (v < 0.0005 ? T('un.abaixo_de', { n: nf(0.001, 3) }) : nf(v, 3)),
     /** Um número já escrito, com a unidade: "+2%", "3 mil". */
     comPct: s => T('un.pct', { n: s }),
@@ -262,7 +283,8 @@
     const grade = el('g', { class: 'grade' }, s);
     for (const v of ticks(o.x.min, o.x.max, o.x.passo)) {
       el('line', { x1: x(v), x2: x(v), y1: topo - 4, y2: alt - base + 4, class: Math.abs(v - (o.x.ref || 0)) < 1e-9 ? 'zero' : '' }, grade);
-      texto(s, x(v), alt - base + 18, o.x.fmt(v), { 'text-anchor': 'middle', class: 'tick' });
+      const tk = texto(s, x(v), alt - base + 18, o.x.fmt(v), { 'text-anchor': 'middle', class: 'tick' });
+      if (DEZ_MIL && x(v) + tk.getComputedTextLength() / 2 > larg) tk.setAttribute('text-anchor', 'end'); // +1500万 na borda (T44)
     }
     texto(s, estreito ? 0 : margE, alt - 6, o.x.rotulo, { class: 'rotulo-eixo' });
     if (o.lados) {
@@ -328,6 +350,12 @@
       const xr = r.x(o.ref.v);
       el('line', { x1: xr, x2: xr, y1: (o.topo || 22) - 4, y2: r.alt - 36, class: 'ref' }, r.s);
       texto(r.s, xr, (o.topo || 22) - 9, o.ref.rotulo, { 'text-anchor': 'middle', class: 'rotulo-eixo val-forte' });
+    }
+    // chinês, japonês e coreano: a unidade por extenso (个百分点) passa da margem direita; refaz com a margem que falta (T44)
+    if (/^(zh|ja|ko)/.test(LINGUA) && !o.refeito) {
+      const W = +r.s.getAttribute('width');
+      const falta = Math.max(0, ...[...r.s.querySelectorAll('text.val')].map(t => { const b = t.getBBox(); return b.x + b.width - W + 2; }));
+      if (falta > 0) return barras(caixa, Object.assign({}, o, { margD: (o.margD || 16) + Math.ceil(falta), refeito: true }));
     }
     return r;
   }
@@ -420,7 +448,9 @@
     const grade = el('g', { class: 'grade' }, s);
     for (const v of ticks(vmin, vmax, 2e6)) {
       el('line', { x1: x(v), x2: x(v), y1: topo, y2: alt - base + 4, class: v === 0 ? 'zero' : '' }, grade);
-      texto(s, x(v), alt - base + 18, v === 0 ? '0' : fmt.mi(v, 0), { 'text-anchor': 'middle', class: 'tick' });
+      const tk = texto(s, x(v), alt - base + 18, v === 0 ? '0' : fmt.mi(v, 0), { 'text-anchor': 'middle', class: 'tick' });
+      // em 万 o número fica mais longo (+1500万): o último não passa da borda (T44)
+      if (DEZ_MIL && x(v) + tk.getComputedTextLength() / 2 > +s.getAttribute('width')) tk.setAttribute('text-anchor', 'end');
     }
     linhas.forEach((l, i) => {
       const y = topo + i * lh + (lh - bh) / 2;
@@ -605,7 +635,7 @@
     }
     for (const v of [1e3, 1e4, 1e5, 1e6, 1e7]) {
       if (v < E[0] || v > E[E.length - 1]) continue;
-      texto(s, x(v), alt - mB + 18, v >= 1e6 ? fmt.comMi(nf(v / 1e6, 0)) : fmt.comMil(nf(v / 1e3, 0)), { 'text-anchor': 'middle', class: 'tick' });
+      texto(s, x(v), alt - mB + 18, v >= 1e6 ? fmt.miCurto(v, 0) : fmt.mil(v, 0), { 'text-anchor': 'middle', class: 'tick' });
     }
     texto(s, mE, alt - 6, T('g.eixo_eleitorado'), { class: 'rotulo-eixo' });
     texto(s, 0, 12, o.y.rotulo, { class: 'rotulo-eixo' });

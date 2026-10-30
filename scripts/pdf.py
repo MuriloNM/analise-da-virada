@@ -102,6 +102,8 @@ def gravar(navegador, url, lingua):
     pagina.on("response", lambda r: erros.append(f"{r.status} {r.url}") if r.status >= 400 and not r.url.endswith("favicon.ico") else None)
     pagina.goto(url, wait_until="load")
     pagina.wait_for_function("window.PDF_PRONTO === true", timeout=60000)
+    # as fontes baixadas só quando aparece um caractere delas (os ideogramas do chinês, T44) precisam ter chegado
+    pagina.evaluate("document.fonts.ready.then(() => document.fonts.status)")
     opcoes = dict(prefer_css_page_size=True, print_background=True, scale=ESCALA, outline=True, tagged=True)
     primeiro = pagina.pdf(**opcoes)
     entradas = pagina.evaluate("window.PDF_ENTRADAS")

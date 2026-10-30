@@ -257,8 +257,8 @@ window.PASSEAR = function (X) {
   /** "+812 mil", "+1,2 milhão": o número que se lê; o exato fica na tabela e na dica. */
   function curto(v) {
     const a = Math.abs(v);
-    if (a >= 1e6) return T.p('un.milhoes', a / 1e6, { n: (v < 0 ? '−' : '+') + nf(a / 1e6, 2) });
-    if (a >= 1e4) return fmt.comMil((v < 0 ? '−' : '+') + nf(a / 1e3, 0));
+    if (a >= 1e6) return T.p('un.milhoes', a / 1e6, { n: (v < 0 ? '−' : '+') + fmt.nMi(a, 2) });
+    if (a >= 1e4) return (v < 0 ? '−' : '+') + fmt.mil(a, 0);
     return fmt.intSinal(v);
   }
   function frente(l, t) {

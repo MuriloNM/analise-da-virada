@@ -1,8 +1,8 @@
 # Diccionario de datos
 
-Português: [DICIONARIO.md](DICIONARIO.md) · English: [DATA-DICTIONARY.md](DATA-DICTIONARY.md)
+Português: [DICIONARIO.md](DICIONARIO.md) · English: [DATA-DICTIONARY.md](DATA-DICTIONARY.md) · 简体中文: [SHUJU-ZIDIAN.md](SHUJU-ZIDIAN.md)
 
-Los archivos de `planilha/`, columna por columna. Los de `planilha/pt-BR/`, `planilha/en/` y `planilha/es/` tienen los mismos números; cambian la lengua de los encabezados, el separador y el signo decimal. La unidad y la fórmula de cada columna están en la descripción. Este archivo se genera de `planilha/es/dicionario.csv`.
+Los archivos de `planilha/`, columna por columna. Los de `planilha/pt-BR/`, `planilha/en/`, `planilha/es/` y `planilha/zh-Hans/` tienen los mismos números; cambian la lengua de los encabezados, el separador y el signo decimal. La unidad y la fórmula de cada columna están en la descripción. Este archivo se genera de `planilha/es/dicionario.csv`.
 
 ## municipios.csv
 

@@ -7,5 +7,6 @@
 window.LINGUAS = [
   {"codigo": "pt-BR", "nome": "Português", "pasta": "", "og": "pt_BR"},
   {"codigo": "en", "nome": "English", "pasta": "en/", "og": "en_US"},
-  {"codigo": "es", "nome": "Español", "pasta": "es/", "og": "es_LA"}
+  {"codigo": "es", "nome": "Español", "pasta": "es/", "og": "es_LA"},
+  {"codigo": "zh-Hans", "nome": "简体中文", "pasta": "zh/", "og": "zh_CN"}
 ];

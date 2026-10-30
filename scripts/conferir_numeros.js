@@ -70,8 +70,9 @@ for (const lingua of linguas) {
     const escala = f === 'mi' || f === 'miAbs' ? 1e6 : 1;
     const a = c === undefined ? pt.GRAFICOS.fmt[f](v) : pt.GRAFICOS.fmt[f](v, c);
     const b = c === undefined ? ot.GRAFICOS.fmt[f](v) : ot.GRAFICOS.fmt[f](v, c);
-    const va = valor(a, 'pt-BR'), vb = valor(b, lingua);
-    const ok = va === vb && !Number.isNaN(va);
+    // em chinês e japonês os milhões vêm em 万 (dez mil): compara em votos
+    const va = valor(a, 'pt-BR') * escala, vb = valor(b, lingua) * (escala > 1 && b.includes('万') ? 1e4 : escala);
+    const ok = Math.round(va * 1e6) === Math.round(vb * 1e6) && !Number.isNaN(va);
     if (!ok) erros++;
     console.log(`${String(i + 1).padStart(2)} ${f.padEnd(8)} ${a.padEnd(22)} ${b.padEnd(22)} ${ok ? 'igual' : 'DIFERENTE'}${escala > 1 ? ' (milhões)' : ''}`);
   });
