@@ -149,7 +149,7 @@
         sitekey: chave, action: 'comentario', appearance: 'interaction-only', size: 'flexible', 'refresh-expired': 'auto',
         theme: document.documentElement.getAttribute('data-tema') === 'escuro' ? 'dark'
           : document.documentElement.getAttribute('data-tema') === 'claro' ? 'light' : 'auto',
-        language: T.lingua === 'pt-BR' ? 'pt-br' : T.lingua,
+        language: { 'pt-BR': 'pt-br', 'zh-Hans': 'zh-cn' }[T.lingua] || T.lingua, // o Turnstile não aceita zh-Hans (T47)
       });
     }).catch(() => { carregando = null; });
     return carregando;
