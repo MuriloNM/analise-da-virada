@@ -656,7 +656,7 @@ window.ESTUDOS_EXTERNOS = {
     "temas": {
      "resumo": "Mudança de cerca de 6,6 milhões.",
      "c4": "Abstenção de 21,08% para 19,22%.",
-     "c9": "211 viradas; uma para o Flávio.",
+     "c9": "211 viradas para o Lula; uma para o Flávio.",
      "limites": "Atribui a virada a uma soma de fatores, mobilização incluída; o estudo não atribui causas."
     }
    },
@@ -676,7 +676,7 @@ window.ESTUDOS_EXTERNOS = {
     "temas": {
      "resumo": "A change of about 6.6 million.",
      "c4": "Abstention rate from 21.08% to 19.22%.",
-     "c9": "211 flips; one to Flávio.",
+     "c9": "211 flips to Lula; one to Flávio.",
      "limites": "Attributes the reversal to a mix of factors, mobilization included; the study does not attribute causes."
     }
    },
@@ -696,7 +696,7 @@ window.ESTUDOS_EXTERNOS = {
     "temas": {
      "resumo": "Cambio de cerca de 6,6 millones.",
      "c4": "Abstención del 21,08 % al 19,22 %.",
-     "c9": "211 cambios de lado; uno a favor de Flávio.",
+     "c9": "211 cambios de lado a favor de Lula; uno a favor de Flávio.",
      "limites": "Atribuye la reversión a una suma de factores, incluida la movilización; el estudio no atribuye causas."
     }
    },

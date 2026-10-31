@@ -56,7 +56,7 @@ window.APURACAO = function (X) {
     frases.push(T(q === 'empate' ? 'av.frase.empatou' : antes ? 'av.frase.voltou' : 'av.frase.passou',
       { quem: q === 'empate' ? '' : nomeDe(q), hora: L[i].hora, pct: fmt.pct(L[i].x, 2) }));
   }
-  const resp = P(raiz, 'av-resposta', T('av.frase.fim', { frases: T.lista(frases) }));
+  const resp = P(raiz, 'av-resposta', T('av.frase.fim', { frases: /^(zh|ja|ko)/.test(T.lingua) ? frases.join('；') : T.lista(frases) }));
   resp.append(...T.f('av.resposta', { min: N(fmt.dec(vMin, 1)),
     max: N(T.p('un.pontos', vMax, { n: fmt.dec(vMax, 1) }, { minimumFractionDigits: 1, maximumFractionDigits: 20 })) }));
 

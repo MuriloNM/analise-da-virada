@@ -53,6 +53,7 @@
     const tr = el('tr', '', undefined, tb);
     const th = el('th', '', undefined, tr); th.scope = 'row';
     const a = el('a', '', L(e).veiculo, th); a.href = '#metodo/ee-' + e.id;
+    th.append(' ');  // separa veículo e data no texto puro (leitor de tela, cópia sem estilo)
     el('span', 'ee-data', e.data ? dia(e.data) : T('ee.sem_data'), th);
     for (const t of E.temas) {
       const td = el('td', 'ee-cel', undefined, tr);

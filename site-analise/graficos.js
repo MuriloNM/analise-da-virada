@@ -218,7 +218,18 @@
       for (const r of o.rotulos) {
         const g = el('g', { class: 'rotulo-direto' }, s);
         el('circle', { cx: x(r.x) + 5, cy: y(r.y) - 4, r: 4.5, class: 'p-' + r.lado }, g);
-        texto(g, x(r.x) + 15, y(r.y), estreito && r.curto ? r.curto : r.t, { class: 'nome-linha' });
+        const tr = texto(g, x(r.x) + 15, y(r.y), estreito && r.curto ? r.curto : r.t, { class: 'nome-linha' });
+        // o rótulo não passa da borda: quebra em duas linhas depois de ":" (chinês: texto mais largo), ou comprime
+        const livre = larg - 2 - (x(r.x) + 15);
+        if (tr.getComputedTextLength() > livre) {
+          const m = tr.textContent.match(/^(.+?[:：])(.+)$/);
+          if (m) {
+            tr.textContent = '';
+            const x0 = x(r.x) + 15, ts = el('tspan', { x: x0, dy: '-0.55em' }, tr); ts.textContent = m[1];
+            const t2 = el('tspan', { x: x0, dy: '1.15em' }, tr); t2.textContent = m[2];
+          }
+          if (tr.getComputedTextLength() > livre) { tr.setAttribute('textLength', livre); tr.setAttribute('lengthAdjust', 'spacingAndGlyphs'); }
+        }
       }
     }
     if (o.anotacao) anotar(s, o.anotacao, x, y, estreito);
@@ -276,9 +287,16 @@
   function linhasBase(caixa, o, desenhaLinha) {
     const larg = caixa.clientWidth, estreito = larg < 520;
     const lh = o.altLinha || 20, topo = o.topo || 22, base = o.base || 40;
-    const margE = estreito ? (o.margEstreito || 40) : (o.margE || 150), margD = o.margD || 16;
+    const margD = o.margD || 16;
     const alt = topo + o.linhas.length * lh + base;
     const s = svgNovo(caixa, larg, alt, o.aria, 'group');
+    // a margem cabe o nome mais comprido, também em outra língua (chinês: rótulos longos); no máximo 55% da largura,
+    // e o que ainda passar é comprimido para caber, em vez de sair da caixa
+    const nomeDe = l => (estreito && l.curto ? l.curto : l.nome);
+    const mede = t => { const e = texto(s, 0, 0, t, { class: 'nome-linha val-forte' }), w = e.getComputedTextLength(); e.remove(); return w; };
+    const maxNome = Math.max(0, ...o.linhas.filter(l => !l.grupo).map(l => mede(nomeDe(l))));
+    const margBase = estreito ? (o.margEstreito || 40) : (o.margE || 150);
+    const margE = Math.max(margBase, Math.min(Math.ceil(maxNome) + 12, larg * 0.55));
     const x = escala(o.x.min, o.x.max, margE, larg - margD);
     const grade = el('g', { class: 'grade' }, s);
     for (const v of ticks(o.x.min, o.x.max, o.x.passo)) {
@@ -299,7 +317,8 @@
       }
       if (l.destaque) el('rect', { x: 0, y: y0, width: larg, height: lh, class: 'linha-destaque' }, s);
       const nome = estreito && l.curto ? l.curto : l.nome;
-      texto(s, margE - 8, yc + 4, nome, { 'text-anchor': 'end', class: 'nome-linha' + (l.destaque ? ' val-forte' : '') });
+      const tn = texto(s, margE - 8, yc + 4, nome, { 'text-anchor': 'end', class: 'nome-linha' + (l.destaque ? ' val-forte' : '') });
+      if (tn.getComputedTextLength() > margE - 10) { tn.setAttribute('textLength', margE - 10); tn.setAttribute('lengthAdjust', 'spacingAndGlyphs'); }
       desenhaLinha(s, l, x, y0, yc, lh, estreito);
       if (l.dica) {
         const alvo = el('rect', { x: 0, y: y0, width: larg, height: lh, fill: 'transparent', tabindex: 0, class: 'alvo',
