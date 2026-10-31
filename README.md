@@ -64,9 +64,9 @@ O que os dados não permitem dizer está em "Limites do estudo", na página. Em 
 
 ## Como citar
 
-> MARTINS, Murilo Neves de. **Análise da virada**: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município. Versão 1.3.2. [S. l.], 30 out. 2026. Disponível em: https://analise-da-virada.pages.dev/. Dados e scripts: https://github.com/MuriloNM/analise-da-virada.
+> MARTINS, Murilo Neves de. **Análise da virada**: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município. Versão 1.3.3. [S. l.], 31 out. 2026. Disponível em: https://analise-da-virada.pages.dev/. Dados e scripts: https://github.com/MuriloNM/analise-da-virada.
 
-APA: Martins, M. N. de (2026). *Análise da virada: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município* (Versão 1.3.2). https://analise-da-virada.pages.dev/
+APA: Martins, M. N. de (2026). *Análise da virada: o que mudou do 1º para o 2º turno da eleição presidencial de 2026, por estado e município* (Versão 1.3.3). https://analise-da-virada.pages.dev/
 
 O GitHub também mostra a citação pelo botão "Cite this repository" (arquivo [`CITATION.cff`](CITATION.cff)).
 
@@ -80,12 +80,13 @@ Detalhes em [`LICENCA-DADOS.md`](LICENCA-DADOS.md).
 
 ## Versão e correções
 
-**Versão 1.3.2, de 30/10/2026**: a primeira publicada, com uma correção de texto, a parte "Pergunte aos dados", o assistente "Pergunte ao estudo", gráficos com a tabela a um clique, o Mapa, a parte "Estudos externos", as regras dos comentários (que abrem depois) a 2ª rodada da exploração guiada, sobre quem votou e quem faltou, por idade, e, no capítulo 7, as projeções da apuração refeitas pela hora de chegada dos boletins, com a parte "Métodos parecidos", e o estudo inteiro em espanhol e em chinês simplificado. A mesma versão da página e do PDF.
+**Versão 1.3.3, de 31/10/2026**: a primeira publicada, com uma correção de texto, a parte "Pergunte aos dados", o assistente "Pergunte ao estudo", gráficos com a tabela a um clique, o Mapa, a parte "Estudos externos", as regras dos comentários (que abrem depois) a 2ª rodada da exploração guiada, sobre quem votou e quem faltou, por idade, e, no capítulo 7, as projeções da apuração refeitas pela hora de chegada dos boletins, com a parte "Métodos parecidos", e o estudo inteiro em espanhol e em chinês simplificado, com a tradução chinesa revisada. A mesma versão da página e do PDF.
 
 Achou um erro? Abra um pedido em [Issues](../../issues) ("Achei um erro") ou escreva pela caixa "Escrever ao autor", na página. Cada correção entra aqui e em "Versão e correções", na página, com a data, o que mudou e, se a pessoa quiser, quem avisou.
 
 | Versão | Data | O que mudou |
 |---|---|---|
+| 1.3.3 | 31/10/2026 | Revisão da tradução em chinês, sem mudar nenhum número nem conclusão: leitura direta do chinês contra o português, chave a chave, com 125 correções de sentido local, terminologia e redação em https://analise-da-virada.pages.dev/zh/ e nos estudos externos (e `planilha/zh-Hans/` aqui). Feita por IA, ainda sem revisão de um falante nativo. |
 | 1.3.2 | 30/10/2026 | Nova língua, sem mudar nenhum número nem conclusão: o estudo inteiro em chinês simplificado, com o PDF, em https://analise-da-virada.pages.dev/zh/ (e `planilha/zh-Hans/`, `SHUJU-ZIDIAN.md` aqui). A tradução foi feita por IA e conferida por tradução de volta e pelos números, sem revisão de um falante nativo. |
 | 1.3.1 | 30/10/2026 | Nova língua, sem mudar nenhum número nem conclusão: o estudo inteiro em espanhol, com o PDF, em https://analise-da-virada.pages.dev/es/ (e `planilha/es/`, `DICCIONARIO.md` aqui). Na versão em inglês, o título de uma nota e a linha da versão 1.3, que tinham ficado em português, agora estão em inglês. |
 | 1.3 | 29/10/2026 | Análise nova, exploratória, sem mudar nenhum número dos capítulos 1 a 6 nem das hipóteses: a apuração do 2º turno refeita pela hora em que o TSE recebeu cada boletim (o buraco do histórico preenchido, os estados leitura a leitura e a causa do salto da projeção às 19:43:31) e projeções que acertam o vencedor desde as primeiras urnas, testadas em 2022, 2018 e 2024 (capítulo 7, Figuras 7.2 e 7.3, e um achado no Resumo); a parte "Métodos parecidos" em Método e fontes; e a hora junto da data nas verificações dos estudos externos. Scripts novos: `reconstrucao_2t.py`, `projecoes_*.py`, `regra_*.py` e os `baixar_*.py` de 2018, 2022, 2024 e das pesquisas. |

@@ -12,8 +12,8 @@
   const T = window.T;
   // 0.1 foi a versão de trabalho; a 1.0 é a primeira publicada (T25, item 8; sessão sobre-estudo, 27/10)
   const VERSAO = {
-    numero: '1.3.2',
-    data: '2026-10-30',
+    numero: '1.3.3',
+    data: '2026-10-31',
     situacao: T('ext.situacao'),
     // { data: 'AAAA-MM-DD', versao: '1.1', oQue: 'chave do catálogo: o que estava errado e o que mudou', onde: '#analise/3',
     //   quem: 'nome de quem avisou, só se a pessoa quiser (D72)' }
@@ -42,6 +42,7 @@
       { data: '2026-10-30', versao: '1.3.1', oQue: 'ext.corr.v131', onde: '#metodo/sobre' },
       // T44: o estudo em chinês simplificado (/zh/), com o PDF
       { data: '2026-10-30', versao: '1.3.2', oQue: 'ext.corr.v132', onde: '#metodo/sobre' },
+      { data: '2026-10-31', versao: '1.3.3', oQue: 'ext.corr.v133', onde: '#metodo/sobre' },
     ],
   };
   const AUTOR = { nome: 'Murilo Neves de Martins', citacao: 'MARTINS, Murilo Neves de', apa: 'Martins, M. N. de',

@@ -3,31 +3,31 @@
 // (SHA-256) de cada PDF, que "Versão e correções" mostra (D72).
 window.PDF_ESTUDO = {
   "pt-BR": {
-    "arquivo": "estudo-virada-v1.3.2.pdf",
-    "versao": "1.3.2",
-    "paginas": 127,
-    "bytes": 10248036,
-    "sha256": "09a9f4040289a19eb47727dca8bd95c340869f02e9d19da4030aaca2243a8a2b"
+    "arquivo": "estudo-virada-v1.3.3.pdf",
+    "versao": "1.3.3",
+    "paginas": 128,
+    "bytes": 10304032,
+    "sha256": "623f4033ed1da4a25202c05b2e4a8ea0e9ff03dcc6106f28d1364c068d04b4bc"
   },
   "en": {
-    "arquivo": "runoff-reversal-study-v1.3.2.pdf",
-    "versao": "1.3.2",
-    "paginas": 128,
-    "bytes": 10191113,
-    "sha256": "b80c1143d3aa6136299644b1882fbc3c2d9b2cb4d5acc92c5b1b822c1c5ef52f"
+    "arquivo": "runoff-reversal-study-v1.3.3.pdf",
+    "versao": "1.3.3",
+    "paginas": 130,
+    "bytes": 10248169,
+    "sha256": "7dbf1ebbd987a25b6d7f1e51ae9f83164db8ead47481369584e16b7e2279e4cf"
   },
   "es": {
-    "arquivo": "estudio-reversion-v1.3.2.pdf",
-    "versao": "1.3.2",
-    "paginas": 130,
-    "bytes": 10283913,
-    "sha256": "d5ab8e45a9a44580e5d517c2f8000e9c2c11c68343f1f58cb3820eb1dcd22b24"
+    "arquivo": "estudio-reversion-v1.3.3.pdf",
+    "versao": "1.3.3",
+    "paginas": 131,
+    "bytes": 10340779,
+    "sha256": "9d24d037e249b8661251100c9cc77b85bf1b6a68b314421f9a0821778ff8e376"
   },
   "zh-Hans": {
-    "arquivo": "nizhuan-yanjiu-v1.3.2.pdf",
-    "versao": "1.3.2",
-    "paginas": 119,
-    "bytes": 19308421,
-    "sha256": "22e27d33d783409551a3a3e98b32630c131b9dc0b7b3f95055c6cf158b7c3a82"
+    "arquivo": "nizhuan-yanjiu-v1.3.3.pdf",
+    "versao": "1.3.3",
+    "paginas": 121,
+    "bytes": 19388975,
+    "sha256": "3774339d72b97195586a4e73e7c00f23ac634389eb1732e01ec709c85fb979e7"
   }
 };

@@ -168,7 +168,7 @@ Português: [DICIONARIO.md](DICIONARIO.md) · English: [DATA-DICTIONARY.md](DATA
 
 ## de_onde_vieram.csv
 
-每位候选人的新增票数从何而来，分全巴西、地区和州，比较同一城市内的各投票站，附95%置信区间和精度标准。
+每位候选人的新增票数从何而来，分全巴西、地区和州，比较同一市镇内的各投票站，附95%置信区间和精度标准。
 
 - **来源:** 巴西高等选举法院（TSE），开放数据和逐个投票站的投票机结果单（dados/secoes_presidente.csv.gz）
 - **生成脚本:** `scripts/secoes_baixar.py`, `scripts/secoes.py`, `scripts/secoes_inferencia.py`, `scripts/inferencia.py` → `dados/inferencia.json`
@@ -225,7 +225,7 @@ Português: [DICIONARIO.md](DICIONARIO.md) · English: [DATA-DICTIONARY.md](DATA
 
 ## dados_sociais.csv
 
-第8章中每个市镇的7项特征（巴西地理统计局（IBGE）、2022年人口普查和2023年市镇GDP），附各项的计算基数。
+第8章中每个市镇的7项特征（来源：巴西地理统计局IBGE、2022年人口普查和2023年市镇GDP），附各项的计算基数。
 
 - **来源:** 巴西地理统计局（IBGE）：2022年人口普查（SIDRA）、2023年市镇生产总值（PIB dos Municípios）、2022年辖区面积
 - **生成脚本:** `scripts/sociais_baixar.py`, `scripts/dados_sociais.py` → `dados/dados_sociais_municipios.json`

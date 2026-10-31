@@ -1,9 +1,9 @@
-// Gravado por scripts/estudos_externos.py a partir de docs/analise/monitoramento/comparacao.json e .en.json (T13).
+// Gravado por scripts/estudos_externos.py a partir de docs/analise/monitoramento/comparacao.json e das outras línguas (T13).
 // Não editar à mão.
 window.ESTUDOS_EXTERNOS = {
- "verificado_em": "2026-10-28 00:50",
+ "verificado_em": "2026-10-31 08:45",
  "tse": {
-  "verificado_em": "2026-10-28 00:50",
+  "verificado_em": "2026-10-31 08:45",
   "situacao": "sem mudança"
  },
  "temas": [
@@ -194,7 +194,7 @@ window.ESTUDOS_EXTERNOS = {
    },
    "zh-Hans": {
     "titulo": "9 · 领先方改变与集中度",
-    "nosso": "在211个市镇，卢拉由落后转为领先弗拉维奥；151个市镇贡献了一半的变化（探索性）。"
+    "nosso": "在211个市镇，卢拉由落后于弗拉维奥转为领先；151个市镇贡献了一半的变化（探索性）。"
    }
   },
   {
@@ -223,7 +223,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-26",
    "link": "https://dadobruto.com/analises/eleicao-2026-segundo-turno-por-municipio",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "resumo": "igual",
     "c1": "igual",
@@ -342,7 +342,7 @@ window.ESTUDOS_EXTERNOS = {
      "c4": "投票人数与票差变化之间的关联较弱（0.10）。",
      "c6": "东南部占43%，东北部占39%，São Paulo占21%。",
      "c9": "211个市镇领先方改变，其中76个在Minas Gerais；100个市镇贡献了45%（本研究：151个市镇贡献了一半）。",
-     "limites": "称其展示的是规律，而不是选民的行为。"
+     "limites": "称其展示的是模式，而不是选民的行为。"
     }
    }
   },
@@ -351,7 +351,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "",
    "link": "https://github.com/lorande/transicao-votos-2026",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "resumo": "igual",
     "c3": "igual",
@@ -441,8 +441,8 @@ window.ESTUDOS_EXTERNOS = {
     ],
     "temas": {
      "resumo": "票差从−222万变为+443万。",
-     "c3": "在两人之间，其他候选人的选票约53%归卢拉，落在本研究46～61的范围内；其区间更窄，只反映抽样误差，作者本人也这样说明。",
-     "c4": "将变化中的605万票归于首轮没有投给任何候选人的人（其中317万来自弃权者、归卢拉）。这是估计的流向；本研究给出的是净变化，新增票数大部分并非来自投票人数的增加。两者的数字并不矛盾，不同的是解读。",
+     "c3": "在两人之间分配时，其他候选人的选票约53%归卢拉，落在本研究每100票46～61票的范围内；其区间更窄，只反映抽样误差，作者本人也这样说明。",
+     "c4": "将变化中的605万票归于首轮没有投给任何候选人的人（其中317万票由首轮弃权者流向卢拉）。这是估计的流向；本研究给出的是净变化，新增票数大部分并非来自投票人数的增加。两者的数字并不矛盾，不同的是解读。",
      "limites": "谈的是选民去了哪里；本研究认为，这些计算显示不出每位选民的路径。作者承认这一局限。"
     }
    }
@@ -452,7 +452,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-26",
    "link": "https://pactopublico.org/noticias/votos-lula-primeiro-para-segundo-turno-2026-estudo",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "resumo": "igual",
     "c4": "igual",
@@ -534,7 +534,7 @@ window.ESTUDOS_EXTERNOS = {
     ],
     "temas": {
      "resumo": "与高等选举法院相同的总数。",
-     "c4": "66.1%来自被淘汰的候选人，21.0%来自投票人数，12.9%来自空白票和无效票：与本研究对来源的计算相同。",
+     "c4": "66.1%来自被淘汰的候选人，21.0%来自投票人数的增加，12.9%来自空白票和无效票：与本研究对来源的计算相同。",
      "c3": "27个州之间的回归（R² 0.91）；称系数并不代表选票转移。",
      "limites": "一段评论称，票差逆转是靠首轮不属于卢拉的选票实现的；本研究认为，这些计算给出的是净变化，而不是每位选民的路径。"
     }
@@ -545,7 +545,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-26",
    "link": "https://www.em.com.br/politica/2026/10/7527832-lula-avanca-sobre-flavio-em-97-dos-municipios-brasileiros-e-vira-em-211.html",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "resumo": "igual",
     "c6": "igual",
@@ -624,7 +624,7 @@ window.ESTUDOS_EXTERNOS = {
     "temas": {
      "resumo": "弗拉维奥领先220万票的票差，变为卢拉领先440万票。",
      "c6": "Minas Gerais是唯一领先方改变的州。",
-     "c9": "211个市镇领先方转为卢拉，1个转为弗拉维奥（Uirapuru，GO）。96.7%（5,385个）衡量的是以百分点计的票差；本研究的5,411衡量的是两人之间的占比。"
+     "c9": "211个市镇领先方转为卢拉，1个转为弗拉维奥（Uirapuru，GO）。96.7%（5,385个）按的是票差（百分点）的变化；本研究的5,411个按的是卢拉在两人合计票数中的占比的变化。"
     }
    }
   },
@@ -633,7 +633,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-26",
    "link": "https://www.cartacapital.com.br/politica/os-fatores-que-levaram-lula-a-vitoria-no-segundo-turno/",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "resumo": "igual",
     "c4": "igual",
@@ -716,7 +716,7 @@ window.ESTUDOS_EXTERNOS = {
     "temas": {
      "resumo": "变化约660万票。",
      "c4": "弃权率从21.08%降至19.22%。",
-     "c9": "211个市镇领先方改变；其中1个转为弗拉维奥。",
+     "c9": "211个市镇领先方转为卢拉；另有1个转为弗拉维奥。",
      "limites": "把票差逆转归因于多种因素的叠加，包括动员；本研究不判断原因。"
     }
    }
@@ -726,7 +726,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-27",
    "link": "https://ecervi.substack.com/p/lula-ganhou-avancou-nas-duas-pontas",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "resumo": "igual",
     "limites": "diverge"
@@ -809,7 +809,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-26",
    "link": "https://www.metropoles.com/colunas/tacio-lorran/no-2o-turno-lula-virou-e-flavio-perdeu-cidades-comandadas-pelo-pl",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "c9": "igual",
     "c5": "so_eles"
@@ -888,7 +888,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-26",
    "link": "https://www.cnnbrasil.com.br/eleicoes/eleicoes-2026-veja-onde-lula-mais-ganhou-votos-no-segundo-turno/",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "resumo": "igual",
     "c6": "igual",
@@ -964,7 +964,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-26",
    "link": "https://www.poder360.com.br/poder-eleicoes-2026/pesquisas-nao-conseguiram-captar-virada-de-lula/",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "resumo": "igual",
     "c4": "igual",
@@ -1053,7 +1053,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-26",
    "link": "https://rede98.com.br/eleicoes2026/todas-as-21-pesquisas-eleitorais-erraram-o-resultado-das-eleicoes-no-segundo-turno/",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "c7": "so_eles",
     "limites": "igual"
@@ -1132,7 +1132,7 @@ window.ESTUDOS_EXTERNOS = {
    "data": "2026-10-26",
    "link": "https://www.esmaelmorais.com.br/pesquisas-erraram-segundo-turno-virada-lula",
    "no_ar": true,
-   "verificado_em": "2026-10-28 00:50",
+   "verificado_em": "2026-10-31 08:45",
    "s": {
     "c4": "diverge",
     "c7": "so_eles",
@@ -1212,6 +1212,261 @@ window.ESTUDOS_EXTERNOS = {
      "c4": "把票差逆转归因于民调原本认为可能不去投票的人参加了投票；本研究测得新增票数大部分并非来自投票人数的增加。其依据是民调的分组（投票意向，而非实际投票）。",
      "c7": "投票前民调的误差。第7章衡量的是计票过程中的实时推算，而不是投票前的民调。",
      "limites": "把票差逆转归因于民调认为不会投票的人参加了投票；本研究不判断原因。"
+    }
+   }
+  },
+  {
+   "id": "brasildefato_mg",
+   "data": "2026-10-27",
+   "link": "https://www.brasildefato.com.br/2026/10/27/virada-em-76-cidades-e-avanco-na-grande-bh-garantem-vitoria-de-lula-em-minas/",
+   "no_ar": true,
+   "verificado_em": "2026-10-31 08:45",
+   "s": {
+    "c6": "igual",
+    "c9": "igual"
+   },
+   "pt-BR": {
+    "titulo": "Virada em 76 cidades e avanço na Grande BH garantem vitória de Lula em Minas",
+    "veiculo": "Brasil de Fato",
+    "autor": "Frederico Santana Rick",
+    "resumo": "Compara os dois turnos em Minas Gerais com os dados do TSE, município a município e por região do estado. Mostra as cidades que trocaram de lado, a capital e a Região Metropolitana.",
+    "so_eles": [
+     "Recorte por região de Minas (a Central teve a maior alta média do Lula, 7,6 pontos por município)",
+     "Belo Horizonte: o Flávio seguiu à frente, com a diferença caindo de cerca de 99 mil para 24 mil votos"
+    ],
+    "so_nos": [
+     "Os 27 estados e o exterior, com teste dentro de cada estado e intervalo de 95%",
+     "Caps. 1 a 5, 7 e 8"
+    ],
+    "temas": {
+     "c6": "Minas trocou de lado: o Lula passou de 43,33% para 50,43% dos válidos no estado, à frente por cerca de 109 mil votos.",
+     "c9": "76 municípios mineiros viraram para o Lula, o mesmo número do levantamento por município (de 452 para 528 cidades vencidas)."
+    }
+   },
+   "en": {
+    "titulo": "Flips in 76 cities and gains in Greater BH secure Lula's win in Minas Gerais",
+    "veiculo": "Brasil de Fato",
+    "autor": "Frederico Santana Rick",
+    "resumo": "Compares the two rounds in Minas Gerais with TSE data, municipality by municipality and by region of the state. Shows the cities that changed sides, the capital and the metropolitan area.",
+    "so_eles": [
+     "Breakdown by region of Minas Gerais (the Central region had Lula's largest average gain, 7.6 points per municipality)",
+     "Belo Horizonte: Flávio stayed ahead, with the margin falling from about 99,000 to 24,000 votes"
+    ],
+    "so_nos": [
+     "All 27 states and abroad, with a within-state test and a 95% interval",
+     "Chapters 1 to 5, 7 and 8"
+    ],
+    "temas": {
+     "c6": "Minas Gerais flipped: Lula went from 43.33% to 50.43% of valid votes in the state, ahead by about 109,000 votes.",
+     "c9": "76 municipalities in Minas Gerais flipped to Lula, the same number as the municipal-level survey (from 452 to 528 cities won)."
+    }
+   },
+   "es": {
+    "titulo": "Virada em 76 cidades e avanço na Grande BH garantem vitória de Lula em Minas",
+    "veiculo": "Brasil de Fato",
+    "autor": "Frederico Santana Rick",
+    "resumo": "Compara las dos vueltas en Minas Gerais con los datos del TSE, municipio por municipio y por región del estado. Muestra las ciudades que cambiaron de lado, la capital y la Región Metropolitana.",
+    "so_eles": [
+     "Corte por región de Minas (la Central tuvo el mayor aumento medio de Lula, 7,6 puntos por municipio)",
+     "Belo Horizonte: Flávio siguió adelante, con la diferencia bajando de unos 99 mil a 24 mil votos"
+    ],
+    "so_nos": [
+     "Los 27 estados y el exterior, con prueba dentro de cada estado e intervalo de confianza del 95 %",
+     "Caps. 1 a 5, 7 y 8"
+    ],
+    "temas": {
+     "c6": "Minas cambió de lado: Lula pasó del 43,33 % al 50,43 % de los votos válidos en el estado, adelante por unos 109 mil votos.",
+     "c9": "76 municipios de Minas Gerais cambiaron de lado a favor de Lula, el mismo número del análisis por municipio (de 452 a 528 ciudades ganadas)."
+    }
+   },
+   "zh-Hans": {
+    "titulo": "Virada em 76 cidades e avanço na Grande BH garantem vitória de Lula em Minas",
+    "veiculo": "Brasil de Fato",
+    "autor": "Frederico Santana Rick",
+    "resumo": "用巴西高等选举法院（TSE）数据比较Minas Gerais的两轮投票，逐个市镇并按州内地区分析。列出领先方改变的城市、首府和大都市区。",
+    "so_eles": [
+     "按Minas Gerais州内地区分组（Central地区卢拉平均增幅最大，每个市镇7.6个百分点）",
+     "Belo Horizonte：弗拉维奥仍然领先，票差从约9.9万票缩小到2.4万票"
+    ],
+    "so_nos": [
+     "27个州和海外，在每个州内部检验，95%置信区间",
+     "第1～5、7、8章"
+    ],
+    "temas": {
+     "c6": "Minas Gerais的领先方改变：卢拉在该州有效票中的得票率从43.33%升至50.43%，领先约10.9万票。",
+     "c9": "Minas Gerais有76个市镇领先方转为卢拉，与逐市镇统计的数字相同（卢拉领先的城市从452个增至528个）。"
+    }
+   }
+  },
+  {
+   "id": "razao_pr",
+   "data": "2026-10-27",
+   "link": "https://jornalrazao.com/politica/urnas-tse-virada-lula-20-cidades-parana-2-turno",
+   "no_ar": true,
+   "verificado_em": "2026-10-31 08:45",
+   "s": {
+    "c1": "igual",
+    "c3": "so_eles",
+    "c4": "so_eles",
+    "c5": "so_eles",
+    "c9": "igual"
+   },
+   "pt-BR": {
+    "titulo": "Urnas do TSE apontam virada de Lula em 20 cidades do Paraná no 2º turno",
+    "veiculo": "Jornal Razão",
+    "autor": "Redação",
+    "resumo": "Compara os dois turnos no Paraná com os dados do TSE: cidades que viraram, Curitiba, abstenção e votos dos candidatos eliminados. Cruza o resultado com a eleição para governador e senador no estado.",
+    "so_eles": [
+     "Conta dos votos a mais dos finalistas no Paraná (59,7% para o Lula)",
+     "Curitiba: o Flávio venceu com 62,3%, com a diferença um pouco menor que no 1º turno"
+    ],
+    "so_nos": [
+     "Os 27 estados, com a faixa de 46 a 61 de cada 100 para o Lula nos votos dos outros candidatos",
+     "Teste dentro de cada estado, com intervalo de 95%"
+    ],
+    "temas": {
+     "c1": "O Lula cresceu nos 399 municípios de um estado em que estava bem atrás (de 31,2% para 37,4% dos válidos).",
+     "c3": "No Paraná, o Lula ficou com 59,7% dos votos a mais dos dois finalistas; os eliminados somaram cerca de 585 mil votos no estado. É a soma do saldo, não o caminho de cada eleitor.",
+     "c4": "No Paraná, a abstenção caiu de 20,6% para 18,0%, cerca de 218 mil eleitores a mais.",
+     "c5": "Põe ao lado o resultado para governador (Sergio Moro venceu no 1º turno em 287 cidades) e para senador, sem medir ligação com a mudança.",
+     "c9": "20 municípios paranaenses viraram para o Lula (de 49 para 69 cidades vencidas); a maior virada foi em Palmas."
+    }
+   },
+   "en": {
+    "titulo": "TSE results show Lula flipping 20 cities in Paraná in the runoff",
+    "veiculo": "Jornal Razão",
+    "autor": "Staff",
+    "resumo": "Compares the two rounds in Paraná with TSE data: cities that flipped, Curitiba, turnout and the votes of eliminated candidates. Sets the result alongside the races for governor and senator in the state.",
+    "so_eles": [
+     "Breakdown of the finalists' added votes in Paraná (59.7% to Lula)",
+     "Curitiba: Flávio won with 62.3%, with a slightly smaller margin than in the first round"
+    ],
+    "so_nos": [
+     "All 27 states, with the range of 46 to 61 in every 100 to Lula among other candidates' votes",
+     "Within-state test, with a 95% interval"
+    ],
+    "temas": {
+     "c1": "Lula grew in all 399 municipalities of a state where he was far behind (from 31.2% to 37.4% of valid votes).",
+     "c3": "In Paraná, Lula took 59.7% of the two finalists' added votes; eliminated candidates totaled about 585,000 votes in the state. This is the sum of the net change, not each voter's path.",
+     "c4": "In Paraná, abstention fell from 20.6% to 18.0%, about 218,000 more voters.",
+     "c5": "Sets alongside the governor's race (Sergio Moro won in the first round in 287 cities) and the Senate race, without measuring a link to the change.",
+     "c9": "20 municipalities in Paraná flipped to Lula (from 49 to 69 cities won); the largest flip was in Palmas."
+    }
+   },
+   "es": {
+    "titulo": "Urnas do TSE apontam virada de Lula em 20 cidades do Paraná no 2º turno",
+    "veiculo": "Jornal Razão",
+    "autor": "Redacción",
+    "resumo": "Compara las dos vueltas en Paraná con los datos del TSE: ciudades que cambiaron de lado, Curitiba, abstención y votos de los candidatos eliminados. Cruza el resultado con la elección para gobernador y senador en el estado.",
+    "so_eles": [
+     "Cálculo de los votos ganados por los finalistas en Paraná (59,7 % para Lula)",
+     "Curitiba: Flávio ganó con el 62,3 %, con una diferencia un poco menor que en la primera vuelta"
+    ],
+    "so_nos": [
+     "Los 27 estados, con el rango de 46 a 61 de cada 100 para Lula en los votos de los otros candidatos",
+     "Prueba dentro de cada estado, con intervalo de confianza del 95 %"
+    ],
+    "temas": {
+     "c1": "Lula creció en los 399 municipios de un estado en el que estaba muy atrás (del 31,2 % al 37,4 % de los votos válidos).",
+     "c3": "En Paraná, Lula se quedó con el 59,7 % de los votos ganados por los dos finalistas; los eliminados sumaron unos 585 mil votos en el estado. Es la suma del saldo, no el camino de cada elector.",
+     "c4": "En Paraná, la abstención bajó del 20,6 % al 18,0 %, unos 218 mil electores más.",
+     "c5": "Pone al lado el resultado para gobernador (Sergio Moro ganó en la primera vuelta en 287 ciudades) y para senador, sin medir relación con el cambio.",
+     "c9": "20 municipios de Paraná cambiaron de lado a favor de Lula (de 49 a 69 ciudades ganadas); el mayor cambio de lado fue en Palmas."
+    }
+   },
+   "zh-Hans": {
+    "titulo": "Urnas do TSE apontam virada de Lula em 20 cidades do Paraná no 2º turno",
+    "veiculo": "Jornal Razão",
+    "autor": "编辑部",
+    "resumo": "用巴西高等选举法院（TSE）数据比较Paraná的两轮投票：领先方改变的城市、Curitiba、弃权以及被淘汰候选人的选票。并把结果与该州的州长和参议员选举对照。",
+    "so_eles": [
+     "Paraná两名第二轮候选人新增票数的计算（59.7%归卢拉）",
+     "Curitiba：弗拉维奥以62.3%的得票率领先，票差比首轮略小"
+    ],
+    "so_nos": [
+     "27个州，其他候选人的选票中每100票有46～61票归卢拉的范围",
+     "在每个州内部检验，95%置信区间"
+    ],
+    "temas": {
+     "c1": "在一个卢拉明显落后的州，卢拉在全部399个市镇都有增长（有效票得票率从31.2%升至37.4%）。",
+     "c3": "在Paraná，卢拉获得了两名第二轮候选人新增票数的59.7%；被淘汰的候选人在该州合计约58.5万票。这是净变化的加总，而不是每位选民的路径。",
+     "c4": "在Paraná，弃权率从20.6%降至18.0%，投票的选民约增加21.8万人。",
+     "c5": "并列给出州长选举结果（Sergio Moro在首轮于287个城市得票最多）和参议员选举结果，但没有衡量与票差变化的关联。",
+     "c9": "Paraná有20个市镇领先方转为卢拉（卢拉领先的城市从49个增至69个）；领先方改变幅度最大的是Palmas。"
+    }
+   }
+  },
+  {
+   "id": "brasil61_abst",
+   "data": "2026-10-27",
+   "link": "https://brasil61.com/n/abstencao-cai-em-18-estados-no-segundo-turno-das-eleicoes-de-2026-bras2617380",
+   "no_ar": true,
+   "verificado_em": "2026-10-31 08:45",
+   "s": {
+    "c4": "igual"
+   },
+   "pt-BR": {
+    "titulo": "Abstenção cai em 18 estados no segundo turno das eleições de 2026",
+    "veiculo": "Brasil 61",
+    "autor": "Marco Guimarães",
+    "resumo": "Lista a variação da abstenção entre os dois turnos em cada estado e no total do país. Compara a queda de 2026 com a de 2022.",
+    "so_eles": [
+     "Comparação com a queda da abstenção entre os turnos de 2022 (0,5 ponto)"
+    ],
+    "so_nos": [
+     "Relação entre a queda da abstenção e a parte do Lula, no mesmo estado",
+     "Quanto dos votos a mais veio do comparecimento"
+    ],
+    "temas": {
+     "c4": "A abstenção caiu cerca de 1,9 ponto no país e subiu em 9 estados, os 7 do Norte, o Maranhão e o Piauí; a maior alta foi no Amapá (8,06 pontos) e a maior queda, na Bahia (3,26)."
+    }
+   },
+   "en": {
+    "titulo": "Abstention falls in 18 states in the 2026 runoff",
+    "veiculo": "Brasil 61",
+    "autor": "Marco Guimarães",
+    "resumo": "Lists the change in abstention between the two rounds in each state and nationwide. Compares the 2026 drop with the 2022 one.",
+    "so_eles": [
+     "Comparison with the drop in abstention between the 2022 rounds (0.5 point)"
+    ],
+    "so_nos": [
+     "Link between the drop in abstention and Lula's share, within the same state",
+     "How much of the vote gains came from turnout"
+    ],
+    "temas": {
+     "c4": "Abstention fell by about 1.9 points nationwide and rose in 9 states, the 7 in the North, Maranhão and Piauí; the largest rise was in Amapá (8.06 points) and the largest drop in Bahia (3.26)."
+    }
+   },
+   "es": {
+    "titulo": "Abstenção cai em 18 estados no segundo turno das eleições de 2026",
+    "veiculo": "Brasil 61",
+    "autor": "Marco Guimarães",
+    "resumo": "Lista la variación de la abstención entre las dos vueltas en cada estado y en el total del país. Compara la caída de 2026 con la de 2022.",
+    "so_eles": [
+     "Comparación con la caída de la abstención entre las vueltas de 2022 (0,5 puntos)"
+    ],
+    "so_nos": [
+     "Relación entre la caída de la abstención y la parte de Lula, dentro del mismo estado",
+     "Cuánto de los votos ganados vino de la participación"
+    ],
+    "temas": {
+     "c4": "La abstención cayó cerca de 1,9 puntos en el país y subió en 9 estados: los 7 del Norte, Maranhão y Piauí; la mayor subida fue en Amapá (8,06 puntos) y la mayor caída, en Bahia (3,26)."
+    }
+   },
+   "zh-Hans": {
+    "titulo": "Abstenção cai em 18 estados no segundo turno das eleições de 2026",
+    "veiculo": "Brasil 61",
+    "autor": "Marco Guimarães",
+    "resumo": "列出两轮之间各州和全国的弃权率变化，并把2026年的降幅与2022年比较。",
+    "so_eles": [
+     "与2022年两轮之间弃权率降幅（0.5个百分点）的比较"
+    ],
+    "so_nos": [
+     "同一州内弃权率下降与卢拉占比之间的关系",
+     "新增票数中有多少来自投票人数的增加"
+    ],
+    "temas": {
+     "c4": "全国弃权率下降约1.9个百分点，在9个州上升：北部7个州、Maranhão和Piauí；升幅最大的是Amapá（8.06个百分点），降幅最大的是Bahia（3.26个百分点）。"
     }
    }
   }
